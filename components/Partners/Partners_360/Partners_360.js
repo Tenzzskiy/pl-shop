@@ -3,7 +3,7 @@ import {useKeenSlider} from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 import styles from './Partners_360.module.scss'
 import {useState} from "react";
-
+import cn from 'classnames'
 export const Partners_360 = ({}) => {
     const [currentSlide, setCurrentSlide] = useState(0)
     const [loaded, setLoaded] = useState(false)
@@ -26,20 +26,20 @@ export const Partners_360 = ({}) => {
             </div>
             <div className="navigation-wrapper">
                 <div ref={sliderRef} className="keen-slider">
-                    <div className="keen-slider__slide number-slide1">
+                    <div className={cn("keen-slider__slide",styles.slider)}>
                         <div className={styles.flex}>
                             <div className={styles.faded}><img src="/Clients/client_1.svg" alt=""/></div>
                             <div className={styles.faded}><img src="/Clients/client_2.svg" alt=""/></div>
                         </div>
                     </div>
-                    <div className="keen-slider__slide number-slide2">
+                    <div className="keen-slider__slide">
                         <div className={styles.flex}>
                             <div className={styles.faded}><img src="/Clients/client_3.svg" alt=""/></div>
                             <div className={styles.faded}><img src="/Clients/client_4.svg" alt=""/></div>
                         </div>
 
                     </div>
-                    <div className="keen-slider__slide number-slide3">
+                    <div className="keen-slider__slide">
                         <div className={styles.flex}>
                             <div className={styles.faded}><img src="/Clients/client_5.svg" alt=""/></div>
                             <div className={styles.faded}><img src="/Clients/client_6.svg" alt=""/></div>
