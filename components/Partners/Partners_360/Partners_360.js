@@ -32,14 +32,14 @@ export const Partners_360 = ({}) => {
                             <div className={styles.faded}><img src="/Clients/client_2.svg" alt=""/></div>
                         </div>
                     </div>
-                    <div className="keen-slider__slide">
+                    <div className={cn("keen-slider__slide",styles.slider)}>
                         <div className={styles.flex}>
                             <div className={styles.faded}><img src="/Clients/client_3.svg" alt=""/></div>
                             <div className={styles.faded}><img src="/Clients/client_4.svg" alt=""/></div>
                         </div>
 
                     </div>
-                    <div className="keen-slider__slide">
+                    <div className={cn("keen-slider__slide",styles.slider)}>
                         <div className={styles.flex}>
                             <div className={styles.faded}><img src="/Clients/client_5.svg" alt=""/></div>
                             <div className={styles.faded}><img src="/Clients/client_6.svg" alt=""/></div>
