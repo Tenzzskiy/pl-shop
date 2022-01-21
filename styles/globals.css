@@ -52,8 +52,10 @@ body{
     border-radius: 50%;
     width: 14px;
     background: none;
-    height: 20px;
+    height: 14px;
     margin-right: 8px;
+padding: 0;
+    flex-shrink: 0;
 }
 .dots{
     display: flex;
