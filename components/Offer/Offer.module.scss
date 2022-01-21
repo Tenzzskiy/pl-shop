@@ -32,3 +32,15 @@
   }
 
 }
+.dots{
+  width: 14px;
+
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: none;
+ left: 50%;
+  bottom: 100px;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+}

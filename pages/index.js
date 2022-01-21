@@ -98,7 +98,7 @@ const Home = ({  }) => {
         <Conditions />
 {/*        <Shop page={1} />*/}
 
-{/*        <Offer />*/}
+        <Offer />
         <Cleaning />
 <Sale />
 

@@ -39,7 +39,7 @@ export const Offer = ({ }) =>{
         <OfferCard price={elem.price} title={elem.name} img={elem.img} key={elem.id}/> )
     const [currentSlide, setCurrentSlide] = React.useState(0);
     const [loaded, setLoaded] = useState(false);
-    const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
+    const [sliderRef, instanceRef] = useKeenSlider({
         initial: 0,
         slides: {
             perView: 1.02
@@ -51,6 +51,7 @@ export const Offer = ({ }) =>{
             setLoaded(true);
         }
     });
+
 
 
 
@@ -139,7 +140,8 @@ export const Offer = ({ }) =>{
 
                 </div>
                 {loaded && instanceRef.current && (
-                    <div className="dots">
+                    <div className={styles.dots}>
+
                         {[
                             ...Array(instanceRef.current.track.details.slides.length).keys()
                         ].map((idx) => {
@@ -153,6 +155,7 @@ export const Offer = ({ }) =>{
                                 > </button>
                             );
                         })}
+
                     </div>
                 )}
 
