@@ -1,0 +1,17 @@
+.dots{
+
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: none;
+
+  bottom: 105px;
+  width: 97%;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  button {
+    width: 14px;
+    height: 14px;
+  }
+}

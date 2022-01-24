@@ -5,7 +5,8 @@ import {useState} from "react";
 import 'keen-slider/keen-slider.min.css'
 import { useKeenSlider } from 'keen-slider/react';
 import data from './../Shop/cart_arenda-plasm77.ru.json'
-
+import {useWindowSize} from "../../Hooks/useWindowSize";
+import cs from 'classnames'
 
 
 export const Offer = ({ }) =>{
@@ -28,21 +29,15 @@ export const Offer = ({ }) =>{
     // });
 
 
-    // @ts-ignore
-    const items1 =  data.mainAdditionals.slice(0,4).map(elem  =>
-        <OfferCard price={elem.price} title={elem.name} img={elem.img} key={elem.id}/> )
-    const items2 =  data.mainAdditionals.slice(4,8).map(elem  =>
-        <OfferCard price={elem.price} title={elem.name} img={elem.img} key={elem.id}/> )
-    // @ts-ignore
-    // @ts-ignore
-    const items3 =  data.mainAdditionals.slice(8,10).map(elem  =>
-        <OfferCard price={elem.price} title={elem.name} img={elem.img} key={elem.id}/> )
+   const size = useWindowSize();
+
     const [currentSlide, setCurrentSlide] = React.useState(0);
     const [loaded, setLoaded] = useState(false);
     const [sliderRef, instanceRef] = useKeenSlider({
         initial: 0,
         slides: {
-            perView: 1.02
+            perView: 4.1,
+            spacing:15,
         },
         slideChanged(slider) {
             setCurrentSlide(slider.track.details.rel);
@@ -53,9 +48,15 @@ export const Offer = ({ }) =>{
     });
 
 
+    const items =  data.mainAdditionals.map(elem  =>
+        <div className="keen-slider__slide number-slide2">
+            <div className={styles.flex}>
+                <OfferCard price={elem.price} title={elem.name} img={elem.img} key={elem.id}/>
+            </div>
+        </div>
 
+    )
 
-    // @ts-ignore
     return(
         <>
             <div className={styles.offer}>
@@ -66,7 +67,7 @@ export const Offer = ({ }) =>{
             <div className={styles.title}>
                 С этим товаром часто берут
             </div>
-                <div className="navigation-wrapper">
+                <div className={cs("navigation-wrapper", styles.navigation_wrapper)}>
                     {/*<div ref={sliderRef} className="keen-slider">*/}
                     {/*    <div className="keen-slider__slide number-slide1"><OfferCard/></div>*/}
                     {/*    <div className="keen-slider__slide number-slide2"><OfferCard/></div>*/}
@@ -95,23 +96,7 @@ export const Offer = ({ }) =>{
                     {/*)}*/}
 
                     <div ref={sliderRef} className="keen-slider">
-                        <div className="keen-slider__slide number-slide1">
-                            <div className={styles.flex}>
-                                {items1}
-                            </div>
-                        </div>
-                        <div className="keen-slider__slide number-slide2">
-                            <div className={styles.flex}>
-                                {items2}
-                            </div>
-                        </div>
-                        <div className="keen-slider__slide number-slide3">
-                            <div className={styles.flex}>
-                                {items3}
-                                {/*<div className={styles.empty}> </div>*/}
-                                {/*<div className={styles.empty}> </div>*/}
-                            </div>
-                        </div>
+                        {items}
 
 
                     </div>
@@ -195,7 +180,7 @@ export const Offer = ({ }) =>{
 //     );
 // }
 
-function Arrow({
+ export function Arrow({
     disabled,
     left,
     onClick

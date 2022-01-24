@@ -19,9 +19,14 @@ import {Preferences_768, Right} from "../components/Preferences/Right/right";
 import {useWindowSize} from "../Hooks/useWindowSize";
 import {Preferences_360} from "../components/Preferences/Preferences_360/Preferences_360.js";
 import {Preferences} from "../components/Preferences/Preferences";
+import {Offer_768} from "../components/Offer/OfferCard/Offer_768";
+import data from "../components/Shop/cart_arenda-plasm77.ru.json";
+import {OfferCard} from "../components/Offer/OfferCard/OfferCard";
+import {Offer_360} from "../components/Offer/OfferCard/Offer_360";
 
 const Home = ({  }) => {
     const size = useWindowSize();
+
   return (
     <Layout>
         <MainHeaderComponent />
@@ -98,7 +103,11 @@ const Home = ({  }) => {
 {/*        <Conditions />*/}
 {/*        <Shop page={1} />*/}
 
-        {/*<Offer />*/}
+
+        {size.width > 1200 ? <Offer /> : null }
+        {size.width > 720 && size.width<1200 ? <Offer_768  /> : null }
+        {size.width < 760  ? <Offer_360
+                                                           /> : null }
 {/*        <Cleaning />*/}
 {/*<Sale />*/}
 

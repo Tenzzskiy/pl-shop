@@ -4,15 +4,16 @@
   padding-top: 115px;
   position: relative;
   .container{
-    width: 1280px;
+    max-width: 1280px;
     margin: 0 auto;
     color: var(--description);
   .content{
-    padding: 0 32px;
+    padding: 0 0 0 32px;
     .flex{
       display: flex;
       flex-direction: row;
       padding-bottom: 150px;
+
     .empty{
       width: 280px;
       height: 428px;
@@ -33,14 +34,21 @@
 
 }
 .dots{
-  width: 14px;
 
+  justify-content: center;
   box-sizing: border-box;
   border-radius: 50%;
   background: none;
- left: 50%;
+  width: 100%;
   bottom: 100px;
   display: flex;
   flex-direction: row;
   position: absolute;
+  max-width: 1204px;
+}
+.slider_slide{
+width: 280px;
+}
+.navigation_wrapper{
+  z-index: 1;
 }
