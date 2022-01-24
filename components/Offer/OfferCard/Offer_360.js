@@ -28,8 +28,8 @@ export const Offer_360 = ({item1,item2,item3,item4,item5,item6,item7,item8,item9
     });
 
     const items =  data.mainAdditionals.map(elem  =>
-        <div className="keen-slider__slide number-slide2">
-            <div className={styles.flex}>
+        <div className="keen-slider__slide number-slide2" key={elem.id}>
+            <div className={styles.flex} key={elem.id}>
                 <OfferCard price={elem.price} title={elem.name} img={elem.img} key={elem.id}/>
             </div>
         </div>
