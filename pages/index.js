@@ -106,7 +106,7 @@ const Home = ({  }) => {
 
         {size.width > 1200 ? <Offer /> : null }
         {size.width > 720 && size.width<1200 ? <Offer_768  /> : null }
-        {size.width < 760  ? <Offer_360
+        {size.width < 720  ? <Offer_360
                                                            /> : null }
 {/*        <Cleaning />*/}
 {/*<Sale />*/}
