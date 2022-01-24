@@ -108,8 +108,8 @@ export const Offer = ({ }) =>{
                         <div className="keen-slider__slide number-slide3">
                             <div className={styles.flex}>
                                 {items3}
-                                <div className={styles.empty}> </div>
-                                <div className={styles.empty}> </div>
+                                {/*<div className={styles.empty}> </div>*/}
+                                {/*<div className={styles.empty}> </div>*/}
                             </div>
                         </div>
 
@@ -204,9 +204,9 @@ function Arrow({
     return (
         <div className={`button-block ${
             left ? "button-block--left" : "button-block--right"
-        } ${disabeld}`} >
+        } ${disabeld}`}  onClick={onClick}>
         <svg
-            onClick={onClick}
+
             className={`arrow ${
                 left ? "arrow--left" : "arrow--right"
             } `}

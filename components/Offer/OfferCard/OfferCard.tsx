@@ -25,7 +25,7 @@ export const OfferCard= ( {price,title,img,...props }) =>{
                     <div className={styles.select}>
                     <Selector />
                     </div>
-                    <div className={styles.price}> {props.price}₽</div>
+                    <div className={styles.price}> {price}₽</div>
                     <div className={styles.busket}>
                         <picture>
                             <img src="/ShopItem/whiteBusket.svg" alt=""/>
