@@ -9,6 +9,7 @@ export const Shop = ( { page,...props}) =>{
     const size = useWindowSize();
     const [step,setStep] = useState(size.width >1200 ? 12 : 6 );
     const [buttonStyle,setButtonStyle] = useState(styles.button)
+
        const items =  data.mainCatalogue.slice(0,step).map(elem  =>
            <ShopItem
 
@@ -17,13 +18,14 @@ export const Shop = ( { page,...props}) =>{
                img={elem.img}
                price={elem.price}
                title={elem.name}/> )
-    const Screens =  data.ledScreenCatalogue.map(elem  =>
+    const Screens =  data.ledScreenCatalogue.slice(0,step).map(elem  =>
         <ShopItem
             count={1}
             key={elem.id}
             img={elem.img}
             price={elem.price}
             title={elem.name}/> )
+
     const VideoWalls =  data.videoWallCatalogue.map(elem  =>
         <ShopItem
             count={1}
@@ -98,6 +100,12 @@ export const Shop = ( { page,...props}) =>{
                     <div className={buttonStyle}>
                         <button onClick={Else}> Показать еще</button>
                     </div> : null
+                }
+                {page === 3 && size.width < 1200 ?
+                    <div className={buttonStyle}>
+                        <button onClick={Else}> Показать еще</button>
+                    </div> : null
+
                 }
 
             </div>
