@@ -2,11 +2,12 @@ import React, { useState} from "react";
 import styles from './Shop.module.scss'
 import {ShopItem} from "./ShopItem/ShopItem";
 import data from './cart_arenda-plasm77.ru.json'
+import {useWindowSize} from "../../Hooks/useWindowSize";
 
 
 export const Shop = ( { page,...props}) =>{
-
-    const [step,setStep] = useState(12);
+    const size = useWindowSize();
+    const [step,setStep] = useState(size.width >1200 ? 12 : 6 );
     const [buttonStyle,setButtonStyle] = useState(styles.button)
        const items =  data.mainCatalogue.slice(0,step).map(elem  =>
            <ShopItem
@@ -66,9 +67,12 @@ export const Shop = ( { page,...props}) =>{
             price={elem.price}
             title={elem.name}/> )
         const Else = () =>{
-           setStep(24)
-            setButtonStyle(styles.button_none)
-            console.log(data);
+           setStep(step + step)
+            if ( step >= 12 ){
+                setButtonStyle(styles.button_none)
+            }
+
+
         }
     return(
         <>
@@ -78,14 +82,7 @@ export const Shop = ( { page,...props}) =>{
             <div className={styles.title}>
                 Каталог
             </div>
-                <div className={styles.select}>
-                    <select name="filter">
-                        <option value="1">1</option>
-                        <option value="2">1</option>
-                        <option value="3">1</option>
-                        <option value="4">1</option>
-                    </select>
-                </div>
+
                 <div className={styles.grid}>
                     {page === 1 ? items : null}
                     {page === 3 ? Screens : null}

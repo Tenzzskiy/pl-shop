@@ -1,7 +1,7 @@
 .releases{
   width: 100%;
   .container{
-    width: 1280px;
+    max-width: 1280px;
    margin: 0 auto;
     .content{
       .title{
@@ -25,7 +25,7 @@
         display: grid;
         padding: 0 32px 124px 32px;
         position: relative;
-        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-columns: 24% 50% 24%;
         gap: 20px;
         grid-template-rows: minmax(216px,auto);
         grid-template-areas: 'box1 box3 box4'

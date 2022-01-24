@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import styles from '../Offer.module.scss'
 import {useWindowSize} from "../../../Hooks/useWindowSize";
 import data from "../../Shop/cart_arenda-plasm77.ru.json";
@@ -10,13 +10,13 @@ import cs from 'classnames'
 export const Offer_768 = ({item1,item2,item3,item4,item5,item6,item7,item8,item9,item10} ) =>{
     const size = useWindowSize();
 
-
+    const [perView,SetPerView] = useState()
     const [currentSlide, setCurrentSlide] = React.useState(0);
     const [loaded, setLoaded] = useState(false);
     const [sliderRef, instanceRef] = useKeenSlider({
         initial: 0,
         slides: {
-            perView: 2.1,
+            perView: size.width < 850 ? 2.1 : 3.1,
 
         },
         slideChanged(slider) {
@@ -34,6 +34,10 @@ export const Offer_768 = ({item1,item2,item3,item4,item5,item6,item7,item8,item9
         </div>
 
     )
+
+
+
+
             return(
             <>
                 <div className={styles.offer}>

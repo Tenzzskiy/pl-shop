@@ -11,7 +11,7 @@ export const MainHeaderComponent_360 = ( { }) =>{
                     <div className={styles.relative}>
                         <img src="/header/backgroundHeaderComponent.png" alt=""/>
                         <div className={styles.title}>
-                            Аренда плазмы
+                            Аренда <br/> плазмы
                         </div>
                     </div>
 

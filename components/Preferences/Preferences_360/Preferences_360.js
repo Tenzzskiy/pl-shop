@@ -42,12 +42,12 @@ export const Preferences_360 = ( {mainTitle,leftImg,rightImg,secondLeftImg,secon
                     ].map((idx) => {
                         return (
                             <button
-    key={idx}
-    onClick={() => {
-        instanceRef.current?.moveToIdx(idx)
-    }}
-    className={"dot" + (currentSlide === idx ? " active" : "")}
-    />
+                                key={idx}
+                                onClick={() => {
+                                    instanceRef.current?.moveToIdx(idx)
+                                }}
+                                className={"dot" + (currentSlide === idx ? " active" : "")}
+                            />
                         )
                     })}
 

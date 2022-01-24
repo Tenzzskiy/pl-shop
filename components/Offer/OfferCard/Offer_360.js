@@ -16,7 +16,7 @@ export const Offer_360 = ({item1,item2,item3,item4,item5,item6,item7,item8,item9
     const [sliderRef, instanceRef] = useKeenSlider({
         initial: 0,
         slides: {
-            perView: 1.1
+            perView: size.width < 550 ? 1.1 : 2.1,
             // perView:"auto",
         },
         slideChanged(slider) {
