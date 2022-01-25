@@ -9,7 +9,7 @@ interface HeaderComponentProps {
     purple?:boolean
 }
 const HeaderComponent:FunctionComponent = ( {title,button_text,mainImg ,purple}:HeaderComponentProps):JSX.Element =>{
-console.log(purple)
+
     return(
         <>
             <div className={styles.header_component}>
