@@ -1,13 +1,14 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import styles from '../Offer.module.scss'
 import {useWindowSize} from "../../../Hooks/useWindowSize";
 import data from "../../Shop/cart_arenda-plasm77.ru.json";
 import {OfferCard} from "./OfferCard";
 import {useKeenSlider} from "keen-slider/react";
-import {Arrow} from "../Offer";
+
 import styles2 from './Offer_360.module.scss'
 import cs from 'classnames'
-export const Offer_360 = ({item1,item2,item3,item4,item5,item6,item7,item8,item9,item10} ) =>{
+
+export const Offer_360 = ( ) =>{
     const size = useWindowSize();
 
 
@@ -34,15 +35,17 @@ export const Offer_360 = ({item1,item2,item3,item4,item5,item6,item7,item8,item9
             </div>
         </div>
 
-    )
+    );
+
             return(
+
             <>
                 <div className={styles.offer}>
                     <div className={styles.container}>
                         <div className={styles.content}>
 
 
-                            <div className={styles.title}>
+                            <div className={styles.title} >
                                 С этим товаром часто берут
                             </div>
                             <div className={cs("navigation-wrapper", styles.navigation_wrapper)}>
@@ -79,7 +82,7 @@ export const Offer_360 = ({item1,item2,item3,item4,item5,item6,item7,item8,item9
                                 <div className={styles2.dots}>
 
                                     {[
-                                        ...Array(instanceRef.current.track.details.slides.length).keys()
+                                        ...Array(instanceRef.current.track.details.slides.length-(size.width>585 && size.width <720 ? 1  :  null)).keys()
                                     ].map((idx) => {
                                         return (
                                             <button

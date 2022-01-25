@@ -81,7 +81,7 @@ export const Offer_768 = ({item1,item2,item3,item4,item5,item6,item7,item8,item9
                                 <div className={styles2.dots}>
 
                                     {[
-                                        ...Array(instanceRef.current.track.details.slides.length - 2).keys()
+                                        ...Array(instanceRef.current.track.details.slides.length-(size.width>720 && size.width <920 ? 1  : size.width >920 && size.width <1200 ? 2: null)).keys()
                                     ].map((idx) => {
                                         return (
                                             <button

@@ -71,7 +71,7 @@ const Index = ({  }) => {
                         rightImg='/Preferences/Desinfection/2.png'
                     /> : null
             }
-            {/*<Certificates />*/}
+            <Certificates />
             <Shop page={9} />
             <Sale />
 

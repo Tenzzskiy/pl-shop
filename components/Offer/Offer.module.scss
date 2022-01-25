@@ -62,8 +62,11 @@ width: 280px;
 @media( max-width: 600px){
   .content{
     padding: 0 0 0 8px;
-
+  .title{
+    font-size: 25px !important;
   }
+  }
+
 }
 @media( max-width: 1200px){
   .navigation_wrapper{

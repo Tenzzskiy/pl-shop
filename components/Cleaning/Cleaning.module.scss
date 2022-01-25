@@ -45,6 +45,7 @@
   }
   .button{
     margin-bottom: 120px;
+
     button{
       background: #8B4CF5;
       box-shadow: 2px 4px 4px rgba(87, 87, 134, 0.2);
@@ -59,6 +60,9 @@
       font-size: 18px;
       line-height: 130%;
       color: white;
+      &:hover{
+        box-shadow: 0 4px 6px rgba(24, 24, 36, 0.8);
+      }
     }
   }
   .grid{

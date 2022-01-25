@@ -2,6 +2,8 @@ import React, {FunctionComponent} from "react";
 import styles from './Cleaning.module.scss'
 import {useWindowSize} from "../../Hooks/useWindowSize";
 import {Cleaning_360} from "./Cleaning_360/Cleaning_360";
+import Link from "next/link";
+import cn from "classnames";
 
 
 export const Cleaning:FunctionComponent = ( { }) =>{
@@ -53,7 +55,8 @@ export const Cleaning:FunctionComponent = ( { }) =>{
 
                                 </div>
                                 <div className={styles.button}>
-                                    <button> Каталог дезинфекции</button>
+                                    <Link href='/Desinfection' ><a className={cn(styles.a,
+                                    )} >   <button> Каталог дезинфекции</button> </a></Link>
                                 </div>
                             </div>
                         </div>

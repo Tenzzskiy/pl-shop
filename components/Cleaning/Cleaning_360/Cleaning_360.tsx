@@ -1,6 +1,8 @@
 import React, {FunctionComponent} from "react";
 import styles from './Cleaning_360.module.scss'
 import {useWindowSize} from "../../../Hooks/useWindowSize";
+import cn from "classnames";
+import Link from "next/link";
 
 
 
@@ -23,7 +25,7 @@ export const Cleaning_360:FunctionComponent = ( { }) =>{
                             Большой ассортимент сертифицированного
                             оброрудования и средств защиты
 
-                            {size.width}
+
                         </div>
 
                     </div>
@@ -34,7 +36,7 @@ export const Cleaning_360:FunctionComponent = ( { }) =>{
                         </div>
                         <div className={styles.item}>
                             <img src="/Desinfection/desinfection_icon_2.svg" alt=""/>
-                            <div> Аренда санитайзеров, автоматов с масками и перчатками</div>
+                            <div> Аренда санитайзеров, автоматов с масками и перчатками</div>
                         </div>
                         <div className={styles.item}>
                             <img src="/Desinfection/desinfection_icon_3.svg" alt=""/>
@@ -47,7 +49,8 @@ export const Cleaning_360:FunctionComponent = ( { }) =>{
 
                     </div>
                     <div className={styles.button}>
-                        <button> Каталог дезинфекции</button>
+                        <Link href='/Desinfection' ><a className={cn(styles.a,
+                        )} >   <button> Каталог дезинфекции</button> </a></Link>
                     </div>
                 </div>
                 </div>

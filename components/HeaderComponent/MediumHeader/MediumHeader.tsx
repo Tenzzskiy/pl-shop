@@ -6,7 +6,8 @@ interface MediumHeaderComponentProps{
     children?:ReactNode,
     title:string,
     button_text:string,
-    mainImg:string
+    mainImg:string,
+    img_360?:string
 }
 const MediumHeaderComponent:FunctionComponent = ( {title,button_text,mainImg,img_360 }:MediumHeaderComponentProps):JSX.Element =>{
 const size = useWindowSize();
