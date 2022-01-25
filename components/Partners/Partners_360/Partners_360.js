@@ -34,7 +34,7 @@ export const Partners_360 = ({}) => {
                     </div>
                     <div className={cn("keen-slider__slide",styles.slider)}>
                         <div className={styles.flex}>
-                            <div className={styles.faded}><img src="/Clients/client_3.svg" alt=""/></div>
+                            <div className={styles.faded}><img src="/Clients/3.jpg" alt=""/></div>
                             <div className={styles.faded}><img src="/Clients/client_4.svg" alt=""/></div>
                         </div>
 
