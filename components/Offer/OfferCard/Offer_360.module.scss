@@ -1,26 +1,11 @@
-.dots{
 
-  justify-content: center;
-  box-sizing: border-box;
-  border-radius: 50%;
-  background: none;
-  width: 100%;
-  left: 0;
-  bottom: 125px;
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  button {
-    width: 10px;
-    height: 10px;
-  }
-}
 .content{
   padding-left: 8px;
   .flex{
     display: flex;
     flex-direction: row;
     padding-bottom: 150px;
+    max-width: 280px;
     .empty{
       width: 280px;
       height: 428px;
@@ -35,5 +20,33 @@
     line-height: 120%;
     text-align: center;
     margin-bottom: 40px;
+  }
+}
+@media (max-width: 99999px){
+  .dots{
+
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: none;
+    width: 100%;
+    left: 0;
+    bottom: 125px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+
+    button {
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+@media (max-width: 500px ){
+  .dots{
+
+    justify-content: flex-start !important;
+
+    padding-left: 75px;
   }
 }

@@ -29,75 +29,75 @@ const Screens = ({  })=> {
             button_text='Рассчитать стоимость'
             purple={true}
         />
-        {/*    {size.width > 1200 ?*/}
-        {/*        <Preferences*/}
-        {/*            count={1}*/}
-        {/*            leftImg='/Preferences/Screen/1.jpg'*/}
-        {/*            mainTitle=' Преимущества светодиодных экранов'*/}
-        {/*            leftTitle='Зрелищность '*/}
-        {/*            leftText='Выгодно выделяют ваш стенд, презентацию или сцену,*/}
-        {/*                 а также зрелищно организуют пространство в вашем заведении! '*/}
-        {/*        /> : null*/}
+            {size.width > 1200 ?
+                <Preferences
+                    count={1}
+                    leftImg='/Preferences/Screen/1.jpg'
+                    mainTitle=' Преимущества светодиодных экранов'
+                    leftTitle='Зрелищность '
+                    leftText='Выгодно выделяют ваш стенд, презентацию или сцену,
+                         а также зрелищно организуют пространство в вашем заведении! '
+                /> : null
 
-        {/*    }*/}
-        {/*    {size.width < 1200 && size.width > 720 ?*/}
-        {/*        <Preferences_768*/}
-        {/*            count={1}*/}
-        {/*            leftImg='/Preferences/Screen/1.jpg'*/}
-        {/*            title=' Преимущества светодиодных экранов'*/}
-        {/*            leftTitle='Зрелищность '*/}
-        {/*            leftText='Выгодно выделяют ваш стенд, презентацию или сцену,*/}
-        {/*                 а также зрелищно организуют пространство в вашем заведении! '*/}
-        {/*        /> : null*/}
-        {/*    }*/}
-        {/*    {*/}
-        {/*        size.width <720 ?*/}
-        {/*            <Preferences_360*/}
-        {/*                count={1}*/}
-        {/*                leftImg='/Preferences/Screen/1.jpg'*/}
-        {/*                mainTitle=' Преимущества светодиодных экранов'*/}
-        {/*                leftTitle='Зрелищность '*/}
-        {/*                leftText='Выгодно выделяют ваш стенд, презентацию или сцену,*/}
-        {/*                 а также зрелищно организуют пространство в вашем заведении! '*/}
-        {/*            /> : null*/}
-        {/*    }*/}
+            }
+            {size.width < 1200 && size.width > 720 ?
+                <Preferences_768
+                    count={1}
+                    leftImg='/Preferences/Screen/1.jpg'
+                    title=' Преимущества светодиодных экранов'
+                    leftTitle='Зрелищность '
+                    leftText='Выгодно выделяют ваш стенд, презентацию или сцену,
+                         а также зрелищно организуют пространство в вашем заведении! '
+                /> : null
+            }
+            {
+                size.width <720 ?
+                    <Preferences_360
+                        count={1}
+                        leftImg='/Preferences/Screen/1.jpg'
+                        mainTitle=' Преимущества светодиодных экранов'
+                        leftTitle='Зрелищность '
+                        leftText='Выгодно выделяют ваш стенд, презентацию или сцену,
+                         а также зрелищно организуют пространство в вашем заведении! '
+                    /> : null
+            }
 
-        {/*    <Conditions />*/}
-        {/*    <Shop page={3} />*/}
-        {/*    {size.width > 1200 ? <Offer /> : null }*/}
-        {/*    {size.width > 720 && size.width<1200 ? <Offer_768  /> : null }*/}
-        {/*    {size.width < 720  ? <Offer_360*/}
-        {/*    /> : null }*/}
-        {/*    <Cleaning />*/}
-        {/*    <Sale />*/}
-        {/*    {size.width > 1200 ?*/}
-        {/*        <Releases*/}
-        {/*            img1='/releases/Screen/1.jpg'*/}
-        {/*            img2='/releases/Screen/2.jpg'*/}
-        {/*            img3='/releases/Screen/3.jpg'*/}
-        {/*            img4='/releases/Screen/4.jpg'*/}
-        {/*            img5='/releases/Screen/5.jpg'*/}
-        {/*            text1='Угловая LED фотозона'*/}
-        {/*            text2='Брендированный экспостенд'*/}
-        {/*            text3='LED экраны в оформлении сцены для презентации нового продукта'*/}
-        {/*            text4='Светодиодный экран для оформления сцены'*/}
-        {/*            text5='Светодиодный экран для оформления фотозоны'*/}
-        {/*        /> : null*/}
-        {/*    }*/}
-        {/*    { size.width < 1200  ?*/}
-        {/*        <Releases_768*/}
-        {/*            img1='/releases/Screen/1.jpg'*/}
-        {/*            img2='/releases/Screen/2.jpg'*/}
-        {/*            img3='/releases/Screen/3.jpg'*/}
-        {/*            img4='/releases/Screen/4.jpg'*/}
-        {/*            img5='/releases/Screen/5.jpg'*/}
-        {/*            text1='Угловая LED фотозона'*/}
-        {/*            text2='Брендированный экспостенд'*/}
-        {/*            text3='LED экраны в оформлении сцены для презентации нового продукта'*/}
-        {/*            text4='Светодиодный экран для оформления сцены'*/}
-        {/*            text5='Светодиодный экран для оформления фотозоны'*/}
-        {/*        /> : null*/}
-        {/*    }*/}
+            <Conditions />
+            <Shop page={3} />
+            {size.width > 1200 ? <Offer /> : null }
+            {size.width > 720 && size.width<1200 ? <Offer_768  /> : null }
+            {size.width < 720  ? <Offer_360
+            /> : null }
+            <Cleaning />
+            <Sale />
+            {size.width > 1200 ?
+                <Releases
+                    img1='/releases/Screen/1.jpg'
+                    img2='/releases/Screen/2.jpg'
+                    img3='/releases/Screen/3.jpg'
+                    img4='/releases/Screen/4.jpg'
+                    img5='/releases/Screen/5.jpg'
+                    text1='Угловая LED фотозона'
+                    text2='Брендированный экспостенд'
+                    text3='LED экраны в оформлении сцены для презентации нового продукта'
+                    text4='Светодиодный экран для оформления сцены'
+                    text5='Светодиодный экран для оформления фотозоны'
+                /> : null
+            }
+            { size.width < 1200  ?
+                <Releases_768
+                    img1='/releases/Screen/1.jpg'
+                    img2='/releases/Screen/2.jpg'
+                    img3='/releases/Screen/3.jpg'
+                    img4='/releases/Screen/4.jpg'
+                    img5='/releases/Screen/5.jpg'
+                    text1='Угловая LED фотозона'
+                    text2='Брендированный экспостенд'
+                    text3='LED экраны в оформлении сцены для презентации нового продукта'
+                    text4='Светодиодный экран для оформления сцены'
+                    text5='Светодиодный экран для оформления фотозоны'
+                /> : null
+            }
 
            {/*<Seo*/}
            {/*    image1='/Seo/Screen/1.jpg'*/}

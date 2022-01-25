@@ -36,7 +36,7 @@ export const Offer = ({ }) =>{
     const [sliderRef, instanceRef] = useKeenSlider({
         initial: 0,
         slides: {
-            perView: 4.1,
+            perView: 4.2,
             spacing:15,
         },
         slideChanged(slider) {
@@ -117,7 +117,7 @@ export const Offer = ({ }) =>{
                                 }
                                 disabled={
                                     currentSlide ===
-                                    instanceRef.current.track.details.slides.length - 1
+                                    instanceRef.current.track.details.slides.length - 4
                                 }
                             />
                         </>
@@ -128,7 +128,7 @@ export const Offer = ({ }) =>{
                     <div className={styles.dots}>
 
                         {[
-                            ...Array(instanceRef.current.track.details.slides.length).keys()
+                            ...Array(instanceRef.current.track.details.slides.length -3).keys()
                         ].map((idx) => {
                             return (
                                 <button

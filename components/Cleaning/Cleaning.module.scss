@@ -23,7 +23,7 @@
     position: absolute;
     bottom: 0;
     max-width: 1284px;
-    right: -400px;
+    width: 100%;
     height: 1284px;
     z-index: -10;
   }
@@ -90,7 +90,7 @@
     margin-bottom:40px ;
   }
 }
-@media (max-width: 960px){
+@media (max-width: 1200px){
   .cleaning{
     width: 100%;
 
