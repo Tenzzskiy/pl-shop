@@ -1,5 +1,7 @@
 import styles from './Footer_320.module.scss'
 import React from "react";
+import Link from "next/link";
+import cn from "classnames";
 
 
 export const Footer_320 = () =>{
@@ -13,7 +15,8 @@ export const Footer_320 = () =>{
                     <div className={styles.head_footer}>
                         <div className={styles.img}>
                             <picture>
-                                <img src="/header/Logotype.svg" alt=""/>
+                                <Link href='/' ><a className={cn(styles.a,
+                                )} > <img src="/header/Logotype.svg" alt=""/></a></Link>
                             </picture>
                         </div>
                         <div className={styles.mail}>info@arenda-plazm77.ru </div>
@@ -35,25 +38,34 @@ export const Footer_320 = () =>{
                     <div className={styles.border}> </div>
                 <div className={styles.grid}>
                 <div>
-                    Главная
+                    <Link href='/' ><a className={cn(styles.a,
+                    )} > Главная</a></Link>
 
                 </div>
                     <span className={styles.border}> </span>
-                <div>Светодиодные экраны </div>
+                <div> <Link href='/Screens' ><a className={cn(styles.a,
+                )} > Светодиодные экраны</a></Link> </div>
                     <span className={styles.border}> </span>
-                <div> Видеостены</div>
+                <div>   <Link href='/VideoWalls' ><a className={cn(styles.a,
+                )} > Видеостены</a></Link></div>
                     <span className={styles.border}> </span>
-                <div>Сенсорные тач-панели </div>
+                <div> <Link href='/TouchPanel' ><a className={cn(styles.a,
+                )} > Сенсорные тач-панели</a></Link> </div>
                     <span className={styles.border}> </span>
-                <div>Проекторы </div>
+                <div> <Link href='/Projectors' ><a className={cn(styles.a,
+                )} > Проекторы</a></Link> </div>
                     <span className={styles.border}> </span>
-                <div>Ноутбуки </div>
+                <div> <Link href='/Laptops' ><a className={cn(styles.a,
+                )} > Ноутбуки</a></Link> </div>
                     <span className={styles.border}> </span>
-                <div>Звук, Свет и окружение </div>
+                <div> <Link href='/Sound' ><a className={cn(styles.a,
+                )} > Звук, Свет и окружение</a></Link> </div>
                     <span className={styles.border}> </span>
-                <div>Дезинфекция </div>
+                <div> <Link href='/Desinfection' ><a className={cn(styles.a,
+                )} > Дезинфекция</a></Link> </div>
                     <span className={styles.border}> </span>
-                <div>Наши новости </div>
+                <div> <Link href='/News' ><a className={cn(styles.a,
+                )} > Наши новости</a></Link></div>
                     <span className={styles.border}> </span>
                 </div>
                 </div>

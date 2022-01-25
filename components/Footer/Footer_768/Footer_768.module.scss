@@ -1,6 +1,11 @@
 
 .footer{
-
+ a{
+   outline:none;
+   border: 0;
+   text-decoration: none;
+   color: white;
+ }
   background: rgba(38, 38, 38, 1);
 
 
@@ -70,7 +75,7 @@
 
     }
     .content {
-      padding: 60px 32px 0 32px;
+      padding: 60px 24px 0 24px;
       color: white;
       font-style: normal;
       font-weight: normal;

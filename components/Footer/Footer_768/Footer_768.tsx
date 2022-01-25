@@ -1,5 +1,7 @@
 import styles from './Footer_768.module.scss'
 import React from "react";
+import Link from "next/link";
+import cn from "classnames";
 
 
 export const Footer_768 = () =>{
@@ -13,7 +15,8 @@ export const Footer_768 = () =>{
 
                     <div className={styles.flex1}>
                         <div className={styles.first}>
-                            <div className={styles.item1}><img src="/header/Logotype.svg" alt=""/> </div>
+                            <div className={styles.item1}> <Link href='/' ><a className={cn(styles.a,
+                            )} > <img src="/header/Logotype.svg" alt=""/></a></Link> </div>
                             <div className={styles.item2}> info@arenda-plazm77.ru</div>
                         </div>
                         <div className={styles.second}>
@@ -39,16 +42,42 @@ export const Footer_768 = () =>{
 
                 <div className={styles.content2}>
                     <div className={styles.flex2}>
-                        <div> Главная</div>
-                        <div>Светодиодные экраны </div>
-                        <div>Видеостены </div>
-                        <div>Сенсорные тач-панели </div>
+                        <div>
+                            <Link href='/' ><a className={cn(styles.a,
+                            )} > Главная</a></Link>
+
+
+                        </div>
+                        <div>
+                            <Link href='/Screens' ><a className={cn(styles.a,
+                            )} > Светодиодные экраны</a></Link>
+                        </div>
+                        <div>
+                            <Link href='/VideoWalls' ><a className={cn(styles.a,
+                            )} > Видеостены</a></Link>
+                        </div>
+                        <div>
+                            <Link href='/TouchPanel' ><a className={cn(styles.a,
+                            )} > Сенсорные тач-панели</a></Link>
+                        </div>
                     </div>
                     <div className={styles.flex3}>
-                        <div> Проекторы</div>
-                        <div > Ноутбуки</div>
-                        <div > Звук, Свет и окружение</div>
-                        <div >Наши новости </div>
+                        <div>
+                            <Link href='/Projectors' ><a className={cn(styles.a,
+                            )} > Проекторы</a></Link>
+                        </div>
+                        <div >
+                            <Link href='/Laptops' ><a className={cn(styles.a,
+                            )} > Ноутбуки</a></Link>
+                        </div>
+                        <div >
+                            <Link href='/Sound' ><a className={cn(styles.a,
+                            )} > Звук, Свет и окружение</a></Link>
+                        </div>
+                        <div >
+                            <Link href='/News' ><a className={cn(styles.a,
+                            )} > Наши новости</a></Link>
+                        </div>
 
                     </div>
                 <div className={styles.box3}>
