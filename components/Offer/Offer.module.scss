@@ -29,16 +29,17 @@ width: 280px;
 }
 .navigation_wrapper{
   z-index: 1;
+  margin-right: 16px;
 }
 
 @media( max-width: 99999px){
   .content{
-    padding: 0 0 0 32px;
+    padding: 0 0 0 24px;
     .flex{
       display: flex;
       flex-direction: row;
       padding-bottom: 150px;
-      padding-left: 16px;
+
       max-width: 280px;
 
       .empty{
@@ -62,5 +63,11 @@ width: 280px;
   .content{
     padding: 0 0 0 8px;
 
+  }
+}
+@media( max-width: 1200px){
+  .navigation_wrapper{
+
+    margin-right: 0 !important;
   }
 }

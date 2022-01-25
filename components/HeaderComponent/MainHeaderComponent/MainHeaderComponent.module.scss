@@ -18,16 +18,15 @@
   .container {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 120px 135px 0 135px;
+    padding: 120px 32px 0 32px;
     img{
-      margin: 100px;
+      margin: 100px 0;
       position: relative;
       border: 22px solid #0E0E52;
       box-sizing: border-box;
 
-      width: 100%;
-      max-width: 970px;
-      max-height: 530px;
+      width: 90%;
+
     }
   }
   .content{

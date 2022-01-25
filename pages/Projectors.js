@@ -21,11 +21,12 @@ const Projectors = ({  }) => {
     const size =useWindowSize();
     return (
         <Layout >
-{/*<MediumHeaderComponent*/}
-{/*    button_text='Рассчитать стоимость'*/}
-{/*    title='Аренда проекторов'*/}
-{/*    mainImg="/header/Projectors/main.jpg"*/}
-{/*/>*/}
+<MediumHeaderComponent
+    button_text='Рассчитать стоимость'
+    title='Аренда проекторов'
+    mainImg="/header/Projectors/main.jpg"
+    img_360='/header/Projectors/middleHeader_360.jpg'
+/>
 
             {size.width > 1200 ?
                 <Preferences
@@ -59,7 +60,7 @@ const Projectors = ({  }) => {
                         leftTitle=' Доступность и удобство'
                     /> : null
             }
-            {/*<Choose />*/}
+            <Choose />
             <Conditions />
             <Shop page={6} />
             {size.width > 1200 ? <Offer /> : null }

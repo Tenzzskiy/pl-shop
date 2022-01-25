@@ -17,11 +17,12 @@ const Index = ({  }) => {
     const size = useWindowSize();
     return (
         <Layout >
-{/*<MediumHeaderComponent*/}
-{/*    button_text='Рассчитать стоимость'*/}
-{/*    title='Аренда оборудования для дезинфекции'*/}
-{/*    mainImg="/header/Desinfection/main.jpg"*/}
-{/*/>*/}
+<MediumHeaderComponent
+    button_text='Рассчитать стоимость'
+    title='Аренда оборудования для дезинфекции'
+    mainImg="/header/Desinfection/main.jpg"
+    img_360='/header/Desinfection/middle_360.jpg'
+/>
 
             {size.width > 1200 ?
                 <Preferences

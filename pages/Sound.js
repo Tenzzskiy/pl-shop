@@ -17,6 +17,7 @@ const Sound = ({  }) => {
                 button_text='Рассчитать стоимость'
                 title='Звук, свет и окружение'
                 mainImg="/header/Sound/main.jpg"
+                img_360='/header/Sound/middle_360.jpg'
             />
 
 

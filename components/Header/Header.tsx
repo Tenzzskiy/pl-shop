@@ -47,7 +47,7 @@ const Header:FunctionComponent = ({ }) =>{
                             }
 
                             <div className={styles.busket}>
-                                {size.width > 1200 ?
+                                {size.width > 1000 ?
                                     <img src="/header/busket.svg" alt=""/> :
                                     <img src="/header/purpleBusket.svg" alt=""/>
                                 }

@@ -20,11 +20,12 @@ const Laptops = ({  }) => {
     const size = useWindowSize()
     return (
         <Layout >
-{/*<MediumHeaderComponent*/}
-{/*    button_text='Рассчитать стоимость'*/}
-{/*    title='Аренда ноутбуков'*/}
-{/*    mainImg="/header/Laptops/main.jpg"*/}
-{/*/>*/}
+<MediumHeaderComponent
+    button_text='Рассчитать стоимость'
+    title='Аренда ноутбуков'
+    mainImg="/header/Laptops/main.jpg"
+    img_360='/header/Laptops/middle_360.jpg'
+/>
 
             {size.width > 1200 ?
                 <Preferences

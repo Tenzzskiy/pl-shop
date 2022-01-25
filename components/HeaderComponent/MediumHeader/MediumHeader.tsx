@@ -1,5 +1,6 @@
 import React, {FunctionComponent, ReactNode} from "react";
 import styles from './MediumHeader.module.scss'
+import {useWindowSize} from "../../../Hooks/useWindowSize";
 
 interface MediumHeaderComponentProps{
     children?:ReactNode,
@@ -7,12 +8,12 @@ interface MediumHeaderComponentProps{
     button_text:string,
     mainImg:string
 }
-const MediumHeaderComponent:FunctionComponent = ( {title,button_text,mainImg }:MediumHeaderComponentProps):JSX.Element =>{
-
+const MediumHeaderComponent:FunctionComponent = ( {title,button_text,mainImg,img_360 }:MediumHeaderComponentProps):JSX.Element =>{
+const size = useWindowSize();
     return(
         <>
             <div className={styles.header_component}>
-                <img className={styles.background} src={mainImg} alt=""/>
+                <img className={styles.background} src={size.width < 720 ? img_360 : mainImg } alt=""/>
                 <div className={styles.container}>
 
                     <div className={styles.content}>

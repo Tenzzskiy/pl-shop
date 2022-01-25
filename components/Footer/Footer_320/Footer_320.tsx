@@ -37,35 +37,35 @@ export const Footer_320 = () =>{
                 <div className={styles.content2}>
                     <div className={styles.border}> </div>
                 <div className={styles.grid}>
-                <div>
                     <Link href='/' ><a className={cn(styles.a,
-                    )} > Главная</a></Link>
+                    )} ><div>
+                    Главная
 
-                </div>
+                </div></a></Link>
                     <span className={styles.border}> </span>
-                <div> <Link href='/Screens' ><a className={cn(styles.a,
-                )} > Светодиодные экраны</a></Link> </div>
+                    <Link href='/Screens' ><a className={cn(styles.a,
+                    )} > <div>  Светодиодные экраны </div></a></Link>
                     <span className={styles.border}> </span>
-                <div>   <Link href='/VideoWalls' ><a className={cn(styles.a,
-                )} > Видеостены</a></Link></div>
+                    <Link href='/VideoWalls' ><a className={cn(styles.a,
+                    )} ><div>    Видеостены</div></a></Link>
                     <span className={styles.border}> </span>
-                <div> <Link href='/TouchPanel' ><a className={cn(styles.a,
-                )} > Сенсорные тач-панели</a></Link> </div>
+                    <Link href='/TouchPanel' ><a className={cn(styles.a,
+                    )} > <div> Сенсорные тач-панели </div></a></Link>
                     <span className={styles.border}> </span>
-                <div> <Link href='/Projectors' ><a className={cn(styles.a,
-                )} > Проекторы</a></Link> </div>
+                    <Link href='/Projectors' ><a className={cn(styles.a,
+                    )} > <div> Проекторы </div></a></Link>
                     <span className={styles.border}> </span>
-                <div> <Link href='/Laptops' ><a className={cn(styles.a,
-                )} > Ноутбуки</a></Link> </div>
+                    <Link href='/Laptops' ><a className={cn(styles.a,
+                    )} ><div>  Ноутбуки </div></a></Link>
                     <span className={styles.border}> </span>
-                <div> <Link href='/Sound' ><a className={cn(styles.a,
-                )} > Звук, Свет и окружение</a></Link> </div>
+                    <Link href='/Sound' ><a className={cn(styles.a,
+                    )} ><div>  Звук, Свет и окружение</div></a></Link>
                     <span className={styles.border}> </span>
-                <div> <Link href='/Desinfection' ><a className={cn(styles.a,
-                )} > Дезинфекция</a></Link> </div>
+                    <Link href='/Desinfection' ><a className={cn(styles.a,
+                    )} ><div>  Дезинфекция </div></a></Link>
                     <span className={styles.border}> </span>
-                <div> <Link href='/News' ><a className={cn(styles.a,
-                )} > Наши новости</a></Link></div>
+                    <Link href='/News' ><a className={cn(styles.a,
+                    )} ><div>  Наши новости</div></a></Link>
                     <span className={styles.border}> </span>
                 </div>
                 </div>
