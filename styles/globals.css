@@ -40,7 +40,7 @@ body{
 .button-block--right{
     position: absolute;
     bottom: 57%;
-    right: -22px;
+    right: 40px;
     transition: all 0.9s;
 }
 .arrow--disabled{

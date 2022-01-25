@@ -16,7 +16,7 @@ export const Offer_768 = ({item1,item2,item3,item4,item5,item6,item7,item8,item9
     const [sliderRef, instanceRef] = useKeenSlider({
         initial: 0,
         slides: {
-            perView: size.width < 850 ? 2.1 : 3.1,
+            perView: size.width < 920 ? 2.2 : 3.1,
 
         },
         slideChanged(slider) {

@@ -3,6 +3,8 @@ import React, {FunctionComponent} from 'react'
 import {useWindowSize} from "../../Hooks/useWindowSize";
 import {Footer_768} from "./Footer_768/Footer_768";
 import {Footer_320} from "./Footer_320/Footer_320";
+import cn from "classnames";
+import Link from "next/link";
 
 const Footer:FunctionComponent = ({ }):JSX.Element =>{
     const [Data] = React.useState(new Date);
@@ -16,22 +18,52 @@ const Footer:FunctionComponent = ({ }):JSX.Element =>{
                        <div className={styles.content}>
                            <div className={styles.flex1}>
 
-                               <div className={styles.item1}><img src="/header/Logotype.svg" alt=""/> </div>
+                               <div className={styles.item1}>
+                                   <Link href='/' ><a className={cn(styles.a,
+                                   )} > <img src="/header/Logotype.svg" alt=""/></a></Link>
+
+                                    </div>
                                <div className={styles.item2}> info@arenda-plazm77.ru</div>
                                <div className={styles.item3}>+7 495 321-54-76 </div>
                                <div className={styles.item4}>109382, Москва, пр. Егорьевский, д.2а </div>
                            </div>
                            <div className={styles.flex2}>
-                               <div> Главная</div>
-                               <div>Светодиодные экраны </div>
-                               <div>Видеостены </div>
-                               <div>Сенсорные тач-панели </div>
+                               <div>
+                                   <Link href='/' ><a className={cn(styles.a,
+                                   )} > Главная</a></Link>
+
+
+                               </div>
+                               <div>
+                                   <Link href='/Screens' ><a className={cn(styles.a,
+                                   )} > Светодиодные экраны</a></Link>
+                                    </div>
+                               <div>
+                                   <Link href='/VideoWalls' ><a className={cn(styles.a,
+                                   )} > Видеостены</a></Link>
+                                  </div>
+                               <div>
+                                   <Link href='/TouchPanel' ><a className={cn(styles.a,
+                                   )} > Сенсорные тач-панели</a></Link>
+                                    </div>
                            </div>
                            <div className={styles.flex3}>
-                               <div> Проекторы</div>
-                               <div > Ноутбуки</div>
-                               <div > Звук, Свет и окружение</div>
-                               <div >Наши новости </div>
+                               <div>
+                                   <Link href='/Projectors' ><a className={cn(styles.a,
+                                   )} > Проекторы</a></Link>
+                                   </div>
+                               <div >
+                                   <Link href='/Laptops' ><a className={cn(styles.a,
+                                   )} > Ноутбуки</a></Link>
+                                   </div>
+                               <div >
+                                   <Link href='/Sound' ><a className={cn(styles.a,
+                                   )} > Звук, Свет и окружение</a></Link>
+                                   </div>
+                               <div >
+                                   <Link href='/News' ><a className={cn(styles.a,
+                                   )} > Наши новости</a></Link>
+                                    </div>
 
                            </div>
                            <div className={styles.flex4}>

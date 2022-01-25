@@ -101,7 +101,7 @@ export const Shop = ( { page,...props}) =>{
                         <button onClick={Else}> Показать еще</button>
                     </div> : null
                 }
-                {page === 3 && size.width < 1200 ?
+                {(page === 3 || page ===5 || page=== 4 || page=== 6  || page=== 8 || page=== 9)  && size.width < 1200  ?
                     <div className={buttonStyle}>
                         <button onClick={Else}> Показать еще</button>
                     </div> : null

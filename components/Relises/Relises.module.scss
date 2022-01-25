@@ -56,6 +56,7 @@
             color: white;
             opacity: 0;
             transition: all 0.5s;
+            text-align: center;
 
           span{
             padding: 10px;
@@ -68,6 +69,7 @@
         .box2{grid-area: box2; height: 216px;
           cursor: pointer;
           .box2_description{
+            text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -89,6 +91,7 @@
         .box3{grid-area: box3 ;
           cursor: pointer;
           .box3_description{
+            text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -114,6 +117,7 @@
         .box4{grid-area: box4;
           cursor: pointer;
           .box4_description{
+            text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -135,6 +139,7 @@
         .box5{grid-area: box5; height: 216px;
           cursor: pointer;
           .box5_description{
+            text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -149,6 +154,7 @@
 
             span{
               padding: 10px;
+              text-align: center;
             }
 
           }
