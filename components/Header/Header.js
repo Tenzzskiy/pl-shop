@@ -50,20 +50,23 @@ const Header = ({ }) =>{
 
                             <div className={styles.busket}>
                                 {size.width > 1000 ?
-                                    <>
-                                        <img src="/header/busket.svg" alt=""/>
-                                        {quantity > 0 ?
-                                            <div> {quantity}</div> : null
-                                        }
+                                        <div className={styles.icon}>
+                                            <img src="/header/busket.svg" alt=""/>
+                                            {quantity > 0 ?
+                                                <div> {quantity}</div> : null
+                                            }
 
-                                    </>
+                                        </div>
                                     :
-                                 <>
-                                     {quantity > 0 ?
-                                         <div> {quantity}</div> : null
-                                     }
-                                     <img src="/header/purpleBusket.svg" alt=""/>
-                                 </>
+
+                                     <div className={styles.icon}>
+                                         {quantity > 0 ?
+                                             <div> {quantity}</div> : null
+                                         }
+                                         <img src="/header/purpleBusket.svg" alt=""/>
+                                     </div>
+
+
                                 }
 
                                 {size.width > 1000 ?
