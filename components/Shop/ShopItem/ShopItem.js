@@ -2,14 +2,15 @@ import React, {FunctionComponent, ReactNode, useState} from "react";
 import styles from './ShopItem.module.scss'
 import {Selector} from "../../Select/Select";
 import {useDispatch} from "react-redux";
-import {setItemInCart} from '../../../redux/cart/reducer.js'
+import {setItemInCart, updateTotalPrice} from '../../../redux/cart/reducer.js'
 
 
-export const ShopItem = ( { data,children,price,count,img,title,...props}) =>{
+export const ShopItem = ( { data,children,price,count,img,title,id,...props}) =>{
     const dispatch = useDispatch();
 
     const handleClick =() =>{
-        dispatch(setItemInCart(data))
+        dispatch(setItemInCart({img,changedPrice,id,title}))
+        dispatch(updateTotalPrice(changedPrice))
     }
     const [changedPrice,setChangedPrice] = useState(Number(price))
     return(

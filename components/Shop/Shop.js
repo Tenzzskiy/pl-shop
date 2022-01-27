@@ -7,20 +7,23 @@ import {useWindowSize} from "../../Hooks/useWindowSize";
 
 export const Shop = ( { page,...props}) =>{
     const size = useWindowSize();
-    const [step,setStep] = useState(size.width >1200 ? 12 : 6 );
-    const [step_2,setStep_2] = useState(size.width >1200 ? 12 : 6 );
+    const [step,setStep] = useState(12);
+
+    const [step_2,setStep_2] = useState( 6 );
     const [buttonStyle,setButtonStyle] = useState(styles.button)
 
-       const items =  data.mainCatalogue.slice(0,step).map(elem  =>
+       const items =  data.mainCatalogue.slice(0,size.width > 1200 ? step : step_2).map(elem  =>
            <ShopItem
+               id={elem.id}
                data={elem}
                count={1}
                key={elem.id}
                img={elem.img}
                price={elem.price}
                title={elem.name}/> )
-    const Screens =  data.ledScreenCatalogue.slice(0,step).map(elem  =>
+    const Screens =  data.ledScreenCatalogue.slice(0,size.width > 1200 ? step : step_2).map(elem  =>
         <ShopItem
+            id={elem.id}
             data={elem}
             count={1}
             key={elem.id}
@@ -28,24 +31,27 @@ export const Shop = ( { page,...props}) =>{
             price={elem.price}
             title={elem.name}/> )
 
-    const VideoWalls =  data.videoWallCatalogue.slice(0,step).map(elem  =>
+    const VideoWalls =  data.videoWallCatalogue.slice(0,size.width > 1200 ? step : step_2).map(elem  =>
         <ShopItem
+            id={elem.id}
             data={elem}
             count={1}
             key={elem.id}
             img={elem.img}
             price={elem.price}
             title={elem.name}/> )
-    const TouchScreen =  data.touchScreenCatalogue.slice(0,step).map(elem  =>
+    const TouchScreen =  data.touchScreenCatalogue.slice(0,size.width > 1200 ? step : step_2).map(elem  =>
         <ShopItem
+            id={elem.id}
             data={elem}
             count={1}
             key={elem.id}
             img={elem.img}
             price={elem.price}
             title={elem.name}/> )
-    const Projectors =  data.projectorsCatalogue.slice(0,step_2).map(elem  =>
+    const Projectors =  data.projectorsCatalogue.slice(0,size.width > 1200 ? step : step_2).map(elem  =>
         <ShopItem
+            id={elem.id}
             data={elem}
             count={1}
             key={elem.id}
@@ -54,22 +60,25 @@ export const Shop = ( { page,...props}) =>{
             title={elem.name}/> )
     const Laptops =  data.laptopsCatalogue.map(elem  =>
         <ShopItem
+            id={elem.id}
             data={elem}
             count={1}
             key={elem.id}
             img={elem.img}
             price={elem.price}
             title={elem.name}/> )
-    const Desinfection =  data.desinfectionCatalogue.map(elem  =>
+    const Desinfection =  data.desinfectionCatalogue.slice(0,size.width > 1200 ? step : step_2).map(elem  =>
         <ShopItem
+            id={elem.id}
             data={elem}
             count={1}
             key={elem.id}
             img={elem.img}
             price={elem.price}
             title={elem.name}/> )
-    const Sound =  data.otherCatalogue.map(elem  =>
+    const Sound =  data.otherCatalogue.slice(0,size.width > 1200 ? step : step_2).map(elem  =>
         <ShopItem
+            id={elem.id}
             data={elem}
             count={1}
             key={elem.id}
@@ -87,6 +96,7 @@ export const Shop = ( { page,...props}) =>{
         const Else_2 = () =>{
         setStep_2(step_2+step_2);
             setButtonStyle(styles.button_none)
+
     }
     return(
         <>
@@ -114,6 +124,31 @@ export const Shop = ( { page,...props}) =>{
                     </div> : null
                 }
                 {(page === 6 )  && size.width < 1200  ?
+                    <div className={buttonStyle}>
+                        <button onClick={Else_2}> Показать еще</button>
+                    </div> : null
+
+                } {(page === 3 )  && size.width < 1200  ?
+                    <div className={buttonStyle}>
+                        <button onClick={Else_2}> Показать еще</button>
+                    </div> : null
+
+                } {(page === 4 )  && size.width < 1200  ?
+                    <div className={buttonStyle}>
+                        <button onClick={Else_2}> Показать еще</button>
+                    </div> : null
+
+                } {(page === 5 )  && size.width < 1200  ?
+                    <div className={buttonStyle}>
+                        <button onClick={Else_2}> Показать еще</button>
+                    </div> : null
+
+                } {(page === 8 )  && size.width < 1200  ?
+                    <div className={buttonStyle}>
+                        <button onClick={Else_2}> Показать еще</button>
+                    </div> : null
+
+                }{(page === 9 )  && size.width < 1200  ?
                     <div className={buttonStyle}>
                         <button onClick={Else_2}> Показать еще</button>
                     </div> : null
