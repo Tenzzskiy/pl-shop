@@ -2,7 +2,7 @@ import styles from './../styles/index.module.scss'
 import Layout from "../components/Layout/Layout";
 import Releases from "../components/Relises/Relises";
 import Seo from "../components/SEO/SEO";
-import React from "react";
+import React, {useState} from "react";
 import Sale from "../components/Sale/Sale";
 import HeaderComponent from "../components/HeaderComponent/HeaderComponent";
 import {Partners} from "../components/Partners/Partners";
@@ -24,13 +24,16 @@ import data from "../components/Shop/cart_arenda-plasm77.ru.json";
 import {OfferCard} from "../components/Offer/OfferCard/OfferCard";
 import {Offer_360} from "../components/Offer/OfferCard/Offer_360";
 import {Releases_768} from "../components/Relises/Releases_768/Releases_768";
-import {Provider} from "react-redux";
+import {Provider, useSelector} from "react-redux";
 import {store} from "../redux";
+import {Modal} from "../components/Modal/Modal";
+import {initialState} from "../redux/cart/reducer";
 
 
 const Home = ({  }) => {
-    const size = useWindowSize();
 
+    const size = useWindowSize();
+    const [modalActive,setModalActive] = useState(false)
   return (
       <Provider store={store} >
     <Layout>
@@ -107,12 +110,12 @@ const Home = ({  }) => {
 
         <Partners />
         <Conditions />
-        <Shop page={1} />
+        <Shop page={1} active={modalActive} setActive={setModalActive} />
 
 
-        {size.width > 1200 ? <Offer /> : null }
-        {size.width > 720 && size.width<1200 ? <Offer_768  /> : null }
-        {size.width < 720  ? <Offer_360
+        {size.width > 1200 ? <Offer active={modalActive} setActive={setModalActive} /> : null }
+        {size.width > 720 && size.width<1200 ? <Offer_768 active={modalActive} setActive={setModalActive} /> : null }
+        {size.width < 720  ? <Offer_360 active={modalActive} setActive={setModalActive}
                                                            /> : null }
         <Cleaning />
 <Sale />
@@ -176,6 +179,7 @@ const Home = ({  }) => {
 
 
     </Layout>
+          <Modal active={modalActive} setActive={setModalActive} />
       </Provider>
   )
 }

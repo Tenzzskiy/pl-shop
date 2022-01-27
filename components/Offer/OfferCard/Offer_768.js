@@ -7,7 +7,7 @@ import {useKeenSlider} from "keen-slider/react";
 import {Arrow} from "../Offer";
 import styles2 from './Offer_768.module.scss'
 import cs from 'classnames'
-export const Offer_768 = ({item1,item2,item3,item4,item5,item6,item7,item8,item9,item10} ) =>{
+export const Offer_768 = ({active,setActive} ) =>{
     const size = useWindowSize();
 
     const [perView,SetPerView] = useState()
@@ -29,7 +29,7 @@ export const Offer_768 = ({item1,item2,item3,item4,item5,item6,item7,item8,item9
     const items =  data.mainAdditionals.map(elem   =>
         <div className="keen-slider__slide number-slide2" key={elem.id}>
             <div className={styles.flex}>
-                <OfferCard price={elem.price} title={elem.name} img={elem.img}  />
+                <OfferCard price={elem.price} title={elem.name} img={elem.img} active={active} setActive={setActive}  />
             </div>
         </div>
 

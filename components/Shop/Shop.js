@@ -5,7 +5,7 @@ import data from './cart_arenda-plasm77.ru.json'
 import {useWindowSize} from "../../Hooks/useWindowSize";
 
 
-export const Shop = ( { page,...props}) =>{
+export const Shop = ( { page,active,setActive,...props}) =>{
     const size = useWindowSize();
     const [step,setStep] = useState(12);
 
@@ -14,6 +14,7 @@ export const Shop = ( { page,...props}) =>{
 
        const items =  data.mainCatalogue.slice(0,size.width > 1200 ? step : step_2).map(elem  =>
            <ShopItem
+               active={active} setActive={setActive}
                id={elem.id}
                data={elem}
                count={1}
@@ -23,6 +24,7 @@ export const Shop = ( { page,...props}) =>{
                title={elem.name}/> )
     const Screens =  data.ledScreenCatalogue.slice(0,size.width > 1200 ? step : step_2).map(elem  =>
         <ShopItem
+            active={active} setActive={setActive}
             id={elem.id}
             data={elem}
             count={1}
@@ -33,6 +35,7 @@ export const Shop = ( { page,...props}) =>{
 
     const VideoWalls =  data.videoWallCatalogue.slice(0,size.width > 1200 ? step : step_2).map(elem  =>
         <ShopItem
+            active={active} setActive={setActive}
             id={elem.id}
             data={elem}
             count={1}
@@ -42,6 +45,7 @@ export const Shop = ( { page,...props}) =>{
             title={elem.name}/> )
     const TouchScreen =  data.touchScreenCatalogue.slice(0,size.width > 1200 ? step : step_2).map(elem  =>
         <ShopItem
+            active={active} setActive={setActive}
             id={elem.id}
             data={elem}
             count={1}
@@ -51,6 +55,7 @@ export const Shop = ( { page,...props}) =>{
             title={elem.name}/> )
     const Projectors =  data.projectorsCatalogue.slice(0,size.width > 1200 ? step : step_2).map(elem  =>
         <ShopItem
+            active={active} setActive={setActive}
             id={elem.id}
             data={elem}
             count={1}
@@ -60,6 +65,7 @@ export const Shop = ( { page,...props}) =>{
             title={elem.name}/> )
     const Laptops =  data.laptopsCatalogue.map(elem  =>
         <ShopItem
+            active={active} setActive={setActive}
             id={elem.id}
             data={elem}
             count={1}
@@ -69,6 +75,7 @@ export const Shop = ( { page,...props}) =>{
             title={elem.name}/> )
     const Desinfection =  data.desinfectionCatalogue.slice(0,size.width > 1200 ? step : step_2).map(elem  =>
         <ShopItem
+            active={active} setActive={setActive}
             id={elem.id}
             data={elem}
             count={1}
@@ -78,6 +85,7 @@ export const Shop = ( { page,...props}) =>{
             title={elem.name}/> )
     const Sound =  data.otherCatalogue.slice(0,size.width > 1200 ? step : step_2).map(elem  =>
         <ShopItem
+            active={active} setActive={setActive}
             id={elem.id}
             data={elem}
             count={1}

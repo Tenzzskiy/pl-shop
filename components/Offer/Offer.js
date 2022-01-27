@@ -9,7 +9,7 @@ import {useWindowSize} from "../../Hooks/useWindowSize";
 import cs from 'classnames'
 
 
-export const Offer = ({ }) =>{
+export const Offer = ({active,setActive }) =>{
     // const [currentSlide, setCurrentSlide] = React.useState(0);
     // const [loaded, setLoaded] = useState(false);
     // const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
@@ -51,7 +51,7 @@ export const Offer = ({ }) =>{
     const items =  data.mainAdditionals.map(elem  =>
         <div className="keen-slider__slide number-slide2" key={elem.id}>
             <div className={styles.flex} >
-                <OfferCard price={elem.price} title={elem.name} img={elem.img} />
+                <OfferCard price={elem.price} title={elem.name} img={elem.img} data={elem} id={elem.id} active={active} setActive={setActive}/>
             </div>
         </div>
 
@@ -95,7 +95,7 @@ export const Offer = ({ }) =>{
                     {/*    </>*/}
                     {/*)}*/}
 
-                    <div ref={sliderRef} className="keen-slider">
+                    <div ref={sliderRef} className={cs("keen-slider",styles.Slider_keen)}>
                         {items}
 
 

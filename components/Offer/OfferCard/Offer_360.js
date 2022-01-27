@@ -8,7 +8,7 @@ import {useKeenSlider} from "keen-slider/react";
 import styles2 from './Offer_360.module.scss'
 import cs from 'classnames'
 
-export const Offer_360 = ( ) =>{
+export const Offer_360 = ({active,setActive} ) =>{
     const size = useWindowSize();
 
 
@@ -31,7 +31,7 @@ export const Offer_360 = ( ) =>{
     const items =  data.mainAdditionals.map(elem  =>
         <div className="keen-slider__slide number-slide2" key={elem.id}>
             <div className={styles.flex} >
-                <OfferCard price={elem.price} title={elem.name} img={elem.img} />
+                <OfferCard active={active} setActive={setActive} price={elem.price} title={elem.name} img={elem.img} />
             </div>
         </div>
 

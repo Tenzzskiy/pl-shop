@@ -21,3 +21,4 @@ const cartSlice = createSlice({
 
 export const {setItemInCart,deleteItemFromCart,updateTotalPrice} = cartSlice.actions;
 export default cartSlice.reducer;
+export const initialState = cartSlice.getInitialState;

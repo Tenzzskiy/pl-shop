@@ -44,7 +44,7 @@
 }
 @media (max-width: 99999px){
   .button{
-    padding-bottom: 40px;
+    padding: 0 32px 40px 32px;
 
 
     button{
@@ -65,7 +65,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     padding-bottom: 40px;
-    margin: 0 16px;
+    margin: 0 32px;
   }
   .container{
     max-width: 1280px;

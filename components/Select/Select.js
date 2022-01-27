@@ -3,7 +3,7 @@ import styles from './Select.module.scss'
 import cn from 'classnames'
 
 
-export const Selector = ( {changedPrice,setChangedPrice,price } ) =>{
+export const Selector = ( {changedPrice,setChangedPrice,price,setTime} ) =>{
     const [selectorStatus,setSelectorStatus] = useState(false)
     const [example,setExample] = useState('1 сутки');
     function roundHundred(value){
@@ -29,6 +29,7 @@ export const Selector = ( {changedPrice,setChangedPrice,price } ) =>{
                         setExample('1 сутки')
                         setSelectorStatus(false)
                         setChangedPrice(a)
+                        setTime('1 сутки');
                     }}>
                         1 сутки
                     </button>
@@ -36,6 +37,7 @@ export const Selector = ( {changedPrice,setChangedPrice,price } ) =>{
                         setExample('2 суток')
                         setSelectorStatus(false)
                         setChangedPrice(b)
+                        setTime('2 суток');
                     }}>
                         2 суток
                     </button>
@@ -43,6 +45,7 @@ export const Selector = ( {changedPrice,setChangedPrice,price } ) =>{
                         setExample('3 суток')
                         setSelectorStatus(false)
                         setChangedPrice(c)
+                        setTime('3 суток');
                     }}>
                         3 суток
                     </button>
@@ -50,6 +53,7 @@ export const Selector = ( {changedPrice,setChangedPrice,price } ) =>{
                         setExample('4 суток')
                         setSelectorStatus(false)
                         setChangedPrice(d )
+                        setTime('4 суток');
                     }}>
                         4 суток
                     </button>
@@ -57,6 +61,7 @@ export const Selector = ( {changedPrice,setChangedPrice,price } ) =>{
                         setExample('5 суток')
                         setSelectorStatus(false)
                         setChangedPrice(e )
+                        setTime('5 суток');
                     }}>
                         5 суток
                     </button>

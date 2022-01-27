@@ -58,6 +58,11 @@
       .price{
         width: 80px;
         text-align: right;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 130%;
+        color: var(--brand-color);
       }
       .busket{
         width:50px;
@@ -67,6 +72,11 @@
         justify-content: center;
         align-items: center;
         margin-left: 10px;
+        border-radius: 2px;
+        img{
+          width: 18px;
+          height: 18px;
+        }
       }
     }
   }
