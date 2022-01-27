@@ -24,11 +24,15 @@ import data from "../components/Shop/cart_arenda-plasm77.ru.json";
 import {OfferCard} from "../components/Offer/OfferCard/OfferCard";
 import {Offer_360} from "../components/Offer/OfferCard/Offer_360";
 import {Releases_768} from "../components/Relises/Releases_768/Releases_768";
+import {Provider} from "react-redux";
+import {store} from "../redux";
+
 
 const Home = ({  }) => {
     const size = useWindowSize();
 
   return (
+      <Provider store={store} >
     <Layout>
         <MainHeaderComponent />
         {size.width > 1200 ?
@@ -79,6 +83,7 @@ const Home = ({  }) => {
         {
             size.width <720 ?
                 <Preferences_360
+                    count={4}
                     mainTitle='Ваши выгоды с PLAZMA77'
                     leftImg="/Preferences/1.png"
                     rightImg="/Preferences/2.png"
@@ -171,6 +176,7 @@ const Home = ({  }) => {
 
 
     </Layout>
+      </Provider>
   )
 }
 

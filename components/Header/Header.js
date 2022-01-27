@@ -1,17 +1,19 @@
 import styles from './Header.module.scss'
-import React, {FunctionComponent, useState} from "react";
+import React, { useState} from "react";
 import Link from "next/link";
 import {useRouter} from "next/router";
 import cn from 'classnames'
 import {useWindowSize} from './../../Hooks/useWindowSize.js'
+import {useSelector} from "react-redux";
 
-
-const Header:FunctionComponent = ({ }) =>{
+const Header = ({ }) =>{
+    const items = useSelector(state => state.cart.itemsInCart);
+    const totalPrice = items.reduce((acc,data) =>acc+=Number(data.price) ,0)
     const route = useRouter()
     const [scroll, setScroll] = React.useState(0);
     const [lastScroll,setLastScroll] = useState(1)
     const size = useWindowSize();
-
+    const quantity = items.length;
     const handleScroll = () => {
         setScroll(window.scrollY);
         setLastScroll(scroll)
@@ -48,7 +50,14 @@ const Header:FunctionComponent = ({ }) =>{
 
                             <div className={styles.busket}>
                                 {size.width > 1000 ?
-                                    <img src="/header/busket.svg" alt=""/> :
+                                    <>
+                                        <img src="/header/busket.svg" alt=""/>
+                                        {quantity > 0 ?
+                                            <div> {quantity}</div> : null
+                                        }
+
+                                    </>
+                                    :
                                     <img src="/header/purpleBusket.svg" alt=""/>
                                 }
 

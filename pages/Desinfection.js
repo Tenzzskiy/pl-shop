@@ -12,10 +12,13 @@ import {Preferences_768} from "../components/Preferences/Right/right";
 import {Preferences_360} from "../components/Preferences/Preferences_360/Preferences_360";
 import {useWindowSize} from "../Hooks/useWindowSize";
 import {Releases_768} from "../components/Relises/Releases_768/Releases_768";
+import {Provider} from "react-redux";
+import {store} from "../redux";
 
 const Index = ({  }) => {
     const size = useWindowSize();
     return (
+        <Provider store={store} >
         <Layout >
 <MediumHeaderComponent
     button_text='Рассчитать стоимость'
@@ -133,6 +136,7 @@ const Index = ({  }) => {
 
             {/*/>*/}
         </Layout>
+        </Provider>
     )
 }
 

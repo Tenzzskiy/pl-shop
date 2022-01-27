@@ -16,10 +16,13 @@ import {Offer} from "../components/Offer/Offer";
 import {Offer_768} from "../components/Offer/OfferCard/Offer_768";
 import {Offer_360} from "../components/Offer/OfferCard/Offer_360";
 import {Releases_768} from "../components/Relises/Releases_768/Releases_768";
+import {Provider} from "react-redux";
+import {store} from "../redux";
 
 const VideoWalls = ({  }) => {
     const size = useWindowSize();
     return (
+    <Provider store={store}>
         <Layout >
 
             <HeaderComponent
@@ -145,6 +148,7 @@ const VideoWalls = ({  }) => {
             {/*    кадров, соответствующей насущным потребностям.'*/}
             {/*/>*/}
         </Layout>
+    </Provider>
     )
 }
 

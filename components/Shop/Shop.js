@@ -13,7 +13,7 @@ export const Shop = ( { page,...props}) =>{
 
        const items =  data.mainCatalogue.slice(0,step).map(elem  =>
            <ShopItem
-
+               data={elem}
                count={1}
                key={elem.id}
                img={elem.img}
@@ -21,6 +21,7 @@ export const Shop = ( { page,...props}) =>{
                title={elem.name}/> )
     const Screens =  data.ledScreenCatalogue.slice(0,step).map(elem  =>
         <ShopItem
+            data={elem}
             count={1}
             key={elem.id}
             img={elem.img}
@@ -29,6 +30,7 @@ export const Shop = ( { page,...props}) =>{
 
     const VideoWalls =  data.videoWallCatalogue.slice(0,step).map(elem  =>
         <ShopItem
+            data={elem}
             count={1}
             key={elem.id}
             img={elem.img}
@@ -36,6 +38,7 @@ export const Shop = ( { page,...props}) =>{
             title={elem.name}/> )
     const TouchScreen =  data.touchScreenCatalogue.slice(0,step).map(elem  =>
         <ShopItem
+            data={elem}
             count={1}
             key={elem.id}
             img={elem.img}
@@ -43,6 +46,7 @@ export const Shop = ( { page,...props}) =>{
             title={elem.name}/> )
     const Projectors =  data.projectorsCatalogue.slice(0,step_2).map(elem  =>
         <ShopItem
+            data={elem}
             count={1}
             key={elem.id}
             img={elem.img}
@@ -50,6 +54,7 @@ export const Shop = ( { page,...props}) =>{
             title={elem.name}/> )
     const Laptops =  data.laptopsCatalogue.map(elem  =>
         <ShopItem
+            data={elem}
             count={1}
             key={elem.id}
             img={elem.img}
@@ -57,6 +62,7 @@ export const Shop = ( { page,...props}) =>{
             title={elem.name}/> )
     const Desinfection =  data.desinfectionCatalogue.map(elem  =>
         <ShopItem
+            data={elem}
             count={1}
             key={elem.id}
             img={elem.img}
@@ -64,6 +70,7 @@ export const Shop = ( { page,...props}) =>{
             title={elem.name}/> )
     const Sound =  data.otherCatalogue.map(elem  =>
         <ShopItem
+            data={elem}
             count={1}
             key={elem.id}
             img={elem.img}

@@ -1,16 +1,23 @@
 import React, {FunctionComponent, ReactNode, useState} from "react";
 import styles from './ShopItem.module.scss'
 import {Selector} from "../../Select/Select";
+import {useDispatch} from "react-redux";
+import {setItemInCart} from '../../../redux/cart/reducer.js'
 
 interface ShopItemProps{
     children?:ReactNode,
     price?:number,
     count?:number,
     img?:string,
-    title?:string
+    title?:string,
+    data?:object
 }
-export const ShopItem:FunctionComponent = ( { children,price,count,img,title,...props} : ShopItemProps) =>{
+export const ShopItem:FunctionComponent = ( { data,children,price,count,img,title,...props} : ShopItemProps) =>{
+    const dispatch = useDispatch();
+    const handleClick =() =>{
 
+        dispatch(setItemInCart(data))
+    }
     return(
         <>
             <div className={styles.container}>
@@ -41,7 +48,7 @@ export const ShopItem:FunctionComponent = ( { children,price,count,img,title,...
                     <div className={styles.card_footer}>
                         <Selector />
                         <span> {price}₽ </span>
-                        <div className={styles.bucket}>
+                        <div className={styles.bucket} onClick={handleClick}>
                             <img src="/ShopItem/busket.svg" alt=""/>
                         </div>
                     </div>

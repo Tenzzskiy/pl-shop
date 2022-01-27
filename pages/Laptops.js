@@ -16,9 +16,13 @@ import {Offer} from "../components/Offer/Offer";
 import {Offer_768} from "../components/Offer/OfferCard/Offer_768";
 import {Offer_360} from "../components/Offer/OfferCard/Offer_360";
 import {Releases_768} from "../components/Relises/Releases_768/Releases_768";
+import {store} from "../redux";
+import {Provider} from "react-redux";
+
 const Laptops = ({  }) => {
     const size = useWindowSize()
     return (
+        <Provider store={store} >
         <Layout >
 <MediumHeaderComponent
     button_text='Рассчитать стоимость'
@@ -156,6 +160,7 @@ const Laptops = ({  }) => {
             {/*соответствующей насущным потребностям. '*/}
             {/*/>*/}
         </Layout>
+            </Provider>
     )
 }
 
