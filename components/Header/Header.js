@@ -58,7 +58,12 @@ const Header = ({ }) =>{
 
                                     </>
                                     :
-                                    <img src="/header/purpleBusket.svg" alt=""/>
+                                 <>
+                                     {quantity > 0 ?
+                                         <div> {quantity}</div> : null
+                                     }
+                                     <img src="/header/purpleBusket.svg" alt=""/>
+                                 </>
                                 }
 
                                 {size.width > 1000 ?
