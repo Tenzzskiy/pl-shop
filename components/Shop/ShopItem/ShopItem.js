@@ -4,20 +4,14 @@ import {Selector} from "../../Select/Select";
 import {useDispatch} from "react-redux";
 import {setItemInCart} from '../../../redux/cart/reducer.js'
 
-interface ShopItemProps{
-    children?:ReactNode,
-    price?:number,
-    count?:number,
-    img?:string,
-    title?:string,
-    data?:object
-}
-export const ShopItem:FunctionComponent = ( { data,children,price,count,img,title,...props} : ShopItemProps) =>{
-    const dispatch = useDispatch();
-    const handleClick =() =>{
 
+export const ShopItem = ( { data,children,price,count,img,title,...props}) =>{
+    const dispatch = useDispatch();
+
+    const handleClick =() =>{
         dispatch(setItemInCart(data))
     }
+    const [changedPrice,setChangedPrice] = useState(Number(price))
     return(
         <>
             <div className={styles.container}>
@@ -46,8 +40,8 @@ export const ShopItem:FunctionComponent = ( { data,children,price,count,img,titl
                     }
 
                     <div className={styles.card_footer}>
-                        <Selector />
-                        <span> {price}₽ </span>
+                        <Selector changedPrice={changedPrice} setChangedPrice={setChangedPrice} price={price}/>
+                        <span> {changedPrice}₽ </span>
                         <div className={styles.bucket} onClick={handleClick}>
                             <img src="/ShopItem/busket.svg" alt=""/>
                         </div>
