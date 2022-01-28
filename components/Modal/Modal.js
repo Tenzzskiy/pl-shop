@@ -21,7 +21,7 @@ export const Modal = ( {active,setActive}) =>{
     const [sliderRef, instanceRef] = useKeenSlider({
         initial: 0,
         slides: {
-            perView: 3,
+            perView: size.width < 720 ? 1.5 : 3,
             spacing:35,
         },
         slideChanged(slider) {
@@ -60,8 +60,16 @@ export const Modal = ( {active,setActive}) =>{
                                     {itemsCount} товаров, {totalPrice}₽
                                 </div>
                             </div>
-                            <div className={styles.back} onClick={() => setActive(false)}> Назад к покупкам</div>
-                            <div className={styles.button}> <button> Перейти в корзину</button> </div>
+                            {size.width > 720 ? <>
+                                <div className={styles.back} onClick={() => setActive(false)}> Назад к покупкам</div>
+                                <div className={styles.button}> <button> Перейти в корзину</button> </div>
+                            </> :
+                                <div className={styles.button_flex}>
+                                    <div className={styles.back} onClick={() => setActive(false)}> Назад к покупкам</div>
+                                    <div className={styles.button}> <button> Перейти в корзину</button> </div>
+                                </div>
+
+                            }
                         </div>
                     </div>
 
@@ -71,16 +79,29 @@ export const Modal = ( {active,setActive}) =>{
                             <picture>
                                 <img src={quantity.img} alt=""/>
                             </picture>
+                            {size.width < 720 ?
+                                <div>
+                                    <div className={styles.flex}>
+
+                                        <span className={styles.time}> {quantity.time}:</span>
+                                        <span className={styles.price} > {quantity.changedPrice}₽</span>
+                                    </div>
+                                </div>
+                          : null}
                         </div>
                         <div className={styles.item_content}>
                             <span className={styles.item_title}>{quantity.title} </span>
-                            <div className={styles.firstDescription}>1 </div>
-                            <div className={styles.lastDescription}>2 </div>
-                            <div className={styles.flex}>
+                            {size.width > 720 ?<>
+                                <div className={styles.firstDescription}>1 </div>
+                                <div className={styles.lastDescription}>2 </div>
+                            </> : null}
+                            {size.width > 720 ? <>
+                                <div className={styles.flex}>
 
-                                <span className={styles.time}> {quantity.time}:</span>
-                                <span className={styles.price} > {quantity.changedPrice}₽</span>
-                            </div>
+                                    <span className={styles.time}> {quantity.time}:</span>
+                                    <span className={styles.price} > {quantity.changedPrice}₽</span>
+                                </div>
+                            </> : null}
 
                         </div>
                     </div>
@@ -97,27 +118,53 @@ export const Modal = ( {active,setActive}) =>{
 
                             </div>
 
-                            {loaded && instanceRef.current && (
-                                <>
-                                    <Arrow
-                                        left
-                                        onClick={(e) =>
-                                            e.stopPropagation() || instanceRef.current?.prev()
-                                        }
-                                        disabled={currentSlide === 0}
-                                    />
+                            {size.width > 720 ?
+                                loaded && instanceRef.current && (
+                                    <>
+                                        <Arrow
+                                            left
+                                            onClick={(e) =>
+                                                e.stopPropagation() || instanceRef.current?.prev()
+                                            }
+                                            disabled={currentSlide === 0}
+                                        />
 
-                                    <Arrow
-                                        onClick={(e) =>
-                                            e.stopPropagation() || instanceRef.current?.next()
-                                        }
-                                        disabled={
-                                            currentSlide ===
-                                            instanceRef.current.track.details.slides.length - 3
-                                        }
-                                    />
-                                </>
-                            )}
+                                        <Arrow
+                                            onClick={(e) =>
+                                                e.stopPropagation() || instanceRef.current?.next()
+                                            }
+                                            disabled={
+                                                currentSlide ===
+                                                instanceRef.current.track.details.slides.length - 3
+                                            }
+                                        />
+                                    </>
+                                ) : null
+
+
+                            }
+                            {size.width < 720 ?
+                                loaded && instanceRef.current && (
+                                    <div className={styles.dots}>
+
+                                        {[
+                                            ...Array(instanceRef.current.track.details.slides.length ).keys()
+                                        ].map((idx) => {
+                                            return (
+                                                <button
+                                                    key={idx}
+                                                    onClick={() => {
+                                                        instanceRef.current?.moveToIdx(idx);
+                                                    }}
+                                                    className={"dot" + (currentSlide === idx ? " active" : "")}
+                                                > </button>
+                                            );
+                                        })}
+
+                                    </div>
+                                ) : null
+
+                            }
 
                         </div>
                     </div>
