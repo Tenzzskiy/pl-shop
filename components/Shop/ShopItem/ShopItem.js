@@ -23,7 +23,7 @@ export const ShopItem = ( { data,children,price,count,img,title,active,setActive
             <div className={styles.content}>
                 <div className={styles.img}>
                     <picture>
-                        <img src={img} alt=""/>
+                        <img src={img} alt="" width='251' height='188'/>
                     </picture>
                 </div>
                 <div className={styles.flex}>

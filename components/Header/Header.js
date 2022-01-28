@@ -40,13 +40,13 @@ const Header = ({ }) =>{
                                     </picture>
                                 </div> : null
                             }
-                            {
+                           <Link href="/"><a> {
                                 size.width > 1000 ? <div className={styles.logo}>
                                     <img src="/header/Logotype.svg" alt=""/>
                                 </div> : <div className={styles.logo}>
                                     <img src="/header/Logotype_768.svg" alt=""/>
                                 </div>
-                            }
+                            }</a></Link>
 
 
 
