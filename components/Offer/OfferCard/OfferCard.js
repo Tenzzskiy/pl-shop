@@ -12,7 +12,7 @@ export const OfferCard= ( {price,title,img,data,id,active,setActive,...props }) 
     const [time, setTime] = useState('1 сутки');
     const handleClick =() =>{
         dispatch(setItemInCart({img,changedPrice,id,title,time}))
-        dispatch(updateTotalPrice(changedPrice))
+        dispatch(updateTotalPrice(Number(changedPrice)))
         setActive(true)
     }
 

@@ -1,0 +1,56 @@
+.container{
+  max-width: 210px;
+  max-height: 263px;
+  border: 1px solid #CFCFDC;
+  box-shadow: 2px 4px 4px rgba(87, 87, 134, 0.2);
+  background: white;
+  .content{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+    .img{
+      max-width: 100%;
+      max-height: 127px;
+      margin-bottom: 18px;
+      img{
+        width: 100%;
+        max-height: 127px;
+      }
+    }
+    .title{
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 130%;
+      color: var(--description);
+      height: 38px;
+      margin-bottom: 30px;
+    }
+    .footer{
+    display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .price{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 130%;
+        color: var(--brand-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .busket{
+      width: 56px;
+        height: 33px;
+        background: var(--brand-color);
+        border-radius: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+    }
+  }
+}

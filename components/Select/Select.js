@@ -6,7 +6,7 @@ import cn from 'classnames'
 export const Selector = ( {changedPrice,setChangedPrice,price,setTime} ) =>{
     const [selectorStatus,setSelectorStatus] = useState(false)
     const [example,setExample] = useState('1 сутки');
-    function roundHundred(value){
+     const roundHundred = (value) =>{
         return Math.round(value/100)*100
     }
     const [a] = useState(price)

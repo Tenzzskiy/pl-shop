@@ -94,10 +94,13 @@ export const Shop = ( { page,active,setActive,...props}) =>{
             price={elem.price}
             title={elem.name}/> )
         const Else = () =>{
-           setStep(step + step)
-            if ( step >= 12 ){
+
+            if ( step_2 <= 24 ){
+                setStep_2(step_2+step_2);
+            } else {
                 setButtonStyle(styles.button_none)
             }
+
 
 
         }

@@ -11,7 +11,7 @@ export const ShopItem = ( { data,children,price,count,img,title,id,active,setAct
     const [changedPrice,setChangedPrice] = useState(Number(price))
     const handleClick =() =>{
         dispatch(setItemInCart({img,changedPrice,id,title,time}))
-        dispatch(updateTotalPrice(changedPrice))
+        dispatch(updateTotalPrice(Number(changedPrice)))
         setActive(true);
     }
 

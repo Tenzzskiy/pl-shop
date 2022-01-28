@@ -1,7 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import styles from './Modal.module.scss'
 import cs from 'classnames'
 import {useSelector} from "react-redux";
+import {Arrow, Offer} from "../Offer/Offer";
+import {useWindowSize} from "../../Hooks/useWindowSize";
+import {useKeenSlider} from "keen-slider/react";
+import data from "../Shop/cart_arenda-plasm77.ru.json";
+import {OfferCard} from "../Offer/OfferCard/OfferCard";
+import {ModalCard} from "./ModalCard/ModalCard";
 
 
 export const Modal = ( {active,setActive}) =>{
@@ -9,6 +15,30 @@ export const Modal = ( {active,setActive}) =>{
     const totalPrice = useSelector(state => state.cart.totalPrice)
     const itemsCount = items.length;
     const quantity = items[items.length-1];
+    const size = useWindowSize();
+    const [currentSlide, setCurrentSlide] = React.useState(0);
+    const [loaded, setLoaded] = useState(false);
+    const [sliderRef, instanceRef] = useKeenSlider({
+        initial: 0,
+        slides: {
+            perView: 3,
+            spacing:35,
+        },
+        slideChanged(slider) {
+            setCurrentSlide(slider.track.details.rel);
+        },
+        created() {
+            setLoaded(true);
+        }
+    });
+    const offers =  data.mainAdditionals.map(elem  =>
+        <div className="keen-slider__slide number-slide2" key={elem.id}>
+            <div className={styles.flex} >
+                <ModalCard price={elem.price} title={elem.name} img={elem.img} data={elem} id={elem.id} />
+            </div>
+        </div>
+
+    )
     return(
         <>
             {active ?  <div className={active ? cs(styles.modal,styles.active) : styles.modal } onClick={() => {
@@ -58,7 +88,38 @@ export const Modal = ( {active,setActive}) =>{
                         Рекомендуем добавить к заказу:
                     </div>
                     <div className={styles.slider}>
+                        <div className={cs("navigation-wrapper", styles.navigation_wrapper)}>
 
+
+                            <div ref={sliderRef} className={cs("keen-slider",styles.Slider_keen)}>
+                                {offers}
+
+
+                            </div>
+
+                            {loaded && instanceRef.current && (
+                                <>
+                                    <Arrow
+                                        left
+                                        onClick={(e) =>
+                                            e.stopPropagation() || instanceRef.current?.prev()
+                                        }
+                                        disabled={currentSlide === 0}
+                                    />
+
+                                    <Arrow
+                                        onClick={(e) =>
+                                            e.stopPropagation() || instanceRef.current?.next()
+                                        }
+                                        disabled={
+                                            currentSlide ===
+                                            instanceRef.current.track.details.slides.length - 3
+                                        }
+                                    />
+                                </>
+                            )}
+
+                        </div>
                     </div>
 
                 </div>
