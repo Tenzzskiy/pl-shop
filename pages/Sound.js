@@ -5,14 +5,16 @@ import {Preferences} from "../components/Preferences/Preferences";
 import {Cleaning} from "../components/Cleaning/Cleaning";
 import {SoundSale} from "../components/SoundSale/SoundSale";
 import {Shop} from "../components/Shop/Shop";
-import React from "react";
+import React, {useState} from "react";
 import {Preferences_768} from "../components/Preferences/Right/right";
 import {Preferences_360} from "../components/Preferences/Preferences_360/Preferences_360";
 import {useWindowSize} from "../Hooks/useWindowSize";
 import {Provider} from "react-redux";
 import {store} from "../redux";
+import {Modal} from "../components/Modal/Modal";
 const Sound = ({  }) => {
     const size = useWindowSize();
+    const [modalActive,setModalActive] = useState(false)
     return (
       <Provider store={store}>
           <Layout >
@@ -60,9 +62,10 @@ const Sound = ({  }) => {
                       /> : null
               }
               {/*<SoundSale />*/}
-              <Shop page={8} />
+              <Shop page={8} active={modalActive} setActive={setModalActive}/>
               <Cleaning />
           </Layout>
+          <Modal active={modalActive} setActive={setModalActive} />
       </Provider>
     )
 }

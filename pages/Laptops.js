@@ -5,7 +5,7 @@ import {Preferences} from "../components/Preferences/Preferences.js";
 import {Conditions} from "../components/Conditions/Conditions";
 import {Cleaning} from "../components/Cleaning/Cleaning";
 import Sale from "../components/Sale/Sale";
-import React from "react";
+import React, {useState} from "react";
 import Releases from "../components/Relises/Relises";
 import Seo from "../components/SEO/SEO";
 import {Shop} from "../components/Shop/Shop";
@@ -18,9 +18,11 @@ import {Offer_360} from "../components/Offer/OfferCard/Offer_360";
 import {Releases_768} from "../components/Relises/Releases_768/Releases_768";
 import {store} from "../redux";
 import {Provider} from "react-redux";
+import {Modal} from "../components/Modal/Modal";
 
 const Laptops = ({  }) => {
     const size = useWindowSize()
+    const [modalActive,setModalActive] = useState(false)
     return (
         <Provider store={store} >
         <Layout >
@@ -79,7 +81,7 @@ const Laptops = ({  }) => {
                     /> : null
             }
             <Conditions />
-            <Shop page={7} />
+            <Shop page={7}  active={modalActive} setActive={setModalActive}/>
             {size.width > 1200 ? <Offer /> : null }
             {size.width > 720 && size.width<1200 ? <Offer_768  /> : null }
             {size.width < 720  ? <Offer_360
@@ -160,6 +162,7 @@ const Laptops = ({  }) => {
             {/*соответствующей насущным потребностям. '*/}
             {/*/>*/}
         </Layout>
+            <Modal active={modalActive} setActive={setModalActive} />
             </Provider>
     )
 }

@@ -2,7 +2,7 @@
 import Layout from "../components/Layout/Layout";
 import {Conditions} from "../components/Conditions/Conditions";
 import {Preferences} from "../components/Preferences/Preferences";
-import React, {FunctionComponent, ReactNode} from "react";
+import React, {FunctionComponent, ReactNode, useState} from "react";
 import HeaderComponent from "../components/HeaderComponent/HeaderComponent";
 import {Cleaning} from "../components/Cleaning/Cleaning";
 import Sale from "../components/Sale/Sale";
@@ -18,11 +18,13 @@ import {Preferences_768} from "../components/Preferences/Right/right";
 import {Preferences_360} from "../components/Preferences/Preferences_360/Preferences_360";
 import {Provider} from "react-redux";
 import {store} from "../redux";
+import {Modal} from "../components/Modal/Modal";
 
 
 
 const Screens = ({  })=> {
     const size = useWindowSize();
+    const [modalActive,setModalActive] = useState(false)
     return (
       <Provider store={store}>
           <Layout >
@@ -66,7 +68,7 @@ const Screens = ({  })=> {
               }
 
               <Conditions />
-              <Shop page={3} />
+              <Shop page={3} active={modalActive} setActive={setModalActive}/>
               {size.width > 1200 ? <Offer /> : null }
               {size.width > 720 && size.width<1200 ? <Offer_768  /> : null }
               {size.width < 720  ? <Offer_360
@@ -150,6 +152,7 @@ const Screens = ({  })=> {
 
               {/*/>*/}
           </Layout>
+          <Modal active={modalActive} setActive={setModalActive} />
       </Provider>
     )
 }

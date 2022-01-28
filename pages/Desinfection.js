@@ -7,16 +7,18 @@ import Releases from "../components/Relises/Relises";
 import Seo from "../components/SEO/SEO";
 import {Certificates} from "../components/Certificates/Certificates";
 import {Shop} from "../components/Shop/Shop";
-import React from "react";
+import React, {useState} from "react";
 import {Preferences_768} from "../components/Preferences/Right/right";
 import {Preferences_360} from "../components/Preferences/Preferences_360/Preferences_360";
 import {useWindowSize} from "../Hooks/useWindowSize";
 import {Releases_768} from "../components/Relises/Releases_768/Releases_768";
 import {Provider} from "react-redux";
 import {store} from "../redux";
+import {Modal} from "../components/Modal/Modal";
 
 const Index = ({  }) => {
     const size = useWindowSize();
+    const [modalActive,setModalActive] = useState(false)
     return (
         <Provider store={store} >
         <Layout >
@@ -75,7 +77,7 @@ const Index = ({  }) => {
                     /> : null
             }
             <Certificates />
-            <Shop page={9} />
+            <Shop page={9} active={modalActive} setActive={setModalActive} />
             <Sale />
 
             {size.width > 1200 ?
@@ -136,6 +138,7 @@ const Index = ({  }) => {
 
             {/*/>*/}
         </Layout>
+            <Modal active={modalActive} setActive={setModalActive} />
         </Provider>
     )
 }

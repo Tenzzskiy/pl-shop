@@ -1,7 +1,7 @@
 
 import Layout from "../components/Layout/Layout";
 import HeaderComponent from "../components/HeaderComponent/HeaderComponent";
-import React from "react";
+import React, {useState} from "react";
 import {Preferences} from "../components/Preferences/Preferences";
 import {Conditions} from "../components/Conditions/Conditions";
 import {Cleaning} from "../components/Cleaning/Cleaning";
@@ -18,9 +18,11 @@ import {Offer_360} from "../components/Offer/OfferCard/Offer_360";
 import {Releases_768} from "../components/Relises/Releases_768/Releases_768";
 import {Provider} from "react-redux";
 import {store} from "../redux";
+import {Modal} from "../components/Modal/Modal";
 
 const VideoWalls = ({  }) => {
     const size = useWindowSize();
+    const [modalActive,setModalActive] = useState(false)
     return (
     <Provider store={store}>
         <Layout >
@@ -66,7 +68,7 @@ const VideoWalls = ({  }) => {
             }
 
             <Conditions />
-            <Shop page={4} />
+            <Shop page={4} active={modalActive} setActive={setModalActive}/>
 
             {size.width > 1250 ? <Offer /> : null }
             {size.width > 720 && size.width<1250 ? <Offer_768  /> : null }
@@ -148,6 +150,7 @@ const VideoWalls = ({  }) => {
             {/*    кадров, соответствующей насущным потребностям.'*/}
             {/*/>*/}
         </Layout>
+        <Modal active={modalActive} setActive={setModalActive} />
     </Provider>
     )
 }

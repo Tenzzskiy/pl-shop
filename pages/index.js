@@ -1,33 +1,24 @@
-import styles from './../styles/index.module.scss'
 import Layout from "../components/Layout/Layout";
 import Releases from "../components/Relises/Relises";
-import Seo from "../components/SEO/SEO";
 import React, {useState} from "react";
 import Sale from "../components/Sale/Sale";
-import HeaderComponent from "../components/HeaderComponent/HeaderComponent";
 import {Partners} from "../components/Partners/Partners";
 import {Conditions} from "../components/Conditions/Conditions";
 import {Cleaning} from "../components/Cleaning/Cleaning";
 import {Shop} from "../components/Shop/Shop";
 import {Offer} from "../components/Offer/Offer";
-import {Selector} from "../components/Select/Select";
 import MainHeaderComponent from "../components/HeaderComponent/MainHeaderComponent/MainHeaderComponent";
-import Sale_768 from "../components/Sale/Sale_768/Sale_768";
-import {PreferenceCard} from "../components/Preferences/PreferenceCard/PreferenceCard";
-import {Left} from "../components/Preferences/LeftPreference_tablet/left";
 import {Preferences_768, Right} from "../components/Preferences/Right/right";
 import {useWindowSize} from "../Hooks/useWindowSize";
 import {Preferences_360} from "../components/Preferences/Preferences_360/Preferences_360.js";
 import {Preferences} from "../components/Preferences/Preferences";
 import {Offer_768} from "../components/Offer/OfferCard/Offer_768";
-import data from "../components/Shop/cart_arenda-plasm77.ru.json";
-import {OfferCard} from "../components/Offer/OfferCard/OfferCard";
 import {Offer_360} from "../components/Offer/OfferCard/Offer_360";
 import {Releases_768} from "../components/Relises/Releases_768/Releases_768";
-import {Provider, useSelector} from "react-redux";
+import {Provider} from "react-redux";
 import {store} from "../redux";
 import {Modal} from "../components/Modal/Modal";
-import {initialState} from "../redux/cart/reducer";
+
 
 
 const Home = ({  }) => {
@@ -37,79 +28,79 @@ const Home = ({  }) => {
   return (
       <Provider store={store} >
     <Layout>
-        {/*<MainHeaderComponent />*/}
-        {/*{size.width > 1200 ?*/}
-        {/*    <Preferences*/}
-        {/*        count={4}*/}
-        {/*        title='Ваши выгоды с PLAZMA77'*/}
-        {/*        leftImg="/Preferences/1.png"*/}
-        {/*        rightImg="/Preferences/2.png"*/}
-        {/*        secondLeftImg='/Preferences/3.png'*/}
-        {/*        secondRightImg='/Preferences/4.png'*/}
-        {/*        leftText='Гибкая система скидок и бонусов для ивент менеджеров*/}
-        {/*    и организаторов мероприятий. Мы за долгосрочное сотрудничество!'*/}
-        {/*        leftSecondText='Работаем в сфере организации частных*/}
-        {/*    и корпоративных мероприятий с 2007 года, и точно знаем своё дело!'*/}
-        {/*        leftTitle='Клиентоориентированность'*/}
-        {/*        leftSecondTitle='Квалификация'*/}
-        {/*        rightText='В зависимости от задач мы подберем для вас плазму*/}
-        {/*    либо соберем видеостену, либо смонтируем масштабную светодиодную сцену!'*/}
-        {/*        rightSecondText='Возьмём на себя все вопросы по инсталяции и избавим вас от*/}
-        {/*    головной боли! Монтаж и демонтаж уже включены в стоимость!'*/}
-        {/*        rightTitle='Огромный выбор'*/}
-        {/*        rightSecondTitle='Под ключ'*/}
-        {/*    /> : null*/}
+        <MainHeaderComponent />
+        {size.width > 1200 ?
+            <Preferences
+                count={4}
+                title='Ваши выгоды с PLAZMA77'
+                leftImg="/Preferences/1.png"
+                rightImg="/Preferences/2.png"
+                secondLeftImg='/Preferences/3.png'
+                secondRightImg='/Preferences/4.png'
+                leftText='Гибкая система скидок и бонусов для ивент менеджеров
+            и организаторов мероприятий. Мы за долгосрочное сотрудничество!'
+                leftSecondText='Работаем в сфере организации частных
+            и корпоративных мероприятий с 2007 года, и точно знаем своё дело!'
+                leftTitle='Клиентоориентированность'
+                leftSecondTitle='Квалификация'
+                rightText='В зависимости от задач мы подберем для вас плазму
+            либо соберем видеостену, либо смонтируем масштабную светодиодную сцену!'
+                rightSecondText='Возьмём на себя все вопросы по инсталяции и избавим вас от
+            головной боли! Монтаж и демонтаж уже включены в стоимость!'
+                rightTitle='Огромный выбор'
+                rightSecondTitle='Под ключ'
+            /> : null
 
-        {/*}*/}
-        {/*{size.width < 1200 && size.width > 720 ?*/}
-        {/*    <Preferences_768*/}
-        {/*        count={4}*/}
-        {/*        title='Ваши выгоды с PLAZMA77'*/}
-        {/*        leftImg="/Preferences/1.png"*/}
-        {/*        rightImg="/Preferences/2.png"*/}
-        {/*        secondLeftImg='/Preferences/3.png'*/}
-        {/*        secondRightImg='/Preferences/4.png'*/}
-        {/*        leftText='Гибкая система скидок и бонусов для ивент менеджеров*/}
-        {/*    и организаторов мероприятий. Мы за долгосрочное сотрудничество!'*/}
-        {/*        leftSecondText='Работаем в сфере организации частных*/}
-        {/*    и корпоративных мероприятий с 2007 года, и точно знаем своё дело!'*/}
-        {/*        leftTitle='Клиентоориентированность'*/}
-        {/*        leftSecondTitle='Квалификация'*/}
-        {/*        rightText='В зависимости от задач мы подберем для вас плазму*/}
-        {/*    либо соберем видеостену, либо смонтируем масштабную светодиодную сцену!'*/}
-        {/*        rightSecondText='Возьмём на себя все вопросы по инсталяции и избавим вас от*/}
-        {/*    головной боли! Монтаж и демонтаж уже включены в стоимость!'*/}
-        {/*        rightTitle='Огромный выбор'*/}
-        {/*        rightSecondTitle='Под ключ'*/}
-        {/*    /> : null*/}
-        {/*}*/}
-        {/*{*/}
-        {/*    size.width <720 ?*/}
-        {/*        <Preferences_360*/}
-        {/*            count={4}*/}
-        {/*            mainTitle='Ваши выгоды с PLAZMA77'*/}
-        {/*            leftImg="/Preferences/1.png"*/}
-        {/*            rightImg="/Preferences/2.png"*/}
-        {/*            secondLeftImg='/Preferences/3.png'*/}
-        {/*            secondRightImg='/Preferences/4.png'*/}
-        {/*            leftText='Гибкая система скидок и бонусов для ивент менеджеров*/}
-        {/*    и организаторов мероприятий. Мы за долгосрочное сотрудничество!'*/}
-        {/*            leftSecondText='Работаем в сфере организации частных*/}
-        {/*    и корпоративных мероприятий с 2007 года, и точно знаем своё дело!'*/}
-        {/*            leftTitle='Клиентоориентированность'*/}
-        {/*            leftSecondTitle='Квалификация'*/}
-        {/*            rightText='В зависимости от задач мы подберем для вас плаsзму*/}
-        {/*    либо соберем видеостену, либо смонтируем масштабную светодиодную сцену!'*/}
-        {/*            rightSecondText='Возьмём на себя все вопросы по инсталяции и избавим вас от*/}
-        {/*    головной боли! Монтаж и демонтаж уже включены в стоимость!'*/}
-        {/*            rightTitle='Огромный выбор'*/}
-        {/*            rightSecondTitle='Под ключ'*/}
-        {/*        /> : null*/}
-        {/*}*/}
+        }
+        {size.width < 1200 && size.width > 720 ?
+            <Preferences_768
+                count={4}
+                title='Ваши выгоды с PLAZMA77'
+                leftImg="/Preferences/1.png"
+                rightImg="/Preferences/2.png"
+                secondLeftImg='/Preferences/3.png'
+                secondRightImg='/Preferences/4.png'
+                leftText='Гибкая система скидок и бонусов для ивент менеджеров
+            и организаторов мероприятий. Мы за долгосрочное сотрудничество!'
+                leftSecondText='Работаем в сфере организации частных
+            и корпоративных мероприятий с 2007 года, и точно знаем своё дело!'
+                leftTitle='Клиентоориентированность'
+                leftSecondTitle='Квалификация'
+                rightText='В зависимости от задач мы подберем для вас плазму
+            либо соберем видеостену, либо смонтируем масштабную светодиодную сцену!'
+                rightSecondText='Возьмём на себя все вопросы по инсталяции и избавим вас от
+            головной боли! Монтаж и демонтаж уже включены в стоимость!'
+                rightTitle='Огромный выбор'
+                rightSecondTitle='Под ключ'
+            /> : null
+        }
+        {
+            size.width <720 ?
+                <Preferences_360
+                    count={4}
+                    mainTitle='Ваши выгоды с PLAZMA77'
+                    leftImg="/Preferences/1.png"
+                    rightImg="/Preferences/2.png"
+                    secondLeftImg='/Preferences/3.png'
+                    secondRightImg='/Preferences/4.png'
+                    leftText='Гибкая система скидок и бонусов для ивент менеджеров
+            и организаторов мероприятий. Мы за долгосрочное сотрудничество!'
+                    leftSecondText='Работаем в сфере организации частных
+            и корпоративных мероприятий с 2007 года, и точно знаем своё дело!'
+                    leftTitle='Клиентоориентированность'
+                    leftSecondTitle='Квалификация'
+                    rightText='В зависимости от задач мы подберем для вас плаsзму
+            либо соберем видеостену, либо смонтируем масштабную светодиодную сцену!'
+                    rightSecondText='Возьмём на себя все вопросы по инсталяции и избавим вас от
+            головной боли! Монтаж и демонтаж уже включены в стоимость!'
+                    rightTitle='Огромный выбор'
+                    rightSecondTitle='Под ключ'
+                /> : null
+        }
 
 
-        {/*<Partners />*/}
-        {/*<Conditions />*/}
+        <Partners />
+        <Conditions />
         <Shop page={1} active={modalActive} setActive={setModalActive} />
 
 
