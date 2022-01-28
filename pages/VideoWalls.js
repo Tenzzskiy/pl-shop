@@ -20,8 +20,15 @@ import {Provider} from "react-redux";
 import {store} from "../redux";
 import {Modal} from "../components/Modal/Modal";
 import FeedBack from "../components/FeedBack/FeedBack";
-
-const VideoWalls = ({  }) => {
+import data from "../components/Shop/cart_arenda-plasm77.ru.json";
+export  const getStaticProps = async () =>{
+    return {
+        props: {
+            cards: data
+        }
+    };
+}
+const VideoWalls = ({  cards}) => {
     const size = useWindowSize();
     const [modalActive,setModalActive] = useState(false)
     return (
@@ -69,7 +76,7 @@ const VideoWalls = ({  }) => {
             }
 
             <Conditions />
-            <Shop page={4} active={modalActive} setActive={setModalActive}/>
+            <Shop page={4} active={modalActive} setActive={setModalActive} data={cards}/>
 
             {size.width > 1250 ? <Offer /> : null }
             {size.width > 720 && size.width<1250 ? <Offer_768  /> : null }

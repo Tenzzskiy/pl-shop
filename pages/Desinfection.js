@@ -16,8 +16,15 @@ import {Provider} from "react-redux";
 import {store} from "../redux";
 import {Modal} from "../components/Modal/Modal";
 import FeedBack from "../components/FeedBack/FeedBack";
-
-const Index = ({  }) => {
+import data from "../components/Shop/cart_arenda-plasm77.ru.json";
+export  const getStaticProps = async () =>{
+    return {
+        props: {
+            cards: data
+        }
+    };
+}
+const Index = ({ cards}) => {
     const size = useWindowSize();
     const [modalActive,setModalActive] = useState(false)
     return (
@@ -78,7 +85,7 @@ const Index = ({  }) => {
                     /> : null
             }
             <Certificates />
-            <Shop page={9} active={modalActive} setActive={setModalActive} />
+            <Shop page={9} active={modalActive} setActive={setModalActive} data={cards} />
             <Sale />
 
             {size.width > 1200 ?

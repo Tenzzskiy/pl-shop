@@ -101,6 +101,11 @@ export const Shop = ( { page,active,setActive,data,...props}) =>{
             } else {
                 setButtonStyle(styles.button_none)
             }
+            if ( step <= 24 ){
+                setStep_2(step+step);
+            } else {
+                setButtonStyle(styles.button_none)
+            }
 
 
 

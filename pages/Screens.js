@@ -20,10 +20,17 @@ import {Provider} from "react-redux";
 import {store} from "../redux";
 import {Modal} from "../components/Modal/Modal";
 import FeedBack from "../components/FeedBack/FeedBack";
+import data from "../components/Shop/cart_arenda-plasm77.ru.json";
 
+export  const getStaticProps = async () =>{
+    return {
+        props: {
+            cards: data
+        }
+    };
+}
 
-
-const Screens = ({  })=> {
+const Screens = ({  cards})=> {
     const size = useWindowSize();
     const [modalActive,setModalActive] = useState(false)
     return (
@@ -69,7 +76,7 @@ const Screens = ({  })=> {
               }
 
               <Conditions />
-              <Shop page={3} active={modalActive} setActive={setModalActive}/>
+              <Shop page={3} active={modalActive} setActive={setModalActive} data={cards}/>
               {size.width > 1200 ? <Offer /> : null }
               {size.width > 720 && size.width<1200 ? <Offer_768  /> : null }
               {size.width < 720  ? <Offer_360

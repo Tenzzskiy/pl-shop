@@ -13,7 +13,15 @@ import {Provider} from "react-redux";
 import {store} from "../redux";
 import {Modal} from "../components/Modal/Modal";
 import FeedBack from "../components/FeedBack/FeedBack";
-const Sound = ({  }) => {
+import data from "../components/Shop/cart_arenda-plasm77.ru.json";
+export  const getStaticProps = async () =>{
+    return {
+        props: {
+            cards: data
+        }
+    };
+}
+const Sound = ({ cards }) => {
     const size = useWindowSize();
     const [modalActive,setModalActive] = useState(false)
     return (
@@ -63,7 +71,7 @@ const Sound = ({  }) => {
                       /> : null
               }
               {/*<SoundSale />*/}
-              <Shop page={8} active={modalActive} setActive={setModalActive}/>
+              <Shop page={8} active={modalActive} setActive={setModalActive} data={cards}/>
               <Cleaning />
               <FeedBack />
           </Layout>
