@@ -54,7 +54,7 @@ export const Modal = ( {active,setActive}) =>{
                         <div className={styles.footer_flex}>
                             <div className={styles.result_flex}>
                                 <div className={styles.result}>
-                                    Итого:{size.width}
+                                    Итого:
                                 </div>
                                 <div className={styles.totalCount}>
                                     {itemsCount} товаров, {totalPrice}₽
