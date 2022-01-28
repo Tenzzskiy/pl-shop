@@ -21,7 +21,7 @@ export const Modal = ( {active,setActive}) =>{
     const [sliderRef, instanceRef] = useKeenSlider({
         initial: 0,
         slides: {
-            perView: size.width < 720 ? 1.5 : 3,
+            perView: size.width > 720 ? 3 : 1.5,
             spacing:35,
         },
         slideChanged(slider) {
@@ -54,7 +54,7 @@ export const Modal = ( {active,setActive}) =>{
                         <div className={styles.footer_flex}>
                             <div className={styles.result_flex}>
                                 <div className={styles.result}>
-                                    Итого:
+                                    Итого:{size.width}
                                 </div>
                                 <div className={styles.totalCount}>
                                     {itemsCount} товаров, {totalPrice}₽

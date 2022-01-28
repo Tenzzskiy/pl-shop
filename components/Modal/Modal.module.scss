@@ -218,8 +218,10 @@
 }
 @media (max-width: 720px){
   .content{
-    max-width: 360px !important;
+    max-width: 100% !important;
+    width: 100%;
     min-width: 320px;
+    height: 90%;
   }
   .img{
     width: 100%;
