@@ -6,7 +6,9 @@
 
 
     .content{
-
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       .title{
         font-style: normal;
         font-weight: bold;
@@ -98,6 +100,7 @@
   }
 }
 @media (max-width: 720px){
+
   .button{
     padding: 0 0 40px 0;
     display: flex;
