@@ -8,9 +8,11 @@ import {useKeenSlider} from "keen-slider/react";
 import data from "../Shop/cart_arenda-plasm77.ru.json";
 import {OfferCard} from "../Offer/OfferCard/OfferCard";
 import {ModalCard} from "./ModalCard/ModalCard";
-
+import {Slider} from "../Slider/Slider";
+import {useEffect} from "react";
 
 export const Modal = ( {active,setActive}) =>{
+
     const items = useSelector(state => state.cart.itemsInCart);
     const totalPrice = useSelector(state => state.cart.totalPrice)
     const itemsCount = items.length;
@@ -18,10 +20,11 @@ export const Modal = ( {active,setActive}) =>{
     const size = useWindowSize();
     const [currentSlide, setCurrentSlide] = React.useState(0);
     const [loaded, setLoaded] = useState(false);
+    const [perView] =useState(size.width > 720 ? 1.5:3)
     const [sliderRef, instanceRef] = useKeenSlider({
         initial: 0,
         slides: {
-            perView: size.width > 720 ? 3 : 1.5,
+            perView: perView,
             spacing:35,
         },
         slideChanged(slider) {
@@ -31,14 +34,11 @@ export const Modal = ( {active,setActive}) =>{
             setLoaded(true);
         }
     });
-    const offers =  data.mainAdditionals.map(elem  =>
-        <div className="keen-slider__slide number-slide2" key={elem.id}>
-            <div className={styles.flex} >
-                <ModalCard price={elem.price} title={elem.name} img={elem.img} data={elem} id={elem.id} />
-            </div>
-        </div>
+    useEffect(() => {
+        const body = document.querySelector('body');
+        body.style.overflow = active ? 'hidden' : 'auto';
+    }, [active])
 
-    )
     return(
         <>
             {active ?  <div className={active ? cs(styles.modal,styles.active) : styles.modal } onClick={() => {
@@ -80,13 +80,13 @@ export const Modal = ( {active,setActive}) =>{
                                 <img src={quantity.img} alt=""/>
                             </picture>
                             {size.width < 720 ?
-                                <div>
+
                                     <div className={styles.flex}>
 
                                         <span className={styles.time}> {quantity.time}:</span>
                                         <span className={styles.price} > {quantity.changedPrice}₽</span>
                                     </div>
-                                </div>
+
                           : null}
                         </div>
                         <div className={styles.item_content}>
@@ -109,64 +109,7 @@ export const Modal = ( {active,setActive}) =>{
                         Рекомендуем добавить к заказу:
                     </div>
                     <div className={styles.slider}>
-                        <div className={cs("navigation-wrapper", styles.navigation_wrapper)}>
-
-
-                            <div ref={sliderRef} className={cs("keen-slider",styles.Slider_keen)}>
-                                {offers}
-
-
-                            </div>
-
-                            {size.width > 720 ?
-                                loaded && instanceRef.current && (
-                                    <>
-                                        <Arrow
-                                            left
-                                            onClick={(e) =>
-                                                e.stopPropagation() || instanceRef.current?.prev()
-                                            }
-                                            disabled={currentSlide === 0}
-                                        />
-
-                                        <Arrow
-                                            onClick={(e) =>
-                                                e.stopPropagation() || instanceRef.current?.next()
-                                            }
-                                            disabled={
-                                                currentSlide ===
-                                                instanceRef.current.track.details.slides.length - 3
-                                            }
-                                        />
-                                    </>
-                                ) : null
-
-
-                            }
-                            {size.width < 720 ?
-                                loaded && instanceRef.current && (
-                                    <div className={styles.dots}>
-
-                                        {[
-                                            ...Array(instanceRef.current.track.details.slides.length ).keys()
-                                        ].map((idx) => {
-                                            return (
-                                                <button
-                                                    key={idx}
-                                                    onClick={() => {
-                                                        instanceRef.current?.moveToIdx(idx);
-                                                    }}
-                                                    className={"dot" + (currentSlide === idx ? " active" : "")}
-                                                > </button>
-                                            );
-                                        })}
-
-                                    </div>
-                                ) : null
-
-                            }
-
-                        </div>
+                        {size.width > 720 ? <Slider perView={3} /> : <Slider perView={1.5} /> }
                     </div>
 
                 </div>

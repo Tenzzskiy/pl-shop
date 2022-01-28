@@ -25,6 +25,7 @@ const Home = ({  }) => {
 
     const size = useWindowSize();
     const [modalActive,setModalActive] = useState(false)
+
   return (
       <Provider store={store} >
     <Layout>
