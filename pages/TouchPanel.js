@@ -19,6 +19,7 @@ import {Releases_768} from "../components/Relises/Releases_768/Releases_768";
 import {Provider} from "react-redux";
 import {store} from "../redux";
 import {Modal} from "../components/Modal/Modal";
+import FeedBack from "../components/FeedBack/FeedBack";
 
 
 const TouchPanel = ({  }) => {
@@ -167,6 +168,7 @@ const TouchPanel = ({  }) => {
               {/*   дня требует от нас анализа системы обучения*/}
               {/* кадров, соответствующей насущным потребностям.'*/}
               {/*/>*/}
+              <FeedBack />
           </Layout>
           <Modal active={modalActive} setActive={setModalActive} />
       </Provider>

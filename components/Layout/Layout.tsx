@@ -13,7 +13,7 @@ const Layout:FunctionComponent = ({children }) =>{
        <Header />
        {children}
 
-       <FeedBack />
+
        <Footer />
    </>
     )

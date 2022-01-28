@@ -19,6 +19,7 @@ import {Releases_768} from "../components/Relises/Releases_768/Releases_768";
 import {Provider} from "react-redux";
 import {store} from "../redux";
 import {Modal} from "../components/Modal/Modal";
+import FeedBack from "../components/FeedBack/FeedBack";
 
 const VideoWalls = ({  }) => {
     const size = useWindowSize();
@@ -149,6 +150,7 @@ const VideoWalls = ({  }) => {
             {/*       системы обучения*/}
             {/*    кадров, соответствующей насущным потребностям.'*/}
             {/*/>*/}
+            <FeedBack />
         </Layout>
         <Modal active={modalActive} setActive={setModalActive} />
     </Provider>

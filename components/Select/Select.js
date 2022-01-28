@@ -1,14 +1,16 @@
 import React, { useState} from "react";
 import styles from './Select.module.scss'
 import cn from 'classnames'
+import {useDispatch} from "react-redux";
+import {updateSelect} from './../../redux/cart/reducer'
 
-
-export const Selector = ( {changedPrice,setChangedPrice,price,setTime} ) =>{
+export const Selector = ( {changedPrice,setChangedPrice,price,setTime,time,data} ) =>{
     const [selectorStatus,setSelectorStatus] = useState(false)
-    const [example,setExample] = useState('1 сутки');
+    const [example,setExample] = useState(time);
      const roundHundred = (value) =>{
         return Math.round(value/100)*100
     }
+    const dispatch = useDispatch();
     const [a] = useState(price)
     const [b] = useState(roundHundred(Number(a) + (Number(a) * 0.5)))
     const [c] = useState(roundHundred(b + (Number(a) * 0.4)) )
@@ -30,6 +32,7 @@ export const Selector = ( {changedPrice,setChangedPrice,price,setTime} ) =>{
                         setSelectorStatus(false)
                         setChangedPrice(a)
                         setTime('1 сутки');
+                        dispatch(updateSelect({...data, changedPrice: a}))
                     }}>
                         1 сутки
                     </button>
@@ -38,6 +41,8 @@ export const Selector = ( {changedPrice,setChangedPrice,price,setTime} ) =>{
                         setSelectorStatus(false)
                         setChangedPrice(b)
                         setTime('2 суток');
+                        dispatch(updateSelect({...data, changedPrice: roundHundred(Number(a) + (Number(a) * 0.5))}))
+
                     }}>
                         2 суток
                     </button>
@@ -46,6 +51,7 @@ export const Selector = ( {changedPrice,setChangedPrice,price,setTime} ) =>{
                         setSelectorStatus(false)
                         setChangedPrice(c)
                         setTime('3 суток');
+                        dispatch(updateSelect({...data, changedPrice: roundHundred(Number(b) + (Number(a) * 0.4))}))
                     }}>
                         3 суток
                     </button>
@@ -54,6 +60,7 @@ export const Selector = ( {changedPrice,setChangedPrice,price,setTime} ) =>{
                         setSelectorStatus(false)
                         setChangedPrice(d )
                         setTime('4 суток');
+                        dispatch(updateSelect({...data, changedPrice: roundHundred(Number(c) + (Number(a) * 0.35))}))
                     }}>
                         4 суток
                     </button>
@@ -62,6 +69,7 @@ export const Selector = ( {changedPrice,setChangedPrice,price,setTime} ) =>{
                         setSelectorStatus(false)
                         setChangedPrice(e )
                         setTime('5 суток');
+                        dispatch(updateSelect({...data, changedPrice: roundHundred(Number(d) + (Number(a) * 0.3))}))
                     }}>
                         5 суток
                     </button>

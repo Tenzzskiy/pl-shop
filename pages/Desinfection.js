@@ -15,6 +15,7 @@ import {Releases_768} from "../components/Relises/Releases_768/Releases_768";
 import {Provider} from "react-redux";
 import {store} from "../redux";
 import {Modal} from "../components/Modal/Modal";
+import FeedBack from "../components/FeedBack/FeedBack";
 
 const Index = ({  }) => {
     const size = useWindowSize();
@@ -137,6 +138,7 @@ const Index = ({  }) => {
             {/*        насущным потребностям.'*/}
 
             {/*/>*/}
+            <FeedBack />
         </Layout>
             <Modal active={modalActive} setActive={setModalActive} />
         </Provider>

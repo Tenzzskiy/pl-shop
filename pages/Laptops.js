@@ -19,6 +19,7 @@ import {Releases_768} from "../components/Relises/Releases_768/Releases_768";
 import {store} from "../redux";
 import {Provider} from "react-redux";
 import {Modal} from "../components/Modal/Modal";
+import FeedBack from "../components/FeedBack/FeedBack";
 
 const Laptops = ({  }) => {
     const size = useWindowSize()
@@ -161,6 +162,7 @@ const Laptops = ({  }) => {
             {/*  обучения кадров,*/}
             {/*соответствующей насущным потребностям. '*/}
             {/*/>*/}
+            <FeedBack />
         </Layout>
             <Modal active={modalActive} setActive={setModalActive} />
             </Provider>

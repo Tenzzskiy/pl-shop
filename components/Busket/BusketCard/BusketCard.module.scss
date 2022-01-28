@@ -1,0 +1,79 @@
+.container{
+  height: 181px;
+  width: 700px;
+  border: 1px solid #CFCFDC;
+  box-sizing: border-box;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  .content{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    .img{
+    max-width: 180px;
+      height: 100%;
+      margin-right: 10px;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .text_content{
+      width: 100%;
+      .title{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 130%;
+        color: var(--description);
+        margin-bottom: 15px;
+      }
+      .firstDescription{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 140%;
+        margin-bottom: 5px;
+      }
+      .secondDescription{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 140%;
+        margin-bottom: 20px;
+      }
+      .text_content_footer{
+display: flex;
+        flex-direction: row;
+      justify-content: space-between;
+      }
+    }
+  }
+}
+.price{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  .number{
+    margin-right: 10px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    color: var(--brand-color);
+  }
+}
+.trigger{
+  width: 120px;
+  height: 41px;
+  background: yellow;
+}
+.exit{
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  max-height: 40px;
+  cursor: pointer;
+}

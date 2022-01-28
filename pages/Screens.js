@@ -19,6 +19,7 @@ import {Preferences_360} from "../components/Preferences/Preferences_360/Prefere
 import {Provider} from "react-redux";
 import {store} from "../redux";
 import {Modal} from "../components/Modal/Modal";
+import FeedBack from "../components/FeedBack/FeedBack";
 
 
 
@@ -151,6 +152,7 @@ const Screens = ({  })=> {
               {/*     кадров, соответствующей насущным потребностям.'*/}
 
               {/*/>*/}
+              <FeedBack />
           </Layout>
           <Modal active={modalActive} setActive={setModalActive} />
       </Provider>

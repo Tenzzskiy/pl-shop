@@ -1,0 +1,99 @@
+.container {
+  width: 1280px;
+  margin: 0 auto;
+ min-height: 750px;
+
+  padding-top: 115px;
+  .content{
+
+    .flex{
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 100px;
+      .items{
+
+      }
+      .menu{
+
+      }
+    }
+    padding: 0 32px;
+    .title{
+      font-style: normal;
+      font-weight: bold;
+      font-size: 45px;
+      line-height: 120%;
+      color: var(--description);
+      margin-bottom: 40px;
+      padding-top: 150px;
+    }
+  }
+}
+.items{
+  margin-right: 20px;
+}
+.menu{
+  width: 495px;
+  height: 392px;
+  background: #575786;
+  box-shadow: 2px 4px 4px rgba(87, 87, 134, 0.2);
+
+  right: 0;
+  .menu_container{
+    padding: 30px;
+    color: white;
+  .menu_title{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 120%;
+   margin-bottom: 20px;
+  }
+    .total{
+      display: flex;
+      flex-direction: row;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 140%;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      .toch{
+        color: #9B8BB6;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+      }
+      .totalPrice{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 32px;
+        line-height: 120%;
+      }
+    }
+
+  }
+}
+.add{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 120%;
+  margin-bottom: 30px;
+}
+.contacts{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .number{
+    width: 210px;
+    height: 42px;
+    background: yellow;
+  }
+  .type{
+    width: 210px;
+    height: 42px;
+    background: yellow;
+  }
+}

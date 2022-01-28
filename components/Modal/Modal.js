@@ -10,7 +10,7 @@ import {OfferCard} from "../Offer/OfferCard/OfferCard";
 import {ModalCard} from "./ModalCard/ModalCard";
 import {Slider} from "../Slider/Slider";
 import {useEffect} from "react";
-
+import Link from "next/link";
 export const Modal = ( {active,setActive}) =>{
 
     const items = useSelector(state => state.cart.itemsInCart);
@@ -62,11 +62,11 @@ export const Modal = ( {active,setActive}) =>{
                             </div>
                             {size.width > 720 ? <>
                                 <div className={styles.back} onClick={() => setActive(false)}> Назад к покупкам</div>
-                                <div className={styles.button}> <button> Перейти в корзину</button> </div>
+                                    <Link href="/Busket"><a><div onClick={() => setActive(false)} className={styles.button}> <button> Перейти в корзину</button> </div></a></Link>
                             </> :
                                 <div className={styles.button_flex}>
                                     <div className={styles.back} onClick={() => setActive(false)}> Назад к покупкам</div>
-                                    <div className={styles.button}> <button> Перейти в корзину</button> </div>
+                                    <Link href="/Busket"><a><div onClick={() => setActive(false)} className={styles.button} > <button> Перейти в корзину</button> </div></a></Link>
                                 </div>
 
                             }

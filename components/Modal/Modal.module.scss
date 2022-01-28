@@ -49,6 +49,12 @@
       height: 100%;
       padding: 0 30px;
       justify-content: space-between;
+      a{
+        text-decoration: none;
+        outline: none;
+        border: 0;
+        cursor: pointer;
+      }
       .button_flex{
         display: flex;
         flex-direction: row;
@@ -91,6 +97,7 @@
       .button{
         width: 235px;
         height: 43px;
+        cursor: pointer;
         button{
           width: 235px;
           height: 43px;
@@ -255,8 +262,8 @@
     display: flex;
     flex-direction: column !important;
     align-items: center;
-
     justify-content: flex-start;
+
   }
   .result_flex{
     justify-content: flex-start !important;

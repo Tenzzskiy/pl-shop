@@ -111,7 +111,7 @@
   }
   .grid{
     display: grid;
-    justify-content: center;
+    justify-items: center;
     grid-template-columns: 1fr ;
     gap: 20px;
     padding: 0 46px 50px 46px;

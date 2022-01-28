@@ -18,11 +18,12 @@ import {Releases_768} from "../components/Relises/Releases_768/Releases_768";
 import {Provider} from "react-redux";
 import {store} from "../redux";
 import {Modal} from "../components/Modal/Modal";
+import FeedBack from "../components/FeedBack/FeedBack";
 
 
 
 const Home = ({  }) => {
-
+    const [totalPrice,setTotalPrice] = useState()
     const size = useWindowSize();
     const [modalActive,setModalActive] = useState(false)
 
@@ -169,7 +170,7 @@ const Home = ({  }) => {
         {/*/>*/}
 
 
-
+        <FeedBack />
     </Layout>
           <Modal active={modalActive} setActive={setModalActive} />
       </Provider>

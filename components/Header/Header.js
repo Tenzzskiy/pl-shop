@@ -8,7 +8,7 @@ import {useSelector} from "react-redux";
 
 const Header = ({ }) =>{
     const items = useSelector(state => state.cart.itemsInCart);
-    const totalPrice = items.reduce((acc,data) =>acc+=Number(data.price) ,0)
+    // const totalPrice = items.reduce((acc,data) =>acc+=Number(data.price) ,0)
     const route = useRouter()
     const [scroll, setScroll] = React.useState(0);
     const [lastScroll,setLastScroll] = useState(1)
@@ -48,32 +48,35 @@ const Header = ({ }) =>{
                                 </div>
                             }
 
-                            <div className={styles.busket}>
-                                {size.width > 1000 ?
-                                        <div className={styles.icon}>
-                                            <img src="/header/busket.svg" alt=""/>
-                                            {quantity > 0 ?
-                                                <div> {quantity}</div> : null
-                                            }
-
-                                        </div>
-                                    :
-
-                                     <div className={styles.icon}>
-                                         {quantity > 0 ?
-                                             <div> {quantity}</div> : null
-                                         }
-                                         <img src="/header/purpleBusket.svg" alt=""/>
-                                     </div>
 
 
-                                }
 
-                                {size.width > 1000 ?
-                                    <span> Корзина</span> : null
-                                }
+                                 <Link href="/Busket"><a> <div className={styles.busket}>
+                                      {size.width > 1000 ?
+                                          <div className={styles.icon}>
+                                              <img src="/header/busket.svg" alt=""/>
+                                              {quantity > 0 ?
+                                                  <div> {quantity}</div> : null
+                                              }
 
-                            </div>
+                                          </div>
+                                          :
+
+                                          <div className={styles.icon}>
+                                              {quantity > 0 ?
+                                                  <div> {quantity}</div> : null
+                                              }
+                                              <img src="/header/purpleBusket.svg" alt=""/>
+                                          </div>
+                                      }
+
+                                      {size.width > 1000 ?
+                                          <span> Корзина</span> : null
+                                      }
+
+                                  </div></a></Link>
+
+
                             <div className={styles.contacts}>
                                 {size.width > 600 ?
                                     <div className={styles.number}> +7 495 321-54-76</div>

@@ -5,7 +5,7 @@ import {useDispatch} from "react-redux";
 import {setItemInCart, updateTotalPrice} from '../../../redux/cart/reducer.js'
 
 
-export const ShopItem = ( { data,children,price,count,img,title,id,active,setActive,...props}) =>{
+export const ShopItem = ( { data,children,price,count,img,title,active,setActive,id,...props}) =>{
     const dispatch = useDispatch();
     const [time, setTime] = useState('1 сутки');
     const [changedPrice,setChangedPrice] = useState(Number(price))
@@ -14,6 +14,8 @@ export const ShopItem = ( { data,children,price,count,img,title,id,active,setAct
         dispatch(updateTotalPrice(Number(changedPrice)))
         setActive(true);
     }
+
+
 
     return(
         <>
@@ -43,7 +45,7 @@ export const ShopItem = ( { data,children,price,count,img,title,id,active,setAct
                     }
 
                     <div className={styles.card_footer}>
-                        <Selector changedPrice={changedPrice} setChangedPrice={setChangedPrice} price={price} setTime={setTime}/>
+                        <Selector changedPrice={changedPrice} setChangedPrice={setChangedPrice} price={price} setTime={setTime} time={time}/>
                         <span> {changedPrice}₽ </span>
                         <div className={styles.bucket} onClick={handleClick}>
                             <img src="/ShopItem/busket.svg" alt=""/>

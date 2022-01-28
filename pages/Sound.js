@@ -12,6 +12,7 @@ import {useWindowSize} from "../Hooks/useWindowSize";
 import {Provider} from "react-redux";
 import {store} from "../redux";
 import {Modal} from "../components/Modal/Modal";
+import FeedBack from "../components/FeedBack/FeedBack";
 const Sound = ({  }) => {
     const size = useWindowSize();
     const [modalActive,setModalActive] = useState(false)
@@ -64,6 +65,7 @@ const Sound = ({  }) => {
               {/*<SoundSale />*/}
               <Shop page={8} active={modalActive} setActive={setModalActive}/>
               <Cleaning />
+              <FeedBack />
           </Layout>
           <Modal active={modalActive} setActive={setModalActive} />
       </Provider>
