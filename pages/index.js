@@ -19,14 +19,22 @@ import {Provider} from "react-redux";
 import {store} from "../redux";
 import {Modal} from "../components/Modal/Modal";
 import FeedBack from "../components/FeedBack/FeedBack";
+import data from '../components/Shop/cart_arenda-plasm77.ru.json'
 
+export  const getStaticProps = async () =>{
+    return {
+        props: {
+            cards: data
+        }
+    };
+}
 
+const Home = ({ cards }) => {
 
-const Home = ({  }) => {
     const [totalPrice,setTotalPrice] = useState()
     const size = useWindowSize();
     const [modalActive,setModalActive] = useState(false)
-
+    console.log(cards)
   return (
       <Provider store={store} >
     <Layout>
@@ -103,7 +111,7 @@ const Home = ({  }) => {
 
         <Partners />
         <Conditions />
-        <Shop page={1} active={modalActive} setActive={setModalActive} />
+        <Shop page={1} active={modalActive} setActive={setModalActive} data={cards}/>
 
 
         {size.width > 1200 ? <Offer active={modalActive} setActive={setModalActive} /> : null }

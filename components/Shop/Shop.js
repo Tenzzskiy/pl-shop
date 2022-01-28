@@ -1,11 +1,11 @@
 import React, { useState} from "react";
 import styles from './Shop.module.scss'
 import {ShopItem} from "./ShopItem/ShopItem";
-import data from './cart_arenda-plasm77.ru.json'
+// import data from './cart_arenda-plasm77.ru.json'
 import {useWindowSize} from "../../Hooks/useWindowSize";
 
 
-export const Shop = ( { page,active,setActive,...props}) =>{
+export const Shop = ( { page,active,setActive,data,...props}) =>{
     const size = useWindowSize();
     const [step,setStep] = useState(12);
 
