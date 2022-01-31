@@ -1,7 +1,6 @@
 import React, { useState} from "react";
 import styles from './Shop.module.scss'
 import {ShopItem} from "./ShopItem/ShopItem";
-// import data from './cart_arenda-plasm77.ru.json'
 import {useWindowSize} from "../../Hooks/useWindowSize";
 
 
@@ -101,8 +100,8 @@ export const Shop = ( { page,active,setActive,data,...props}) =>{
             } else {
                 setButtonStyle(styles.button_none)
             }
-            if ( step <= 24 ){
-                setStep_2(step+step);
+           if ( step <= 24 ){
+                setStep(step+step);
             } else {
                 setButtonStyle(styles.button_none)
             }

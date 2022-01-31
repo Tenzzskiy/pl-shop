@@ -1,7 +1,107 @@
+.menu{
+  width: 495px;
+  height: 392px;
+  background: #575786;
+  box-shadow: 2px 4px 4px rgba(87, 87, 134, 0.2);
+
+  right: 0;
+  .menu_container{
+    padding: 30px;
+    color: white;
+    .menu_title{
+      font-style: normal;
+      font-weight: normal;
+      font-size: 32px;
+      line-height: 120%;
+      margin-bottom: 20px;
+    }
+    .total{
+      display: flex;
+      flex-direction: row;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 140%;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      .toch{
+        color: #9B8BB6;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+      }
+      .totalPrice{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 32px;
+        line-height: 120%;
+      }
+    }
+
+  }
+}
+.button{
+  margin-top: 20px;
+  button{
+    background: #4CF5E0;
+    box-shadow: 2px 4px 4px rgba(87, 87, 134, 0.2);
+    border-radius: 2px;
+    width: 260px;
+    height: 42px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--description);
+    padding: 0 10px;
+    outline: none;
+    border: 0;
+    text-decoration: none;
+  }
+}
+.rules{
+  padding-top: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 120%;
+  .checkbox{
+    background: #F2F3FE;
+    border-radius: 8px;
+    width: 28px;
+    max-width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    .hide{
+      opacity: 0;
+      transition: all 0.2s;
+    }
+    img{
+      transition: all 0.2s;
+      width: 12px;
+      height: 8px;
+    }
+  }
+  a{
+    outline: none;
+    text-decoration: none;
+    border: 0;
+    color: #4CF5E0;
+  }
+}
 .container {
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
- min-height: 750px;
+
+
 
   padding-top: 115px;
   .content{
@@ -31,50 +131,30 @@
 }
 .items{
   margin-right: 20px;
-}
-.menu{
-  width: 495px;
-  height: 392px;
-  background: #575786;
-  box-shadow: 2px 4px 4px rgba(87, 87, 134, 0.2);
-
-  right: 0;
-  .menu_container{
-    padding: 30px;
-    color: white;
-  .menu_title{
+  width: 60%;
+  .first{
     font-style: normal;
     font-weight: normal;
-    font-size: 32px;
-    line-height: 120%;
-   margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 140%;
+    color: #575786;
+    margin-bottom: 20px;
   }
-    .total{
-      display: flex;
-      flex-direction: row;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 20px;
-      line-height: 140%;
-      align-items: flex-end;
-      justify-content: space-between;
-      margin-bottom: 15px;
-      .toch{
-        color: #9B8BB6;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 20px;
-      }
-      .totalPrice{
-        font-style: normal;
-        font-weight: normal;
-        font-size: 32px;
-        line-height: 120%;
-      }
-    }
-
+  .second{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 140%;
+    color: #575786;
+  }
+  a{
+    outline: none;
+    text-decoration: none;
+    border: 0;
+    color: var(--brand-color);
   }
 }
+
 .add{
   font-style: normal;
   font-weight: normal;
@@ -90,10 +170,83 @@
     width: 210px;
     height: 42px;
     background: yellow;
+    color: black;
   }
   .type{
     width: 210px;
     height: 42px;
     background: yellow;
+  }
+}
+
+@media (max-width: 1250px) {
+  .title{
+    padding-top: 80px !important;
+  }
+  .menu{
+    width: auto;
+    .menu_container{
+      width: auto !important;
+      max-width: 450px !important;
+
+    }
+  }
+  .items{
+    max-width: 100% !important;
+    margin-right: 0 !important;
+    width: 100%;
+  }
+  .container{
+    margin: 0 auto !important;
+
+  }
+}
+@media (max-width: 720px){
+  .menu_container{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .button{
+    button{
+      width: 240px !important;
+    }
+  }
+  .number{
+    width: 240px !important;
+  }
+  .type{
+    width: 240px !important;
+  }
+  .content{
+    padding: 0 16px !important;
+  }
+    .contacts{
+      flex-direction: column !important;
+      .number{
+        margin-bottom: 10px;
+      }
+    }
+  .menu_title{
+    font-size: 23px !important;
+  }
+  .totalPrice{
+    font-size: 23px !important;
+  }
+  .add{
+    font-size: 12px !important;
+    max-width: 246px;
+  }
+  .rules{
+    font-size: 12px !important;
+
+  }
+  .agree{
+    max-width: 208px;
+  }
+  .total{
+    justify-content: left !important;
   }
 }

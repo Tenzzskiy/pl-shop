@@ -1,6 +1,9 @@
 
 .header_fixed{
+  opacity: 0;
   transform: translateY(-100%);
+  transition: all 0.3s;
+  z-index: -1;
 }
 .header{
   a{
@@ -98,6 +101,7 @@
 .bottom_header{
  background: linear-gradient(90deg, #C038F5 0%, #3496FE 100%);
   height: 56px;
+  transition: all 0.3s;
   &_container{
     width: 1280px;
     margin: 0 auto;

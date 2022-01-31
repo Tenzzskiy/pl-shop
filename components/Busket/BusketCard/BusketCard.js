@@ -4,22 +4,30 @@ import {Selector} from "../../Select/Select";
 import {setItemInCart, updateTotalPrice} from "../../../redux/cart/reducer";
 import {useDispatch} from "react-redux";
 import {deleteItemFromCart} from './../../../redux/cart/reducer'
-import {updateSelect} from './../../../redux/cart/reducer'
-export const BusketCard = ( {img,title,time,price,id,data  }) => {
-    const dispatch = useDispatch();
-    const [changedPrice,setChangedPrice] = useState(price);
-    const [duration,setTime] =useState(time);
-    const handleClick =() =>{
-        dispatch(setItemInCart({img,changedPrice,id,title,time}))
-        dispatch(updateTotalPrice(Number(changedPrice)))
-
+import {updateSelect,updateCount,updateTime} from './../../../redux/cart/reducer'
+import {useWindowSize} from "../../../Hooks/useWindowSize";
+export const BusketCard = ( {img,title,time,price,id,data,Priced  }) => {
+    const size = useWindowSize();
+    const [changedPrice,setChangedPrice] = useState(Number(data.Priced));
+    const roundHundred = (value) =>{
+        return Math.round(value/100)*100
     }
+    const [a] = useState(data.Priced)
+    const [b] = useState(roundHundred(Number(a) + (Number(a) * 0.5)))
+    const [c] = useState(roundHundred(b + (Number(a) * 0.4)) )
+    const [d] = useState(roundHundred(c + (Number(a) * 0.35)))
+    const [e] = useState(roundHundred(d + (Number(a) * 0.3)))
+    const [count,setCount] = useState(1)
+    const dispatch = useDispatch();
+    const [duration,setTime] =useState(time);
+
     const deleteItem = ( ) =>{
         dispatch(deleteItemFromCart(id))
     }
     useEffect(() => {
-        console.log(changedPrice)
-        dispatch(updateSelect(data))
+        dispatch(updateSelect(data));
+        dispatch(updateCount(data));
+        dispatch(updateTime({data}))
     }, [changedPrice])
     return(
         <>
@@ -28,18 +36,52 @@ export const BusketCard = ( {img,title,time,price,id,data  }) => {
                 <img className={styles.exit} src="/Modal/exit.svg" alt="" onClick={deleteItem}/>
                 <div className={styles.img}>
                     <picture>
-                        <img src={img} alt=""/>
+
+                        {size.width < 720 ? <div className={styles.img_360}>
+                            <img src={img} alt=""/>
+                            <Selector setChangedPrice={setChangedPrice} duration={duration}  price={changedPrice} setTime={setTime} time={time} data={data} changedPrice={changedPrice} count={count} />
+                        </div> :<img src={img} alt=""/> }
                     </picture>
                 </div>
                 <div className={styles.text_content}>
-                    <div className={styles.title} onClick={ () => console.log(data)}>{title} </div>
-                    <div className={styles.firstDescription}> 1</div>
-                    <div className={styles.secondDescription}> 2</div>
+                    <div className={styles.title} >{title} </div>
+                    {size.width >720 ?
+                    <>
+                        <div className={styles.firstDescription} > 1</div>
+                        <div className={styles.secondDescription}> 2</div>
+                    </> : null
+                    }
                     <div className={styles.text_content_footer}>
-                        <Selector setChangedPrice={setChangedPrice}  price={changedPrice} setTime={setTime} time={time} data={data} changedPrice={changedPrice}/>
+                        {size.width > 720 ? <Selector setChangedPrice={setChangedPrice} duration={duration}  price={changedPrice} setTime={setTime} time={time} data={data} changedPrice={changedPrice} count={count} /> : null}
                         <div className={styles.price}>
-                        <div className={styles.number}>{changedPrice}₽</div>
-                            <div className={styles.trigger}> </div>
+                        <div className={styles.number}>{data.changedPrice}₽</div>
+                            <div className={styles.trigger}>
+                                <div onClick={ ( ) => {
+
+                                   if( count-1 > 0 ) {
+                                       dispatch(updateSelect({...data, changedPrice: (data.time === '1 сутки' ? a :
+                                               data.time === "2 суток" ? b :
+                                                   data.time === '3 суток' ? c :
+                                                       data.time === '4 суток' ? d :
+                                                           data.time === '5 суток' ? e : null) * (count-1)}))
+
+                                       setCount(count - 1)
+                                   }
+                                }}
+                                >-</div>
+                                <div>{count}</div>
+                                <div onClick={ ( ) => {
+
+                                    dispatch(updateSelect({...data, changedPrice: (data.time === "1 сутки" ? a :
+                                            data.time === '2 суток' ? b :
+                                                data.time === "3 суток" ? c :
+                                                    data.time === '4 суток' ? d :
+                                                        data.time === '5 суток' ? e : null )* (count +1)}))
+                                    setCount(count + 1)
+                                }
+
+                                }>+</div>
+                            </div>
                         </div>
                     </div>
                 </div>

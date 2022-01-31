@@ -20,10 +20,18 @@ const cartSlice = createSlice({
         updateSelect:(state,action) => {
             state.itemsInCart = state.itemsInCart.map(elem => elem.id === action.payload.id ?
                 action.payload : elem )
+        },
+        updateCount:(state,action) => {
+            state.itemsInCart = state.itemsInCart.map(elem => elem.id === action.payload.id ?
+                action.payload : elem )
+        } ,
+        updateTime:(state,action) => {
+            state.itemsInCart = state.itemsInCart.map(elem => elem.id === action.payload.id ?
+                action.payload : elem )
         }
     }
 });
 
-export const {setItemInCart,deleteItemFromCart,updateTotalPrice,updateSelect} = cartSlice.actions;
+export const {setItemInCart,deleteItemFromCart,updateTotalPrice,updateSelect,updateCount,updateTime} = cartSlice.actions;
 export default cartSlice.reducer;
 export const initialState = cartSlice.getInitialState;

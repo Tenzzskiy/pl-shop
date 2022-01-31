@@ -27,7 +27,7 @@ const Header = ({ }) =>{
     return(
    <>
        <div className={cn(styles.header,
-            scroll>lastScroll ? styles.header_fixed : null
+            // scroll>lastScroll ? styles.header_fixed : null
         )} >
 
             <div className={styles.top_header} >
@@ -98,7 +98,7 @@ const Header = ({ }) =>{
                 </div>
             </div>
            {size.width > 1250 ?
-               <div className={styles.bottom_header}>
+               <div className={cn(styles.bottom_header,  scroll>lastScroll ? styles.header_fixed : null)} >
                    <div className={styles.bottom_header_container}>
                        <div className={styles.content}>
                            <Link href='/' ><a className={cn(styles.a,

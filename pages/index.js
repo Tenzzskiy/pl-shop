@@ -34,7 +34,7 @@ const Home = ({ cards }) => {
     const [totalPrice,setTotalPrice] = useState()
     const size = useWindowSize();
     const [modalActive,setModalActive] = useState(false)
-    console.log(cards)
+
   return (
       <Provider store={store} >
     <Layout>
@@ -111,12 +111,12 @@ const Home = ({ cards }) => {
 
         <Partners />
         <Conditions />
-        <Shop page={1} active={modalActive} setActive={setModalActive} data={cards}/>
+        <Shop page={1} active={modalActive} setActive={setModalActive} data={cards} />
 
 
-        {size.width > 1200 ? <Offer active={modalActive} setActive={setModalActive} /> : null }
-        {size.width > 720 && size.width<1200 ? <Offer_768 active={modalActive} setActive={setModalActive} /> : null }
-        {size.width < 720  ? <Offer_360 active={modalActive} setActive={setModalActive}
+        {size.width > 1200 ? <Offer active={modalActive} setActive={setModalActive} title={' С этим товаром часто берут'} /> : null }
+        {size.width > 720 && size.width<1200 ? <Offer_768 active={modalActive} setActive={setModalActive} title={' С этим товаром часто берут'} /> : null }
+        {size.width < 720  ? <Offer_360 active={modalActive} setActive={setModalActive} title={' С этим товаром часто берут'}
                                                            /> : null }
         <Cleaning />
 <Sale />

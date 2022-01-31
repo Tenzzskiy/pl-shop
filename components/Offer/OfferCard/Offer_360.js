@@ -8,7 +8,7 @@ import {useKeenSlider} from "keen-slider/react";
 import styles2 from './Offer_360.module.scss'
 import cs from 'classnames'
 
-export const Offer_360 = ({active,setActive} ) =>{
+export const Offer_360 = ({busket=0,active,setActive,title=' С этим товаром часто берут'} ) =>{
     const size = useWindowSize();
 
 
@@ -31,7 +31,7 @@ export const Offer_360 = ({active,setActive} ) =>{
     const items =  data.mainAdditionals.map(elem  =>
         <div className="keen-slider__slide number-slide2" key={elem.id}>
             <div className={styles.flex} >
-                <OfferCard active={active} setActive={setActive} price={elem.price} title={elem.name} img={elem.img} />
+                <OfferCard price={elem.price} title={elem.name} img={elem.img} data={elem} id={elem.id} active={active} setActive={setActive} busket={busket}/>
             </div>
         </div>
 
@@ -40,13 +40,13 @@ export const Offer_360 = ({active,setActive} ) =>{
             return(
 
             <>
-                <div className={styles.offer}>
+                <div className={cs(styles.offer,busket === 1 ? styles.busket : null)}>
                     <div className={styles.container}>
                         <div className={styles.content}>
 
 
-                            <div className={styles.title} >
-                                С этим товаром часто берут
+                            <div className={cs(styles.title,busket === 1 ? styles.busket : null)} >
+                                {title}
                             </div>
                             <div className={cs("navigation-wrapper", styles.navigation_wrapper)}>
 
