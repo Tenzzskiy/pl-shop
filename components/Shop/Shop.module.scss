@@ -63,11 +63,15 @@
     }
   }
   .grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    //display: grid;
+    //grid-template-columns: 1fr 1fr;
+    //gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     padding-bottom: 40px;
-    margin: 0 32px;
+
+  ;
   }
   .container{
     max-width: 1280px;
@@ -88,9 +92,9 @@
     }
   }
   .grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    //display: grid;
+    //grid-template-columns: 1fr 1fr;
+    //gap: 20px;
 
 
   }
@@ -113,9 +117,9 @@
     }
   }
   .grid{
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 1fr ;
+    //display: grid;
+    //justify-items: center;
+    //grid-template-columns: 1fr ;
     gap: 20px;
     padding: 0 0 20px 0 ;
     margin: 0;

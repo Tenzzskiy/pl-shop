@@ -5,6 +5,8 @@
   .content_img{
     .relative{
       position: relative;
+      display: flex;
+
     }
     .img{
       padding: 100px 12px 30px 12px;
@@ -14,8 +16,8 @@ img{
 
   border: 12px solid #0E0E52;
   box-sizing: border-box;
-
-  width: 100%;
+  margin: 0 auto;
+  width: 347px;
   max-width: 970px;
   max-height: 194px;
 }
