@@ -62,13 +62,18 @@
   }
 }
 @media  (max-width: 720px) {
+  .navigation_wrapper{
+    height: 275px;
+  }
   .slider_container{
     position: relative;
-    width: 100%;
+
     img{
       width: 100%;
       height: 100%;
     }
+    height: 275px;
+    width: 360px;
   }
 
   .container{

@@ -31,7 +31,7 @@ export const Releases_768 = ( {img1,img2,img3,img4,img5,text1,text2,text3,text4,
                     Реализованные проекты
 
                 </div>
-                <div className="navigation-wrapper">
+                <div className={cs("navigation-wrapper",styles.navigation_wrapper)}>
                     <div ref={sliderRef} className="keen-slider">
                         <div className={cs("keen-slider__slide number-slide1",styles.slider_item)}> <ReleasesSlider img={img1} text={text1}/></div>
                         <div className={cs("keen-slider__slide number-slide1",styles.slider_item)}> <ReleasesSlider img={img2} text={text2}/></div>
