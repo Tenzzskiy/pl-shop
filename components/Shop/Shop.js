@@ -11,7 +11,7 @@ export const Shop = ( { page,active,setActive,data,...props}) =>{
     const [step_2,setStep_2] = useState( 6 );
     const [buttonStyle,setButtonStyle] = useState(styles.button)
 
-       const items =  data.mainCatalogue.slice(0,size.width > 1200 ? step : step_2).map(elem  =>
+       const items =  data.mainCatalogue.map(elem  =>
            <ShopItem
                active={active} setActive={setActive}
                id={elem.id}
