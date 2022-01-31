@@ -21,8 +21,10 @@ background:  #F2F3FE;
     align-items: center;
     padding: 160px 0;
     position: relative;
+    width: 100%;
   }
   &_content{
+    width: 100%;
     z-index: 4;
 .feedback_flex{
   font-style: normal;
@@ -32,7 +34,7 @@ background:  #F2F3FE;
   color: white;
   display: flex;
   flex-direction: column;
-
+  width: 100%;
   align-items: center;
   justify-content: center;
   .title{
@@ -65,7 +67,24 @@ background:  #F2F3FE;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    max-width:600px;
+    max-width: 740px;
+    width: 100%;
+      button{
+        border: 0;
+
+        height: 44px;
+        background: #4CF5E0;
+        box-shadow: 2px 4px 4px rgba(87, 87, 134, 0.2);
+        border-radius: 2px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 140%;
+        color: #0E0E52;
+        width: 240px
+      }
+
+
 
     input{
       width: 260px;
@@ -79,22 +98,10 @@ background:  #F2F3FE;
       line-height: 140%;
       text-align: center;
       color: #0E0E52;
-      margin-right: 16px;
-    }
-    button{
-      border: 0;
-      width: 264px;
-      height: 44px;
-      background: #4CF5E0;
-      box-shadow: 2px 4px 4px rgba(87, 87, 134, 0.2);
-      border-radius: 2px;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 140%;
-      color: #0E0E52;
 
     }
+
+
 
   }
 }
@@ -124,10 +131,11 @@ background:  #F2F3FE;
   }
 
   .contacts{
-
+  max-width: 740px;
+    width: 100%;
     button{
       width: 224px;
-      margin-right: 16px;
+
     }
     input{
       width:  220px;
@@ -141,8 +149,9 @@ background:  #F2F3FE;
   }
   .contacts{
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    height: 160px;
   }
   .img{
     height: 600px;
@@ -164,13 +173,16 @@ background:  #F2F3FE;
   }
   .contacts{
     button{
-      margin-bottom: 16px;
+      height: 40px !important;
+      width: 225px !important;
+      border-radius: 2px !important;
       margin-right: 0;
     }
 
+
     input{
       margin-right: 0;
-      margin-bottom: 16px;
+
     }
   }
 }

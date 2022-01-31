@@ -10,6 +10,7 @@ import Link from "next/link";
 import {Offer} from "../Offer/Offer";
 import {Offer_768} from "../Offer/OfferCard/Offer_768";
 import {Offer_360} from "../Offer/OfferCard/Offer_360";
+import {Contacts} from "../Contacts/Contacts";
 
 
 export const ResultBusket = ( { }) => {
@@ -62,7 +63,7 @@ export const ResultBusket = ( { }) => {
             с учётом доставки рассчитывается менеджером</div>
             <div className={styles.contacts}>
             <div className={styles.number}>{size.width} </div>
-            <div className={styles.type}> </div>
+                <Contacts />
             </div>
             <div className={styles.rules}>
             <div className={styles.checkbox} onClick={triggerCheckBox}><img className={checkbox ? null : styles.hide} src="/Seo/checkbox.svg" alt=""/></div>
@@ -97,7 +98,7 @@ export const ResultBusket = ( { }) => {
                             с учётом доставки рассчитывается менеджером</div>
                         <div className={styles.contacts}>
                             <div className={styles.number}>{size.width} </div>
-                            <div className={styles.type}> </div>
+                           <Contacts />
                         </div>
                         <div className={styles.rules}>
                             <div className={styles.checkbox} onClick={triggerCheckBox}><img className={checkbox ? null : styles.hide} src="/Seo/checkbox.svg" alt=""/></div>

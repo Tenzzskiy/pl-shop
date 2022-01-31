@@ -227,6 +227,7 @@
   .flex{
     width: 100%;
     padding-left: 8px;
+
   }
   .content{
     max-width: 100% !important;
@@ -235,7 +236,7 @@
 
   }
   .img{
-
+    width: 100% !important;
     height: 100% !important;
     display: flex;flex-direction: column;
     justify-content: space-between;
@@ -253,6 +254,7 @@
     height: 134px !important;
     padding: 5px !important;
     position: relative;
+
   }
   .title{
     font-size: 18px !important;

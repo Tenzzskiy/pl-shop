@@ -1,8 +1,9 @@
 import styles from './FeedBack.module.scss'
-import React,{FunctionComponent} from "react";
+import React from "react";
 import {useWindowSize} from "../../Hooks/useWindowSize";
+import Contacts from "../Contacts/Contacts";
 
-const FeedBack:FunctionComponent = ( { }) => {
+const FeedBack = ( { }) => {
     const size = useWindowSize();
     return (
         <>
@@ -36,7 +37,7 @@ const FeedBack:FunctionComponent = ( { }) => {
                         <div className={styles.contacts}>
                             <input type="text"/>
                         <button>Отправить заявку </button>
-                        <button>Отправить заявку </button>
+                        <Contacts />
 
                         </div>
                     </div>
