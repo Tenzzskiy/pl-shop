@@ -83,6 +83,7 @@
 @media (max-width: 1200px) {
   .container{
     padding: 0;
+    max-width: 768px!important;
   }
   .button{
     & button{

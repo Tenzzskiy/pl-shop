@@ -1,3 +1,8 @@
+.disabled_button{
+  background:white !important;
+  border: 2px solid #E3E1FB !important;
+  border-radius: 2px !important;
+}
 .wrapper{
   font-style: normal;
   font-weight: normal;
@@ -26,6 +31,23 @@
     background: #E3E1FB;
     z-index: 5;
     border-radius: 1px;
+    text-align: center;
+    position: relative;
+  }
+  .select_arrow{
+    margin-left: 10px;
+    transition: all 0.2s;
+
+    img{
+      position: absolute;
+      bottom: 15px;
+      max-width: 8px;
+      max-height: 4px;
+    }
+  }
+  .disable_arrow{
+    opacity: 0;
+    transition: all 0.2s;
   }
   .selectorList{
     z-index: 5;

@@ -68,9 +68,9 @@ export const BusketCard = ( {img,title,time,price,id,data,Priced  }) => {
                                        setCount(count - 1)
                                    }
                                 }}
-                                >-</div>
+                                className={styles.minus}>-</div>
                                 <div>{count}</div>
-                                <div onClick={ ( ) => {
+                                <div className={styles.plus} onClick={ ( ) => {
 
                                     dispatch(updateSelect({...data, changedPrice: (data.time === "1 сутки" ? a :
                                             data.time === '2 суток' ? b :

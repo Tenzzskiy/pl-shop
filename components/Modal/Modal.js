@@ -109,7 +109,7 @@ export const Modal = ( {active,setActive}) =>{
                         Рекомендуем добавить к заказу:
                     </div>
                     <div className={styles.slider}>
-                        {size.width > 720 ? <Slider perView={3} /> : <Slider perView={1.5} /> }
+                        {size.width > 720 ? <Slider perView={3} setActive={setActive}/> : <Slider perView={1.5} setActive={setActive}/> }
                     </div>
 
                 </div>

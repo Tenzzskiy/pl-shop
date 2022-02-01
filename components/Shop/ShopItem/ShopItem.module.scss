@@ -1,3 +1,4 @@
+
 .container{
   background: white;border-radius: 5px;
   margin-bottom: 20px;
@@ -60,17 +61,35 @@
 
       bottom: 5px;
       left: 170px;
-      width: 77px;
-      text-align: center;
+      width: 50%;
+      text-align: right;
+
+    }
+    .disabled_busket{
+      margin-left: 10px;
+      width: 68px;
+      height: 40px;
+      background: white;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      bottom: 0;
+      right: -320px;
+      cursor: pointer;
+      border: 1.5px solid #460BD9;
+      box-sizing: border-box;
+      border-radius: 2px;
 
     }
   }
+
   .bucket{
     margin-left: 10px;
     width: 68px;
     height: 40px;
     background: var(--brand-color);
-    border-radius: 5px;
+    border-radius: 2px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,11 +1,13 @@
 import React, {FunctionComponent, ReactNode, useState} from "react";
 import styles from './ShopItem.module.scss'
-import {Selector} from "../../Select/Select";
+import {Disabled_Selector, Selector} from "../../Select/Select";
 import {useDispatch, useSelector} from "react-redux";
 import {setItemInCart, updateTotalPrice} from '../../../redux/cart/reducer.js'
+import Link from "next/link";
 
 
 export const ShopItem = ( { data,children,price,count,img,title,active,setActive,id,...props}) =>{
+    const [checked,setCheck] = useState(false)
     const dispatch = useDispatch();
     const [time, setTime] = useState('1 сутки');
     const Priced = Number(price);
@@ -18,7 +20,16 @@ export const ShopItem = ( { data,children,price,count,img,title,active,setActive
 
     }
 
+const check = () =>{
+    for (let i = 0; i < items.length; i++) {
+        if (items[i].id === id) {
+            return true;
 
+        }
+    }
+    return false;
+
+}
 
     return(
         <>
@@ -48,11 +59,24 @@ export const ShopItem = ( { data,children,price,count,img,title,active,setActive
                     }
 
                     <div className={styles.card_footer}>
-                        <Selector changedPrice={changedPrice} setChangedPrice={setChangedPrice} data={data} price={data.price} setTime={setTime} time={time}  />
+                       <Selector changedPrice={changedPrice} setChangedPrice={setChangedPrice} data={data} price={data.price} setTime={setTime} time={time} check={check()} />
                         <span> {changedPrice}₽ </span>
-                        <div className={styles.bucket} onClick={handleClick}>
-                            <img src="/ShopItem/busket.svg" alt=""/>
-                        </div>
+                        { check() ?
+
+                            <Link href="/Busket"><a>  <div className={styles.disabled_busket}>
+                                <img src="/ShopItem/selected_busket.svg" alt=""/>
+                            </div></a></Link> :
+                            <div className={styles.bucket} onClick={handleClick}>
+                                <img src="/ShopItem/busket.svg" alt=""/>
+                            </div>
+
+
+
+
+
+                        }
+
+
                     </div>
                 </div>
             </div>

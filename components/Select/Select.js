@@ -4,7 +4,7 @@ import cn from 'classnames'
 import {useDispatch} from "react-redux";
 import {updateSelect,updateTime} from './../../redux/cart/reducer'
 
-export const Selector = ( {changedPrice,duration,setChangedPrice,price,setTime,time,data,Priced,count=1} ) =>{
+export const Selector = ( {check,setChangedPrice,price,setTime,time,data,Priced,count=1} ) =>{
     const [selectorStatus,setSelectorStatus] = useState(false)
     const [example,setExample] = useState(time);
      const roundHundred = (value) =>{
@@ -21,11 +21,12 @@ export const Selector = ( {changedPrice,duration,setChangedPrice,price,setTime,t
     return(
         <>
         <div className={styles.wrapper}>
-            <button type='button' className={cn(styles.selector, {
-                [styles.selectorActive]: selectorStatus === true
-            })} onClick={() => {
+            <button type='button' className={cn(styles.selector,check ?  styles.disabled_button : null, {
+                [styles.selectorActive]: selectorStatus === true,
+
+            })} onClick={!check ? () => {
                 setSelectorStatus(!selectorStatus)
-            }}>{example} </button>
+            } : null}>{example}<img src="/select_arrow.svg" alt="" className={cn(styles.select_arrow,selectorStatus ? styles.disable_arrow : null)}/></button>
 
             {selectorStatus && (
                 <div className={styles.selectorList}>

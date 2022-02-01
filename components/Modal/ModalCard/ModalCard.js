@@ -2,10 +2,12 @@ import React, {useState} from "react";
 import styles from './ModalCard.module.scss'
 import {setItemInCart, updateTotalPrice} from "../../../redux/cart/reducer";
 import {useDispatch, useSelector} from "react-redux";
+import Link from "next/link";
+import cs from "classnames";
 
 
 
-export const ModalCard = ({img,title,price,id }) => {
+export const ModalCard = ({img,title,price,id,setActive }) => {
     const roundHundred = (value) =>{
         return Math.round(value/100)*100
     }
@@ -28,7 +30,16 @@ export const ModalCard = ({img,title,price,id }) => {
         dispatch(setItemInCart({img,changedPrice,id,title,time,Priced}))
         dispatch(updateTotalPrice(changedPrice))
     }
+    const check = () =>{
+        for (let i = 0; i < items.length; i++) {
+            if (items[i].id === id) {
+                return true;
 
+            }
+        }
+        return false;
+
+    }
     return(
         <>
         <div className={styles.container}>
@@ -44,7 +55,18 @@ export const ModalCard = ({img,title,price,id }) => {
                                               time === '3 суток' ? c :
                                               time === '4 суток' ? d :
                                                 time === '5 суток' ? e : null }₽</div>
-            <div className={styles.busket} onClick={handleClick}><img src='/ShopItem/busket.svg' alt=""/> </div>
+            <div className={cs(styles.busket,check() ? styles.disabled_busket_background : null)} onClick={check() ? () => setActive(false) : handleClick}>
+
+
+                { check() ?
+
+                    <Link href="/Busket"><a>  <div className={styles.disabled_busket}>
+                        <img src="/ShopItem/selected_busket.svg" alt=""/>
+                    </div></a></Link> :
+                        <img src="/ShopItem/busket.svg" alt=""/>
+
+                }
+            </div>
             </div>
             </div>
         </div>
