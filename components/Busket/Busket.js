@@ -81,7 +81,7 @@ export const ResultBusket = ( { setOfferModal}) => {
 </div>
 
         </div>
-            {size.width < 1200 ?
+            {size.width < 1200 && count >0?
             <>
             <div className={styles.anchor} >
             <div className={styles.anchor_text}>
