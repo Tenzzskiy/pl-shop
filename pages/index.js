@@ -182,7 +182,7 @@ const Home = ({ cards }) => {
         {/*/>*/}
 
 
-        <FeedBack setOfferModal={setOfferModal} />
+        {/*<FeedBack setOfferModal={setOfferModal} />*/}
     </Layout>
           <OfferModal offerModal={offerModal} setOfferModal={setOfferModal}/>
           <Modal active={modalActive} setActive={setModalActive} />
