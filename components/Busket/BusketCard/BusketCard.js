@@ -38,9 +38,9 @@ export const BusketCard = ( {img,title,time,price,id,data,Priced  }) => {
                     <picture>
 
                         {size.width < 720 ? <div className={styles.img_360}>
-                            <img src={img} alt=""/>
+                            <img className={styles.card_img} src={img} alt=""/>
                             <Selector setChangedPrice={setChangedPrice} duration={duration}  price={changedPrice} setTime={setTime} time={time} data={data} changedPrice={changedPrice} count={count} />
-                        </div> :<img src={img} alt=""/> }
+                        </div> :<img className={styles.card_img} src={img} alt=""/> }
                     </picture>
                 </div>
                 <div className={styles.text_content}>

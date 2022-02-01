@@ -38,7 +38,7 @@ export const ResultBusket = ( { }) => {
         <>
         <div className={styles.container}>
 <div className={styles.content}>
-    <div className={styles.title} onClick={() => console.log(items)}>
+    <div className={styles.title} >
         Моя корзина
     </div>
     <div className={styles.flex}>
