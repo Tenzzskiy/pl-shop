@@ -123,7 +123,7 @@ const Home = ({ cards }) => {
         {size.width < 720  ? <Offer_360 active={modalActive} setActive={setModalActive} title={' С этим товаром часто берут'}
                                                            /> : null }
         <Cleaning />
-<Sale />
+{/*<Sale />*/}
 
 
         {size.width > 1200 ?
