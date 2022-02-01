@@ -62,11 +62,11 @@ export const Modal = ( {active,setActive}) =>{
                             </div>
                             {size.width > 720 ? <>
                                 <div className={styles.back} onClick={() => setActive(false)}> Назад к покупкам</div>
-                                    <Link href="/Busket"><a><div onClick={() => setActive(false)} className={styles.button}> <button> Перейти в корзину</button> </div></a></Link>
+                                    <Link href="/busket"><a><div onClick={() => setActive(false)} className={styles.button}> <button> Перейти в корзину</button> </div></a></Link>
                             </> :
                                 <div className={styles.button_flex}>
                                     <div className={styles.back} onClick={() => setActive(false)}> Назад к покупкам</div>
-                                    <Link href="/Busket"><a><div onClick={() => setActive(false)} className={styles.button} > <button> Перейти в корзину</button> </div></a></Link>
+                                    <Link href="/busket"><a><div onClick={() => setActive(false)} className={styles.button} > <button> Перейти в корзину</button> </div></a></Link>
                                 </div>
 
                             }

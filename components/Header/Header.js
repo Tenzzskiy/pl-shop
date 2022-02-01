@@ -6,7 +6,7 @@ import cn from 'classnames'
 import {useWindowSize} from './../../Hooks/useWindowSize.js'
 import {useSelector} from "react-redux";
 
-const Header = ({ }) =>{
+const Header = ({ setNavigation}) =>{
     const items = useSelector(state => state.cart.itemsInCart);
     // const totalPrice = items.reduce((acc,data) =>acc+=Number(data.price) ,0)
     const route = useRouter()
@@ -31,12 +31,14 @@ const Header = ({ }) =>{
         )} >
 
             <div className={styles.top_header} >
+
                     <div className={styles.top_header_container}>
                         <div className={styles.top_header_container_content}>
                             {size.width <1250 ?
-                                <div className={styles.leftModal}>
+                                <div className={styles.leftModal} onClick={( ) => setNavigation(true)} >
                                     <picture>
                                         <img src="/header/leftModal.svg" alt=""/>
+
                                     </picture>
                                 </div> : null
                             }
@@ -105,33 +107,33 @@ const Header = ({ }) =>{
                                route.asPath === '/' ? styles.a_active : null
 
                            )} >Плазмы</a></Link>
-                           <Link href='/Screens'><a className={cn(styles.a,
-                               route.asPath === '/Screens' ? styles.a_active : null
+                           <Link href='/screens'><a className={cn(styles.a,
+                               route.asPath === '/screens' ? styles.a_active : null
 
                            )}
                            >Светодиодные экраны</a></Link>
-                           <Link href='/VideoWalls'><a className={cn(styles.a,
-                               route.asPath === '/VideoWalls' ? styles.a_active : null
+                           <Link href='/sideoWalls'><a className={cn(styles.a,
+                               route.asPath === '/videoWalls' ? styles.a_active : null
 
                            )}>Видеостены</a></Link>
-                           <Link href='/TouchPanel'><a className={cn(styles.a,
-                               route.asPath === '/TouchPanel' ? styles.a_active : null
+                           <Link href='/touchPanel'><a className={cn(styles.a,
+                               route.asPath === '/touchPanel' ? styles.a_active : null
 
                            )} >Сенсорные тач-панели</a></Link>
-                           <Link href='/Projectors'><a className={cn(styles.a,
-                               route.asPath === '/Projectors' ? styles.a_active : null
+                           <Link href='/projectors'><a className={cn(styles.a,
+                               route.asPath === '/projectors' ? styles.a_active : null
 
                            )}>Проекторы</a></Link>
-                           <Link href='/Laptops'><a className={cn(styles.a,
-                               route.asPath === '/Laptops' ? styles.a_active : null
+                           <Link href='/laptops'><a className={cn(styles.a,
+                               route.asPath === '/laptops' ? styles.a_active : null
 
                            )}>Ноутбуки</a></Link>
-                           <Link href='/Sound'><a className={cn(styles.a,
-                               route.asPath === '/Sound' ? styles.a_active : null
+                           <Link href='/sound'><a className={cn(styles.a,
+                               route.asPath === '/sound' ? styles.a_active : null
 
                            )}>Звук, Свет и окружение</a></Link>
-                           <Link href='/Desinfection'><a className={cn(styles.a,
-                               route.asPath === '/Desinfection' ? styles.a_active : null
+                           <Link href='/desinfection'><a className={cn(styles.a,
+                               route.asPath === '/desinfection' ? styles.a_active : null
 
                            )}>Дезинфекция</a></Link>
 
@@ -148,5 +150,7 @@ const Header = ({ }) =>{
    </>
     )
 }
+
+
 
 export default Header;

@@ -60,7 +60,7 @@ export const ModalCard = ({img,title,price,id,setActive }) => {
 
                 { check() ?
 
-                    <Link href="/Busket"><a>  <div className={styles.disabled_busket}>
+                    <Link href="/busket"><a>  <div className={styles.disabled_busket}>
                         <img src="/ShopItem/selected_busket.svg" alt=""/>
                     </div></a></Link> :
                         <img src="/ShopItem/busket.svg" alt=""/>

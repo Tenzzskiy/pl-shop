@@ -35,33 +35,33 @@ const Footer:FunctionComponent = ({ }):JSX.Element =>{
 
                                </div>
                                <div>
-                                   <Link href='/Screens' ><a className={cn(styles.a,
+                                   <Link href='/screens' ><a className={cn(styles.a,
                                    )} > Светодиодные экраны</a></Link>
                                     </div>
                                <div>
-                                   <Link href='/VideoWalls' ><a className={cn(styles.a,
+                                   <Link href='/videoWalls' ><a className={cn(styles.a,
                                    )} > Видеостены</a></Link>
                                   </div>
                                <div>
-                                   <Link href='/TouchPanel' ><a className={cn(styles.a,
+                                   <Link href='/touchPanel' ><a className={cn(styles.a,
                                    )} > Сенсорные тач-панели</a></Link>
                                     </div>
                            </div>
                            <div className={styles.flex3}>
                                <div>
-                                   <Link href='/Projectors' ><a className={cn(styles.a,
+                                   <Link href='/projectors' ><a className={cn(styles.a,
                                    )} > Проекторы</a></Link>
                                    </div>
                                <div >
-                                   <Link href='/Laptops' ><a className={cn(styles.a,
+                                   <Link href='/laptops' ><a className={cn(styles.a,
                                    )} > Ноутбуки</a></Link>
                                    </div>
                                <div >
-                                   <Link href='/Sound' ><a className={cn(styles.a,
+                                   <Link href='/sound' ><a className={cn(styles.a,
                                    )} > Звук, Свет и окружение</a></Link>
                                    </div>
                                <div >
-                                   <Link href='/News' ><a className={cn(styles.a,
+                                   <Link href='/news' ><a className={cn(styles.a,
                                    )} > Наши новости</a></Link>
                                     </div>
 

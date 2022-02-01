@@ -54,7 +54,7 @@ export const OfferCard= ( {price,title,img,data,id,active,setActive,busket,...pr
                         {/*</picture>*/}
                         { check() ?
 
-                            <Link href="/Busket"><a>  <div className={styles.disabled_busket}>
+                            <Link href="/busket"><a>  <div className={styles.disabled_busket}>
                                 <img src="/ShopItem/selected_busket.svg" alt=""/>
                             </div></a></Link> :
                             <div className={styles.bucket} >

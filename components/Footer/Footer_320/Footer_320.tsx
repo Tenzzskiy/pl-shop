@@ -43,28 +43,28 @@ export const Footer_320 = () =>{
 
                 </div></a></Link>
                     <span className={styles.border}> </span>
-                    <Link href='/Screens' ><a className={cn(styles.a,
+                    <Link href='/screens' ><a className={cn(styles.a,
                     )} > <div>  Светодиодные экраны </div></a></Link>
                     <span className={styles.border}> </span>
-                    <Link href='/VideoWalls' ><a className={cn(styles.a,
+                    <Link href='/sideoWalls' ><a className={cn(styles.a,
                     )} ><div>    Видеостены</div></a></Link>
                     <span className={styles.border}> </span>
-                    <Link href='/TouchPanel' ><a className={cn(styles.a,
+                    <Link href='/touchPanel' ><a className={cn(styles.a,
                     )} > <div> Сенсорные тач-панели </div></a></Link>
                     <span className={styles.border}> </span>
-                    <Link href='/Projectors' ><a className={cn(styles.a,
+                    <Link href='/projectors' ><a className={cn(styles.a,
                     )} > <div> Проекторы </div></a></Link>
                     <span className={styles.border}> </span>
-                    <Link href='/Laptops' ><a className={cn(styles.a,
+                    <Link href='/laptops' ><a className={cn(styles.a,
                     )} ><div>  Ноутбуки </div></a></Link>
                     <span className={styles.border}> </span>
-                    <Link href='/Sound' ><a className={cn(styles.a,
+                    <Link href='/sound' ><a className={cn(styles.a,
                     )} ><div>  Звук, Свет и окружение</div></a></Link>
                     <span className={styles.border}> </span>
-                    <Link href='/Desinfection' ><a className={cn(styles.a,
+                    <Link href='/desinfection' ><a className={cn(styles.a,
                     )} ><div>  Дезинфекция </div></a></Link>
                     <span className={styles.border}> </span>
-                    <Link href='/News' ><a className={cn(styles.a,
+                    <Link href='/news' ><a className={cn(styles.a,
                     )} ><div>  Наши новости</div></a></Link>
                     <span className={styles.border}> </span>
                 </div>

@@ -20,7 +20,8 @@ import {store} from "../redux";
 import {Modal} from "../components/Modal/Modal";
 import FeedBack from "../components/FeedBack/FeedBack";
 import data from '../components/Shop/cart_arenda-plasm77.ru.json'
-
+import styles from './../styles/index.module.scss'
+import {Navigation} from "../components/Header/Header";
 export  const getStaticProps = async () =>{
     return {
         props: {
@@ -36,8 +37,11 @@ const Home = ({ cards }) => {
     const [modalActive,setModalActive] = useState(false)
 
   return (
+
       <Provider store={store} >
+
     <Layout>
+
         <MainHeaderComponent />
         {size.width > 1200 ?
             <Preferences
