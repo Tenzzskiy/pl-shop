@@ -17,6 +17,7 @@ import {store} from "../redux";
 import {Modal} from "../components/Modal/Modal";
 import FeedBack from "../components/FeedBack/FeedBack";
 import data from "../components/Shop/cart_arenda-plasm77.ru.json";
+import {OfferModal} from "../components/offerModal/OfferModal";
 export  const getStaticProps = async () =>{
     return {
         props: {
@@ -25,6 +26,7 @@ export  const getStaticProps = async () =>{
     };
 }
 const Index = ({ cards}) => {
+    const [offerModal,setOfferModal] = useState(false)
     const size = useWindowSize();
     const [modalActive,setModalActive] = useState(false)
     return (
@@ -145,8 +147,9 @@ const Index = ({ cards}) => {
             {/*        насущным потребностям.'*/}
 
             {/*/>*/}
-            <FeedBack />
+            <FeedBack setOfferModal={setOfferModal} />
         </Layout>
+            <OfferModal offerModal={offerModal} setOfferModal={setOfferModal}/>
             <Modal active={modalActive} setActive={setModalActive} />
         </Provider>
     )

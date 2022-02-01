@@ -21,6 +21,7 @@ import {store} from "../redux";
 import {Modal} from "../components/Modal/Modal";
 import FeedBack from "../components/FeedBack/FeedBack";
 import data from "../components/Shop/cart_arenda-plasm77.ru.json";
+import {OfferModal} from "../components/offerModal/OfferModal";
 
 export  const getStaticProps = async () =>{
     return {
@@ -32,6 +33,7 @@ export  const getStaticProps = async () =>{
 const TouchPanel = ({ cards}) => {
     const size =useWindowSize();
     const [modalActive,setModalActive] = useState(false)
+    const [offerModal,setOfferModal] = useState(false)
     return (
       <Provider store={store}>
           <Layout >
@@ -175,8 +177,9 @@ const TouchPanel = ({ cards}) => {
               {/*   дня требует от нас анализа системы обучения*/}
               {/* кадров, соответствующей насущным потребностям.'*/}
               {/*/>*/}
-              <FeedBack />
+              <FeedBack setOfferModal={setOfferModal} />
           </Layout>
+          <OfferModal offerModal={offerModal} setOfferModal={setOfferModal}/>
           <Modal active={modalActive} setActive={setModalActive} />
       </Provider>
     )

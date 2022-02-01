@@ -46,7 +46,7 @@ export const Footer_320 = () =>{
                     <Link href='/screens' ><a className={cn(styles.a,
                     )} > <div>  Светодиодные экраны </div></a></Link>
                     <span className={styles.border}> </span>
-                    <Link href='/sideoWalls' ><a className={cn(styles.a,
+                    <Link href='/videoWalls' ><a className={cn(styles.a,
                     )} ><div>    Видеостены</div></a></Link>
                     <span className={styles.border}> </span>
                     <Link href='/touchPanel' ><a className={cn(styles.a,

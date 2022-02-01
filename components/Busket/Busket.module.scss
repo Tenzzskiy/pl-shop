@@ -167,9 +167,11 @@
   flex-direction: row;
   justify-content: space-between;
   .number{
-    width: 210px;
+    width: 170px;
     height: 42px;
-    background: yellow;
+    input{
+      border-radius: 2px;
+    }
     color: black;
   }
   .type{

@@ -11,9 +11,11 @@ import {Offer} from "../Offer/Offer";
 import {Offer_768} from "../Offer/OfferCard/Offer_768";
 import {Offer_360} from "../Offer/OfferCard/Offer_360";
 import {Contacts} from "../Contacts/Contacts";
+import {FormInput} from "../Input";
 
 
-export const ResultBusket = ( { }) => {
+export const ResultBusket = ( { setOfferModal}) => {
+    const [value,setValue] = useState();
     const [checkbox,setCheckBox] = useState(false);
     const size = useWindowSize();
     const items = useSelector(state => state.cart.itemsInCart);
@@ -62,14 +64,14 @@ export const ResultBusket = ( { }) => {
             <div className={styles.add}>*финальная стоимость
             с учётом доставки рассчитывается менеджером</div>
             <div className={styles.contacts}>
-            <div className={styles.number}>{size.width} </div>
+            <div className={styles.number}><FormInput mask="+7 (999) 999-99-99" onChange={(evt) => setValue(evt)} /> </div>
                 <Contacts />
             </div>
             <div className={styles.rules}>
             <div className={styles.checkbox} onClick={triggerCheckBox}><img className={checkbox ? null : styles.hide} src="/Seo/checkbox.svg" alt=""/></div>
             <div> Соглашаюсь с <Link href=""><a>Правилами обработки персональных данных</a></Link></div>
             </div>
-            <div className={styles.button}><button>Отправить заявку</button> </div>
+            <div className={styles.button} onClick={() => checkbox ? setOfferModal(true) : null}><button>Отправить заявку</button> </div>
             </div>
             </div> : null
         }
