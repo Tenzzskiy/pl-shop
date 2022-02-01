@@ -78,7 +78,7 @@ export const Offer_768 = ({busket=0,active,setActive,title=' С этим тов�
 
                             </div>
                             {loaded && instanceRef.current && (
-                                <div className={styles2.dots}>
+                                <div className={styles2.dots} >
 
                                     {[
                                         ...Array(instanceRef.current.track.details.slides.length-(size.width>720 && size.width <920 ? 1  : size.width >920 && size.width <1200 ? 2: null)).keys()

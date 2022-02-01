@@ -6,7 +6,7 @@ import cn from 'classnames'
 import {useWindowSize} from './../../Hooks/useWindowSize.js'
 import {useSelector} from "react-redux";
 
-const Header = ({ setNavigation}) =>{
+const Header = ({ setNavigation,setContacts}) =>{
     const items = useSelector(state => state.cart.itemsInCart);
     // const totalPrice = items.reduce((acc,data) =>acc+=Number(data.price) ,0)
     const route = useRouter()
@@ -85,7 +85,7 @@ const Header = ({ setNavigation}) =>{
                                 :   <div className={styles.contacts}>
                                         <picture>
 
-                                            <img src="/header/contacts.svg" alt=""/>
+                                            <img src="/header/contacts.svg" alt="" onClick={() => setContacts(true)}/>
                                         </picture>
                                         
                                 </div>

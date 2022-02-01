@@ -8,6 +8,7 @@
 
 
   button{
+
     outline: none;
     border: 0;
     color: var(--description);
@@ -59,4 +60,12 @@
 
   }
 
+}
+@media (max-width: 720px){
+  .selector{
+    width: 258px !important;
+  }
+  .selectorList{
+    width: 258px !important;
+  }
 }

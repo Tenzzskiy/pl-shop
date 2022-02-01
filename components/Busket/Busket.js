@@ -12,7 +12,7 @@ import {Offer_768} from "../Offer/OfferCard/Offer_768";
 import {Offer_360} from "../Offer/OfferCard/Offer_360";
 import {Contacts} from "../Contacts/Contacts";
 import {FormInput} from "../Input";
-
+import {Link as Link32, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 export const ResultBusket = ( { setOfferModal}) => {
     const [value,setValue] = useState();
@@ -81,14 +81,24 @@ export const ResultBusket = ( { setOfferModal}) => {
 </div>
 
         </div>
-            <div>
+            {size.width < 1200 ?
+            <>
+            <div className={styles.anchor} >
+            <div className={styles.anchor_text}>
+               <Link32 onClick={() => scroll.scrollTo(1200)} duration={500} smooth={true}>К оформлению </Link32>
+             </div>
+            <div><img src="/select_arrow.svg" alt=""/> </div>
+            </div>
+            </> :null
+            }
+            <div >
                 {size.width > 1200 ? <Offer title={'Вам также может пригодиться'} busket={1}/> : null }
                 {size.width > 720 && size.width<1200 ? <Offer_768  title={'Вам также может пригодиться'} busket={1}/> : null }
                 {size.width < 720  ? <Offer_360  title={'Вам также может пригодиться'} busket={1}
                 /> : null }
             </div>
             {count > 0 &&  size.width < 1250 ?
-                <div className={styles.menu}>
+                <div className={styles.menu}  >
                     <div className={styles.menu_container}>
                         <div className={styles.menu_title}>Итого:</div>
                         <div className={styles.total}>
@@ -99,14 +109,14 @@ export const ResultBusket = ( { setOfferModal}) => {
                         <div className={styles.add}>*финальная стоимость
                             с учётом доставки рассчитывается менеджером</div>
                         <div className={styles.contacts}>
-                            <div className={styles.number}>{size.width} </div>
+                            <div className={styles.number}><FormInput mask="+7 (999) 999-99-99" onChange={(evt) => setValue(evt)} /> </div>
                            <Contacts />
                         </div>
                         <div className={styles.rules}>
                             <div className={styles.checkbox} onClick={triggerCheckBox}><img className={checkbox ? null : styles.hide} src="/Seo/checkbox.svg" alt=""/></div>
                             <div className={styles.agree}> Соглашаюсь с <Link href=""><a>Правилами обработки персональных данных</a></Link></div>
                         </div>
-                        <div className={styles.button}><button>Отправить заявку</button> </div>
+                        <div className={styles.button}><button onClick={() => checkbox ? setOfferModal(true) : null}>Отправить заявку</button> </div>
                     </div>
                 </div> : null
             }

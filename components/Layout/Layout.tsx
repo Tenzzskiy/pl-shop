@@ -13,10 +13,12 @@ import cn from "classnames";
 const Layout:FunctionComponent = ({children }) =>{
 
     const [navigation,setNavigation] = useState(false);
+    const [contacts,setContacts] =useState(false)
     return(
    <>
-       <Header setNavigation={setNavigation}/>
-       <Navigation setNavigation={setNavigation} navigation={navigation}/>
+       <Header setNavigation={setNavigation} setContacts={setContacts}/>
+       <Navigation setNavigation={setNavigation} navigation={navigation} contacts={contacts} setContacts={setContacts}/>
+
        {children}
 
 
@@ -24,11 +26,11 @@ const Layout:FunctionComponent = ({children }) =>{
    </>
     )
 }
-export const Navigation = ( { setNavigation,navigation}) =>{
+export const Navigation = ( { setNavigation,navigation,contacts,setContacts}) =>{
     const route = useRouter();
     return(
         <>
-            <div className={cn(styles.navigation_container,navigation ? styles.show : null)}>
+             <div className={cn(styles.navigation_container,navigation ? styles.show : null)}>
                 <div className={styles.navigation_content}>
                     <div className={styles.exit} onClick={() => setNavigation(false)}><img src="/Modal/exit.svg" alt=""/></div>
                     <Link href='/' ><a className={cn(styles.a,
@@ -67,6 +69,31 @@ export const Navigation = ( { setNavigation,navigation}) =>{
 
                 </div>
             </div>
+            <div className={cn(styles.navigation_container,contacts ? styles.show : null)}>
+                <div className={styles.navigation_content}>
+                    <div className={styles.exit} onClick={() => setContacts(false)}><img src="/Modal/exit.svg" alt=""/></div>
+                    <div className={styles.app}>
+                        <img src="/Modal/1.svg" alt=""/>
+                        <span>Позвонить</span>
+                    </div>
+                    <div className={styles.app}>
+                        <img src="/Modal/WS.svg" alt=""/>
+                        <span>Написать в WhatsApp</span>
+                    </div>
+                    <div className={styles.app}>
+                        <img src="/Modal/TG.svg" alt=""/>
+                        <span>Написать в Telegram</span>
+                    </div>
+                    <div className={styles.app}>
+                        <img src="/Modal/TG.svg" alt=""/>
+                        <span>Отправить E-mail</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+
         </>
     )
 }
