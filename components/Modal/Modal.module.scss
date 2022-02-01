@@ -230,7 +230,7 @@
   .flex{
     width: 100%;
     padding-left: 8px;
-
+    justify-content: center !important;
   }
   .content{
     max-width: 100% !important;
@@ -239,7 +239,7 @@
     height: 615px !important;
   }
   .img{
-    width: 100% !important;
+    width: 275px !important;
     height: 100% !important;
     display: flex;flex-direction: column;
     justify-content: space-between;
