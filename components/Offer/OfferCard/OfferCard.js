@@ -48,7 +48,7 @@ export const OfferCard= ( {price,title,img,data,id,active,setActive,busket,...pr
                     <Selector changedPrice={changedPrice} setChangedPrice={setChangedPrice} price={price} setTime={setTime} time={time} check={check()}/>
                     </div>
                     <div className={styles.price}> {changedPrice}₽</div>
-                    <div className={styles.busket} onClick={check() ? null : handleClick} >
+                    <div className={cs(styles.busket,check() ? styles.busket_disabled : null)} onClick={check() ? null : handleClick} >
                         {/*<picture>*/}
                         {/*    <img src="/ShopItem/whiteBusket.svg" alt="" />*/}
                         {/*</picture>*/}

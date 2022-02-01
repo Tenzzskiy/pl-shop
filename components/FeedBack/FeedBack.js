@@ -1,9 +1,13 @@
 import styles from './FeedBack.module.scss'
-import React from "react";
+import React, {useRef, useState} from "react";
 import {useWindowSize} from "../../Hooks/useWindowSize";
 import Contacts from "../Contacts/Contacts";
+import {FormInput} from "../Input";
 
-const FeedBack = ( { }) => {
+const FeedBack = ( {setOfferModal}) => {
+    const [input,setInput] = useState();
+    const value = useRef()
+    console.log(input)
     const size = useWindowSize();
     return (
         <>
@@ -35,8 +39,8 @@ const FeedBack = ( { }) => {
                         </div>
 
                         <div className={styles.contacts}>
-                            <input type="text"/>
-                        <button>Отправить заявку </button>
+                            <FormInput mask="+7 (999) 999-99-99" maskChar=" "  onChange={(evt) =>setInput(evt)}/>
+                        <button onClick={() => setOfferModal(true)}>Отправить заявку </button>
                         <Contacts />
 
                         </div>

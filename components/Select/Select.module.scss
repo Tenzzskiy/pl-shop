@@ -9,7 +9,7 @@
   font-size: 16px;
   line-height: 140%;
   color: var(--description);
-
+  cursor: pointer;
   bottom: 0;
 
   button{
@@ -33,6 +33,7 @@
     border-radius: 1px;
     text-align: center;
     position: relative;
+    cursor: pointer;
   }
   .select_arrow{
     margin-left: 10px;
@@ -56,6 +57,7 @@
       width: 110px;
       height: 28px;
       background: white;
+      cursor: pointer;
       z-index: 5;
       &:hover{
         background: #575786;

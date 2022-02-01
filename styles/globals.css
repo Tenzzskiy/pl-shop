@@ -30,7 +30,7 @@ body{
     position: relative;
 }
 .button-block--left{
-
+    cursor: pointer;
     position: absolute;
     bottom: 57%;
     left: -22px;
@@ -38,6 +38,7 @@ body{
 }
 
 .button-block--right{
+    cursor: pointer;
     position: absolute;
     bottom: 57%;
     right: -5px;

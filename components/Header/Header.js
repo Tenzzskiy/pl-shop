@@ -53,7 +53,7 @@ const Header = ({ setNavigation}) =>{
 
 
 
-                                 <Link href="/Busket"><a> <div className={styles.busket}>
+                                 <Link href="/busket"><a> <div className={styles.busket}>
                                       {size.width > 1000 ?
                                           <div className={styles.icon}>
                                               <img src="/header/busket.svg" alt=""/>
@@ -112,7 +112,7 @@ const Header = ({ setNavigation}) =>{
 
                            )}
                            >Светодиодные экраны</a></Link>
-                           <Link href='/sideoWalls'><a className={cn(styles.a,
+                           <Link href='/videoWalls'><a className={cn(styles.a,
                                route.asPath === '/videoWalls' ? styles.a_active : null
 
                            )}>Видеостены</a></Link>
