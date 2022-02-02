@@ -31,6 +31,7 @@ export  const getStaticProps = async () =>{
 }
 
 const Home = ({ cards }) => {
+    const [sites,setSites] = useState(true);
     const [offerModal,setOfferModal] = useState(false)
     const [totalPrice,setTotalPrice] = useState()
     const size = useWindowSize();
