@@ -23,6 +23,7 @@ import data from '../components/Shop/cart_arenda-plasm77.ru.json'
 import {OfferModal} from "../components/offerModal/OfferModal";
 import SitesModal from "../components/SitesModal/SitesModal";
 import Seo from "../components/SEO/SEO";
+import {MainHeaderComponent_360} from "../components/HeaderComponent/MainHeaderComponent/MainHeaderComponent_360";
 
 export  const getStaticProps = async () =>{
     return {
@@ -44,9 +45,10 @@ const Home = ({ cards }) => {
       <Provider store={store} >
 
     <Layout>
+        {/*{size.width > 720 ? <MainHeaderComponent  setSites={setSites}*/}
+        {/*    setOfferModal={setOfferModal}/> : null  }*/}
 
-        <MainHeaderComponent  setSites={setSites}
-                              setOfferModal={setOfferModal}/>
+       <MainHeaderComponent_360 setSites={setSites}/>
         {size.width > 1200 ?
             <Preferences
                 count={4}
