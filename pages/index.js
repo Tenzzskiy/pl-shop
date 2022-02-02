@@ -115,7 +115,7 @@ const Home = ({ cards }) => {
 
         <Partners />
         <Conditions />
-        {/*<Shop page={1} active={modalActive} setActive={setModalActive} data={cards} />*/}
+        <Shop page={1} active={modalActive} setActive={setModalActive} data={cards} />
 
 
         {size.width > 1200 ? <Offer active={modalActive} setActive={setModalActive} title={' С этим товаром часто берут'} /> : null }
@@ -182,7 +182,7 @@ const Home = ({ cards }) => {
         {/*/>*/}
 
 
-        {/*<FeedBack setOfferModal={setOfferModal} />*/}
+        <FeedBack setOfferModal={setOfferModal} />
     </Layout>
           <OfferModal offerModal={offerModal} setOfferModal={setOfferModal}/>
           <Modal active={modalActive} setActive={setModalActive} />
