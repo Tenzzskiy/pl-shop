@@ -128,7 +128,7 @@ const Home = ({ cards }) => {
         {size.width < 720  ? <Offer_360 active={modalActive} setActive={setModalActive} title={' С этим товаром часто берут'}
                                                            /> : null }
         <Cleaning />
-{/*<Sale />*/}
+<Sale />
 
 
         {size.width > 1200 ?
@@ -189,7 +189,7 @@ const Home = ({ cards }) => {
         />
 
 
-        <FeedBack setOfferModal={setOfferModal} />
+        {/*<FeedBack setOfferModal={setOfferModal} />*/}
     </Layout>
           <SitesModal sites={sites} setSites= {setSites} setOfferModal={setOfferModal} title='Получить расчет'/>
           <OfferModal offerModal={offerModal} setOfferModal={setOfferModal}/>
