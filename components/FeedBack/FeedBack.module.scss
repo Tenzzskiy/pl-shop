@@ -150,6 +150,9 @@ background:  #F2F3FE;
 }
 
 @media (max-width: 720px){
+  .feedback_flex{
+    min-height: 433px !important;
+  }
   .feedback_container{
     padding: 90px 0;
   }
@@ -160,10 +163,10 @@ background:  #F2F3FE;
     height: 160px;
   }
   .img{
-    height: 600px;
+    min-height: 600px;
   }
   .feedback{
-    height: 600px;
+    min-height: 600px;
   }
 
 

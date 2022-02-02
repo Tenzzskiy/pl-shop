@@ -23,7 +23,8 @@ width: 100%;;
   .image_360{
     max-width: 320px;
     max-height: 196px;
-
+    min-width: 311px;
+    min-height: 196px;
   }
   .img_360{
     margin-bottom: 32px;
@@ -39,6 +40,10 @@ width: 100%;;
   .background_image_360{
     position: absolute;
     z-index: -1;
+    max-width: 352px;
+    max-height: 252px;
+    min-width: 352px;
+    min-height: 252px;
   }
   .text_360{
     margin: 0 auto 10px auto;
@@ -47,6 +52,8 @@ width: 100%;;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 201px;
+    min-width: 320px;
 
   }
 
