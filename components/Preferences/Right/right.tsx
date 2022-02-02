@@ -4,7 +4,7 @@ import {useWindowSize} from "../../../Hooks/useWindowSize";
 import {Left} from "../LeftPreference_tablet/left";
 
 
-export const Preferences_768 = ( {count = 0,secondLeftImg,secondRightImg,leftImg,rightImg,leftTitle,rightTitle,leftText,rightText,rightSecondText,leftSecondText,leftSecondTitle,rightSecondTitle,...props } ) => {
+export const Preferences_768 = ( {button=false,count = 0,secondLeftImg,secondRightImg,leftImg,rightImg,leftTitle,rightTitle,leftText,rightText,rightSecondText,leftSecondText,leftSecondTitle,rightSecondTitle,...props } ) => {
     const size = useWindowSize();
     return(
         <>
@@ -24,7 +24,12 @@ export const Preferences_768 = ( {count = 0,secondLeftImg,secondRightImg,leftImg
                         {count === 4 ? <Right  img={secondRightImg}  title={rightSecondTitle}    description={rightSecondText}/>: null}
                         {count === 5 ? <Left img={leftImg} title={leftTitle} description={leftText}/>: null}
                         {count === 6 ? <Right  img={rightImg}  title={rightTitle}  description={rightText}/>: null}
+                        {button ?
+                            <div className={styles.button}>
+                                <button> Заказать разработку</button>
+                            </div>
 
+                            : null}
 
                     </div>
 

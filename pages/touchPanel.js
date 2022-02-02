@@ -57,6 +57,7 @@ const TouchPanel = ({ cards}) => {
                   до сложной интерактивной игры!'
                       leftTitle=' Встроенный процессор и ОС'
                       rightTitle='Любой контент! '
+                      button={true}
                   /> : null
 
               }
@@ -74,6 +75,7 @@ const TouchPanel = ({ cards}) => {
                   до сложной интерактивной игры!'
                       leftTitle=' Встроенный процессор и ОС'
                       rightTitle='Любой контент! '
+                      button={true}
                   /> : null
               }
               {
@@ -91,6 +93,7 @@ const TouchPanel = ({ cards}) => {
                   до сложной интерактивной игры!'
                           leftTitle=' Встроенный процессор и ОС'
                           rightTitle='Любой контент! '
+                          button={true}
                       /> : null
               }
               <Conditions />

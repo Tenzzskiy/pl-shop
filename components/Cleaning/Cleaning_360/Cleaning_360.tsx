@@ -49,7 +49,7 @@ export const Cleaning_360:FunctionComponent = ( { }) =>{
 
                     </div>
                     <div className={styles.button}>
-                        <Link href='/Desinfection' ><a className={cn(styles.a,
+                        <Link href='/desinfection' ><a className={cn(styles.a,
                         )} >   <button> Каталог дезинфекции</button> </a></Link>
                     </div>
                 </div>

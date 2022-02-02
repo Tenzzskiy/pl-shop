@@ -1,3 +1,27 @@
+.button{
+  width: 100%;
+  display: flex;
+  justify-content: center;align-items: center;
+  margin-bottom: 120px;
+  button{
+    padding: 15px 30px;
+    background: #460BD9;
+    /* Smooth Shadow */
+
+    box-shadow: 2px 4px 4px rgba(87, 87, 134, 0.2);
+    border-radius: 2px;
+    width: 340px;
+    height: 60px;
+    color: white;
+    outline: none;
+    border: 0;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 120%;
+  }
+}
 .preferences{
   width: 100%;
   .container{
