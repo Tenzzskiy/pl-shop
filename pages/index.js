@@ -49,7 +49,7 @@ const Home = ({ cards }) => {
          <MainHeaderComponent  setSites={setSites}
             setOfferModal={setOfferModal}/>
         </div>
-
+        <div className={styles.preferences}>
         {size.width > 1200 ?
             <Preferences
                 count={4}
@@ -119,21 +119,30 @@ const Home = ({ cards }) => {
                     rightSecondTitle='Под ключ'
                 /> : null
         }
-
-
+         </div>
+            <div className={styles.partners}>
         <Partners />
+            </div>
+        <div className={styles.conditions}>
         <Conditions />
+        </div>
+        <div className={styles.shop}>
         <Shop page={1} active={modalActive} setActive={setModalActive} data={cards} />
-
-
+        </div>
+<div className={styles.offer}>
         {size.width > 1200 ? <Offer active={modalActive} setActive={setModalActive} title={' С этим товаром часто берут'} /> : null }
         {size.width > 720 && size.width<1200 ? <Offer_768 active={modalActive} setActive={setModalActive} title={' С этим товаром часто берут'} /> : null }
         {size.width < 720  ? <Offer_360 active={modalActive} setActive={setModalActive} title={' С этим товаром часто берут'}
-                                                           /> : null }
+                                                           /> : null } </div>
+
+        <div className={styles.cleaning}>
         <Cleaning />
+        </div>
+        <div className={styles.sale}>
 <Sale />
+        </div>
 
-
+        <div className={styles.releases}>
         {size.width > 1200 ?
             <Releases
                 img1='/releases/releases1(1).png'
@@ -163,7 +172,8 @@ const Home = ({ cards }) => {
                 text4='Плазма на брендированной стойке для интерактивной зоны'
                 text5='Плазма на брендированной стойке для игровой VR зоны'
             /> : null
-        }
+        } </div>
+        <div className={styles.seo}>
         <Seo
             image1='/Seo/seo1FirstPicture.png'
             image2='/Seo/2.png'
@@ -190,9 +200,9 @@ const Home = ({ cards }) => {
  Для получения подробной консультации и согласования времени аренды достаточно воспользоваться формой обратной связи на сайте. '
 
         />
-
-
-        <FeedBack setOfferModal={setOfferModal} />
+        </div>
+<div className={styles.feedback}>
+        <FeedBack setOfferModal={setOfferModal} /> </div>
     </Layout>
           <SitesModal sites={sites} setSites= {setSites} setOfferModal={setOfferModal} title='Получить расчет'/>
           <OfferModal offerModal={offerModal} setOfferModal={setOfferModal}/>
