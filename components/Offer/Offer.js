@@ -29,7 +29,7 @@ export const Offer = ({active,setActive,title=' С этим товаром ча�
     // });
 
 
-   const size = useWindowSize();
+
 
     const [currentSlide, setCurrentSlide] = React.useState(0);
     const [loaded, setLoaded] = useState(false);
@@ -48,7 +48,7 @@ export const Offer = ({active,setActive,title=' С этим товаром ча�
     });
 
 
-    const items =  data.mainAdditionals.map(elem  =>
+    const items =  data.LedAdditionals.map(elem  =>
         <div className="keen-slider__slide number-slide2" key={elem.id}>
             <div className={styles.flex} >
                 <OfferCard price={elem.price} title={elem.name} img={elem.img} data={elem} id={elem.id} active={active} setActive={setActive} busket={busket} />

@@ -9,6 +9,8 @@
       "nights": "1",
       "total": "0",
       "totalResult": "0"
+
+
     },
     {
       "name": "Плазма 50” (113x65см) + cтойка",
@@ -19,6 +21,7 @@
       "nights": "1",
       "total": "0",
       "totalResult": "0"
+
     },
     {
       "name": "Плазма 80” (186x111см)",
@@ -970,7 +973,7 @@
       "name": "Стойка напольная для плазмы",
       "id": "100",
       "price": "8000",
-      "img": "/assets/images2/zvukovaya-sistema-550.jpg",
+      "img": "/assets/images2/stoyka-napolnaya-dlya-plazmy.jpg",
       "count": "0",
       "nights": "1",
       "total": "0",
@@ -980,7 +983,7 @@
       "name": "Брендированная плашка под плазму",
       "id": "101",
       "price": "11000",
-      "img": "/assets/images2/zvukovaya-sistema-800.jpg",
+      "img": "/assets/images2/brendirovannaya-plashka-pod-plazmu.jpg",
       "count": "0",
       "nights": "1",
       "total": "0",
@@ -990,7 +993,7 @@
       "name": "Экспостенд 2х2 под плазму",
       "id": "102",
       "price": "2000",
-      "img": "/assets/images2/vertikalnaya-podsvetka-led-24.jpg",
+      "img": "/assets/images2/ekspostend-pod-plazmu_2x2.jpg",
       "count": "0",
       "nights": "1",
       "total": "0",
@@ -1000,7 +1003,7 @@
       "name": "Экспостенд 3х2 под плазму",
       "id": "103",
       "price": "1500",
-      "img": "/assets/images2/podsvetka-led-15.jpg",
+      "img": "/assets/images2/ekspostend-pod-plazmu_3x2.jpg",
       "count": "0",
       "nights": "1",
       "total": "0",
@@ -1010,7 +1013,7 @@
       "name": "Санитайзер для рук с сенсорным датчиком",
       "id": "104",
       "price": "2000",
-      "img": "/assets/images2/prozhektor-led-36.jpg",
+      "img": "/assets/images2/sanitayzer-dlya-ruk-s-sensornym-datchikom.jpg",
       "count": "0",
       "nights": "1",
       "total": "0",
@@ -1020,7 +1023,7 @@
       "name": "Таблички-указатели",
       "id": "105",
       "price": "1500",
-      "img": "/assets/images2/prozhektor-led-9.jpg",
+      "img": "/assets/images2/tablichki-ukazateli.jpg",
       "count": "0",
       "nights": "1",
       "total": "0",
@@ -1030,7 +1033,7 @@
       "name": "Подсветка LED 15",
       "id": "106",
       "price": "1000",
-      "img": "/assets/images2/tablichki-ukazateli.jpg",
+      "img": "/assets/images2/podsvetka-led-15.jpg",
       "count": "0",
       "nights": "1",
       "total": "0",
@@ -1040,17 +1043,17 @@
       "name": "Профессиональный ноутбук 14-15”",
       "id": "107",
       "price": "1200",
-      "img": "/assets/images2/ograzhdenie-kanat.jpg",
+      "img": "/assets/images2/professionalnyy-noutbuk.jpg",
       "count": "0",
       "nights": "1",
       "total": "0",
       "totalResult": "0"
     },
     {
-      "name": "Звуковая система 800 Вт",
+      "name": "Звуковая система 800Вт",
       "id": "108",
       "price": "500",
-      "img": "/assets/images2/stoyka-napolnaya-dlya-plazmy.jpg",
+      "img": "/assets/images2/zvukovaya-sistema-800.jpg",
       "count": "0",
       "nights": "1",
       "total": "0",
@@ -1060,7 +1063,121 @@
       "name": "Ограждение «канат»",
       "id": "109",
       "price": "500",
-      "img": "/assets/images2/stoyka-napolnaya-dlya-plazmy.jpg",
+      "img": "/assets/images2/ograzhdenie-kanat.webp",
+      "count": "0",
+      "nights": "1",
+      "total": "0",
+      "totalResult": "0"
+    }
+  ],
+  "LedAdditionals": [
+    {
+      "name": "Санитайзер для рук с сенсорным датчиком",
+      "id": "104",
+      "price": "2000",
+      "img": "/assets/images2/sanitayzer-dlya-ruk-s-sensornym-datchikom.jpg"
+    },
+    {
+      "name": "Раствор антисептика 5 литров",
+      "id": "84",
+      "price": "1800",
+      "img": "/assets/images2/rastvor-antiseptika-5-litrov.jpg"
+    },
+    {
+      "name": "Ограждение «канат»",
+      "id": "94",
+      "price": "1200",
+      "img": "/assets/images2/ograzhdenie-kanat.jpg",
+      "count": "0",
+      "nights": "1",
+      "total": "0",
+      "totalResult": "0"
+    },
+    {
+      "name": "Профессиональный ноутбук 14-15”",
+      "id": "63",
+      "price": "1200",
+      "img": "/assets/images2/professionalnyy-noutbuk.jpg",
+      "count": "0",
+      "nights": "1",
+      "total": "0",
+      "totalResult": "0"
+    },
+    {
+      "name": "Таблички-указатели",
+      "id": "93",
+      "price": "1000",
+      "img": "/assets/images2/tablichki-ukazateli.jpg",
+      "count": "0",
+      "nights": "1",
+      "total": "0",
+      "totalResult": "0"
+    },
+    {
+      "name": "Бактерицидный рециркулятор Advansys 60м³",
+      "id": "72",
+      "price": "6000",
+      "img": "/assets/images2/baktericidnyy-recirkulyator_60.jpg",
+      "count": "0",
+      "nights": "1",
+      "total": "0",
+      "totalResult": "0"
+    },
+    {
+      "name": "Автоматический аппарат для надевания бахил",
+      "id": "82",
+      "price": "10000",
+      "img": "/assets/images2/avtomaticheskiy-apparat-dlya-nadevaniya-bahil.jpg",
+      "count": "0",
+      "nights": "1",
+      "total": "0",
+      "totalResult": "0"
+    },
+    {
+      "name": "Комплект дезинфекции 30м³",
+      "id": "75",
+      "price": "5000",
+      "img": "/assets/images2/komplekt-dezinfekcii-30.jpg",
+      "count": "0",
+      "nights": "1",
+      "total": "0",
+      "totalResult": "0"
+    },
+    {
+      "name": "Звуковая система 800Вт",
+      "id": "108",
+      "price": "500",
+      "img": "/assets/images2/zvukovaya-sistema-800.jpg",
+      "count": "0",
+      "nights": "1",
+      "total": "0",
+      "totalResult": "0"
+    },
+    {
+      "name": "Вертикальная подсветка LED 24",
+      "id": "89",
+      "price": "2000",
+      "img": "/assets/images2/vertikalnaya-podsvetka-led-24.jpg",
+      "count": "0",
+      "nights": "1",
+      "total": "0",
+      "totalResult": "0"
+    },
+    {
+      "name": "Подсветка LED 15",
+      "id": "106",
+      "price": "1000",
+      "img": "/assets/images2/podsvetka-led-15.jpg",
+      "count": "0",
+      "nights": "1",
+      "total": "0",
+      "totalResult": "0"
+    },
+    {
+      "name": "Прожектор LED 36",
+      "id": "91",
+      "price": "2000",
+      "img": "/assets/images2/prozhektor-led-36.jpg",
       "count": "0",
       "nights": "1",
       "total": "0",
