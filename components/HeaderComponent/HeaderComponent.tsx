@@ -6,9 +6,13 @@ interface HeaderComponentProps {
     title:string,
     button_text:string,
     mainImg:string,
-    purple?:boolean
+    purple?:boolean,
+    setSites?:any,
+    touchpanel?:number,
+    setTouchPanel?:any,
+    TouchPanel?:boolean
 }
-const HeaderComponent:FunctionComponent = ( {title,button_text,mainImg ,purple}:HeaderComponentProps):JSX.Element =>{
+const HeaderComponent:FunctionComponent = ( {TouchPanel,setTouchPanel,touchpanel ,setSites,title,button_text,mainImg ,purple}:HeaderComponentProps):JSX.Element =>{
 
     return(
         <>
@@ -18,7 +22,15 @@ const HeaderComponent:FunctionComponent = ( {title,button_text,mainImg ,purple}:
                 <img src={mainImg} alt=""/>
             <div className={styles.content}>
                 <div className={styles.title}>{title} </div>
-                <div className={cs(styles.button, purple===true ? styles.purple : null)}><button> {button_text}</button> </div>
+                <div className={cs(styles.button, purple===true ? styles.purple : null)}><button onClick={() =>
+             /*   {
+                    touchpanel === 1 ? setTouchPanel(true) : setSites(true)
+                }*/ {
+                    setTouchPanel(true)
+                    console.log(touchpanel)
+                    console.log(TouchPanel)
+                }
+                }> {button_text}</button> </div>
                 <div className={styles.free}> Это бесплатно</div>
 
 

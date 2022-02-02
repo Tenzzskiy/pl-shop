@@ -18,6 +18,7 @@ import {Modal} from "../components/Modal/Modal";
 import FeedBack from "../components/FeedBack/FeedBack";
 import data from "../components/Shop/cart_arenda-plasm77.ru.json";
 import {OfferModal} from "../components/offerModal/OfferModal";
+import SitesModal from "../components/SitesModal/SitesModal";
 export  const getStaticProps = async () =>{
     return {
         props: {
@@ -26,6 +27,7 @@ export  const getStaticProps = async () =>{
     };
 }
 const Index = ({ cards}) => {
+    const [sites,setSites] = useState(false);
     const [offerModal,setOfferModal] = useState(false)
     const size = useWindowSize();
     const [modalActive,setModalActive] = useState(false)
@@ -37,6 +39,8 @@ const Index = ({ cards}) => {
     title='Аренда оборудования для дезинфекции'
     mainImg="/header/Desinfection/main.jpg"
     img_360='/header/Desinfection/middle_360.jpg'
+    setSites={setSites}
+    setOfferModal={setOfferModal}
 />
 
             {size.width > 1200 ?
@@ -149,6 +153,7 @@ const Index = ({ cards}) => {
             {/*/>*/}
             <FeedBack setOfferModal={setOfferModal} />
         </Layout>
+            <SitesModal sites={sites} setSites= {setSites} setOfferModal={setOfferModal} title='Получить расчет'/>
             <OfferModal offerModal={offerModal} setOfferModal={setOfferModal}/>
             <Modal active={modalActive} setActive={setModalActive} />
         </Provider>

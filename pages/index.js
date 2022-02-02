@@ -21,6 +21,7 @@ import {Modal} from "../components/Modal/Modal";
 import FeedBack from "../components/FeedBack/FeedBack";
 import data from '../components/Shop/cart_arenda-plasm77.ru.json'
 import {OfferModal} from "../components/offerModal/OfferModal";
+import SitesModal from "../components/SitesModal/SitesModal";
 
 export  const getStaticProps = async () =>{
     return {
@@ -31,7 +32,7 @@ export  const getStaticProps = async () =>{
 }
 
 const Home = ({ cards }) => {
-    const [sites,setSites] = useState(true);
+    const [sites,setSites] = useState(false);
     const [offerModal,setOfferModal] = useState(false)
     const [totalPrice,setTotalPrice] = useState()
     const size = useWindowSize();
@@ -43,7 +44,8 @@ const Home = ({ cards }) => {
 
     <Layout>
 
-        <MainHeaderComponent />
+        <MainHeaderComponent  setSites={setSites}
+                              setOfferModal={setOfferModal}/>
         {size.width > 1200 ?
             <Preferences
                 count={4}
@@ -64,6 +66,7 @@ const Home = ({ cards }) => {
             головной боли! Монтаж и демонтаж уже включены в стоимость!'
                 rightTitle='Огромный выбор'
                 rightSecondTitle='Под ключ'
+
             /> : null
 
         }
@@ -185,6 +188,7 @@ const Home = ({ cards }) => {
 
         <FeedBack setOfferModal={setOfferModal} />
     </Layout>
+          <SitesModal sites={sites} setSites= {setSites} setOfferModal={setOfferModal} title='Получить расчет'/>
           <OfferModal offerModal={offerModal} setOfferModal={setOfferModal}/>
           <Modal active={modalActive} setActive={setModalActive} />
       </Provider>

@@ -3,7 +3,7 @@ import styles from './MainHeaderComponent_360.module.scss'
 
 
 
-export const MainHeaderComponent_360 = ( { }) =>{
+export const MainHeaderComponent_360 = ( { setSites}) =>{
     return(
         <div className={styles.container}>
             <div className={styles.content_img}>
@@ -21,10 +21,10 @@ export const MainHeaderComponent_360 = ( { }) =>{
 
         <div className={styles.content_text}>
                 <div className={styles.description}>
-                    Организуем техническое обеспечение выставок, форумов и конференций
+                    Организуем техническое обеспечение выставок, форумов и конференций
                 </div>
             <div className={styles.button}>
-                <button>
+                <button onClick={() => setSites(true)}>
                     Рассчитать стоимость
                 </button>
 

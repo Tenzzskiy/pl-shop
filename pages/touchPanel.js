@@ -22,6 +22,7 @@ import {Modal} from "../components/Modal/Modal";
 import FeedBack from "../components/FeedBack/FeedBack";
 import data from "../components/Shop/cart_arenda-plasm77.ru.json";
 import {OfferModal} from "../components/offerModal/OfferModal";
+import SitesModal from "../components/SitesModal/SitesModal";
 
 export  const getStaticProps = async () =>{
     return {
@@ -31,9 +32,11 @@ export  const getStaticProps = async () =>{
     };
 }
 const TouchPanel = ({ cards}) => {
+    const [sites,setSites] = useState(false);
     const size =useWindowSize();
     const [modalActive,setModalActive] = useState(false)
     const [offerModal,setOfferModal] = useState(false)
+    const [touchPanel,setTouchPanel] = useState(false);
     return (
       <Provider store={store}>
           <Layout >
@@ -41,6 +44,10 @@ const TouchPanel = ({ cards}) => {
                   button_text='Рассчитать стоимость'
                   title='Аренда сенсорных тач -панелей'
                   mainImg="/header/TouchPanel/main.jpg"
+                  setSites={setSites}
+                  setOfferModal={setOfferModal}
+                  touchpanel={1}
+                  setTouchPanel={setTouchPanel}
               />
 
               {size.width > 1200 ?
@@ -58,11 +65,13 @@ const TouchPanel = ({ cards}) => {
                       leftTitle=' Встроенный процессор и ОС'
                       rightTitle='Любой контент! '
                       button={true}
+                      setSites={setSites}
                   /> : null
 
               }
               {size.width < 1200 && size.width > 720 ?
                   <Preferences_768
+                      setSites={setSites}
                       count={2}
                       title='Ваши выгоды с PLAZMA77'
                       leftImg="/Preferences/TouchPanel/1.png"
@@ -81,6 +90,7 @@ const TouchPanel = ({ cards}) => {
               {
                   size.width <720 ?
                       <Preferences_360
+                          setSites={setSites}
                           count={2}
                           mainTitle='Преимущества сенсорных панелей'
                           leftImg="/Preferences/TouchPanel/1.png"
@@ -182,8 +192,10 @@ const TouchPanel = ({ cards}) => {
               {/*/>*/}
               <FeedBack setOfferModal={setOfferModal} />
           </Layout>
+          <SitesModal sites={sites} setSites= {setSites} setOfferModal={setOfferModal}  />
+          <SitesModal TouchPanel={touchPanel} setTouchPanel= {setTouchPanel} setOfferModal={setOfferModal} touchpanel={1} title='Получить расчет'/>
           <OfferModal offerModal={offerModal} setOfferModal={setOfferModal}/>
-          <Modal active={modalActive} setActive={setModalActive} />
+          <Modal active={modalActive} setActive={setModalActive}  />
       </Provider>
     )
 }

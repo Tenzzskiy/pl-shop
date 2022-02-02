@@ -133,7 +133,7 @@ display: flex;
 }
 @media(max-width: 720px){
   .title{
-    max-width: 165px !important;
+    max-width: 155px !important;
   }
   .text_content_footer{
     justify-content: flex-end !important;
@@ -149,13 +149,14 @@ display: flex;
   .img{
     margin-right: -10px !important;
     height: 140px !important;
+    max-width: 130px !important;
     img{
       max-width: 90px !important;
       max-height: 68px !important;
     }
   }
   .trigger{
-    width: 120px;
+    width: 100px;
   }
   .content{
     padding: 8px !important;

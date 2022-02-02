@@ -7,7 +7,6 @@ import {FormInput} from "../Input";
 const FeedBack = ( {setOfferModal}) => {
     const [input,setInput] = useState();
     const value = useRef()
-    console.log(input)
     const size = useWindowSize();
     return (
         <>

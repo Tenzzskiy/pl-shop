@@ -22,6 +22,7 @@ import {Modal} from "../components/Modal/Modal";
 import FeedBack from "../components/FeedBack/FeedBack";
 import data from "../components/Shop/cart_arenda-plasm77.ru.json";
 import {OfferModal} from "../components/offerModal/OfferModal";
+import SitesModal from "../components/SitesModal/SitesModal";
 export  const getStaticProps = async () =>{
     return {
         props: {
@@ -33,6 +34,7 @@ const VideoWalls = ({  cards}) => {
     const size = useWindowSize();
     const [modalActive,setModalActive] = useState(false)
     const [offerModal,setOfferModal] = useState(false)
+    const [sites,setSites] = useState(false);
     return (
     <Provider store={store}>
         <Layout >
@@ -41,7 +43,8 @@ const VideoWalls = ({  cards}) => {
                 title='Аренда видеостен'
                 mainImg="/header/VideoWalls/main.jpg"
                 button_text='Рассчитать стоимость'
-
+                setSites={setSites}
+                setOfferModal={setOfferModal}
             />
 
             {size.width > 1200 ?
@@ -161,6 +164,7 @@ const VideoWalls = ({  cards}) => {
             {/*/>*/}
             <FeedBack setOfferModal={setOfferModal} />
         </Layout>
+        <SitesModal sites={sites} setSites= {setSites} setOfferModal={setOfferModal}/>
         <OfferModal offerModal={offerModal} setOfferModal={setOfferModal}/>
         <Modal active={modalActive} setActive={setModalActive} />
     </Provider>

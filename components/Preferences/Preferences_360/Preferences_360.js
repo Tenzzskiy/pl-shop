@@ -7,7 +7,7 @@ import {PreferenceCard} from "../PreferenceCard/PreferenceCard";
 
 
 
-export const Preferences_360 = ( {button=false,mainTitle,leftImg,rightImg,secondLeftImg,secondRightImg,leftText,leftSecondText,leftTitle,
+export const Preferences_360 = ( {setSites,button=false,mainTitle,leftImg,rightImg,secondLeftImg,secondRightImg,leftText,leftSecondText,leftTitle,
                                      leftSecondTitle,rightText,rightSecondTitle,rightSecondText,rightTitle,count}) =>{
     const [currentSlide, setCurrentSlide] = useState(0)
     const [loaded, setLoaded] = useState(false)
@@ -71,7 +71,7 @@ export const Preferences_360 = ( {button=false,mainTitle,leftImg,rightImg,second
                     <PreferenceCard img={rightImg} title={rightTitle} description={rightText}/>
                     {button ?
                         <div className={styles.button}>
-                            <button> Заказать разработку</button>
+                            <button onClick={() => setSites(true)}> Заказать разработку</button>
                         </div>
 
                         : null}

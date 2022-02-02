@@ -8,8 +8,9 @@ interface MediumHeaderComponentProps{
     button_text:string,
     mainImg:string,
     img_360?:string
+    setSites?:any
 }
-const MediumHeaderComponent:FunctionComponent = ( {title,button_text,mainImg,img_360 }:MediumHeaderComponentProps):JSX.Element =>{
+const MediumHeaderComponent:FunctionComponent = ( {setSites,title,button_text,mainImg,img_360 }:MediumHeaderComponentProps):JSX.Element =>{
 const size = useWindowSize();
     return(
         <>
@@ -19,7 +20,7 @@ const size = useWindowSize();
 
                     <div className={styles.content}>
                         <div className={styles.title}>{title} </div>
-                        <div className={styles.button}><button> {button_text}</button> </div>
+                        <div className={styles.button}><button onClick={() => setSites(true)}> {button_text}</button> </div>
                         <div className={styles.free}> Это бесплатно</div>
 
 

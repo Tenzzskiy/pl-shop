@@ -4,7 +4,7 @@ import styles from './Preferences.module.scss'
 
 
 
- export const Preferences = ( {button=false,count = 0,secondLeftImg,secondRightImg,leftImg,rightImg,leftTitle,rightTitle,leftText,rightText,rightSecondText,leftSecondText,leftSecondTitle,rightSecondTitle,...props } ) => {
+ export const Preferences = ( {setSites,button=false,count = 0,secondLeftImg,secondRightImg,leftImg,rightImg,leftTitle,rightTitle,leftText,rightText,rightSecondText,leftSecondText,leftSecondTitle,rightSecondTitle,...props } ) => {
 
     return(
        <>
@@ -26,7 +26,7 @@ import styles from './Preferences.module.scss'
            {count === 6 ? <RightPreference rightImg={rightImg} rightTitle={rightTitle} rightText={rightText}/>: null}
            {button ?
            <div className={styles.button}>
-           <button> Заказать разработку</button>
+           <button onClick={() => setSites(true)}> Заказать разработку</button>
            </div>
 
            : null}

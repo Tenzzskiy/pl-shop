@@ -85,7 +85,7 @@ export const ResultBusket = ( { setOfferModal}) => {
             <>
             <div className={styles.anchor} >
             <div className={styles.anchor_text}>
-               <Link32 onClick={() => scroll.scrollTo(1600)} duration={500} smooth={true}>К оформлению </Link32>
+               <Link32 to='anchor' spy={true} smooth={true} duration={500}>К оформлению </Link32>
              </div>
             <div><img src="/select_arrow.svg" alt=""/> </div>
             </div>
@@ -98,7 +98,7 @@ export const ResultBusket = ( { setOfferModal}) => {
                 /> : null }
             </div>
             {count > 0 &&  size.width < 1250 ?
-                <div className={styles.menu}  >
+                <div className={styles.menu}  id='anchor'>
                     <div className={styles.menu_container}>
                         <div className={styles.menu_title}>Итого:</div>
                         <div className={styles.total}>

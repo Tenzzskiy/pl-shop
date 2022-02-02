@@ -18,6 +18,7 @@
     line-height: 140%;
     z-index: 5;
     height: 100%;
+
   }
   .selectorActive{
 
@@ -52,6 +53,7 @@
       height: 40px;
       background: white;
       z-index: 5;
+      cursor: pointer;
       &:hover{
         background: #575786;
         color: white;

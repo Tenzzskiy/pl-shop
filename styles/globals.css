@@ -72,3 +72,9 @@ padding: 0;
 .active{
     background: #575786;
 }
+button{
+    cursor: pointer;
+}
+a{
+    cursor: pointer;
+}
