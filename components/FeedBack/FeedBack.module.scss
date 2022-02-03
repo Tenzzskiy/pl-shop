@@ -56,6 +56,13 @@ background:  #F2F3FE;
 @media (max-width: 99999px){
   .number{
     margin-bottom: 45px;
+   a{
+     outline: none;
+     color: white;
+     text-decoration: none;
+     border: 0;
+   }
+
   }
   .request{
     font-style: normal;

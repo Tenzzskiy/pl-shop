@@ -48,15 +48,15 @@ export const Slider = ({perView,setActive}) =>{
                 {size.width > 720 ?
                     loaded && instanceRef.current && (
                         <>
-                            <Arrow
+                        <div className={styles.button_left}>   <Arrow
                                 left
                                 onClick={(e) =>
                                     e.stopPropagation() || instanceRef.current?.prev()
                                 }
                                 disabled={currentSlide === 0}
-                            />
+                            /></div>
 
-                            <Arrow
+                            <div className={styles.button_right}>     <Arrow
                                 onClick={(e) =>
                                     e.stopPropagation() || instanceRef.current?.next()
                                 }
@@ -64,7 +64,7 @@ export const Slider = ({perView,setActive}) =>{
                                     currentSlide ===
                                     instanceRef.current.track.details.slides.length - 3
                                 }
-                            />
+                            /></div>
                         </>
                     ) : null
 

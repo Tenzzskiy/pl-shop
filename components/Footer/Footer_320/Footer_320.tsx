@@ -24,7 +24,7 @@ export const Footer_320 = () =>{
                     </div>
                         <div className={styles.contacts}>
                             <picture>
-                                <img src="/header/footer_contacts.svg" alt=""/>
+                                <a href="tel:+7 (495) 321 54 76"> <img src="/header/footer_contacts.svg" alt=""/></a>
                             </picture>
                         </div>
 
@@ -79,7 +79,7 @@ export const Footer_320 = () =>{
                     </div>
                     <div className={styles.item14}> Yandex metrika badge-widget  </div>
                 <div className={styles.item15}>Политика конфиденциальности </div>
-                <div className={styles.item16}>© Arenda-plazm77, 2021-2022 </div>
+                <div className={styles.item16}>© Arenda-plazm77, 2021-{Data.getFullYear()} </div>
                 </div>
                 </div>
             </div>

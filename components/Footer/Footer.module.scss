@@ -19,6 +19,12 @@
     }
 
   &_container {
+    a{
+      outline: none;
+      color: white;
+      text-decoration: none;
+      border: 0;
+    }
     .item16{
       text-align: right;
       padding-right: 32px;

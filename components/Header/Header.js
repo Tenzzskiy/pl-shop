@@ -81,7 +81,7 @@ const Header = ({ setNavigation,setContacts}) =>{
 
                             <div className={styles.contacts}>
                                 {size.width > 600 ?
-                                    <div className={styles.number}> +7 495 321-54-76</div>
+                                    <div className={styles.number}> <a href="tel:+7 (495) 321 54 76"> +7 495 321-54-76</a></div>
                                 :   <div className={styles.contacts}>
                                         <picture>
 
@@ -95,7 +95,9 @@ const Header = ({ setNavigation,setContacts}) =>{
                                 }
 
                                 {size.width > 1250 ?
-                                    <div className={styles.mail}> info@arenda-plazm77.ru</div> : null
+                                    <div className={styles.mail}>  <a href="mailto:info@arenda-plazm77.ru">info@arenda-plazm77.ru</a>   </div> : null
+
+
                                 }
 
                             </div>
