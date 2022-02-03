@@ -13,10 +13,12 @@ import {Offer_360} from "../Offer/OfferCard/Offer_360";
 import {Contacts} from "../Contacts/Contacts";
 import {FormInput} from "../Input";
 import {Link as Link32, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import cn from "classnames";
+import {Selector} from "../Select/Select";
 
 export const ResultBusket = ( { setOfferModal}) => {
     const [value,setValue] = useState();
-    const [checkbox,setCheckBox] = useState(false);
+    const [checkbox,setCheckBox] = useState(true);
     const size = useWindowSize();
     const items = useSelector(state => state.cart.itemsInCart);
     let result = 0;
@@ -64,7 +66,7 @@ export const ResultBusket = ( { setOfferModal}) => {
             <div className={styles.add}>*финальная стоимость
             с учётом доставки рассчитывается менеджером</div>
             <div className={styles.contacts}>
-            <div className={styles.number}><FormInput mask="+7 (999) 999-99-99" onChange={(evt) => setValue(evt)} /> </div>
+            <div className={styles.number}><FormInput mask="+7 (999) 999-99-99" placeholder='+7 999 999-99-99' onChange={(evt) => setValue(evt)} /> </div>
                 <Contacts />
             </div>
             <div className={styles.rules}>
@@ -91,12 +93,12 @@ export const ResultBusket = ( { setOfferModal}) => {
             </div>
             </> :null
             }
-            <div >
+            {count > 0 ?    <div >
                 {size.width > 1200 ? <Offer title={'Вам также может пригодиться'} busket={1}/> : null }
                 {size.width > 720 && size.width<1200 ? <Offer_768  title={'Вам также может пригодиться'} busket={1}/> : null }
                 {size.width < 720  ? <Offer_360  title={'Вам также может пригодиться'} busket={1}
                 /> : null }
-            </div>
+            </div> : null}
             {count > 0 &&  size.width < 1250 ?
                 <div className={styles.menu}  id='anchor'>
                     <div className={styles.menu_container}>
@@ -109,8 +111,8 @@ export const ResultBusket = ( { setOfferModal}) => {
                         <div className={styles.add}>*финальная стоимость
                             с учётом доставки рассчитывается менеджером</div>
                         <div className={styles.contacts}>
-                            <div className={styles.number}><FormInput mask="+7 (999) 999-99-99" onChange={(evt) => setValue(evt)} /> </div>
-                           <Contacts />
+                            <div className={styles.number}><FormInput mask="+7 (999) 999-99-99" placeholder='+7 999 999-99-99' onChange={(evt) => setValue(evt)} /> </div>
+                            {size.width < 720 ? <Selector_360 /> : <Contacts /> }
                         </div>
                         <div className={styles.rules}>
                             <div className={styles.checkbox} onClick={triggerCheckBox}><img className={checkbox ? null : styles.hide} src="/Seo/checkbox.svg" alt=""/></div>
@@ -120,6 +122,48 @@ export const ResultBusket = ( { setOfferModal}) => {
                     </div>
                 </div> : null
             }
+        </>
+    )
+}
+
+ export const Selector_360 =() => {
+    const [example,setExample] = useState('Позвонить по Телефону');
+    const [selectorStatus,setSelectorStatus] = useState(false)
+    return(
+        <>
+            <div className={styles.wrapper}>
+                <button type='button' className={cn(styles.selector, {
+                    [styles.selectorActive]: selectorStatus === true
+                })} onClick={() => {
+                    setSelectorStatus(!selectorStatus)
+                }}>{example} <div className={selectorStatus === true ? styles.selector_img_2 : null}> <img src="/purple_arrow.svg" className={selectorStatus === true ? styles.selector_img_style : styles.selector_img_style_2} alt=""/></div> </button>
+
+                {selectorStatus && (
+                    <div className={styles.selectorList}>
+                        <button type="button" className={styles.selectorItem} onClick={() => {
+                            setExample('Позвонить по телефону')
+                            setSelectorStatus(false)
+                        }}>
+                            Позвонить по телефону
+                        </button>
+                        <button type="button" className={styles.selectorItem} onClick={() => {
+                            setExample('Написать в Telegram')
+                            setSelectorStatus(false)
+
+                        }}>
+                            Написать в Telegram
+                        </button>
+                        <button type="button" className={styles.selectorItem} onClick={() => {
+                            setExample('Написать в WhatsApp')
+                            setSelectorStatus(false)
+                        }}>
+                            Написать в WhatsApp
+                        </button>
+                    </div>
+                )}
+
+
+            </div>
         </>
     )
 }

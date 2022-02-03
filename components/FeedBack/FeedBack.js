@@ -38,7 +38,11 @@ const FeedBack = ( {setOfferModal}) => {
                         </div>
 
                         <div className={styles.contacts}>
-                            <FormInput mask="+7 (999) 999-99-99" maskChar=" "  onChange={(evt) =>setInput(evt)}/>
+                            <FormInput mask="+7 (999) 999-99-99" maskChar=" "  placeholder='+7 999 999-99-99' onChange={(evt) => {
+                                setInput(evt)
+                                console.log(evt)
+
+                            }}/>
                         <button onClick={() => setOfferModal(true)}>Отправить заявку </button>
                         <Contacts />
 

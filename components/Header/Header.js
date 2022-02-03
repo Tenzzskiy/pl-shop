@@ -85,7 +85,10 @@ const Header = ({ setNavigation,setContacts}) =>{
                                 :   <div className={styles.contacts}>
                                         <picture>
 
-                                            <img src="/header/contacts.svg" alt="" onClick={() => setContacts(true)}/>
+                                            <img src="/header/contacts.svg" alt="" onClick={() => {
+                                                setContacts(true);
+                                                console.log('done')
+                                            }}/>
                                         </picture>
                                         
                                 </div>

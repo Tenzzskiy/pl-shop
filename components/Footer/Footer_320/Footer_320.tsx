@@ -79,7 +79,7 @@ export const Footer_320 = () =>{
                     </div>
                     <div className={styles.item14}> Yandex metrika badge-widget  </div>
                 <div className={styles.item15}>Политика конфиденциальности </div>
-                <div className={styles.item16}>© Arenda-plazm77, 2021 </div>
+                <div className={styles.item16}>© Arenda-plazm77, 2021-2022 </div>
                 </div>
                 </div>
             </div>

@@ -64,9 +64,12 @@
   }
 }
 @media  (max-width: 720px) {
+  .content{
+    padding: 80px 0 !important;
+  }
   .grid{
     grid-template-columns: minmax(auto,240px) !important;
-
+  row-gap: 20px !important;
     img{
       width: 104px;
       height: 72px;

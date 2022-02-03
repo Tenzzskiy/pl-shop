@@ -17,6 +17,7 @@
     font-size: 15px;
     line-height: 100%;
     margin: 0 auto;
+    text-transform: uppercase;
   }
 }
 .menu{
@@ -225,13 +226,16 @@
   }
 }
 @media (max-width: 720px){
+  .title{
+    font-size: 25px !important;
+  }
   .menu_container{
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 80px 0 30px 0 !important;
+    justify-content: flex-start !important;
+    align-items: flex-start;
+    padding: 60px 60px 60px 40px !important;
   }
   .button{
     button{
@@ -281,4 +285,73 @@
   .total{
     justify-content: left !important;
   }
+}
+.wrapper{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 140%;
+  color: var(--description);
+  background: white;
+
+
+  button{
+
+    outline: none;
+    border: 0;
+    color: var(--description);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    z-index: 5;
+    height: 100%;
+
+  }
+  .selectorActive{
+
+  }
+  .selector{
+    width: 258px;
+    height: 100%;
+    background: #F2F3FE;
+    z-index: 5;
+    border-radius: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--brand-color);
+
+    img{
+      margin-left: 10px;
+      transition: all 0.2s
+    }
+    .selector_img_style{
+      transform: rotate(360deg);
+
+    }
+    .selector_img_style_2{
+      transform: rotate(180deg);
+    }
+  }
+  .selectorList{
+    z-index: 5;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    .selectorItem{
+      border:0.1px solid #F2F3FE;
+      width: 258px;
+      height: 40px;
+      background: white;
+      z-index: 5;
+      cursor: pointer;
+      &:hover{
+        background: #575786;
+        color: white;
+      }
+    }
+
+  }
+
 }

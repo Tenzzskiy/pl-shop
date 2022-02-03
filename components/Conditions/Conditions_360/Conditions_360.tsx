@@ -21,14 +21,14 @@ export const Conditions_360:FunctionComponent = ( { }) =>{
                                 <div className={styles.text}>Монтаж оборудования </div>
                             </div >
                             <div className={styles.flex}>
-                                <div className={styles.number}> 2</div>
-                                <div className={styles.text}>Комплект коммутации </div>
+                                <div className={styles.number}> 3</div>
+                                <div className={styles.text}>  Первичная настройка </div>
                             </div>
                             </div>
                             <div className={styles.common_flex2}>
                                 <div className={styles.flex}>
-                                    <div className={styles.number}>3 </div>
-                                    <div className={styles.text}>Первичная настройка </div>
+                                    <div className={styles.number}>2 </div>
+                                    <div className={styles.text}>Комплект коммутации </div>
                                 </div >
                                 <div className={styles.flex}>
                                     <div className={styles.number}> 4</div>

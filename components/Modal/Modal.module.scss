@@ -89,7 +89,8 @@
         font-weight: normal;
         font-size: 16px;
         line-height: 140%;
-        text-decoration-line: underline;
+       border-bottom: 1px solid var(--description);
+        height: 18px;
         color: var(--description);
 
         cursor: pointer;
@@ -125,7 +126,7 @@
   }
 }
 .content_active{
-  transform: scale(1);
+  transform: scale(1) !important;
 }
 .active{
   opacity: 1 !important;

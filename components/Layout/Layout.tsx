@@ -29,7 +29,9 @@ const Layout:FunctionComponent = ({children }) =>{
 export const Navigation = ( { setNavigation,navigation,contacts,setContacts}) =>{
     const route = useRouter();
     return(
-        <>
+        <><div onClick={() => {
+            setContacts(false);
+        }} className={cn(styles.modal_container, !navigation ? null : styles.modal_container_active)}>
              <div className={cn(styles.navigation_container,navigation ? styles.show : null)}>
                 <div className={styles.navigation_content}>
                     <div className={styles.exit} onClick={() => setNavigation(false)}><img src="/Modal/exit.svg" alt=""/></div>
@@ -69,6 +71,10 @@ export const Navigation = ( { setNavigation,navigation,contacts,setContacts}) =>
 
                 </div>
             </div>
+        </div>
+            <div onClick={() => {
+                setContacts(false);
+            }} className={cn(styles.modal_container, !contacts ? null : styles.modal_container_active)}>
             <div className={cn(styles.navigation_container,contacts ? styles.show : null)}>
                 <div className={styles.navigation_content}>
                     <div className={styles.exit} onClick={() => setContacts(false)}><img src="/Modal/exit.svg" alt=""/></div>
@@ -92,7 +98,7 @@ export const Navigation = ( { setNavigation,navigation,contacts,setContacts}) =>
             </div>
 
 
-
+            </div>
 
         </>
     )

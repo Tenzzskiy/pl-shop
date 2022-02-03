@@ -12,7 +12,7 @@ export const Certificates = () =>{
     const [sliderRef, instanceRef] = useKeenSlider({
         initial: 0,
         slides: {
-            perView: size.width < 600 ? 1 :  size.width > 600 && size.width < 800 ? 2.2 : size.width < 1200 && size.width>800 ? 3 : null ,
+            perView: size.width < 600 ? 1.3 :  size.width > 600 && size.width < 800 ? 2.2 : size.width>800 && size.width < 1200 ?   3 : null ,
             spacing:15,
             // perView:"auto",
         },
