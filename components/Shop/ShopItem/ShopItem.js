@@ -6,7 +6,7 @@ import {setItemInCart, updateTotalPrice} from '../../../redux/cart/reducer.js'
 import Link from "next/link";
 
 
-export const ShopItem = ( { data,children,price,count,img,title,active,setActive,id,...props}) =>{
+export const ShopItem = ( { data,children,price,count,img,title,active,setActive,detail1,detail2,mainDetail,mainDetail2,id,...props}) =>{
     const [checked,setCheck] = useState(false)
     const dispatch = useDispatch();
     const [time, setTime] = useState('1 сутки');
@@ -14,7 +14,7 @@ export const ShopItem = ( { data,children,price,count,img,title,active,setActive
     const [changedPrice,setChangedPrice] = useState(Number(price))
     const items = useSelector(state => state.cart.itemsInCart);
     const handleClick =() =>{
-        dispatch(setItemInCart({img,changedPrice,id,title,time,Priced}));
+        dispatch(setItemInCart({img,changedPrice,id,title,time,Priced,detail1,detail2,mainDetail,mainDetail2}));
         dispatch(updateTotalPrice(Number(changedPrice)))
         setActive(true);
 
@@ -46,13 +46,13 @@ const check = () =>{
                         <>
                         <div className={styles.detail}>
 
-                            <span> Рарешение:</span>
-                            <p>4k,FullHD</p>
+                            <span> {mainDetail}</span>
+                            <p>{detail1}</p>
                         </div>
                             <div className={styles.detail}>
 
-                                <span>Выходы:</span>
-                                <p>AV, Wi-Fi, HDMI, USB 2.0</p>
+                                <span>{mainDetail2}</span>
+                                <p> {detail2}</p>
                             </div>
 
                         </> : null

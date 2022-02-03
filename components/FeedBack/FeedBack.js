@@ -5,7 +5,7 @@ import Contacts from "../Contacts/Contacts";
 import {FormInput} from "../Input";
 
 const FeedBack = ( {setOfferModal}) => {
-    const [input,setInput] = useState();
+    const [input,setInput] = useState(false);
     const value = useRef()
     const size = useWindowSize();
     return (
@@ -39,11 +39,20 @@ const FeedBack = ( {setOfferModal}) => {
 
                         <div className={styles.contacts}>
                             <FormInput mask="+7 (999) 999-99-99" maskChar=" "  placeholder='+7 999 999-99-99' onChange={(evt) => {
-                                setInput(evt)
-                                console.log(evt)
+
+
+                                {
+                                    (evt?.includes('_')) ?  setInput(false): null ;
+                                }
+                                {
+                                    !(evt?.includes('_')) ?  setInput(true): null ;
+                                }
+
 
                             }}/>
-                        <button onClick={() => setOfferModal(true)}>Отправить заявку </button>
+                        <button onClick={() => {
+                            input ? setOfferModal(true) : null
+                        }}>Отправить заявку </button>
                         <Contacts />
 
                         </div>

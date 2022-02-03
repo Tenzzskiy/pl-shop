@@ -8,7 +8,7 @@ import Contacts from "../Contacts/Contacts";
 import {Selector_360} from "../Busket/Busket";
 
 export const SitesModal = ({touchpanel=0, setTouchPanel,TouchPanel,setOfferModal,setSites,sites,title='Заказать разработку ПО'}) =>{
-    const [number,setNumber] =useState(' ');
+    const [input,setNumber] =useState(false);
     const [checkbox,setCheckBox] =useState(true);
     const [disabled,setDisabled] = useState(true)
     const triggerCheckBox = () =>{
@@ -36,11 +36,15 @@ export const SitesModal = ({touchpanel=0, setTouchPanel,TouchPanel,setOfferModal
                     </div>
                     <div className={styles.input}>
                         <FormInput mask="+7 (999) 999-99-99" placeholder='+7 999 999-99-99' onChange={(evt) => {
-                            setNumber(evt);
-                            console.log(!(number?.includes('_')) && number.length > 1 )
-                            if (!(number?.includes('_')) && number.length > 1) {
-                                setDisabled(false)
+                            {
+                                (evt?.includes('_')) ?  setNumber(false): null ;
                             }
+                            {
+                                !(evt?.includes('_')) ?  setNumber(true): null ;
+                            }
+                            console.log(evt)
+                            console.log((evt?.includes('_')))
+                            console.log(input)
 
                         }} />
                     </div>
@@ -54,13 +58,20 @@ export const SitesModal = ({touchpanel=0, setTouchPanel,TouchPanel,setOfferModal
                         </div>
 
                         <div className={styles.button} >
-                        <button onClick={ disabled ? null :
+                        <button onClick={ () => {
+                            checkbox ?
+                                touchpanel === 1 ? setTouchPanel(false) : setSites(false)
+                                :null
 
-                            checkbox ?  () =>{
-                                {touchpanel === 1 ? setTouchPanel(false) : setSites(false)
-                                    setOfferModal(true)}
-                            } : null
+                            {
+                                input ? setOfferModal(true) : null;
+                            }
+
+
                         }
+                        }
+
+
 
                         >Отправить заявку</button>
                         </div>

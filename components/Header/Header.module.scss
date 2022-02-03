@@ -14,7 +14,7 @@
   }
   width: 100%;
   position: fixed;
-  z-index: 6;
+  z-index: 5;
   transition: all 0.4s;
   opacity: 1;
 }
@@ -22,6 +22,7 @@
   background: #262626;
   height: 59px;
   z-index: 5;
+  position: relative;
   &_container{
     max-width: 1280px;
    margin: 0 auto;

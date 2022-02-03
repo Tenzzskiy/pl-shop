@@ -131,9 +131,9 @@ const Home = ({ cards }) => {
         <Shop page={1} active={modalActive} setActive={setModalActive} data={cards} />
         </div>
 <div className={styles.offer}>
-        {size.width > 1200 ? <Offer active={modalActive} setActive={setModalActive} title={' С этим товаром часто берут'} /> : null }
-        {size.width > 720 && size.width<1200 ? <Offer_768 active={modalActive} setActive={setModalActive} title={' С этим товаром часто берут'} /> : null }
-        {size.width < 720  ? <Offer_360 active={modalActive} setActive={setModalActive} title={' С этим товаром часто берут'}
+        {size.width > 1200 ? <Offer count={1} active={modalActive} setActive={setModalActive} title={' С этим товаром часто берут'} /> : null }
+        {size.width > 720 && size.width<1200 ? <Offer_768 count={1} active={modalActive} setActive={setModalActive} title={' С этим товаром часто берут'} /> : null }
+        {size.width < 720  ? <Offer_360 count={1} active={modalActive} setActive={setModalActive} title={' С этим товаром часто берут'}
                                                            /> : null } </div>
 
         <div className={styles.cleaning}>

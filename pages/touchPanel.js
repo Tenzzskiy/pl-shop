@@ -108,9 +108,9 @@ const TouchPanel = ({ cards}) => {
               }
               <Conditions />
               <Shop page={5} active={modalActive} setActive={setModalActive} data={cards}/>
-              {size.width > 1200 ? <Offer active={modalActive} setActive={setModalActive} /> : null }
-              {size.width > 720 && size.width<1200 ? <Offer_768 active={modalActive} setActive={setModalActive}  /> : null }
-              {size.width < 720  ? <Offer_360 active={modalActive} setActive={setModalActive}
+              {size.width > 1200 ? <Offer active={modalActive} setActive={setModalActive} count={2}/> : null }
+              {size.width > 720 && size.width<1200 ? <Offer_768 active={modalActive} count={2} setActive={setModalActive}  /> : null }
+              {size.width < 720  ? <Offer_360 active={modalActive} count={2} setActive={setModalActive}
               /> : null }
               <Cleaning />
               <Sale />

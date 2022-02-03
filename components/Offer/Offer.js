@@ -9,7 +9,7 @@ import {useWindowSize} from "../../Hooks/useWindowSize";
 import cs from 'classnames'
 
 
-export const Offer = ({active,setActive,title=' С этим товаром часто берут',busket=0 }) =>{
+export const Offer = ({count=0,active,setActive,title=' С этим товаром часто берут',busket=0 }) =>{
     // const [currentSlide, setCurrentSlide] = React.useState(0);
     // const [loaded, setLoaded] = useState(false);
     // const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
@@ -48,12 +48,46 @@ export const Offer = ({active,setActive,title=' С этим товаром ча�
     });
 
 
-    const items =  data.LedAdditionals.map(elem  =>
+    const items =  data.mainAdditionals.map(elem  =>
+        <div className="keen-slider__slide number-slide2" key={elem.id}>
+            <div className={styles.flex} >
+                <OfferCard price={elem.price} title={elem.name} img={elem.img} data={elem} id={elem.id} active={active} setActive={setActive} busket={busket} />
+            </div>
+        </div>)
+    const items1 =  data.LedAdditionals.map(elem  =>
         <div className="keen-slider__slide number-slide2" key={elem.id}>
             <div className={styles.flex} >
                 <OfferCard price={elem.price} title={elem.name} img={elem.img} data={elem} id={elem.id} active={active} setActive={setActive} busket={busket} />
             </div>
         </div>
+
+
+    )
+    const items2 =  data.TouchAdditionals.map(elem  =>
+        <div className="keen-slider__slide number-slide2" key={elem.id}>
+            <div className={styles.flex} >
+                <OfferCard price={elem.price} title={elem.name} img={elem.img} data={elem} id={elem.id} active={active} setActive={setActive} busket={busket} />
+            </div>
+        </div>
+
+
+    )
+    const items3 =  data.ProjectorAdditionals.map(elem  =>
+        <div className="keen-slider__slide number-slide2" key={elem.id}>
+            <div className={styles.flex} >
+                <OfferCard price={elem.price} title={elem.name} img={elem.img} data={elem} id={elem.id} active={active} setActive={setActive} busket={busket} />
+            </div>
+        </div>
+
+
+    )
+    const items4 =  data.LaptopAdditionals.map(elem  =>
+        <div className="keen-slider__slide number-slide2" key={elem.id}>
+            <div className={styles.flex} >
+                <OfferCard price={elem.price} title={elem.name} img={elem.img} data={elem} id={elem.id} active={active} setActive={setActive} busket={busket} />
+            </div>
+        </div>
+
 
     )
 
@@ -96,7 +130,11 @@ export const Offer = ({active,setActive,title=' С этим товаром ча�
                     {/*)}*/}
 
                     <div ref={sliderRef} className={cs("keen-slider",styles.Slider_keen)}>
-                        {items}
+                        {count === 0 ?  items1 : null}
+                        {count === 1 ?  items: null}
+                        {count === 2 ?  items2: null}
+                        {count === 3 ?  items3: null}
+                        {count === 4 ?  items4: null}
 
 
                     </div>

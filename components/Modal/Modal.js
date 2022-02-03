@@ -92,8 +92,16 @@ export const Modal = ( {active,setActive}) =>{
                         <div className={styles.item_content}>
                             <span className={styles.item_title}>{quantity.title} </span>
                             {size.width > 720 ?<>
-                                <div className={styles.firstDescription}>1 </div>
-                                <div className={styles.lastDescription}>2 </div>
+                                <div className={styles.detail}>
+
+                                    <span> {quantity.mainDetail}</span>
+                                    <p>{quantity.detail1}</p>
+                                </div>
+                                <div className={styles.detail}>
+
+                                    <span>{quantity.mainDetail2}</span>
+                                    <p> {quantity.detail2}</p>
+                                </div>
                             </> : null}
                             {size.width > 720 ? <>
                                 <div className={styles.flex}>

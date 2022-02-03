@@ -13,6 +13,10 @@ export const Shop = ( { page,active,setActive,data,...props}) =>{
 
        const items =  data.mainCatalogue.slice(0,size.width > 1200 ? step : step_2).map(elem  =>
            <ShopItem
+               detail1={elem.detail1}
+               detail2={elem.detail2}
+               mainDetail={elem.mainDetail}
+               mainDetail2={elem.mainDetail2}
                active={active} setActive={setActive}
                id={elem.id}
                data={elem}
@@ -24,6 +28,10 @@ export const Shop = ( { page,active,setActive,data,...props}) =>{
 
     const Screens =  data.ledScreenCatalogue.slice(0,size.width > 1200 ? step : step_2).map(elem  =>
         <ShopItem
+            detail1={elem.detail1}
+            detail2={elem.detail2}
+            mainDetail={elem.mainDetail}
+            mainDetail2={elem.mainDetail2}
             active={active} setActive={setActive}
             id={elem.id}
             data={elem}
@@ -35,6 +43,10 @@ export const Shop = ( { page,active,setActive,data,...props}) =>{
 
     const VideoWalls =  data.videoWallCatalogue.slice(0,size.width > 1200 ? step : step_2).map(elem  =>
         <ShopItem
+            detail1={elem.detail1}
+            detail2={elem.detail2}
+            mainDetail={elem.mainDetail}
+            mainDetail2={elem.mainDetail2}
             active={active} setActive={setActive}
             id={elem.id}
             data={elem}
@@ -45,6 +57,10 @@ export const Shop = ( { page,active,setActive,data,...props}) =>{
             title={elem.name}/> )
     const TouchScreen =  data.touchScreenCatalogue.slice(0,size.width > 1200 ? step : step_2).map(elem  =>
         <ShopItem
+            detail1={elem.detail1}
+            detail2={elem.detail2}
+            mainDetail={elem.mainDetail}
+            mainDetail2={elem.mainDetail2}
             active={active} setActive={setActive}
             id={elem.id}
             data={elem}
@@ -55,6 +71,10 @@ export const Shop = ( { page,active,setActive,data,...props}) =>{
             title={elem.name}/> )
     const Projectors =  data.projectorsCatalogue.slice(0,size.width > 1200 ? step : step_2).map(elem  =>
         <ShopItem
+            detail1={elem.detail1}
+            detail2={elem.detail2}
+            mainDetail={elem.mainDetail}
+            mainDetail2={elem.mainDetail2}
             active={active} setActive={setActive}
             id={elem.id}
             data={elem}
@@ -65,6 +85,10 @@ export const Shop = ( { page,active,setActive,data,...props}) =>{
             title={elem.name}/> )
     const Laptops =  data.laptopsCatalogue.map(elem  =>
         <ShopItem
+            detail1={elem.detail1}
+            detail2={elem.detail2}
+            mainDetail={elem.mainDetail}
+            mainDetail2={elem.mainDetail2}
             active={active} setActive={setActive}
             id={elem.id}
             data={elem}
@@ -75,6 +99,10 @@ export const Shop = ( { page,active,setActive,data,...props}) =>{
             title={elem.name}/> )
     const Desinfection =  data.desinfectionCatalogue.slice(0,size.width > 1200 ? step : step_2).map(elem  =>
         <ShopItem
+            detail1={elem.detail1}
+            detail2={elem.detail2}
+            mainDetail={elem.mainDetail}
+            mainDetail2={elem.mainDetail2}
             active={active} setActive={setActive}
             id={elem.id}
             data={elem}
@@ -85,6 +113,10 @@ export const Shop = ( { page,active,setActive,data,...props}) =>{
             title={elem.name}/> )
     const Sound =  data.otherCatalogue.slice(0,size.width > 1200 ? step : step_2).map(elem  =>
         <ShopItem
+            detail1={elem.detail1}
+            detail2={elem.detail2}
+            mainDetail={elem.mainDetail}
+            mainDetail2={elem.mainDetail2}
             active={active} setActive={setActive}
             id={elem.id}
             data={elem}

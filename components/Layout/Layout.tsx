@@ -30,7 +30,8 @@ export const Navigation = ( { setNavigation,navigation,contacts,setContacts}) =>
     const route = useRouter();
     return(
         <><div onClick={() => {
-            setContacts(false);
+            setNavigation(false);
+
         }} className={cn(styles.modal_container, !navigation ? null : styles.modal_container_active)}>
              <div className={cn(styles.navigation_container,navigation ? styles.show : null)}>
                 <div className={styles.navigation_content}>
