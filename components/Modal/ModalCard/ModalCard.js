@@ -7,7 +7,7 @@ import cs from "classnames";
 
 
 
-export const ModalCard = ({img,title,price,id,setActive }) => {
+export const ModalCard = ({img,title,price,id,setActive,detail1,detail2,mainDetail,mainDetail2 }) => {
     const roundHundred = (value) =>{
         return Math.round(value/100)*100
     }
@@ -27,7 +27,7 @@ export const ModalCard = ({img,title,price,id,setActive }) => {
                     time === '5 суток' ? e : null )
     const Priced = Number(price);
     const handleClick =() =>{
-        dispatch(setItemInCart({img,changedPrice,id,title,time,Priced}))
+        dispatch(setItemInCart({img,changedPrice,id,title,time,Priced,detail1,detail2,mainDetail,mainDetail2}))
         dispatch(updateTotalPrice(changedPrice))
     }
     const check = () =>{

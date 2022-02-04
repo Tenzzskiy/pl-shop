@@ -44,19 +44,43 @@
         color: var(--description);
         margin-bottom: 15px;
       }
+      .details{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        p{
+          color: #575786;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 140%;
+          margin-right: 10px;
+        }
+        span{
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 140%;
+          color: var(--description);
+        }
+      }
       .firstDescription{
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 140%;
+        max-height: 22px;
         margin-bottom: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
       }
       .secondDescription{
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 140%;
+        max-height: 22px;
         margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
       }
       .text_content_footer{
 display: flex;

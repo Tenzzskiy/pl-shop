@@ -7,14 +7,14 @@ import cs from 'classnames'
 import Link from "next/link";
 
 
-export const OfferCard= ( {price,title,img,data,id,active,setActive,busket,...props }) =>{
+export const OfferCard= ( {detail1,detail2,mainDetail,mainDetail2,price,title,img,data,id,active,setActive,busket,...props }) =>{
     const dispatch = useDispatch();
     const [changedPrice,setChangedPrice] = useState(Number(price))
     const [time, setTime] = useState('1 сутки');
     const Priced = Number(price);
     const items = useSelector(state => state.cart.itemsInCart);
     const handleClick =() =>{
-        dispatch(setItemInCart({img,changedPrice,id,title,time,Priced}))
+        dispatch(setItemInCart({img,changedPrice,id,title,time,Priced,detail1,detail2,mainDetail,mainDetail2}))
         dispatch(updateTotalPrice(Number(changedPrice)))
         {busket === 1 ? null : setActive(true)}
     }
@@ -40,9 +40,13 @@ export const OfferCard= ( {price,title,img,data,id,active,setActive,busket,...pr
             </div>
                 <div className={styles.title}> {title}</div>
                 <div className={styles.subTitle}>
-                    <div>Детали: </div>
-                    <div>с полочкой-держателем </div>
+                    <div>{mainDetail} </div>
+                    <div>{detail1} </div>
                    </div>
+                <div className={styles.subTitle}>
+                    <div>{mainDetail2} </div>
+                    <div>{detail2} </div>
+                </div>
                 <div className={styles.flex}>
                     <div className={styles.select}>
                     <Selector changedPrice={changedPrice} setChangedPrice={setChangedPrice} price={price} setTime={setTime} time={time} check={check()}/>

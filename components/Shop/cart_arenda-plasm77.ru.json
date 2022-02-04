@@ -347,7 +347,10 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail": "Шаг пикселя :",
+      "select1": "2,9 мм, д/помещений",
+      "select2": "4,8 мм, д/улицы"
     },
     {
       "name": "Светодиодный (LED) экран 3,5х2м",
@@ -357,7 +360,10 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "select1": "2,9 мм, д/помещений",
+      "select2": "4,8 мм, д/улицы",
+      "detail": "Шаг пикселя :"
     },
     {
       "name": "Светодиодный (LED) экран 4х3м",
@@ -367,7 +373,10 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "select1": "2,9 мм, д/помещений",
+      "select2": "4,8 мм, д/улицы",
+      "detail": "Шаг пикселя :"
     },
     {
       "name": "Светодиодный (LED) экран 6х4м",
@@ -377,7 +386,10 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "select1": "2,9 мм, д/помещений",
+      "select2": "4,8 мм, д/улицы",
+      "detail": "Шаг пикселя :"
     },
     {
       "name": "Светодиодный (LED) экран 4х2,5м",
@@ -387,7 +399,10 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "select1": "2,9 мм, д/помещений",
+      "select2": "4,8 мм, д/улицы",
+      "detail": "Шаг пикселя :"
     },
     {
       "name": "Светодиодный (LED) экран 2,5х1,5м",
@@ -397,7 +412,10 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "select1": "2,9 мм, д/помещений",
+      "select2": "4,8 мм, д/улицы",
+      "detail": "Шаг пикселя :"
     },
     {
       "name": "Светодиодный (LED) экран 5х3м",
@@ -407,7 +425,10 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "select1": "2,9 мм, д/помещений",
+      "select2": "4,8 мм, д/улицы",
+      "detail": "Шаг пикселя :"
     },
     {
       "name": "Светодиодный (LED) экран 5х4м",
@@ -417,7 +438,10 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "select1": "2,9 мм, д/помещений",
+      "select2": "4,8 мм, д/улицы",
+      "detail": "Шаг пикселя :"
     },
     {
       "name": "Светодиодный (LED) экран 6х3м",
@@ -427,7 +451,10 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "select1": "2,9 мм, д/помещений",
+      "select2": "4,8 мм, д/улицы",
+      "detail": "Шаг пикселя :"
     },
     {
       "name": "Светодиодный (LED) экран 7х4м",
@@ -437,7 +464,10 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "select1": "2,9 мм, д/помещений",
+      "select2": "4,8 мм, д/улицы",
+      "detail": "Шаг пикселя :"
     }
   ],
   "videoWallCatalogue": [
@@ -454,6 +484,7 @@
       "detail2": "5,5мм",
       "mainDetail": "Комплектация:",
       "mainDetail2": "Ширина шва:"
+
     },
     {
       "name": "Видеостена 4х3",
@@ -774,8 +805,8 @@
       "nights": "1",
       "total": "0",
       "totalResult": "0",
-      "detail1": "фильмы и фото высокой четкости",
-      "mainDetail": "Тип контента:"
+      "detail2": "фильмы и фото высокой четкости",
+      "mainDetail2": "Тип контента:"
 
     },
     {
@@ -1232,7 +1263,7 @@
       "nights": "1",
       "total": "0",
       "totalResult": "0",
-      "detail2": "36 многоцветных светодиодов, уравляемый угол поворота",
+      "detail2": "36 многоцветных светодиодов, управляемый угол поворота",
       "mainDetail2": "Детали:"
     },
     {
@@ -1293,7 +1324,10 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "с полочкой-держателем",
+      "mainDetail": "Детали:"
+
     },
     {
       "name": "Брендированная плашка под плазму",
@@ -1303,7 +1337,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "по вашему дизайн-макету ",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Экспостенд 2х2 под плазму",
@@ -1313,7 +1349,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "по вашему дизайн-макету ",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Экспостенд 3х2 под плазму",
@@ -1323,7 +1361,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "по вашему дизайн-макету ",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Санитайзер для рук с сенсорным датчиком",
@@ -1333,7 +1373,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "до 200 использований ",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Таблички-указатели",
@@ -1343,7 +1385,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "ветроустойчивые, возможно брендирование",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Подсветка LED 15",
@@ -1353,7 +1397,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "15 многоцветных светодиодов",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Профессиональный ноутбук 14-15”",
@@ -1363,7 +1409,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "для любых рабочих задач",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Звуковая система 800Вт",
@@ -1373,7 +1421,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "динамики, микрофон, микшер, пульт",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Ограждение «канат»",
@@ -1383,7 +1433,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "дезинфицирует воздух",
+      "mainDetail": "Детали:"
     }
   ],
   "LedAdditionals": [
@@ -1391,13 +1443,17 @@
       "name": "Санитайзер для рук с сенсорным датчиком",
       "id": "104",
       "price": "2000",
-      "img": "/assets/images2/sanitayzer-dlya-ruk-s-sensornym-datchikom.jpg"
+      "img": "/assets/images2/sanitayzer-dlya-ruk-s-sensornym-datchikom.jpg",
+      "detail1": "до 200 использований ",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Раствор антисептика 5 литров",
       "id": "84",
       "price": "1800",
-      "img": "/assets/images2/rastvor-antiseptika-5-litrov.jpg"
+      "img": "/assets/images2/rastvor-antiseptika-5-litrov.jpg",
+      "detail1": "ёмкость на 200 доз",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Ограждение «канат»",
@@ -1407,7 +1463,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "протяженность 1м",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Профессиональный ноутбук 14-15”",
@@ -1417,7 +1475,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "для любых рабочих задач",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Таблички-указатели",
@@ -1427,7 +1487,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "ветроустойчивые, возможно брендирование",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Бактерицидный рециркулятор Advansys 60м³",
@@ -1437,7 +1499,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "дезинфецирует воздух",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Автоматический аппарат для надевания бахил",
@@ -1447,7 +1511,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "300 шт/ 150 пар",
+      "mainDetail": "Вместимость:"
     },
     {
       "name": "Комплект дезинфекции 30м³",
@@ -1457,7 +1523,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "Влажная уборка, обработка парогенератором и антисептиком",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Звуковая система 800Вт",
@@ -1467,7 +1535,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "динамики, микрофон, микшер, пульт",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Вертикальная подсветка LED 24",
@@ -1477,7 +1547,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "24 многоцветных светодиодов, высота до 2м",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Подсветка LED 15",
@@ -1487,7 +1559,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "15 многоцветных светодиодов",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Прожектор LED 36",
@@ -1497,7 +1571,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "36 многоцветных светодиодов, управляемый угол поворота",
+      "mainDetail": "Детали:"
     }
   ],
   "TouchAdditionals": [
@@ -1509,7 +1585,11 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail2": "до 200 использований",
+      "mainDetail2": "Детали:",
+      "detail1": "предоставляет заказчик",
+      "mainDetail": "Дизайн-макет:"
     },
     {
       "name": "Разработка макета для брендирования",
@@ -1519,7 +1599,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "ёмкость на 200 доз",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Брендирование 100% корпуса",
@@ -1529,7 +1611,11 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "предоставляет заказчик",
+      "mainDetail": "Дизайн-макет:",
+      "detail2": "ёмкость на 200 доз",
+      "mainDetail2": "Детали:"
     },
     {
       "name": "Санитайзер для рук с сенсорным датчиком",
@@ -1539,7 +1625,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "до 200 использований",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Раствор антисептика 5 литров",
@@ -1549,7 +1637,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "ёмкость на 200 доз",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Подсветка LED 15",
@@ -1559,7 +1649,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "15 многоцветных светодиодов",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Таблички-указатели",
@@ -1569,7 +1661,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "ветроустойчивые, возможно брендирование",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Ограждение «канат»",
@@ -1579,7 +1673,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "протяженность 1м",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Бактерицидный рециркулятор Advansys 60м³",
@@ -1589,7 +1685,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "дезинфицирует воздух",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Автоматический аппарат для надевания бахил",
@@ -1599,7 +1697,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "300 шт/ 150 пар",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Комплект дезинфекции 30м³",
@@ -1609,7 +1709,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "Влажная уборка, обработка парогенератором и антисептиком",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Звуковая система 800Вт",
@@ -1619,7 +1721,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "динамики, микрофон, микшер, пульт",
+      "mainDetail": "Детали:"
     }
   ],
   "ProjectorAdditionals": [
@@ -1631,7 +1735,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "размещение напольное на ножках",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Презентер (кликкер)",
@@ -1641,7 +1747,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "для дистанционного переклюяения слайдов",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Профессиональный ноутбук 14-15”",
@@ -1651,7 +1759,11 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "Intel Core i5 (8Гб ОП)",
+      "mainDetail": "Процессор:",
+      "detail2": "для любых рабочих задач",
+      "mainDetail2": "Назначение:"
     },
     {
       "name": "Экран д/проектора 160х160см",
@@ -1661,7 +1773,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "размещение напольное на ножках",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Столик д/проектора и ноутбука",
@@ -1671,7 +1785,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "сталь, пластик",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Экран д/проектора 300х220см",
@@ -1681,7 +1797,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "размещение напольное на ножках",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Санитайзер для рук с сенсорным датчиком",
@@ -1691,7 +1809,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "до 200 использований",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Раствор антисептика 5 литров",
@@ -1701,7 +1821,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "ёмкость на 200 доз",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Экран д/проектора 244х244см",
@@ -1711,7 +1833,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "размещение напольное на ножках",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Таблички-указатели",
@@ -1721,7 +1845,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "ветроустойчивые, возможно брендирование",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Ограждение «канат»",
@@ -1731,7 +1857,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "протяженность 1м",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Бактерицидный рециркулятор Advansys 60м³",
@@ -1741,7 +1869,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "дезинфицирует воздух",
+      "mainDetail": "Детали:"
     }
   ],
   "LaptopAdditionals": [
@@ -1753,7 +1883,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "сталь, пластик",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Санитайзер для рук с сенсорным датчиком",
@@ -1763,7 +1895,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "до 200 использований",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Раствор антисептика 5 литров",
@@ -1773,7 +1907,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "ёмкость на 200 доз",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Ограждение «канат»",
@@ -1783,7 +1919,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "протяженность 1м",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Таблички-указатели",
@@ -1793,7 +1931,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "ветроустойчивые, возможно брендирование",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Бактерицидный рециркулятор Advansys 60м³",
@@ -1803,7 +1943,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "дезинфицирует воздух",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Автоматический аппарат для надевания бахил",
@@ -1813,7 +1955,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "300 шт/ 150 пар",
+      "mainDetail": "Вместимость:"
     },
     {
       "name": "Комплект дезинфекции 30м³",
@@ -1823,7 +1967,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "Влажная уборка, обработка парогенератором и антисептиком",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Звуковая система 800Вт",
@@ -1833,7 +1979,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "динамики, микрофон, микшер, пульт",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Подсветка LED 15",
@@ -1843,7 +1991,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "15 многоцветных светодиодов",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Вертикальная подсветка LED 24",
@@ -1853,7 +2003,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "24 многоцветных светодиодов, высота до 2м",
+      "mainDetail": "Детали:"
     },
     {
       "name": "Прожектор LED 36",
@@ -1863,7 +2015,9 @@
       "count": "0",
       "nights": "1",
       "total": "0",
-      "totalResult": "0"
+      "totalResult": "0",
+      "detail1": "36 многоцветных светодиодов, управляемый угол поворота",
+      "mainDetail": "Детали:"
     }
   ]
 }

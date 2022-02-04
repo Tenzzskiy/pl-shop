@@ -28,14 +28,14 @@ export const Shop = ( { page,active,setActive,data,...props}) =>{
 
     const Screens =  data.ledScreenCatalogue.slice(0,size.width > 1200 ? step : step_2).map(elem  =>
         <ShopItem
-            detail1={elem.detail1}
-            detail2={elem.detail2}
-            mainDetail={elem.mainDetail}
-            mainDetail2={elem.mainDetail2}
+            total={elem.total}
+            detail={elem.detail}
+            select1={elem.select1}
+            select2={elem.select2}
             active={active} setActive={setActive}
             id={elem.id}
             data={elem}
-            count={1}
+            count={0}
             key={elem.id}
             img={elem.img}
             price={elem.price}

@@ -40,7 +40,7 @@ const Home = ({ cards }) => {
     const [totalPrice,setTotalPrice] = useState()
     const size = useWindowSize();
     const [modalActive,setModalActive] = useState(false)
-    console.log(size.width)
+
   return (
 
       <Provider store={store} >

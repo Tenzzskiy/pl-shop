@@ -8,7 +8,7 @@ import {useKeenSlider} from "keen-slider/react";
 import styles2 from './Offer_360.module.scss'
 import cs from 'classnames'
 
-export const Offer_360 = ({busket=0,active,setActive,title=' С этим товаром часто берут'} ) =>{
+export const Offer_360 = ({count =0,busket=0,active,setActive,title=' С этим товаром часто берут'} ) =>{
     const size = useWindowSize();
 
 
@@ -31,11 +31,72 @@ export const Offer_360 = ({busket=0,active,setActive,title=' С этим тов�
     const items =  data.mainAdditionals.map(elem  =>
         <div className="keen-slider__slide number-slide2" key={elem.id}>
             <div className={styles.flex} >
-                <OfferCard price={elem.price} title={elem.name} img={elem.img} data={elem} id={elem.id} active={active} setActive={setActive} busket={busket}/>
+                <OfferCard price={elem.price} title={elem.name} img={elem.img} data={elem} id={elem.id} active={active} setActive={setActive} busket={busket}
+                           detail1={elem.detail1}
+                           detail2={elem.detail2}
+                           mainDetail2={elem.mainDetail2}
+                           mainDetail={elem.mainDetail}
+
+                />
+            </div>
+        </div>)
+    const items1 =  data.LedAdditionals.map(elem  =>
+        <div className="keen-slider__slide number-slide2" key={elem.id}>
+            <div className={styles.flex} >
+                <OfferCard price={elem.price} title={elem.name} img={elem.img} data={elem} id={elem.id} active={active} setActive={setActive} busket={busket}
+                           Switch={elem.Switch}
+                           detail1={elem.detail1}
+                           detail2={elem.detail2}
+                           mainDetail2={elem.mainDetail2}
+                           mainDetail={elem.mainDetail}
+                />
             </div>
         </div>
 
-    );
+
+    )
+    const items2 =  data.TouchAdditionals.map(elem  =>
+        <div className="keen-slider__slide number-slide2" key={elem.id}>
+            <div className={styles.flex} >
+                <OfferCard price={elem.price} title={elem.name} img={elem.img} data={elem} id={elem.id} active={active} setActive={setActive} busket={busket}
+                           detail1={elem.detail1}
+                           detail2={elem.detail2}
+                           mainDetail2={elem.mainDetail2}
+                           mainDetail={elem.mainDetail}
+                />
+            </div>
+        </div>
+
+
+    )
+    const items3 =  data.ProjectorAdditionals.map(elem  =>
+        <div className="keen-slider__slide number-slide2" key={elem.id}>
+            <div className={styles.flex} >
+                <OfferCard price={elem.price} title={elem.name} img={elem.img} data={elem} id={elem.id} active={active} setActive={setActive} busket={busket}
+                           detail1={elem.detail1}
+                           detail2={elem.detail2}
+                           mainDetail2={elem.mainDetail2}
+                           mainDetail={elem.mainDetail}
+                />
+            </div>
+        </div>
+
+
+    )
+    const items4 =  data.LaptopAdditionals.map(elem  =>
+        <div className="keen-slider__slide number-slide2" key={elem.id}>
+            <div className={styles.flex} >
+                <OfferCard price={elem.price} title={elem.name} img={elem.img} data={elem} id={elem.id} active={active} setActive={setActive} busket={busket}
+                           detail1={elem.detail1}
+                           detail2={elem.detail2}
+                           mainDetail2={elem.mainDetail2}
+                           mainDetail={elem.mainDetail}
+                />
+            </div>
+        </div>
+
+
+    )
 
             return(
 
@@ -51,7 +112,11 @@ export const Offer_360 = ({busket=0,active,setActive,title=' С этим тов�
                             <div className={cs("navigation-wrapper", styles.navigation_wrapper)}>
 
                                 <div ref={sliderRef} className="keen-slider">
-                                    {items}
+                                    {count === 0 ?  items1 : null}
+                                    {count === 1 ?  items: null}
+                                    {count === 2 ?  items2: null}
+                                    {count === 3 ?  items3: null}
+                                    {count === 4 ?  items4: null}
 
                                 </div>
 

@@ -6,7 +6,7 @@ import {useDispatch} from "react-redux";
 import {deleteItemFromCart} from './../../../redux/cart/reducer'
 import {updateSelect,updateCount,updateTime} from './../../../redux/cart/reducer'
 import {useWindowSize} from "../../../Hooks/useWindowSize";
-export const BusketCard = ( {img,title,time,price,id,data,Priced  }) => {
+export const BusketCard = ( {detail1,detail2,mainDetail,mainDetail2,img,title,time,price,id,data,Priced  }) => {
     const size = useWindowSize();
     const [changedPrice,setChangedPrice] = useState(Number(data.Priced));
     const roundHundred = (value) =>{
@@ -46,10 +46,10 @@ export const BusketCard = ( {img,title,time,price,id,data,Priced  }) => {
                 <div className={styles.text_content}>
                     <div className={styles.title} >{title} </div>
                     {size.width >720 ?
-                    <>
-                        <div className={styles.firstDescription} > 1</div>
-                        <div className={styles.secondDescription}> 2</div>
-                    </> : null
+                    <div className={styles.details}>
+                        <div className={styles.firstDescription} > <p>{mainDetail}</p> <span> {detail1}</span></div>
+                        <div className={styles.secondDescription}> <p> {mainDetail2}</p> <span>{detail2}</span></div>
+                    </div> : null
                     }
                     <div className={styles.text_content_footer}>
                         {size.width > 720 ? <Selector setChangedPrice={setChangedPrice} duration={duration}  price={changedPrice} setTime={setTime} time={time} data={data} changedPrice={changedPrice} count={count} /> : null}

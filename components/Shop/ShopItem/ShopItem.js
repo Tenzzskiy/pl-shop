@@ -4,20 +4,22 @@ import {Disabled_Selector, Selector} from "../../Select/Select";
 import {useDispatch, useSelector} from "react-redux";
 import {setItemInCart, updateTotalPrice} from '../../../redux/cart/reducer.js'
 import Link from "next/link";
+import {LedSelector} from "../LedSelector/LedSelector";
 
 
-export const ShopItem = ( { data,children,price,count,img,title,active,setActive,detail1,detail2,mainDetail,mainDetail2,id,...props}) =>{
+export const ShopItem = ( { total,detail,select1,select2,data,children,price,count,img,title,active,setActive,detail1,detail2,mainDetail,mainDetail2,id,...props}) =>{
     const [checked,setCheck] = useState(false)
     const dispatch = useDispatch();
     const [time, setTime] = useState('1 сутки');
     const Priced = Number(price);
     const [changedPrice,setChangedPrice] = useState(Number(price))
     const items = useSelector(state => state.cart.itemsInCart);
+   const [Switch,setSwitch] = useState(1)
     const handleClick =() =>{
-        dispatch(setItemInCart({img,changedPrice,id,title,time,Priced,detail1,detail2,mainDetail,mainDetail2}));
+        dispatch(setItemInCart({img,changedPrice,id,title,time,Priced,select1,select2,mainDetail,mainDetail2,detail1,detail2,Switch}));
         dispatch(updateTotalPrice(Number(changedPrice)))
         setActive(true);
-
+        console.log(items)
     }
 
 const check = () =>{
@@ -56,7 +58,14 @@ const check = () =>{
                             </div>
 
                         </> : null
-                    }
+                    } {count === 0 ?
+                    <div className={styles.detailSelector}>
+
+                        <span> {detail}</span>
+                        <LedSelector select1={select1} select2={select2} detail={detail} data={data} setSwitch={setSwitch}/>
+                    </div>
+
+                     : null}
 
                     <div className={styles.card_footer}>
                        <Selector changedPrice={changedPrice} setChangedPrice={setChangedPrice} data={data} price={data.price} setTime={setTime} time={time} check={check()} />

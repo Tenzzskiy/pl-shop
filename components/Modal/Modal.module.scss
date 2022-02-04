@@ -8,12 +8,14 @@
   align-items: center;
   margin-bottom: 15px;
   height: 15px;
-  span{
 
+  span{
+    margin-right: 5px;
     color: #575786;
   }
   p{
     color: var(--description);
+
   }
 }
 .modal{

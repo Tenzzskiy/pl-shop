@@ -22,11 +22,17 @@ export const ResultBusket = ( { setOfferModal}) => {
     const size = useWindowSize();
     const items = useSelector(state => state.cart.itemsInCart);
     let result = 0;
+    const [input,setNumber ] = useState(false)
     items.map(elem => result += elem.changedPrice)
     const count = items.length;
     const totalPrice = useSelector(state => state.cart.totalPrice);
     const goods =  items.map(elem  =>
         <BusketCard
+            detail1={elem.detail1}
+            detail2={elem.detail2}
+            mainDetail={elem.mainDetail}
+            mainDetail2={elem.mainDetail2}
+            detail={elem.detail}
             key={elem.id}
         id={elem.id}
         time={elem.time}
@@ -66,14 +72,32 @@ export const ResultBusket = ( { setOfferModal}) => {
             <div className={styles.add}>*финальная стоимость
             с учётом доставки рассчитывается менеджером</div>
             <div className={styles.contacts}>
-            <div className={styles.number}><FormInput mask="+7 (999) 999-99-99" placeholder='+7 999 999-99-99' onChange={(evt) => setValue(evt)} /> </div>
+            <div className={styles.number}><FormInput mask="+7 (999) 999-99-99" placeholder='+7 999 999-99-99' onChange={(evt) => {
+                {
+                    (evt?.includes('_')) && (evt?.includes(' ')) ?  setNumber(false): null ;
+                }
+                {
+                    (!(evt?.includes('_')) && (evt?.includes(' '))) ?  setNumber(true): null ;
+                }
+
+
+            }} /> </div>
                 <Contacts />
             </div>
             <div className={styles.rules}>
             <div className={styles.checkbox} onClick={triggerCheckBox}><img className={checkbox ? null : styles.hide} src="/Seo/checkbox.svg" alt=""/></div>
             <div> Соглашаюсь с <Link href=""><a>Правилами обработки персональных данных</a></Link></div>
             </div>
-            <div className={styles.button} onClick={() => checkbox ? setOfferModal(true) : null}><button>Отправить заявку</button> </div>
+            <div className={styles.button} onClick={ () =>
+
+            {
+                if ( checkbox === true  && input ===true){
+                    setOfferModal(true)
+                } else if (checkbox ===true  && input ===true){
+                    setOfferModal(true)
+                }
+            }
+            }><button>Отправить заявку</button> </div>
             </div>
             </div> : null
         }

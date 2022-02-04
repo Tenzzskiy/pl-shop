@@ -21,6 +21,8 @@
   border-radius: 5px;
 }
 .container{
+  box-shadow: 2px 4px 4px rgba(87, 87, 134, 0.2);
+  border-radius: 5px;
   background: white;
   max-width: 100%;
 
@@ -46,7 +48,7 @@
       font-size: 18px;
       line-height: 130%;
       text-align: left;
-      height: 46px;
+      height: 60px;
       margin-bottom: 15px;
     }
     .subTitle{
@@ -56,7 +58,7 @@
       line-height: 120%;
       display: flex;
       flex-direction: row;
-      align-items: center;
+
       div:first-child{
         margin-right: 3px;
         color: #575786;
