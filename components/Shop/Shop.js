@@ -6,12 +6,12 @@ import {useWindowSize} from "../../Hooks/useWindowSize";
 
 export const Shop = ( { page,active,setActive,data,...props}) =>{
     const size = useWindowSize();
-    const [step,setStep] = useState(12);
+    const [step,setStep] = useState(size.width > 1200 ? 12 : 6);
 
     const [step_2,setStep_2] = useState( 6 );
     const [buttonStyle,setButtonStyle] = useState(styles.button)
-
-       const items =  data.mainCatalogue.slice(0,size.width > 1200 ? step : step_2).map(elem  =>
+        const itemsLength = data.mainCatalogue.length;
+       const items =  data.mainCatalogue.slice(0,step).map(elem  =>
            <ShopItem
                detail1={elem.detail1}
                detail2={elem.detail2}
@@ -127,16 +127,12 @@ export const Shop = ( { page,active,setActive,data,...props}) =>{
             title={elem.name}/> )
         const Else = () =>{
 
-            if ( step_2 <= 24 ){
-                setStep_2(step_2+step_2);
-            } else {
-                setButtonStyle(styles.button_none)
-            }
-           if ( step <= 24 ){
-                setStep(step+step);
-            } else {
-                setButtonStyle(styles.button_none)
-            }
+                if (step <= items.length){
+                    setStep(itemsLength)
+                    setButtonStyle(styles.button_none)
+                }
+
+
 
 
 
