@@ -135,14 +135,32 @@ export const ResultBusket = ( { setOfferModal}) => {
                         <div className={styles.add}>*финальная стоимость
                             с учётом доставки рассчитывается менеджером</div>
                         <div className={styles.contacts}>
-                            <div className={styles.number}><FormInput mask="+7 (999) 999-99-99" placeholder='+7 999 999-99-99' onChange={(evt) => setValue(evt)} /> </div>
+                            <div className={styles.number}><FormInput mask="+7 (999) 999-99-99" placeholder='+7 999 999-99-99'  onChange={(evt) => {
+                                {
+                                    (evt?.includes('_')) && (evt?.includes(' ')) ?  setNumber(false): null ;
+                                }
+                                {
+                                    (!(evt?.includes('_')) && (evt?.includes(' '))) ?  setNumber(true): null ;
+                                }
+
+
+                            }}  /> </div>
                             {size.width < 720 ? <Selector_360 /> : <Contacts /> }
                         </div>
                         <div className={styles.rules}>
                             <div className={styles.checkbox} onClick={triggerCheckBox}><img className={checkbox ? null : styles.hide} src="/Seo/checkbox.svg" alt=""/></div>
                             <div className={styles.agree}> Соглашаюсь с <Link href=""><a>Правилами обработки персональных данных</a></Link></div>
                         </div>
-                        <div className={styles.button}><button onClick={() => checkbox ? setOfferModal(true) : null}>Отправить заявку</button> </div>
+                        <div className={styles.button}><button onClick={ () =>
+
+                        {
+                            if ( checkbox === true &&  input ===true){
+                                setOfferModal(true)
+                            } else if (checkbox ===true && input ===true){
+                                setOfferModal(true)
+                            }
+                        }
+                        }>Отправить заявку</button> </div>
                     </div>
                 </div> : null
             }

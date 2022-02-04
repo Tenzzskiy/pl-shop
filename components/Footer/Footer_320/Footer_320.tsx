@@ -2,6 +2,7 @@ import styles from './Footer_320.module.scss'
 import React from "react";
 import Link from "next/link";
 import cn from "classnames";
+import {MyImage} from "../../MyImage";
 
 
 export const Footer_320 = () =>{
@@ -16,7 +17,8 @@ export const Footer_320 = () =>{
                         <div className={styles.img}>
                             <picture>
                                 <Link href='/' ><a className={cn(styles.a,
-                                )} > <img src="/header/Logotype.svg" alt=""/></a></Link>
+                                )} ><MyImage src={{default: "/header/Logotype.svg"}} alt={'1'} />
+                                    </a></Link>
                             </picture>
                         </div>
                         <div className={styles.mail}>info@arenda-plazm77.ru </div>
@@ -24,7 +26,9 @@ export const Footer_320 = () =>{
                     </div>
                         <div className={styles.contacts}>
                             <picture>
-                                <a href="tel:+7 (495) 321 54 76"> <img src="/header/footer_contacts.svg" alt=""/></a>
+                                <a href="tel:+7 (495) 321 54 76">
+                                    <MyImage src={{default: "/header/footer_contacts.svg"}} alt={'1'} />
+                                    </a>
                             </picture>
                         </div>
 
@@ -73,9 +77,10 @@ export const Footer_320 = () =>{
                 <div className={styles.content3}>
                 <div className={styles.flex}>
                     <div className={styles.item1}>
-                        <img src="/VK.svg" alt=""/>
-                        <img src="/FB.svg" alt=""/>
-                        <img src="/IG.svg" alt=""/>
+                        <MyImage src={{default: "/VK.svg"}} alt={'1'} />
+                        <MyImage src={{default: "/FB.svg"}} alt={'1'} />
+                        <MyImage src={{default: "/IG.svg"}} alt={'1'} />
+
                     </div>
                     <div className={styles.item14}> Yandex metrika badge-widget  </div>
                 <div className={styles.item15}>Политика конфиденциальности </div>

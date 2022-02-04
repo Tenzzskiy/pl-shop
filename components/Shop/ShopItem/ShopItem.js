@@ -5,6 +5,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {setItemInCart, updateTotalPrice} from '../../../redux/cart/reducer.js'
 import Link from "next/link";
 import {LedSelector} from "../LedSelector/LedSelector";
+import {MyImage} from "../../MyImage";
 
 
 export const ShopItem = ( { total,detail,select1,select2,data,children,price,count,img,title,active,setActive,detail1,detail2,mainDetail,mainDetail2,id,...props}) =>{
@@ -39,7 +40,8 @@ const check = () =>{
             <div className={styles.content}>
                 <div className={styles.img}>
                     <picture>
-                        <img src={img} alt="" width='251' height='188'/>
+                        <MyImage src={{default: img}} alt={'1'} />
+
                     </picture>
                 </div>
                 <div className={styles.flex}>

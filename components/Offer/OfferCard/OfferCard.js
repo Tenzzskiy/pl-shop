@@ -5,6 +5,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {setItemInCart, updateTotalPrice} from "../../../redux/cart/reducer";
 import cs from 'classnames'
 import Link from "next/link";
+import {MyImage} from "../../MyImage";
 
 
 export const OfferCard= ( {detail1,detail2,mainDetail,mainDetail2,price,title,img,data,id,active,setActive,busket,...props }) =>{
@@ -35,7 +36,7 @@ export const OfferCard= ( {detail1,detail2,mainDetail,mainDetail2,price,title,im
             <div className={styles.content}>
             <div className={styles.img}>
                 <picture>
-                    <img src={img} alt=""/>
+                    <MyImage src={{default: img}} alt={'1'} />
                 </picture>
             </div>
                 <div className={styles.title}> {title}</div>

@@ -5,6 +5,7 @@ import {Footer_768} from "./Footer_768/Footer_768";
 import {Footer_320} from "./Footer_320/Footer_320";
 import cn from "classnames";
 import Link from "next/link";
+import {MyImage} from "../MyImage";
 
 const Footer:FunctionComponent = ({ }):JSX.Element =>{
     const [Data] = React.useState(new Date);
@@ -20,7 +21,7 @@ const Footer:FunctionComponent = ({ }):JSX.Element =>{
 
                                <div className={styles.item1}>
                                    <Link href='/' ><a className={cn(styles.a,
-                                   )} > <img src="/header/Logotype.svg" alt=""/></a></Link>
+                                   )} ><MyImage src={{default: "/header/Logotype.svg"}} alt={'1'} /></a></Link>
 
                                     </div>
                                <div className={styles.item2}>  <a href="mailto:info@arenda-plazm77.ru"> info@arenda-plazm77.ru</a></div>
@@ -68,9 +69,9 @@ const Footer:FunctionComponent = ({ }):JSX.Element =>{
                            </div>
                            <div className={styles.flex4}>
                                <div className={styles.item13}>
-                                   <img src="/VK.svg" alt=""/>
-                                   <img src="/FB.svg" alt=""/>
-                                   <img src="/IG.svg" alt=""/>
+                                   <MyImage src={{default: "/VK.svg"}} alt={'1'} />
+                                   <MyImage src={{default: "/FB.svg"}} alt={'1'} />
+                                   <MyImage src={{default: "/IG.svg"}} alt={'1'} />
                                </div>
                                <div className={styles.item14}>{size.width} </div>
                                <div className={styles.item15}> Политика конфиденциальности</div>

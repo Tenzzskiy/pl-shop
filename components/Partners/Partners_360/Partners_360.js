@@ -4,6 +4,7 @@ import "keen-slider/keen-slider.min.css"
 import styles from './Partners_360.module.scss'
 import {useState} from "react";
 import cn from 'classnames'
+import {MyImage} from "../../MyImage";
 export const Partners_360 = ({}) => {
     const [currentSlide, setCurrentSlide] = useState(0)
     const [loaded, setLoaded] = useState(false)
@@ -28,21 +29,23 @@ export const Partners_360 = ({}) => {
                 <div ref={sliderRef} className="keen-slider">
                     <div className={cn("keen-slider__slide",styles.slider)}>
                         <div className={styles.flex}>
-                            <div className={styles.faded}><img src="/Clients/client_1.svg" alt=""/></div>
-                            <div className={styles.faded}><img src="/Clients/client_2.svg" alt=""/></div>
+
+
+                            <div className={styles.faded}> <MyImage src={{default: "/Clients/client_1.svg"}} alt={'1'} />   </div>
+                            <div className={styles.faded}><MyImage src={{default: "/Clients/client_2.svg"}} alt={'1'} />    </div>
                         </div>
                     </div>
                     <div className={cn("keen-slider__slide",styles.slider)}>
                         <div className={styles.flex}>
-                            <div className={styles.faded}><img src="/Clients/3.jpg" alt=""/></div>
-                            <div className={styles.faded}><img src="/Clients/client_4.svg" alt=""/></div>
+                            <div className={styles.faded}><MyImage src={{default: "/Clients/client_3.svg"}} alt={'1'} /></div>
+                            <div className={styles.faded}><MyImage src={{default: "/Clients/client_4.svg"}} alt={'1'} /></div>
                         </div>
 
                     </div>
                     <div className={cn("keen-slider__slide",styles.slider)}>
                         <div className={styles.flex}>
-                            <div className={styles.faded}><img src="/Clients/client_5.svg" alt=""/></div>
-                            <div className={styles.faded}><img src="/Clients/client_6.svg" alt=""/></div>
+                            <div className={styles.faded}><MyImage src={{default: "/Clients/client_5.svg"}} alt={'1'} /></div>
+                            <div className={styles.faded}><MyImage src={{default: "/Clients/client_6.svg"}} alt={'1'} /></div>
                         </div>
                     </div>
                     {loaded && instanceRef.current && (

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from './Preferences.module.scss'
+import {MyImage} from "../MyImage";
 
 
 
@@ -49,7 +50,7 @@ const LeftPreference = ( { leftImg,leftTitle,leftText}) =>{
              <div className={styles.container}>
                 <div className={styles.flex}>
                     <div className={styles.img}>
-                        <img src={leftImg} alt=""/>
+                        <MyImage src={{default: leftImg}} alt={'1'} />
                         <img  className={styles.background_img} src="/Preferences/background_image.svg" alt=""/>
                     </div>
 
@@ -84,7 +85,7 @@ const RightPreference = ( { rightImg,rightText,rightTitle}) =>{
                          </div>
                      </div>
                      <div className={styles.img}>
-                         <img src={rightImg} alt=""/>
+                        <MyImage src={{default: rightImg}} alt={'1'} />
                          <img  className={styles.background_img_2} src="/Preferences/background_img2.svg" alt=""/>
                      </div>
                  </div>

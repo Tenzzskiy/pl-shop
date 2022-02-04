@@ -2,6 +2,7 @@ import styles from './Footer_768.module.scss'
 import React from "react";
 import Link from "next/link";
 import cn from "classnames";
+import {MyImage} from "../../MyImage";
 
 
 export const Footer_768 = () =>{
@@ -16,7 +17,7 @@ export const Footer_768 = () =>{
                     <div className={styles.flex1}>
                         <div className={styles.first}>
                             <div className={styles.item1}> <Link href='/' ><a className={cn(styles.a,
-                            )} > <img src="/header/Logotype.svg" alt=""/></a></Link> </div>
+                            )} ><MyImage src={{default: "/header/Logotype.svg"}} alt={'1'} /></a></Link> </div>
                             <div className={styles.item2}><a href="mailto:info@arenda-plazm77.ru">info@arenda-plazm77.ru</a></div>
                         </div>
                         <div className={styles.second}>
@@ -85,9 +86,9 @@ export const Footer_768 = () =>{
                     </div>
                 <div className={styles.box3}>
                         <div className={styles.item13}>
-                            <img src="/VK.svg" alt=""/>
-                            <img src="/FB.svg" alt=""/>
-                            <img src="/IG.svg" alt=""/>
+                            <MyImage src={{default: "/VK.svg"}} alt={'1'} />
+                            <MyImage src={{default: "/FB.svg"}} alt={'1'} />
+                            <MyImage src={{default: "/IG.svg"}} alt={'1'} />
                         </div>
 
                         <div className={styles.item15}> Политика конфиденциальности</div>

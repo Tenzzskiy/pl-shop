@@ -5,6 +5,7 @@ import {PreferenceCard} from "../../Preferences/PreferenceCard/PreferenceCard";
 import data from "../../Shop/cart_arenda-plasm77.ru.json";
 import {ShopItem} from "../../Shop/ShopItem/ShopItem";
 import cs from 'classnames'
+import {MyImage} from "../../MyImage";
 export const Releases_768 = ( {img1,img2,img3,img4,img5,text1,text2,text3,text4,text5 }) =>{
     const [currentSlide, setCurrentSlide] = useState(0)
     const [loaded, setLoaded] = useState(false)
@@ -76,7 +77,7 @@ const ReleasesSlider = ({img,text} ) => {
         <>
         <div className={styles.slider_container}>
             <picture>
-                <img src={img} alt=""/>
+                <MyImage src={{default: img}} alt={'1'} />
                 <div className={styles.faded_text}> {text}</div>
             </picture>
 
