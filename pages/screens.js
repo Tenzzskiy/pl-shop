@@ -22,6 +22,7 @@ import FeedBack from "../components/FeedBack/FeedBack";
 import data from "../components/Shop/cart_arenda-plasm77.ru.json";
 import {OfferModal} from "../components/offerModal/OfferModal";
 import SitesModal from "../components/SitesModal/SitesModal";
+import MediumHeader from "../components/HeaderComponent/MediumHeader/MediumHeader";
 
 export const getStaticProps = async () => {
     return {
@@ -39,9 +40,10 @@ const Screens = ({cards}) => {
     return (
         <Provider store={store}>
             <Layout>
-                <HeaderComponent
+                <MediumHeader
+                    img_360='/header/Screen/main_360.jpg'
                     title='Аренда  светодиодных экранов'
-                    mainImg='/header/Screen/main.jpg'
+                    mainImg='/header/Screen/main2.jpg'
                     button_text='Рассчитать стоимость'
                     purple={true}
                     setSites={setSites}
