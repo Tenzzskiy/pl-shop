@@ -37,14 +37,12 @@ export const SitesModal = ({touchpanel=0, setTouchPanel,TouchPanel,setOfferModal
                     <div className={styles.input}>
                         <FormInput mask="+7 (999) 999-99-99" placeholder='+7 999 999-99-99' onChange={(evt) => {
                             {
-                                (evt?.includes('_')) ?  setNumber(false): null ;
+                                (evt?.includes('_')) && (evt?.includes(' ')) ?  setNumber(false): null ;
                             }
                             {
-                                !(evt?.includes('_')) ?  setNumber(true): null ;
+                                (!(evt?.includes('_')) && (evt?.includes(' '))) ?  setNumber(true): null ;
                             }
-                            console.log(evt)
-                            console.log((evt?.includes('_')))
-                            console.log(input)
+
 
                         }} />
                     </div>
@@ -58,16 +56,16 @@ export const SitesModal = ({touchpanel=0, setTouchPanel,TouchPanel,setOfferModal
                         </div>
 
                         <div className={styles.button} >
-                        <button onClick={ () => {
-                            checkbox ?
-                                touchpanel === 1 ? setTouchPanel(false) : setSites(false)
-                                :null
+                        <button onClick={ () =>
 
-                            {
-                                input ? setOfferModal(true) : null;
-                            }
-
-
+                        {
+                                if ( checkbox === true && touchpanel === 1 && input ===true){
+                                    setTouchPanel(false);
+                                    setOfferModal(true)
+                                } else if (checkbox ===true && touchpanel === 0 && input ===true){
+                                    setSites(false)
+                                    setOfferModal(true)
+                                }
                         }
                         }
 

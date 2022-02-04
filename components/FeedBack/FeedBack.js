@@ -42,10 +42,10 @@ const FeedBack = ( {setOfferModal}) => {
 
 
                                 {
-                                    (evt?.includes('_')) ?  setInput(false): null ;
+                                    (evt?.includes('_')) && (evt?.includes(' ')) ?  setInput(false): null ;
                                 }
                                 {
-                                    !(evt?.includes('_')) ?  setInput(true): null ;
+                                    (!(evt?.includes('_')) && (evt?.includes(' '))) ?  setInput(true): null ;
                                 }
 
 
