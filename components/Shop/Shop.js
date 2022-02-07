@@ -8,6 +8,7 @@ export const Shop = ( { page,active,setActive,data,...props}) =>{
     const size = useWindowSize();
     const [step,setStep] = useState(size.width > 1200 ? 12 : 6);
 
+
     const [step_2,setStep_2] = useState( 6 );
     const [buttonStyle,setButtonStyle] = useState(styles.button)
         const itemsLength = data.mainCatalogue.length;

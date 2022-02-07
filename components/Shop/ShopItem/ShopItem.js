@@ -10,6 +10,8 @@ import {MyImage} from "../../MyImage";
 
 export const ShopItem = ( { total,detail,select1,select2,data,children,price,count,img,title,active,setActive,detail1,detail2,mainDetail,mainDetail2,id,...props}) =>{
     const [checked,setCheck] = useState(false)
+    const num = 1;
+   const item = true;
     const dispatch = useDispatch();
     const [time, setTime] = useState('1 сутки');
     const Priced = Number(price);
@@ -17,10 +19,10 @@ export const ShopItem = ( { total,detail,select1,select2,data,children,price,cou
     const items = useSelector(state => state.cart.itemsInCart);
    const [Switch,setSwitch] = useState(1)
     const handleClick =() =>{
-        dispatch(setItemInCart({img,changedPrice,id,title,time,Priced,select1,select2,mainDetail,mainDetail2,detail1,detail2,Switch}));
+        dispatch(setItemInCart({img,changedPrice,id,title,time,Priced,select1,select2,mainDetail,mainDetail2,detail1,detail2,Switch,checked}));
         dispatch(updateTotalPrice(Number(changedPrice)))
         setActive(true);
-        console.log(items)
+
     }
 
 const check = () =>{
@@ -64,13 +66,13 @@ const check = () =>{
                     <div className={styles.detailSelector}>
 
                         <span> {detail}</span>
-                        <LedSelector select1={select1} select2={select2} detail={detail} data={data} setSwitch={setSwitch}/>
+                        <LedSelector check={check()} changedPrice={changedPrice} time={time} num={num} setChangedPrice={setChangedPrice} item={item} select1={select1} select2={select2} detail={detail} data={data} setSwitch={setSwitch} setCheck={setCheck} checked={checked}/>
                     </div>
 
                      : null}
 
                     <div className={styles.card_footer}>
-                       <Selector changedPrice={changedPrice} setChangedPrice={setChangedPrice} data={data} price={data.price} setTime={setTime} time={time} check={check()} />
+                       <Selector item={item} checked={checked} changedPrice={changedPrice} setChangedPrice={setChangedPrice} data={data} price={data.price} setTime={setTime} time={time} check={check()} />
                         <span> {changedPrice}₽ </span>
                         { check() ?
 

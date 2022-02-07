@@ -15,14 +15,14 @@
   }
   width: 100%;
   position: fixed;
-  z-index: 6;
+  z-index: 1000;
   transition: all 0.4s;
   opacity: 1;
 }
 .top_header{
   background: #262626;
   height: 59px;
-  z-index: 5;
+  z-index: 1000;
   position: relative;
   &_container{
     max-width: 1280px;
