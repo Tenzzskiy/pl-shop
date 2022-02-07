@@ -51,11 +51,11 @@ const Index = ({ cards}) => {
                     leftText=' В текущей неблагоприятной
              санэпидемиологической обстановке жизненно важно обеспечить
             санитарную безопасность на мероприятиях любого профиля.'
-                    leftImg='/Preferences/Desinfection/1.png'
+                    leftImg='/assets/images/advantages_7-1.jpg'
                     rightTitle='Гарантия качества'
                     rightText='Мы работаем исключительно с сертифицированными
             специализированными санитарными средствами и оборудованием.'
-                    rightImg='/Preferences/Desinfection/2.png'
+                    rightImg='/assets/images/advantages_7-2.jpg'
                 /> : null
 
             }
@@ -67,11 +67,11 @@ const Index = ({ cards}) => {
                     leftText=' В текущей неблагоприятной
              санэпидемиологической обстановке жизненно важно обеспечить
             санитарную безопасность на мероприятиях любого профиля.'
-                    leftImg='/Preferences/Desinfection/1.png'
+                    leftImg='/assets/images/advantages_7-1.jpg'
                     rightTitle='Гарантия качества'
                     rightText='Мы работаем исключительно с сертифицированными
             специализированными санитарными средствами и оборудованием.'
-                    rightImg='/Preferences/Desinfection/2.png'
+                    rightImg='/assets/images/advantages_7-2.jpg'
                 /> : null
             }
             {
@@ -83,11 +83,11 @@ const Index = ({ cards}) => {
                         leftText=' В текущей неблагоприятной
              санэпидемиологической обстановке жизненно важно обеспечить
             санитарную безопасность на мероприятиях любого профиля.'
-                        leftImg='/Preferences/Desinfection/1.png'
+                        leftImg='/assets/images/advantages_7-1.jpg'
                         rightTitle='Гарантия качества'
                         rightText='Мы работаем исключительно с сертифицированными
             специализированными санитарными средствами и оборудованием.'
-                        rightImg='/Preferences/Desinfection/2.png'
+                        rightImg='/assets/images/advantages_7-2.jpg'
                     /> : null
             }
             <Certificates />

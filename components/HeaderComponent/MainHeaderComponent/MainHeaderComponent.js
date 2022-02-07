@@ -15,7 +15,11 @@ const MainHeaderComponent = ({setSites} ) =>{
                 <div className={styles.header_component}>
 
                     <div className={styles.container}>
-                        <img src='/header/backgroundHeaderComponent.jpg' alt=""/>
+                        <picture>
+                            <source srcSet="/assets/images/tv.webp" type="image/webp" />
+                            <img src="/assets/images/tv.jpg" alt=""/>
+                        </picture>
+
                         <div className={styles.content}>
                             <div className={styles.title}> Аренда плазмы </div>
                             <div className={styles.description}> Организуем техническое обеспечение выставок, форумов и конференций</div>

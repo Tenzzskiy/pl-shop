@@ -55,10 +55,10 @@ const Home = ({ cards }) => {
             <Preferences
                 count={4}
                 title='Ваши выгоды с PLAZMA77'
-                leftImg="/Preferences/1.png"
-                rightImg="/Preferences/2.png"
-                secondLeftImg='/Preferences/3.png'
-                secondRightImg='/Preferences/4.png'
+                leftImg="/assets/images/advantages_1.jpg"
+                rightImg="/assets/images/advantages_2.jpg"
+                secondLeftImg='/assets/images/advantages_3.jpg'
+                secondRightImg='/assets/images/advantages_4.jpg'
                 leftText='Гибкая система скидок и бонусов для ивент менеджеров
             и организаторов мероприятий. Мы за долгосрочное сотрудничество!'
                 leftSecondText='Работаем в сфере организации частных
@@ -79,10 +79,10 @@ const Home = ({ cards }) => {
             <Preferences_768
                 count={4}
                 title='Ваши выгоды с PLAZMA77'
-                leftImg="/Preferences/1.png"
-                rightImg="/Preferences/2.png"
-                secondLeftImg='/Preferences/3.png'
-                secondRightImg='/Preferences/4.png'
+                leftImg="/assets/images/advantages_1.jpg"
+                rightImg="/assets/images/advantages_2.jpg"
+                secondLeftImg='/assets/images/advantages_3.jpg'
+                secondRightImg='/assets/images/advantages_4.jpg'
                 leftText='Гибкая система скидок и бонусов для ивент менеджеров
             и организаторов мероприятий. Мы за долгосрочное сотрудничество!'
                 leftSecondText='Работаем в сфере организации частных
@@ -102,10 +102,10 @@ const Home = ({ cards }) => {
                 <Preferences_360
                     count={4}
                     mainTitle='Ваши выгоды с PLAZMA77'
-                    leftImg="/Preferences/1.png"
-                    rightImg="/Preferences/2.png"
-                    secondLeftImg='/Preferences/3.png'
-                    secondRightImg='/Preferences/4.png'
+                    leftImg="/assets/images/advantages_1.jpg"
+                    rightImg="/assets/images/advantages_2.jpg"
+                    secondLeftImg='/assets/images/advantages_3.jpg'
+                    secondRightImg='/assets/images/advantages_4.jpg'
                     leftText='Гибкая система скидок и бонусов для ивент менеджеров
             и организаторов мероприятий. Мы за долгосрочное сотрудничество!'
                     leftSecondText='Работаем в сфере организации частных

@@ -54,11 +54,11 @@ const Laptops = ({ cards }) => {
                 работоспособности всей цепочки оборудования.
 И не будете беспокоиться о несовместимости разъёмов.'
                     leftTitle='Гарантия совместимости '
-                    leftImg='/Preferences/Laptops/1.png'
+                    leftImg='/assets/images/advantages_6-1.jpg'
                     rightText='Ноутбук в аренду также может служить отличным резервным
                 оборудованием на случай неожиданной неисправности вашего комьютера. '
                     rightTitle=' Страховой резерв'
-                    rightImg='/Preferences/Laptops/2.png'
+                    rightImg='/assets/images/advantages_6-2.jpg'
                     title='Преимущества аренды ноутбуков '
                 /> : null
 
@@ -70,11 +70,11 @@ const Laptops = ({ cards }) => {
                 работоспособности всей цепочки оборудования.
 И не будете беспокоиться о несовместимости разъёмов.'
                     leftTitle='Гарантия совместимости '
-                    leftImg='/Preferences/Laptops/1.png'
+                    leftImg='/assets/images/advantages_6-1.jpg'
                     rightText='Ноутбук в аренду также может служить отличным резервным
                 оборудованием на случай неожиданной неисправности вашего комьютера. '
                     rightTitle=' Страховой резерв'
-                    rightImg='/Preferences/Laptops/2.png'
+                    rightImg='/assets/images/advantages_6-2.jpg'
                     title='Преимущества аренды ноутбуков '
                 /> : null
             }
@@ -86,11 +86,11 @@ const Laptops = ({ cards }) => {
                 работоспособности всей цепочки оборудования.
 И не будете беспокоиться о несовместимости разъёмов.'
                         leftTitle='Гарантия совместимости '
-                        leftImg='/Preferences/Laptops/1.png'
+                        leftImg='/assets/images/advantages_6-1.jpg'
                         rightText='Ноутбук в аренду также может служить отличным резервным
                 оборудованием на случай неожиданной неисправности вашего комьютера. '
                         rightTitle=' Страховой резерв'
-                        rightImg='/Preferences/Laptops/2.png'
+                        rightImg='/assets/images/advantages_6-2.jpg'
                         mainTitle='Преимущества аренды ноутбуков '
                     /> : null
             }

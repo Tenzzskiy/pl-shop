@@ -54,8 +54,8 @@ const TouchPanel = ({ cards}) => {
                   <Preferences
                       count={2}
                       title='Ваши выгоды с PLAZMA77'
-                      leftImg="/Preferences/TouchPanel/1.png"
-                      rightImg="/Preferences/TouchPanel/2.png"
+                      leftImg='/assets/images/advantages_4-1.jpg'
+                      rightImg='/assets/images/advantages_4-2.jpg'
                       leftText='Позволяют презентовать информацию с возможностью
                 многопользовательтского взаимодействия без дополнительных устройств! '
                       rightText=' Наша IT команда
@@ -74,8 +74,8 @@ const TouchPanel = ({ cards}) => {
                       setSites={setSites}
                       count={2}
                       title='Ваши выгоды с PLAZMA77'
-                      leftImg="/Preferences/TouchPanel/1.png"
-                      rightImg="/Preferences/TouchPanel/2.png"
+                      leftImg='/assets/images/advantages_4-1.jpg'
+                      rightImg='/assets/images/advantages_4-2.jpg'
                       leftText='Позволяют презентовать информацию с возможностью
                 многопользовательтского взаимодействия без дополнительных устройств! '
                       rightText=' Наша IT команда
@@ -93,8 +93,8 @@ const TouchPanel = ({ cards}) => {
                           setSites={setSites}
                           count={2}
                           mainTitle='Преимущества сенсорных панелей'
-                          leftImg="/Preferences/TouchPanel/1.png"
-                          rightImg="/Preferences/TouchPanel/2.png"
+                          leftImg='/assets/images/advantages_4-1.jpg'
+                          rightImg='/assets/images/advantages_4-2.jpg'
                           leftText='Позволяют презентовать информацию с возможностью
                 многопользовательтского взаимодействия без дополнительных устройств! '
                           rightText=' Наша IT команда

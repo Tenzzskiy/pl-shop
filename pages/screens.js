@@ -52,7 +52,7 @@ const Screens = ({cards}) => {
                 {size.width > 1200 ?
                     <Preferences
                         count={1}
-                        leftImg='/Preferences/Screen/1.jpg'
+                        leftImg='/assets/images/advantages_2-1.jpg'
                         mainTitle=' Преимущества светодиодных экранов'
                         leftTitle='Зрелищность '
                         leftText='Выгодно выделяют ваш стенд, презентацию или сцену,
@@ -63,7 +63,7 @@ const Screens = ({cards}) => {
                 {size.width < 1200 && size.width > 720 ?
                     <Preferences_768
                         count={1}
-                        leftImg='/Preferences/Screen/1.jpg'
+                        leftImg='/assets/images/advantages_2-1.jpg'
                         title=' Преимущества светодиодных экранов'
                         leftTitle='Зрелищность '
                         leftText='Выгодно выделяют ваш стенд, презентацию или сцену,
@@ -74,7 +74,7 @@ const Screens = ({cards}) => {
                     size.width < 720 ?
                         <Preferences_360
                             count={1}
-                            leftImg='/Preferences/Screen/1.jpg'
+                            leftImg='/assets/images/advantages_2-1.jpg'
                             mainTitle=' Преимущества светодиодных экранов'
                             leftTitle='Зрелищность '
                             leftText='Выгодно выделяют ваш стенд, презентацию или сцену,

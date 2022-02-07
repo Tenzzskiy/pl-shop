@@ -48,7 +48,7 @@ const Sound = ({ cards }) => {
                       rightText='Мы приложим все наши усилия и богатый
              опыт для того, чтобы всё прошло зрелищно и гладко.
              Для этого у нас в ассортименте есть всё необходимое!'
-                      rightImg='/Preferences/Sound/1.jpg'
+                      rightImg='/assets/images/advantages_8.jpg'
                       title='Что нужно для идеального мероприятия'
                   /> : null
 
@@ -60,7 +60,7 @@ const Sound = ({ cards }) => {
                       rightText='Мы приложим все наши усилия и богатый
              опыт для того, чтобы всё прошло зрелищно и гладко.
              Для этого у нас в ассортименте есть всё необходимое!'
-                      rightImg='/Preferences/Sound/1.jpg'
+                      rightImg='/assets/images/advantages_8.jpg'
                       title='Что нужно для идеального мероприятия'
                   /> : null
               }
@@ -72,7 +72,7 @@ const Sound = ({ cards }) => {
                           rightText='Мы приложим все наши усилия и богатый
              опыт для того, чтобы всё прошло зрелищно и гладко.
              Для этого у нас в ассортименте есть всё необходимое!'
-                          rightImg='/Preferences/Sound/1.jpg'
+                          rightImg='/assets/images/advantages_8.jpg'
                           mainTitle='Что нужно для идеального мероприятия'
                       /> : null
               }

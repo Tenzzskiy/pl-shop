@@ -51,7 +51,7 @@ const VideoWalls = ({  cards}) => {
                 <Preferences
                     count={6}
                     title='Преимущества бесшовных видеостен '
-                    rightImg="/Preferences/VideoWalls/1.jpg"
+                    rightImg='/assets/images/advantages_3-1.jpg'
                     rightTitle='Визуализация '
                     rightText=' Идеальное решение для трансляции на большую аудиторию
                 и привлечения внимания к вашему контенту!'
@@ -62,7 +62,7 @@ const VideoWalls = ({  cards}) => {
                 <Preferences_768
                     count={6}
                     title='Преимущества бесшовных видеостен '
-                    rightImg="/Preferences/VideoWalls/1.jpg"
+                    rightImg='/assets/images/advantages_3-1.jpg'
                     rightTitle='Визуализация '
                     rightText=' Идеальное решение для трансляции на большую аудиторию
                 и привлечения внимания к вашему контенту!'
@@ -73,7 +73,7 @@ const VideoWalls = ({  cards}) => {
                     <Preferences_360
                         count={6}
                         mainTitle='Преимущества бесшовных видеостен '
-                        rightImg="/Preferences/VideoWalls/1.jpg"
+                        rightImg='/assets/images/advantages_3-1.jpg'
                         rightTitle='Визуализация '
                         rightText=' Идеальное решение для трансляции на большую аудиторию
                 и привлечения внимания к вашему контенту!'

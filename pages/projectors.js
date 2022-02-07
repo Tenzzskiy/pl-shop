@@ -52,7 +52,7 @@ const Projectors = ({ cards }) => {
                   <Preferences
                       count={1}
                       title='Преимущества аренды проекторов'
-                      leftImg="/Preferences/Projectors/1.png"
+                      leftImg='/assets/images/advantages_5.jpg'
                       leftText='Универсальное средство для трансляции презентаций
                 и видеороликов для малых аудиторий и больших залов. '
                       leftTitle=' Доступность и удобство'
@@ -63,7 +63,7 @@ const Projectors = ({ cards }) => {
                   <Preferences_768
                       count={1}
                       title='Преимущества аренды проекторов'
-                      leftImg="/Preferences/Projectors/1.png"
+                      leftImg='/assets/images/advantages_5.jpg'
                       leftText='Универсальное средство для трансляции презентаций
                 и видеороликов для малых аудиторий и больших залов. '
                       leftTitle=' Доступность и удобство'
@@ -74,7 +74,7 @@ const Projectors = ({ cards }) => {
                       <Preferences_360
                           count={1}
                           mainTitle='Преимущества аренды проекторов'
-                          leftImg="/Preferences/Projectors/1.png"
+                          leftImg='/assets/images/advantages_5.jpg'
                           leftText='Универсальное средство для трансляции презентаций
                 и видеороликов для малых аудиторий и больших залов. '
                           leftTitle=' Доступность и удобство'
