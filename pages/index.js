@@ -25,6 +25,7 @@ import SitesModal from "../components/SitesModal/SitesModal";
 import Seo from "../components/SEO/SEO";
 import {MainHeaderComponent_360} from "../components/HeaderComponent/MainHeaderComponent/MainHeaderComponent_360";
 import styles from './../styles/index.module.scss'
+import ImgModal from "../components/Img_modal/ImgModal";
 export  const getStaticProps = async () =>{
     return {
         props: {
@@ -34,13 +35,13 @@ export  const getStaticProps = async () =>{
 }
 
 const Home = ({ cards }) => {
-
+    const [id,setId] = useState(0);
     const [sites,setSites] = useState(false);
     const [offerModal,setOfferModal] = useState(false)
     const [totalPrice,setTotalPrice] = useState()
     const size = useWindowSize();
     const [modalActive,setModalActive] = useState(false)
-
+    const [imgModal,setImgModal] = useState(false)
   return (
 
       <Provider store={store} >
@@ -146,12 +147,15 @@ const Home = ({ cards }) => {
         <div className={styles.releases}>
         {size.width > 1200 ?
             <Releases
+                setImgModal={setImgModal}
+                imgModal={imgModal}
                 img1='/releases/releases1(1).png'
                 img2='/releases/releases1(2).png'
                 img3='/releases/releases1(3).png'
                 img4='/releases/releases1(4).png'
                 img5='/releases/releases1(5).png'
-
+                id={id}
+                setId={setId}
                 text1='Плазма на стойке для трансляции спортивных матчей'
                 text2='Брендированный экспостенд с плазмой для интерактивной зоны'
                 text3='Плазма на стойке для трансляции кибер-спортивных матчей'
@@ -208,6 +212,20 @@ const Home = ({ cards }) => {
           <SitesModal sites={sites} setSites= {setSites} setOfferModal={setOfferModal} title='Получить расчет'/>
           <OfferModal offerModal={offerModal} setOfferModal={setOfferModal}/>
           <Modal active={modalActive} setActive={setModalActive} />
+          <ImgModal active={imgModal} setActive={setImgModal}
+                    id={id}
+                    img1='/releases/releases1(1).png'
+                    img2='/releases/releases1(2).png'
+                    img3='/releases/releases1(3).png'
+                    img4='/releases/releases1(4).png'
+                    img5='/releases/releases1(5).png'
+
+                    text1='Плазма на стойке для трансляции спортивных матчей'
+                    text2='Брендированный экспостенд с плазмой для интерактивной зоны'
+                    text3='Плазма на стойке для трансляции кибер-спортивных матчей'
+                    text4='Плазма на брендированной стойке для интерактивной зоны'
+                    text5='Плазма на брендированной стойке для игровой VR зоны'
+          />
       </Provider>
   )
 }

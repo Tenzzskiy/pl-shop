@@ -91,7 +91,10 @@ const Seo:FunctionComponent = ({children, image1,image2,text1,text2,text3,text4,
                                <MyImage src={{default: image1}} alt={'1'} className={styles.image} />
 
                            </div>
-                           <div className={styles.text}>{text1}{text2}
+                           <div className={styles.text}>{text1}
+
+                           </div>   <div className={styles.text_2}>{text2}
+
                            </div>
                        </div>
                        <div className={styles.container_2}>

@@ -4,6 +4,7 @@
     max-width: 1280px;
    margin: 0 auto;
     .content{
+      transition: opacity 0.4s;
       .title{
         font-style: normal;
         font-weight: bold;
