@@ -2,6 +2,7 @@ import React from "react";
 import styles from './MainHeaderComponent.module.scss'
 import {useWindowSize} from "../../../Hooks/useWindowSize";
 import {MainHeaderComponent_360} from "./MainHeaderComponent_360";
+import {Steps} from "../../steps/steps";
 
 
 
@@ -21,6 +22,7 @@ const MainHeaderComponent = ({setSites} ) =>{
                         </picture>
 
                         <div className={styles.content}>
+
                             <div className={styles.title}> Аренда плазмы </div>
                             <div className={styles.description}> Организуем техническое обеспечение выставок, форумов и конференций</div>
                             <div className={styles.button}><button onClick={() =>setSites(true)}> Рассчитать стоимость</button> </div>

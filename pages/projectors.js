@@ -42,8 +42,8 @@ const Projectors = ({ cards }) => {
               <MediumHeaderComponent
                   button_text='Рассчитать стоимость'
                   title='Аренда проекторов'
-                  mainImg="/header/Projectors/main.jpg"
-                  img_360='/header/Projectors/middleHeader_360.jpg'
+                  mainImg="/assets/images/tv_5.jpg"
+                  img_360='/assets/images/tv360_5.jpg'
                   setSites={setSites}
                   setOfferModal={setOfferModal}
               />

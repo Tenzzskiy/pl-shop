@@ -9,7 +9,7 @@ export const MainHeaderComponent_360 = ( { setSites}) =>{
             <div className={styles.content_img}>
                 <div className={styles.img}>
                     <div className={styles.relative}>
-                        <img src='/header/backgroundHeaderComponent.jpg' alt=""/>
+                        <img src='/assets/images/tv360_1.jpg' alt=""/>
                         <div className={styles.title}>
                             Аренда <br/> плазмы
                         </div>

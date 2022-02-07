@@ -27,7 +27,7 @@ const Header = ({ setNavigation,setContacts}) =>{
     return(
    <>
        <div className={cn(styles.header,
-            // scroll>lastScroll ? styles.header_fixed : null
+
         )} >
 
             <div className={styles.top_header} >
@@ -104,49 +104,51 @@ const Header = ({ setNavigation,setContacts}) =>{
                         </div>
                 </div>
             </div>
-           {size.width > 1250 ?
-               <div className={cn(styles.bottom_header,  scroll>lastScroll ? styles.header_fixed : null)} >
-                   <div className={styles.bottom_header_container}>
-                       <div className={styles.content}>
-                           <Link href='/' ><a className={cn(styles.a,
-                               route.asPath === '/' ? styles.a_active : null
+           {size.width > 1250 ? route.asPath !== '/busket' ?
+                   <div className={cn(styles.bottom_header,  scroll>lastScroll ? styles.header_fixed : null)} >
+                       <div className={styles.bottom_header_container}>
+                           <div className={styles.content}>
+                               <Link href='/' ><a className={cn(styles.a,
+                                   route.asPath === '/' ? styles.a_active : null
 
-                           )} >Плазмы</a></Link>
-                           <Link href='/screens'><a className={cn(styles.a,
-                               route.asPath === '/screens' ? styles.a_active : null
+                               )} >Плазмы</a></Link>
+                               <Link href='/screens'><a className={cn(styles.a,
+                                   route.asPath === '/screens' ? styles.a_active : null
 
-                           )}
-                           >Светодиодные экраны</a></Link>
-                           <Link href='/videoWalls'><a className={cn(styles.a,
-                               route.asPath === '/videoWalls' ? styles.a_active : null
+                               )}
+                               >Светодиодные экраны</a></Link>
+                               <Link href='/videoWalls'><a className={cn(styles.a,
+                                   route.asPath === '/videoWalls' ? styles.a_active : null
 
-                           )}>Видеостены</a></Link>
-                           <Link href='/touchPanel'><a className={cn(styles.a,
-                               route.asPath === '/touchPanel' ? styles.a_active : null
+                               )}>Видеостены</a></Link>
+                               <Link href='/touchPanel'><a className={cn(styles.a,
+                                   route.asPath === '/touchPanel' ? styles.a_active : null
 
-                           )} >Сенсорные тач-панели</a></Link>
-                           <Link href='/projectors'><a className={cn(styles.a,
-                               route.asPath === '/projectors' ? styles.a_active : null
+                               )} >Сенсорные тач-панели</a></Link>
+                               <Link href='/projectors'><a className={cn(styles.a,
+                                   route.asPath === '/projectors' ? styles.a_active : null
 
-                           )}>Проекторы</a></Link>
-                           <Link href='/laptops'><a className={cn(styles.a,
-                               route.asPath === '/laptops' ? styles.a_active : null
+                               )}>Проекторы</a></Link>
+                               <Link href='/laptops'><a className={cn(styles.a,
+                                   route.asPath === '/laptops' ? styles.a_active : null
 
-                           )}>Ноутбуки</a></Link>
-                           <Link href='/sound'><a className={cn(styles.a,
-                               route.asPath === '/sound' ? styles.a_active : null
+                               )}>Ноутбуки</a></Link>
+                               <Link href='/sound'><a className={cn(styles.a,
+                                   route.asPath === '/sound' ? styles.a_active : null
 
-                           )}>Звук, Свет и окружение</a></Link>
-                           <Link href='/desinfection'><a className={cn(styles.a,
-                               route.asPath === '/desinfection' ? styles.a_active : null
+                               )}>Звук, Свет и окружение</a></Link>
+                               <Link href='/desinfection'><a className={cn(styles.a,
+                                   route.asPath === '/desinfection' ? styles.a_active : null
 
-                           )}>Дезинфекция</a></Link>
+                               )}>Дезинфекция</a></Link>
 
 
 
+                           </div>
                        </div>
                    </div>
-               </div> : null
+                   : null
+               : null
 
            }
 

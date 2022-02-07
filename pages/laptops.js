@@ -41,8 +41,8 @@ const Laptops = ({ cards }) => {
 <MediumHeaderComponent
     button_text='Рассчитать стоимость'
     title='Аренда ноутбуков'
-    mainImg="/header/Laptops/main.jpg"
-    img_360='/header/Laptops/middle_360.jpg'
+    mainImg="/assets/images/tv_6.jpg"
+    img_360='/assets/images/tv360_6.jpg'
     setSites={setSites}
     setOfferModal={setOfferModal}
 />

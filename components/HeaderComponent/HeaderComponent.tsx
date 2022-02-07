@@ -1,6 +1,7 @@
 import React, {FunctionComponent, ReactNode} from "react";
 import styles from './HeaderComponent.module.scss'
 import cs from 'classnames'
+import Steps from './../steps/steps.js'
 interface HeaderComponentProps {
     children?:ReactNode
     title:string,
@@ -17,7 +18,7 @@ const HeaderComponent:FunctionComponent = ( {TouchPanel,setTouchPanel,touchpanel
     return(
         <>
             <div className={styles.header_component}>
-
+            <Steps />
             <div className={styles.container}>
                 <img src={mainImg} alt=""/>
             <div className={styles.content}>

@@ -43,7 +43,7 @@ const TouchPanel = ({ cards}) => {
               <HeaderComponent
                   button_text='Рассчитать стоимость'
                   title='Аренда сенсорных тач -панелей'
-                  mainImg="/header/TouchPanel/main.jpg"
+                  mainImg="/assets/images/tv_4.jpg"
                   setSites={setSites}
                   setOfferModal={setOfferModal}
                   touchpanel={1}

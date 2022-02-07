@@ -1,3 +1,24 @@
+.back{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 32px;
+  a{
+    outline: none;
+    text-decoration: none;
+    border: 0;
+    color: #575786;
+  }
+  img{
+    margin-right: 5px;
+  }
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 140%;
+  color: #575786;
+
+}
 .anchor{
   width: 100%;
   display: flex;
@@ -122,18 +143,18 @@
 .container {
   max-width: 1280px;
   margin: 0 auto;
-
+  min-height: 65vh;
 
 
   padding-top: 115px;
   .content{
-
+    padding: 0 32px;
     .flex{
       display: flex;
       flex-direction: row;
       margin-bottom: 100px;
 
-      min-height: 35vh;
+      min-height: 25vh;
       .items{
 
       }
@@ -141,7 +162,7 @@
 
       }
     }
-    padding: 0 32px;
+
     .title{
       font-style: normal;
       font-weight: bold;

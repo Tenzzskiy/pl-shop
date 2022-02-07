@@ -1,6 +1,7 @@
 import React, {FunctionComponent, ReactNode} from "react";
 import styles from './MediumHeader.module.scss'
 import {useWindowSize} from "../../../Hooks/useWindowSize";
+import Steps from "../../steps/steps";
 
 interface MediumHeaderComponentProps{
     children?:ReactNode,
@@ -15,8 +16,12 @@ const size = useWindowSize();
     return(
         <>
             <div className={styles.header_component}>
+                <div className={styles.back}>
+                <Steps />
+                </div>
                 <img className={styles.background} src={size.width < 720 ? img_360 : mainImg } alt=""/>
                 <div className={styles.container}>
+
 
                     <div className={styles.content}>
                         <div className={styles.title}>{title} </div>

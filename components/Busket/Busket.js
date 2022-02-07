@@ -47,6 +47,11 @@ export const ResultBusket = ( { setOfferModal}) => {
     return(
         <>
         <div className={styles.container}>
+            <div className={styles.back}>
+
+            <Link href="/"><a> <img src="/back_arrow.svg" alt=""/> Назад к покупкам   </a></Link>
+
+            </div>
 <div className={styles.content}>
     <div className={styles.title} >
         Моя корзина

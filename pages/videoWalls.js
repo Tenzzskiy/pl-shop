@@ -41,7 +41,7 @@ const VideoWalls = ({  cards}) => {
 
             <HeaderComponent
                 title='Аренда видеостен'
-                mainImg="/header/VideoWalls/main.jpg"
+                mainImg="/assets/images/tv_3.jpg"
                 button_text='Рассчитать стоимость'
                 setSites={setSites}
                 setOfferModal={setOfferModal}
