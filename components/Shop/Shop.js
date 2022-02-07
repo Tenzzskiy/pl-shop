@@ -7,7 +7,7 @@ import {useWindowSize} from "../../Hooks/useWindowSize";
 export const Shop = ( { page,active,setActive,data,...props}) =>{
     const size = useWindowSize();
     const [step,setStep] = useState(true)
-    console.log(step);
+
     const [step_2,setStep_2] = useState( true);
     const [step_3,setStep_3] = useState(true );
     const [step_4,setStep_4] = useState(true );
@@ -187,7 +187,7 @@ export const Shop = ( { page,active,setActive,data,...props}) =>{
             <div className={styles.container}>
             <div className={styles.content}>
             <div className={styles.title}>
-                Каталог {size.width}
+                Каталог
             </div>
 
                 <div className={styles.grid}>
