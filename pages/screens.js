@@ -38,7 +38,7 @@ const Screens = ({cards}) => {
     const [offerModal, setOfferModal] = useState(false)
     const [sites, setSites] = useState(false);
     return (
-        <Provider store={store}>
+        <>
             <Layout>
                 <MediumHeader
                     img_360='/header/Screen/main_360.jpg'
@@ -147,7 +147,7 @@ const Screens = ({cards}) => {
             <SitesModal sites={sites} setSites={setSites} setOfferModal={setOfferModal} title='Получить расчет'/>
             <OfferModal offerModal={offerModal} setOfferModal={setOfferModal}/>
             <Modal active={modalActive} setActive={setModalActive}/>
-        </Provider>
+        </>
     )
 }
 

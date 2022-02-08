@@ -9,7 +9,7 @@ import {OfferModal} from "../components/offerModal/OfferModal";
 const Busket = ( { }) => {
     const [offerModal,setOfferModal] = useState(false)
     return(
-        <Provider store={store} >
+        <>
             <Layout>
 
                 <ResultBusket setOfferModal={setOfferModal} />
@@ -17,7 +17,7 @@ const Busket = ( { }) => {
 
             </Layout>
             <OfferModal offerModal={offerModal} setOfferModal={setOfferModal}/>
-        </Provider>
+        </>
     )
 }
 

@@ -6,7 +6,7 @@ import {useRouter} from "next/router";
 import Link from "next/link";
 const Error_page = () =>{
     return(
-            <Provider store={store} >
+            <>
             <Layout count ={1}>
 
              <div className={styles.error_container}>
@@ -18,7 +18,7 @@ const Error_page = () =>{
 
 
             </Layout>
-            </Provider>
+            </>
     )
 }
 export default Error_page;

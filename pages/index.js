@@ -45,14 +45,15 @@ const Home = ({ cards }) => {
     const [imgModal,setImgModal] = useState(false)
   return (
 
-      <Provider store={store} >
-    <Head>
+
+      <>
+    <Layout>
+        <Head>
             <title itemProp="headline">название_страницы</title>
-        <meta property="og:title" content="описание_тайтла"/>
+            <meta property="og:title" content="описание_тайтла"/>
             <meta itemProp="description" name="description" content="описание_страницы"/>
 
-    </Head>
-    <Layout>
+        </Head>
         <div className={styles.header}>
          <MainHeaderComponent  setSites={setSites}
             setOfferModal={setOfferModal}/>
@@ -233,7 +234,7 @@ const Home = ({ cards }) => {
                                          text4='Плазма на брендированной стойке для интерактивной зоны'
                                          text5='Плазма на брендированной стойке для игровой VR зоны'
           /> : null}
-      </Provider>
+    </>
   )
 }
 

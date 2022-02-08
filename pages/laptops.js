@@ -36,7 +36,7 @@ const Laptops = ({ cards }) => {
     const [offerModal,setOfferModal] = useState(false)
     const [sites,setSites] = useState(false);
     return (
-        <Provider store={store} >
+        <>
         <Layout >
 <MediumHeaderComponent
     button_text='Рассчитать стоимость'
@@ -161,7 +161,7 @@ const Laptops = ({ cards }) => {
             <SitesModal sites={sites} setSites= {setSites} setOfferModal={setOfferModal} title='Получить расчет'/>
             <OfferModal offerModal={offerModal} setOfferModal={setOfferModal}/>
             <Modal active={modalActive} setActive={setModalActive} />
-            </Provider>
+            </>
     )
 }
 

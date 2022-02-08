@@ -12,8 +12,6 @@ import {Preferences_768} from "../components/Preferences/Right/right";
 import {Preferences_360} from "../components/Preferences/Preferences_360/Preferences_360";
 import {useWindowSize} from "../Hooks/useWindowSize";
 import {Releases_768} from "../components/Relises/Releases_768/Releases_768";
-import {Provider} from "react-redux";
-import {store} from "../redux";
 import {Modal} from "../components/Modal/Modal";
 import FeedBack from "../components/FeedBack/FeedBack";
 import data from "../sources/data/cart_arenda-plasm77.ru.json";
@@ -32,7 +30,7 @@ const Index = ({ cards}) => {
     const size = useWindowSize();
     const [modalActive,setModalActive] = useState(false)
     return (
-        <Provider store={store} >
+        <>
         <Layout >
 <MediumHeaderComponent
     button_text='Рассчитать стоимость'
@@ -144,7 +142,7 @@ const Index = ({ cards}) => {
             <SitesModal sites={sites} setSites= {setSites} setOfferModal={setOfferModal} title='Получить расчет'/>
             <OfferModal offerModal={offerModal} setOfferModal={setOfferModal}/>
             <Modal active={modalActive} setActive={setModalActive} />
-        </Provider>
+        </>
     )
 }
 

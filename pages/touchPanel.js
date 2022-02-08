@@ -38,7 +38,7 @@ const TouchPanel = ({ cards}) => {
     const [offerModal,setOfferModal] = useState(false)
     const [touchPanel,setTouchPanel] = useState(false);
     return (
-      <Provider store={store}>
+      <>
           <Layout >
               <HeaderComponent
                   button_text='Рассчитать стоимость'
@@ -197,7 +197,7 @@ const TouchPanel = ({ cards}) => {
           <SitesModal TouchPanel={touchPanel} setTouchPanel= {setTouchPanel} setOfferModal={setOfferModal} touchpanel={1} title='Получить расчет'/>
           <OfferModal offerModal={offerModal} setOfferModal={setOfferModal}/>
           <Modal active={modalActive} setActive={setModalActive}  />
-      </Provider>
+      </>
     )
 }
 
