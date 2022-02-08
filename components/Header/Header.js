@@ -6,7 +6,7 @@ import cn from 'classnames'
 import {useWindowSize} from './../../Hooks/useWindowSize.js'
 import {useSelector} from "react-redux";
 
-const Header = ({ setNavigation,setContacts}) =>{
+const Header = ({ setNavigation,setContacts,count}) =>{
     const items = useSelector(state => state.cart.itemsInCart);
     // const totalPrice = items.reduce((acc,data) =>acc+=Number(data.price) ,0)
     const route = useRouter()
@@ -104,7 +104,7 @@ const Header = ({ setNavigation,setContacts}) =>{
                         </div>
                 </div>
             </div>
-           {size.width > 1250 ? route.asPath !== '/busket' ?
+           {size.width > 1250 ? route.asPath !== '/busket' && count !==1 ?
                    <div className={cn(styles.bottom_header,  scroll>lastScroll ? styles.header_fixed : null)} >
                        <div className={styles.bottom_header_container}>
                            <div className={styles.content}>

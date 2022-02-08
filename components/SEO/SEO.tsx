@@ -102,7 +102,10 @@ const Seo:FunctionComponent = ({children, image1,image2,text1,text2,text3,text4,
                                <img src="/Seo/background_768.svg" className={styles.background_image2} alt=""/>
                                <MyImage src={{default: image2}} alt={'1'} className={styles.image_2} />
                            </div>
-                           <div className={styles.text}>{text3}{text4}
+                           <div className={styles.text}>{text3}
+                           </div>
+                           <div className={styles.text_2}>{text4}
+
                            </div>
                        </div>
                    </> : null

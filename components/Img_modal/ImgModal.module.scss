@@ -1,7 +1,9 @@
 .slide{
-  min-width: 802px;
+
+  min-width: 100%;
   img{
-    min-width: 802px;
+
+    width: 100%;
   }
 }
 .modal{
@@ -23,16 +25,13 @@
   position: relative;
   transition: opacity 0.4s;
   img{
-    min-width: 804px;
-    min-height: 602px;
-    max-width: 804px;
-    max-height: 602px;
+
   }
   background: white;
   max-width: 804px;
   min-width: 804px;
   height: 602px;
-  transform: scale(0.5);
+
   transition: all 0.4s;
   position: relative;
 
@@ -45,7 +44,7 @@
   }
 }
 .content_active{
-  transform: scale(1) !important;
+
   transition: all 0.4s;
 }
 .active{

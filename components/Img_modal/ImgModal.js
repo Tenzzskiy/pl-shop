@@ -7,14 +7,13 @@ import {useKeenSlider} from "keen-slider/react";
 import {useEffect} from "react";
 import {Arrow} from "../Offer/Offer";
 import {MyImage} from "../MyImage";
-export const ImgModal = ( {id =0,active,setActive,text1,text2,text3,text4,text5,...props}) =>{
-    console.log(id)
+export const ImgModal = ( {id,active,setActive,text1,text2,text3,text4,text5,...props}) =>{
     const [currentSlide, setCurrentSlide] = useState(0);
     const [loaded, setLoaded] = useState(false);
     const [sliderRef, instanceRef] = useKeenSlider({
-        initial: id,
+        initial: {id},
         slides: {
-            perView: 0,
+            perView: "auto",
 
         },
         slideChanged(slider) {
@@ -22,12 +21,14 @@ export const ImgModal = ( {id =0,active,setActive,text1,text2,text3,text4,text5,
         },
         created() {
             setLoaded(true);
+
         }
     });
     console.log(instanceRef)
     useEffect(() => {
         const body = document.querySelector('body');
         body.style.overflow = active ? 'hidden' : 'auto';
+        instanceRef.current.update();
     }, [active])
 
     return(
