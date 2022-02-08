@@ -5,14 +5,14 @@ import styles from './MainHeaderComponent_360.module.scss'
 
 export const MainHeaderComponent_360 = ( { setSites}) =>{
     return(
-        <div className={styles.container}>
+        <section className={styles.container}>
             <div className={styles.content_img}>
                 <div className={styles.img}>
                     <div className={styles.relative}>
                         <img src='/assets/images/tv360_1.jpg' alt=""/>
-                        <div className={styles.title}>
+                        <h2 className={styles.title}>
                             Аренда <br/> плазмы
-                        </div>
+                        </h2>
                     </div>
 
                 </div>
@@ -20,9 +20,9 @@ export const MainHeaderComponent_360 = ( { setSites}) =>{
             </div>
 
         <div className={styles.content_text}>
-                <div className={styles.description}>
+                <h3 className={styles.description}>
                     Организуем техническое обеспечение выставок, форумов и конференций
-                </div>
+                </h3>
             <div className={styles.button}>
                 <button onClick={() => setSites(true)}>
                     Рассчитать стоимость
@@ -33,6 +33,6 @@ export const MainHeaderComponent_360 = ( { setSites}) =>{
 Это бесплатно
             </div>
         </div>
-        </div>
+        </section>
     )
 }

@@ -7,7 +7,7 @@ export const Choose:FunctionComponent = ({  }) =>{
     const size = useWindowSize();
    return(
        <>
-       <div className={styles.choose}>
+       <section className={styles.choose}>
        <div className={styles.container}>
        <div className={styles.content}>
        <div className={styles.title}>
@@ -62,7 +62,7 @@ export const Choose:FunctionComponent = ({  }) =>{
 
 
        </div>
-       </div>
+       </section>
        </>
    )
 

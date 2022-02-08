@@ -8,14 +8,14 @@ import Sale_360 from "./Sale_360/Sale_360";
 const Sale:FunctionComponent = (  { })  =>{
 const size =useWindowSize();
     return(
-        <>
+        <section>
             {size.width > 1200 ?
                 <div className={styles.sale}>
                     <img className={styles.sale_svg} src="/sale.svg" alt=""/>
                     <div className={styles.container}>
                         <div className={styles.content}>
                             <div className={styles.offer}>
-                                <div className={styles.title}>Закажи сейчас со скидкой ! </div>
+                                <h2 className={styles.title}>Закажи сейчас со скидкой ! </h2>
                                 <div className={styles.promo}> По промокоду “PLAZMA77”</div>
                                 <div className={styles.sale_title}> До завершения акции:</div>
                                 <div className={styles.time}> 12312312312</div>
@@ -31,7 +31,7 @@ const size =useWindowSize();
             }
             {size.width < 1200 && size.width>720 ? <Sale_768 /> : null}
             {size.width < 720 ? <Sale_360 /> : null}
-        </>
+        </section>
     )
 }
 

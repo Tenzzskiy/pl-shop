@@ -19,7 +19,7 @@ import {Provider} from "react-redux";
 import {store} from "../redux";
 import {Modal} from "../components/Modal/Modal";
 import FeedBack from "../components/FeedBack/FeedBack";
-import data from "../components/Shop/cart_arenda-plasm77.ru.json";
+import data from "../sources/data/cart_arenda-plasm77.ru.json";
 import {OfferModal} from "../components/offerModal/OfferModal";
 import SitesModal from "../components/SitesModal/SitesModal";
 import MediumHeader from "../components/HeaderComponent/MediumHeader/MediumHeader";
@@ -122,6 +122,7 @@ const Screens = ({cards}) => {
                 }
 
                 <Seo
+                    title='Прокат светодиодных экранов'
                     image1='/Seo/Screen/1.jpg'
                     image2='/Seo/Screen/2.jpg'
                     text1='Довольно часто на развлекательных и информационных мероприятиях используется оборудование, позволяющее транслировать информацию на большой экран. Речь идет о светодиодных экранах, которые отличаются способностью передавать изображение высокого качества с отличной яркостью. Отдельно можно отметить работоспособность оборудования.

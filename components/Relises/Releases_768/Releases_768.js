@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import styles  from './Releases_768.module.scss'
 import {useKeenSlider} from "keen-slider/react";
 import {PreferenceCard} from "../../Preferences/PreferenceCard/PreferenceCard";
-import data from "../../Shop/cart_arenda-plasm77.ru.json";
+import data from "../../../sources/data/cart_arenda-plasm77.ru.json";
 import {ShopItem} from "../../Shop/ShopItem/ShopItem";
 import cs from 'classnames'
 import {MyImage} from "../../MyImage";
@@ -24,14 +24,14 @@ export const Releases_768 = ( {img1,img2,img3,img4,img5,text1,text2,text3,text4,
     })
 
     return(
-        <>
+        <section>
             <div className={styles.releases}>
             <div className={styles.container}>
             <div className={styles.content}>
-                <div className={styles.title}>
+                <h2 className={styles.title}>
                     Реализованные проекты
 
-                </div>
+                </h2>
                 <div className={cs("navigation-wrapper",styles.navigation_wrapper)}>
                     <div ref={sliderRef} className="keen-slider">
                         <div className={cs("keen-slider__slide number-slide1",styles.slider_item)}> <ReleasesSlider img={img1} text={text1}/></div>
@@ -68,7 +68,7 @@ export const Releases_768 = ( {img1,img2,img3,img4,img5,text1,text2,text3,text4,
             </div>
             </div>
             </div>
-        </>
+        </section>
     )
 }
 
@@ -77,7 +77,7 @@ const ReleasesSlider = ({img,text} ) => {
         <>
         <div className={styles.slider_container}>
             <picture>
-                <MyImage src={{default: img}} alt={'1'} />
+                <MyImage src={{default: img}} alt={text} />
                 <div className={styles.faded_text}> {text}</div>
             </picture>
 

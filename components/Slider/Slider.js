@@ -2,7 +2,7 @@ import styles from './Slider.module.scss'
 import cs from "classnames";
 import {Arrow} from "../Offer/Offer";
 import React, {useState} from "react";
-import data from "../Shop/cart_arenda-plasm77.ru.json";
+import data from "../../sources/data/cart_arenda-plasm77.ru.json";
 import {ModalCard} from "../Modal/ModalCard/ModalCard";
 import {useKeenSlider} from "keen-slider/react";
 import {useWindowSize} from "../../Hooks/useWindowSize";

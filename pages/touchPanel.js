@@ -20,7 +20,7 @@ import {Provider} from "react-redux";
 import {store} from "../redux";
 import {Modal} from "../components/Modal/Modal";
 import FeedBack from "../components/FeedBack/FeedBack";
-import data from "../components/Shop/cart_arenda-plasm77.ru.json";
+import data from "../sources/data/cart_arenda-plasm77.ru.json";
 import {OfferModal} from "../components/offerModal/OfferModal";
 import SitesModal from "../components/SitesModal/SitesModal";
 
@@ -148,6 +148,7 @@ const TouchPanel = ({ cards}) => {
                   /> : null
               }
               <Seo
+                  title='Сенсорные столы и киоски в аренду'
               image1='/Seo/TouchPanel/1.png'
               image2='/Seo/TouchPanel/2.svg'
               text1='Банальные, но неопровержимые выводы,

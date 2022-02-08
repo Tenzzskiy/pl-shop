@@ -19,12 +19,12 @@ const size = useWindowSize();
                 <div className={styles.back}>
                 <Steps />
                 </div>
-                <img className={styles.background} src={size.width < 720 ? img_360 : mainImg } alt=""/>
+                <img className={styles.background} src={size.width < 720 ? img_360 : mainImg } alt={title}/>
                 <div className={styles.container}>
 
 
                     <div className={styles.content}>
-                        <div className={styles.title}>{title} </div>
+                        <h2 className={styles.title}>{title} </h2>
                         <div className={styles.button}><button onClick={() => setSites(true)}> {button_text}</button> </div>
                         <div className={styles.free}> Это бесплатно</div>
 

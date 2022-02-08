@@ -15,16 +15,16 @@ interface PreferenceCardProps{
             <div className={styles.container}>
             <div className={styles.content}>
                 <div className={styles.img}>
-                    <img src={img} alt=""/>
+                    <img src={img} alt={title}/>
                 </div>
                 <div className={styles.info}>
-                    <div className={styles.title}>
+                    <h2 className={styles.title}>
                         {title}
-                    </div>
-                    <div className={styles.description}>
+                    </h2>
+                    <h3 className={styles.description}>
                         {description}
 
-                    </div>
+                    </h3>
                     <div className={styles.second_description}>
                         {secondDescription}
                     </div>

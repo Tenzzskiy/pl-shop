@@ -20,7 +20,7 @@ import {Provider} from "react-redux";
 import {store} from "../redux";
 import {Modal} from "../components/Modal/Modal";
 import FeedBack from "../components/FeedBack/FeedBack";
-import data from "../components/Shop/cart_arenda-plasm77.ru.json";
+import data from "../sources/data/cart_arenda-plasm77.ru.json";
 import {OfferModal} from "../components/offerModal/OfferModal";
 import SitesModal from "../components/SitesModal/SitesModal";
 export  const getStaticProps = async () =>{
@@ -119,6 +119,7 @@ const VideoWalls = ({  cards}) => {
                 /> : null
             }
             <Seo
+                title='Прокат видеостены'
                 image1='/Seo/VideoWalls/1.png'
                 image2='/Seo/VideoWalls/2.png'
                 text1='Подготовка к проведению мероприятия, будь то большой семейный праздник, выставка, презентация или корпоративная встреча, подразумевает украшение зала и его оснащение современной аппаратурой. Интересно на тематических мероприятиях смотрятся видеостены. Смонтировав систему видеоотражающих устройств, которые образуют цельный экран, можно воспроизводить практически любую информацию. Это может быть как несколько независимых роликов, так и один клип, транслирующий информацию на большую поверхность. Добиться высокого качества при проведении такой презентации помогает большое количество источников видеосигнала.

@@ -5,13 +5,13 @@ import styles from './Sale_768.module.scss'
 const Sale_768:FunctionComponent = (  { })  =>{
 
     return(
-        <>
+        <section>
             <div className={styles.sale}>
                 <img className={styles.sale_svg} src="/sale.svg" alt=""/>
                 <div className={styles.container}>
                     <div className={styles.content}>
                         <div className={styles.offer}>
-                            <div className={styles.title}>Закажи сейчас со скидкой ! </div>
+                            <h2 className={styles.title}>Закажи сейчас со скидкой ! </h2>
                             <div className={styles.promo}> По промокоду “PLAZMA77”</div>
 
                         </div>
@@ -27,7 +27,7 @@ const Sale_768:FunctionComponent = (  { })  =>{
                 </div>
 
             </div>
-        </>
+        </section>
     )
 }
 

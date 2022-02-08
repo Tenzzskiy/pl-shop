@@ -4,7 +4,7 @@ import {Provider} from "react-redux";
 import {store} from "../../redux";
 import {useRouter} from "next/router";
 import Link from "next/link";
-import data from './../../components/Shop/cart_arenda-plasm77.ru.json'
+import data from '../../sources/data/cart_arenda-plasm77.ru.json'
 import cs from "classnames";
 import FeedBack from "../../components/FeedBack/FeedBack";
 const Index_page = ({props}) =>{
@@ -31,14 +31,14 @@ const Index_page = ({props}) =>{
 }
 
 export async function getStaticPaths() {
-    const paths = data.News.map((elem) => ({ params: { id:elem.index } }))
+    const paths = data.news.map((elem) => ({ params: { id:elem.index } }))
     return {
         paths,
         fallback: false
     };
 }
 export async function getStaticProps(context) {
-    const props = data.News.find((elem) => elem.index === context.params.id)
+    const props = data.news.find((elem) => elem.index === context.params.id)
 
     return {
         props: {props},

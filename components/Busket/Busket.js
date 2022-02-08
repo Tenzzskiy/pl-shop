@@ -2,7 +2,7 @@ import styles from './Busket.module.scss'
 import Layout from "../Layout/Layout";
 import {BusketCard} from "./BusketCard/BusketCard";
 import {useSelector} from "react-redux";
-import data from "../Shop/cart_arenda-plasm77.ru.json";
+import data from "../../sources/data/cart_arenda-plasm77.ru.json";
 import {ShopItem} from "../Shop/ShopItem/ShopItem";
 import React, {useState} from "react";
 import {useWindowSize} from "../../Hooks/useWindowSize";
@@ -45,7 +45,7 @@ export const ResultBusket = ( { setOfferModal}) => {
         setCheckBox(!checkbox);
     }
     return(
-        <>
+        <section>
         <div className={styles.container}>
             <div className={styles.back}>
 
@@ -169,7 +169,7 @@ export const ResultBusket = ( { setOfferModal}) => {
                     </div>
                 </div> : null
             }
-        </>
+        </section>
     )
 }
 

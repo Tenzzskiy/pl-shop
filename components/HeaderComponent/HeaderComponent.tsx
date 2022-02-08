@@ -16,13 +16,13 @@ interface HeaderComponentProps {
 const HeaderComponent:FunctionComponent = ( {TouchPanel,setTouchPanel,touchpanel=0,setSites,title,button_text,mainImg ,purple}:HeaderComponentProps):JSX.Element =>{
 
     return(
-        <>
+        <section>
             <div className={styles.header_component}>
             <Steps />
             <div className={styles.container}>
-                <img src={mainImg} alt=""/>
+                <img src={mainImg} alt={title}/>
             <div className={styles.content}>
-                <div className={styles.title}>{title} </div>
+                <h2 className={styles.title}>{title} </h2>
                 <div className={cs(styles.button, purple===true ? styles.purple : null)}><button onClick={() =>
                 {
                     touchpanel === 1 ? setTouchPanel(true) : setSites(true)
@@ -36,7 +36,7 @@ const HeaderComponent:FunctionComponent = ( {TouchPanel,setTouchPanel,touchpanel
             </div>
             </div>
 
-        </>
+        </section>
     )
 }
 

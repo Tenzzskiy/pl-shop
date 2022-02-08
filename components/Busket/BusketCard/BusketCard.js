@@ -61,16 +61,16 @@ export const BusketCard = ( {detail1,detail2,mainDetail,mainDetail2,img,title,ti
     }
     return(
         <>
-        <div className={styles.container}>
+        <section className={styles.container}>
             <div className={styles.content}>
-                <img className={styles.exit} src="/Modal/exit.svg" alt="" onClick={deleteItem}/>
+                <img className={styles.exit} src="/Modal/exit.svg" alt="exit" onClick={deleteItem}/>
                 <div className={styles.img}>
                     <picture>
 
                         {size.width < 720 ? <div className={styles.img_360}>
-                            <img className={styles.card_img} src={img} alt=""/>
+                            <img className={styles.card_img} src={img} alt={title}/>
                             <Selector checked={data.checked} setChangedPrice={setChangedPrice} duration={duration}  price={changedPrice} setTime={setTime} time={time} data={data} changedPrice={changedPrice} count={count} />
-                        </div> :<img className={styles.card_img} src={img} alt=""/> }
+                        </div> :<img className={styles.card_img} src={img} alt={title}/> }
                     </picture>
                 </div>
                 <div className={styles.text_content}>
@@ -155,7 +155,7 @@ export const BusketCard = ( {detail1,detail2,mainDetail,mainDetail2,img,title,ti
 
 
             </div>
-        </div>
+        </section>
         </>
     )
 }

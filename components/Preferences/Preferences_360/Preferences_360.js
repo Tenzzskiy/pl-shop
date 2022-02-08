@@ -22,10 +22,10 @@ export const Preferences_360 = ( {setSites,button=false,mainTitle,leftImg,rightI
     })
 
     return(
-        <>
+        <section>
             {count === 4 ?
                 <div className={styles.container}>
-                    <div className={styles.mainTitle}>{mainTitle}</div>
+                    <h2 className={styles.mainTitle}>{mainTitle}</h2>
                     <div className="navigation-wrapper">
                         <div ref={sliderRef} className="keen-slider">
                             <div className="keen-slider__slide number-slide1"><PreferenceCard img={leftImg} title={leftTitle} description={leftText}/></div>
@@ -85,6 +85,6 @@ export const Preferences_360 = ( {setSites,button=false,mainTitle,leftImg,rightI
             }
 
 
-        </>
+        </section>
     )
 }

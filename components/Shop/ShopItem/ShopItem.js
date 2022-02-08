@@ -42,25 +42,25 @@ const check = () =>{
             <div className={styles.content}>
                 <div className={styles.img}>
                     <picture>
-                        <MyImage src={{default: img}} alt={'1'} />
+                        <MyImage src={{default: img}} alt={title} />
 
                     </picture>
                 </div>
                 <div className={styles.flex}>
-                    <div className={styles.title}>{title}</div>
+                    <h4 className={styles.title}>{title}</h4>
                     {count === 1 ?
                         <>
-                        <div className={styles.detail}>
+                            {detail1 !== undefined ?  <div className={styles.detail}>
 
-                            <span> {mainDetail}</span>
-                            <p>{detail1}</p>
-                        </div>
-                            <div className={styles.detail}>
+                                <span> {mainDetail}</span>
+                                <p>{detail1}</p>
+                            </div> : null}
+                            {detail2 !== undefined ?  <div className={styles.detail}>
 
                                 <span>{mainDetail2}</span>
                                 <p> {detail2}</p>
                             </div>
-
+                             : null}
                         </> : null
                     } {count === 0 ?
                     <div className={styles.detailSelector}>

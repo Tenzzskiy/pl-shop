@@ -11,7 +11,7 @@ const Footer:FunctionComponent = ({ }):JSX.Element =>{
     const [Data] = React.useState(new Date);
     const size = useWindowSize();
     return(
-       <>
+       <footer>
            {size.width > 1250 ?
                <div className={styles.footer}>
 
@@ -95,7 +95,7 @@ const Footer:FunctionComponent = ({ }):JSX.Element =>{
 
 
 
-       </>
+       </footer>
     )
 }
 

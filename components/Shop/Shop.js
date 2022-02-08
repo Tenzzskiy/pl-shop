@@ -186,9 +186,9 @@ export const Shop = ( { page,active,setActive,data,...props}) =>{
             <div className={styles.shop}>
             <div className={styles.container}>
             <div className={styles.content}>
-            <div className={styles.title}>
+            <h2 className={styles.title}>
                 Каталог
-            </div>
+            </h2>
 
                 <div className={styles.grid}>
                     {page === 1 ? items : null}

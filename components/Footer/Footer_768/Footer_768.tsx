@@ -8,7 +8,7 @@ import {MyImage} from "../../MyImage";
 export const Footer_768 = () =>{
     const [Data] = React.useState(new Date);
     return(
-        <div className={styles.footer}>
+        <section className={styles.footer}>
 
             <div className={styles.footer_container}>
                 <div className={styles.content}>
@@ -97,6 +97,6 @@ export const Footer_768 = () =>{
                 </div>
             </div>
 
-        </div>
+        </section>
     )
 }

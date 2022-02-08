@@ -11,7 +11,7 @@ const MainHeaderComponent = ({setSites} ) =>{
         const size = useWindowSize();
 
     return(
-        <>
+        <section>
             {size.width > 720 ?
                 <div className={styles.header_component}>
 
@@ -23,8 +23,8 @@ const MainHeaderComponent = ({setSites} ) =>{
 
                         <div className={styles.content}>
 
-                            <div className={styles.title}> Аренда плазмы </div>
-                            <div className={styles.description}> Организуем техническое обеспечение выставок, форумов и конференций</div>
+                            <h2 className={styles.title}> Аренда плазмы </h2>
+                            <h3 className={styles.description}> Организуем техническое обеспечение выставок, форумов и конференций</h3>
                             <div className={styles.button}><button onClick={() =>setSites(true)}> Рассчитать стоимость</button> </div>
                             <div className={styles.free}> Это бесплатно</div>
 
@@ -37,7 +37,7 @@ const MainHeaderComponent = ({setSites} ) =>{
             {size.width < 720 ? <MainHeaderComponent_360 setSites={setSites}/> : null}
 
             {/*<MainHeaderComponent_360 setSites={setSites}/>*/}
-        </>
+        </section>
     )
 }
 

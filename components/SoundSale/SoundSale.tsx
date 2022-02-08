@@ -6,7 +6,7 @@ export const SoundSale = ( ) =>{
 
         <>
         <div className={styles.soundSale}>
-            <img className={styles.background} src="/sale.svg" alt=""/>
+            <img className={styles.background} src="/sale.svg" alt="sale"/>
         <div className={styles.container}>
         <div className={styles.content}>
             <div className={styles.flex}>

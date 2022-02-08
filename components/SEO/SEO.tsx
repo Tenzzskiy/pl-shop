@@ -13,8 +13,9 @@ interface SeoProps{
     text3?:string,
     text4?:string,
     otherText?:string,
+    title?:string
 }
-const Seo:FunctionComponent = ({children, image1,image2,text1,text2,text3,text4,otherText}:SeoProps) =>{
+const Seo:FunctionComponent = ({title,children, image1,image2,text1,text2,text3,text4,otherText}:SeoProps) =>{
     const size=useWindowSize();
     const [active,setActive]= useState(true);
     const text = `${text1}${text2}${text3}${text4} `
@@ -25,9 +26,9 @@ const Seo:FunctionComponent = ({children, image1,image2,text1,text2,text3,text4,
         <div className={styles.container}>
 
 
-                <div className={styles.title}>
-                    Информация
-                </div>
+                <h2 className={styles.title}>
+                    {title}
+                </h2>
             <div className={styles.content}>
             <div className={styles.grid}>
                 {/*    <div className={styles.box1}><img src={image1} alt=""/>*/}
@@ -88,7 +89,7 @@ const Seo:FunctionComponent = ({children, image1,image2,text1,text2,text3,text4,
                        <div className={styles.container_1}>
                            <div className={styles.img}>
                                <img src="/Seo/background_768.svg" className={styles.background_image} alt=""/>
-                               <MyImage src={{default: image1}} alt={'1'} className={styles.image} />
+                               <MyImage src={{default: image1}} alt={title} className={styles.image} />
 
                            </div>
                            <div className={styles.text}>{text1}
@@ -100,7 +101,7 @@ const Seo:FunctionComponent = ({children, image1,image2,text1,text2,text3,text4,
                        <div className={styles.container_2}>
                            <div className={styles.img}>
                                <img src="/Seo/background_768.svg" className={styles.background_image2} alt=""/>
-                               <MyImage src={{default: image2}} alt={'1'} className={styles.image_2} />
+                               <MyImage src={{default: image2}} alt={title} className={styles.image_2} />
                            </div>
                            <div className={styles.text}>{text3}
                            </div>
@@ -116,7 +117,7 @@ const Seo:FunctionComponent = ({children, image1,image2,text1,text2,text3,text4,
                 <div className={styles.container_360}>
                 <div className={styles.img_360}>
                     <img src="/Seo/background_768.svg" className={styles.background_image_360} alt=""/>
-                    <MyImage src={{default: image1}} alt={'1'} className={styles.image_360} />
+                    <MyImage src={{default: image1}} alt={title} className={styles.image_360} />
                 </div>
                     <div className={cs(styles.text_360,active ? styles.show : styles.hide)}>
                         {items}{active ?  '...' :  null}

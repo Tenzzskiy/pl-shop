@@ -119,6 +119,7 @@ width: 100%;;
   float: left;
   z-index: 3;
   margin-right: 15px;
+  margin-bottom: 15px;
   width: 382px;
 }
 .background_image{
@@ -172,6 +173,11 @@ width: 100%;;
 
 
 @media (max-width: 1200px){
+  .title{
+
+      font-size: 25px !important;
+
+  }
   .container{
     font-size: 18px !important;
   }
@@ -205,6 +211,9 @@ width: 100%;;
   .title{
     font-size: 25px !important;
     padding: 80px 0 40px 0 !important;
+    h1{
+      font-size: 25px !important;
+    }
   }
   .button{
     padding-bottom: 40px !important;

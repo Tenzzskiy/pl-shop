@@ -6,7 +6,7 @@ import { SourceProps, SourcesProps } from './types';
 
 const Source = (props: SourceProps): JSX.Element | null => {
     const { url, media, lazy } = props;
-    const placeholder = '/placeholder.png';
+    // const placeholder = '/placeholder.png';
 
     if (url) {
         const extension = url.slice(-4) === 'webp' ? 'webp' : 'jpg';
@@ -14,7 +14,7 @@ const Source = (props: SourceProps): JSX.Element | null => {
         return (
             <source
                 data-srcset={url}
-                srcSet={lazy ? placeholder : url}
+                srcSet={lazy ? ' ' : url}
                 media={media ? `(max-width: ${media}px)` : undefined}
                 type={`image/${extension}`}
             />

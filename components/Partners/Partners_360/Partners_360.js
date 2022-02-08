@@ -21,31 +21,31 @@ export const Partners_360 = ({}) => {
 
     // @ts-ignore
     return (
-        <div className={styles.partners_360}>
-            <div className={styles.title}>
+        <section className={styles.partners_360}>
+            <h1 className={styles.title}>
                 Наши клиенты
-            </div>
+            </h1>
             <div className="navigation-wrapper">
                 <div ref={sliderRef} className="keen-slider">
                     <div className={cn("keen-slider__slide",styles.slider)}>
                         <div className={styles.flex}>
 
 
-                            <div className={styles.faded}> <MyImage src={{default: "/Clients/client_1.svg"}} alt={'1'} />   </div>
-                            <div className={styles.faded}><MyImage src={{default: "/Clients/client_2.svg"}} alt={'1'} />    </div>
+                            <div className={styles.faded}> <MyImage src={{default: "/Clients/client_1.svg"}} alt="maximice" />   </div>
+                            <div className={styles.faded}><MyImage src={{default: "/Clients/client_2.svg"}} alt="mega" />    </div>
                         </div>
                     </div>
                     <div className={cn("keen-slider__slide",styles.slider)}>
                         <div className={styles.flex}>
-                            <div className={styles.faded}><MyImage src={{default: "/Clients/client_3.svg"}} alt={'1'} /></div>
-                            <div className={styles.faded}><MyImage src={{default: "/Clients/client_4.svg"}} alt={'1'} /></div>
+                            <div className={styles.faded}><MyImage src={{default: "/Clients/client_3.svg"}} alt="volkswagen" /></div>
+                            <div className={styles.faded}><MyImage src={{default: "/Clients/client_4.svg"}} alt="porsche" /></div>
                         </div>
 
                     </div>
                     <div className={cn("keen-slider__slide",styles.slider)}>
                         <div className={styles.flex}>
-                            <div className={styles.faded}><MyImage src={{default: "/Clients/client_5.svg"}} alt={'1'} /></div>
-                            <div className={styles.faded}><MyImage src={{default: "/Clients/client_6.svg"}} alt={'1'} /></div>
+                            <div className={styles.faded}><MyImage src={{default: "/Clients/client_5.svg"}} alt="lacoste" /></div>
+                            <div className={styles.faded}><MyImage src={{default: "/Clients/client_6.svg"}} alt="adidas" /></div>
                         </div>
                     </div>
                     {loaded && instanceRef.current && (
@@ -70,7 +70,7 @@ export const Partners_360 = ({}) => {
                 </div>
 
             </div>
-        </div>
+        </section>
 
     )
 }

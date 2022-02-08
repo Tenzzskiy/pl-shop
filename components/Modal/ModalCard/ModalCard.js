@@ -46,7 +46,7 @@ export const ModalCard = ({img,title,price,id,setActive,detail1,detail2,mainDeta
             <div className={styles.content}>
             <div className={styles.img}>
                 <picture>
-                    <img src={img} alt=""/>
+                    <img src={img} alt={title}/>
                 </picture> </div>
             <div className={styles.title}>{title} </div>
             <div className={styles.footer}>

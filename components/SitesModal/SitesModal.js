@@ -52,7 +52,7 @@ export const SitesModal = ({touchpanel=0, setTouchPanel,TouchPanel,setOfferModal
                     </div>
                         <div className={styles.rules}>
                             <div className={styles.checkbox} onClick={triggerCheckBox}><img className={checkbox ? null : styles.hide} src="/Seo/checkbox.svg" alt=""/></div>
-                            <div className={styles.agree}> Соглашаюсь с <Link href=""><a>Правилами обработки персональных данных</a></Link></div>
+                            <div className={styles.agree}> Соглашаюсь с <Link href="/privacy"><a>Правилами обработки персональных данных</a></Link></div>
                         </div>
 
                         <div className={styles.button} >

@@ -4,7 +4,7 @@ import cs from 'classnames'
 
 export const OfferModal = ({setOfferModal,offerModal}) =>{
     return(
-        <>
+        <section>
         <div className={offerModal ? cs(styles.modal,styles.active) : styles.modal } onClick={() => {
             setOfferModal(false)
 
@@ -19,6 +19,6 @@ export const OfferModal = ({setOfferModal,offerModal}) =>{
 
         </div>
         </div>
-        </>
+        </section>
     )
 }

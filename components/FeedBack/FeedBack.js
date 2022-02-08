@@ -9,7 +9,7 @@ const FeedBack = ( {setOfferModal}) => {
     const value = useRef()
     const size = useWindowSize();
     return (
-        <>
+        <section>
 
             <div className={styles.feedback}>
                 {size.width < 720 ? <img className={styles.img} src="/contacts/contacts_360.svg" alt=""/> : null}
@@ -61,7 +61,7 @@ const FeedBack = ( {setOfferModal}) => {
                 </div>
             </div>
 
-        </>
+        </section>
     )
 }
 

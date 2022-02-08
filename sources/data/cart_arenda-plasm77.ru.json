@@ -1449,7 +1449,7 @@
       "mainDetail": "Детали:"
     }
   ],
-  "LedAdditionals": [
+  "ledAdditionals": [
     {
       "name": "Санитайзер для рук с сенсорным датчиком",
       "id": "104",
@@ -1587,7 +1587,7 @@
       "mainDetail": "Детали:"
     }
   ],
-  "TouchAdditionals": [
+  "touchAdditionals": [
     {
       "name": "Сенсорный стол под брендирование 32”",
       "id": "49",
@@ -1737,7 +1737,7 @@
       "mainDetail": "Детали:"
     }
   ],
-  "ProjectorAdditionals": [
+  "projectorAdditionals": [
     {
       "name": "Экран д/проектора 180х180см",
       "id": "112",
@@ -1885,7 +1885,7 @@
       "mainDetail": "Детали:"
     }
   ],
-  "LaptopAdditionals": [
+  "laptopAdditionals": [
     {
       "name": "Столик д/проектора и ноутбука",
       "id": "115",
@@ -2031,7 +2031,7 @@
       "mainDetail": "Детали:"
     }
   ],
-  "News": [
+  "news": [
     {
       "index": "1",
       "title": "Бесшовная стена на мероприятие в гостинице",

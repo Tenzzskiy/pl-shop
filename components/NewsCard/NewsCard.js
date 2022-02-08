@@ -8,7 +8,7 @@ const NewsCard = ( {img,title,date,text,data,index}) =>{
     const size = useWindowSize();
     const router = useRouter();
     return(
-        <>
+        <section>
         <div className={styles.container}>
         <div className={styles.content}>
         <div className={styles.flex}>
@@ -26,7 +26,7 @@ const NewsCard = ( {img,title,date,text,data,index}) =>{
         </div>
         </div>
 
-        </>
+        </section>
     )
 }
 

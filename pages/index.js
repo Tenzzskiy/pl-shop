@@ -1,6 +1,7 @@
 import Layout from "../components/Layout/Layout";
 import Releases from "../components/Relises/Relises";
 import React, {useState} from "react";
+import Head from 'next/head'
 import Sale from "../components/Sale/Sale";
 import {Partners} from "../components/Partners/Partners";
 import {Conditions} from "../components/Conditions/Conditions";
@@ -19,7 +20,7 @@ import {Provider} from "react-redux";
 import {store} from "../redux";
 import {Modal} from "../components/Modal/Modal";
 import FeedBack from "../components/FeedBack/FeedBack";
-import data from '../components/Shop/cart_arenda-plasm77.ru.json'
+import data from '../sources/data/cart_arenda-plasm77.ru.json'
 import {OfferModal} from "../components/offerModal/OfferModal";
 import SitesModal from "../components/SitesModal/SitesModal";
 import Seo from "../components/SEO/SEO";
@@ -45,7 +46,12 @@ const Home = ({ cards }) => {
   return (
 
       <Provider store={store} >
+    <Head>
+            <title itemProp="headline">название_страницы</title>
+        <meta property="og:title" content="описание_тайтла"/>
+            <meta itemProp="description" name="description" content="описание_страницы"/>
 
+    </Head>
     <Layout>
         <div className={styles.header}>
          <MainHeaderComponent  setSites={setSites}
@@ -180,6 +186,7 @@ const Home = ({ cards }) => {
         } </div>
         <div className={styles.seo}>
         <Seo
+            title='Телевизоры в аренду'
             image1='/Seo/seo1FirstPicture.png'
             image2='/Seo/2.png'
         text1='Намечается торжественное мероприятие, планируется выставка или понадобилось организовать деловую встречу?
@@ -212,20 +219,20 @@ const Home = ({ cards }) => {
           <SitesModal sites={sites} setSites= {setSites} setOfferModal={setOfferModal} title='Получить расчет'/>
           <OfferModal offerModal={offerModal} setOfferModal={setOfferModal}/>
           <Modal active={modalActive} setActive={setModalActive} />
-          <ImgModal active={imgModal} setActive={setImgModal}
-                    id={id}
-                    img1='/releases/releases1(1).png'
-                    img2='/releases/releases1(2).png'
-                    img3='/releases/releases1(3).png'
-                    img4='/releases/releases1(4).png'
-                    img5='/releases/releases1(5).png'
+          {size.width > 1200 ? <ImgModal active={imgModal} setActive={setImgModal}
+                                         id={id}
+                                         img1='/releases/releases1(1).png'
+                                         img2='/releases/releases1(2).png'
+                                         img3='/releases/releases1(3).png'
+                                         img4='/releases/releases1(4).png'
+                                         img5='/releases/releases1(5).png'
 
-                    text1='Плазма на стойке для трансляции спортивных матчей'
-                    text2='Брендированный экспостенд с плазмой для интерактивной зоны'
-                    text3='Плазма на стойке для трансляции кибер-спортивных матчей'
-                    text4='Плазма на брендированной стойке для интерактивной зоны'
-                    text5='Плазма на брендированной стойке для игровой VR зоны'
-          />
+                                         text1='Плазма на стойке для трансляции спортивных матчей'
+                                         text2='Брендированный экспостенд с плазмой для интерактивной зоны'
+                                         text3='Плазма на стойке для трансляции кибер-спортивных матчей'
+                                         text4='Плазма на брендированной стойке для интерактивной зоны'
+                                         text5='Плазма на брендированной стойке для игровой VR зоны'
+          /> : null}
       </Provider>
   )
 }

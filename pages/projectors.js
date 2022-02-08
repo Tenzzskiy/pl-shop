@@ -21,7 +21,7 @@ import {Provider} from "react-redux";
 import {store} from "../redux";
 import {Modal} from "../components/Modal/Modal";
 import FeedBack from "../components/FeedBack/FeedBack";
-import data from "../components/Shop/cart_arenda-plasm77.ru.json";
+import data from "../sources/data/cart_arenda-plasm77.ru.json";
 import {OfferModal} from "../components/offerModal/OfferModal";
 import SitesModal from "../components/SitesModal/SitesModal";
 export  const getStaticProps = async () =>{
@@ -123,6 +123,7 @@ const Projectors = ({ cards }) => {
                   /> : null
               }
               <Seo
+                  title='Прокат проектора'
               image1='/Seo/Projectors/1.png'
               image2='/Seo/Projectors/2.svg'
               text1=' Компания предлагает взять в аренду проектор на мероприятие с доставкой. Всегда в наличии широкий выбор профессионального оборудования для проведения конференции, выставки, праздника или инсталляции любого формата. Заказчикам гарантируется гибкая стоимость услуг, монтаж, настройка и демонтаж под ключ.

@@ -20,9 +20,11 @@ const Layout:FunctionComponent = ({children ,count=0}:LayoutProps) =>{
     return(
    <>
        <Header setNavigation={setNavigation} setContacts={setContacts} count={count}/>
-       <Navigation setNavigation={setNavigation} navigation={navigation} contacts={contacts} setContacts={setContacts}/>
+      <main>
+          <Navigation setNavigation={setNavigation} navigation={navigation} contacts={contacts} setContacts={setContacts}/>
 
-       {children}
+          {children}
+      </main>
 
 
        <Footer />

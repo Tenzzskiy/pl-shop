@@ -36,17 +36,17 @@ export const OfferCard= ( {detail1,detail2,mainDetail,mainDetail2,price,title,im
             <div className={styles.content}>
             <div className={styles.img}>
                 <picture>
-                    <MyImage src={{default: img}} alt={'1'} />
+                    <MyImage src={{default: img}} alt={title} />
                 </picture>
             </div>
-                <div className={styles.title}> {title}</div>
+                <h2 className={styles.title}> {title}</h2>
                 <div className={styles.subTitle}>
                     <div>{mainDetail} </div>
-                    <div>{detail1} </div>
+                    <h3>{detail1} </h3>
                    </div>
                 <div className={styles.subTitle}>
                     <div>{mainDetail2} </div>
-                    <div>{detail2} </div>
+                    <h3>{detail2} </h3>
                 </div>
                 <div className={styles.flex}>
                     <div className={styles.select}>

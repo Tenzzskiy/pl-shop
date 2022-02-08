@@ -20,7 +20,7 @@ const FormInput = ({
             {mask ? (
                 <InputMask
                     className={clsx(s.input, className)}
-                    placeholder={placeholder}
+                    // placeholder={placeholder}
                     required={required}
                     mask="+7 (999) 999-99-99"
                     value={value}
@@ -33,7 +33,7 @@ const FormInput = ({
                 <input
                     className={clsx(s.input, className)}
                     type={type}
-                    placeholder={placeholder}
+                    // placeholder={placeholder}
                     value={value}
                     onChange={(evt) => {
                         onChange(evt.target.value);

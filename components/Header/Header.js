@@ -25,7 +25,7 @@ const Header = ({ setNavigation,setContacts,count}) =>{
     });
 
     return(
-   <>
+   <header>
        <div className={cn(styles.header,
 
         )} >
@@ -154,7 +154,7 @@ const Header = ({ setNavigation,setContacts,count}) =>{
 
 
        </div>
-   </>
+   </header>
     )
 }
 

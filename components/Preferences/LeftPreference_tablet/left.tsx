@@ -12,15 +12,15 @@ export const Left =({img,title,description }) =>{
             <div className={styles.content}>
             <div className={styles.grid}>
             <div className={styles.img}>
-                <img  className={styles.background_img} src={img} alt=""/>
+                <img  className={styles.background_img} src={img} alt={title}/>
             </div>
                 <div  className={styles.flex}>
-                <div className={styles.title}>
+                <h3 className={styles.title}>
                     {title}
-                </div>
-                    <div className={styles.description}>
+                </h3>
+                    <h4 className={styles.description}>
                         {description}
-                    </div>
+                    </h4>
 
                 </div>
             </div>

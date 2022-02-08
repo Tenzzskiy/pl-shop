@@ -25,7 +25,7 @@ export const Certificates = () =>{
     });
     return(
         <>
-        <div className={styles.certificates}>
+        <section className={styles.certificates}>
             <div className={styles.container}>
             <div className={styles.content}>
                 <div className={styles.title}>Сертификаты на оборудование и антисептики </div>
@@ -103,7 +103,7 @@ export const Certificates = () =>{
 
             </div>
             </div>
-        </div>
+        </section>
         </>
     )
 }

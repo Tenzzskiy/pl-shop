@@ -5,7 +5,7 @@ import {useSelector} from "react-redux";
 import {Arrow, Offer} from "../Offer/Offer";
 import {useWindowSize} from "../../Hooks/useWindowSize";
 import {useKeenSlider} from "keen-slider/react";
-import data from "../Shop/cart_arenda-plasm77.ru.json";
+import data from "../../sources/data/cart_arenda-plasm77.ru.json";
 import {OfferCard} from "../Offer/OfferCard/OfferCard";
 import {ModalCard} from "./ModalCard/ModalCard";
 import {Slider} from "../Slider/Slider";
@@ -40,7 +40,7 @@ export const Modal = ( {active,setActive}) =>{
     }, [active])
 
     return(
-        <>
+        <section>
             {active ?  <div className={active ? cs(styles.modal,styles.active) : styles.modal } onClick={() => {
                 setActive(false)
 
@@ -77,7 +77,7 @@ export const Modal = ( {active,setActive}) =>{
                     <div className={styles.item}>
                         <div className={styles.img}>
                             <picture>
-                                <img src={quantity.img} alt=""/>
+                                <img src={quantity.img} alt={quantity.title}/>
                             </picture>
                             {size.width < 720 ?
 
@@ -122,6 +122,6 @@ export const Modal = ( {active,setActive}) =>{
 
                 </div>
             </div> : null}
-        </>
+        </section>
     )
 }

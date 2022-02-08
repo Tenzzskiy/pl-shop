@@ -20,7 +20,7 @@ import {store} from "../redux";
 import {Provider} from "react-redux";
 import {Modal} from "../components/Modal/Modal";
 import FeedBack from "../components/FeedBack/FeedBack";
-import data from "../components/Shop/cart_arenda-plasm77.ru.json";
+import data from "../sources/data/cart_arenda-plasm77.ru.json";
 import {OfferModal} from "../components/offerModal/OfferModal";
 import SitesModal from "../components/SitesModal/SitesModal";
 export  const getStaticProps = async () =>{
@@ -132,6 +132,7 @@ const Laptops = ({ cards }) => {
                 /> : null
             }
             <Seo
+                title='Прокат ноутбука'
             image1='/Seo/Laptops/1.png'
             image2='/Seo/Laptops/2.jpg'
             text1='Нередко техника выходит из строя в самый важный момент. В других ситуация ноутбук требуется для того, чтобы весело провести время на корпоративе, вечеринке или празднике. Чтобы в срочном порядке не покупать портативный компьютер, можно арендовать его на период ремонта или под мероприятие.

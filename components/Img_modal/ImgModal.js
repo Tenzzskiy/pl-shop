@@ -8,10 +8,10 @@ import {useEffect} from "react";
 import {Arrow} from "../Offer/Offer";
 import {MyImage} from "../MyImage";
 export const ImgModal = ( {id,active,setActive,text1,text2,text3,text4,text5,...props}) =>{
-    const [currentSlide, setCurrentSlide] = useState(0);
+    const [currentSlide, setCurrentSlide] = useState(id);
     const [loaded, setLoaded] = useState(false);
     const [sliderRef, instanceRef] = useKeenSlider({
-        initial: {id},
+        initial: id,
         slides: {
             perView: "auto",
 
@@ -31,8 +31,12 @@ export const ImgModal = ( {id,active,setActive,text1,text2,text3,text4,text5,...
         instanceRef.current.update();
     }, [active])
 
+    useEffect(() => {
+        instanceRef && instanceRef.current?.moveToIdx(id)
+    }, [id])
+
     return(
-        <>
+        <section>
             <div className={active ? cs(styles.modal,styles.active) : styles.modal } onClick={() => {
                 setActive(false)
 
@@ -45,18 +49,18 @@ export const ImgModal = ( {id,active,setActive,text1,text2,text3,text4,text5,...
                     <div className="navigation-wrapper">
                         <div ref={sliderRef} className="keen-slider">
                             <div className={cs("keen-slider__slide number-slide1", styles.slide)}>
-                                <div className={styles.box1}><MyImage src={{default: props.img1}} alt={'1'} /> <div className={styles.box1_description}><span>{ text1} </span> </div></div></div>
+                                <div className={styles.box1}><MyImage src={{default: props.img1}} alt={text1} /> <div className={styles.box1_description}><span>{ text1} </span> </div></div></div>
                             <div className={cs("keen-slider__slide number-slide1", styles.slide)}>
-                                <div className={styles.box2}><MyImage src={{default: props.img2}} alt={'1'} /> <div className={styles.box2_description}><span>{ text1} </span> </div></div>
+                                <div className={styles.box2}><MyImage src={{default: props.img2}} alt={text2} /> <div className={styles.box2_description}><span>{ text1} </span> </div></div>
                             </div>
                             <div className={cs("keen-slider__slide number-slide1", styles.slide)}>
-                                <div className={styles.box3}><MyImage src={{default: props.img3}} alt={'1'} /> <div className={styles.box3_description}><span>{ text1} </span> </div></div>
+                                <div className={styles.box3}><MyImage src={{default: props.img3}} alt={text3} /> <div className={styles.box3_description}><span>{ text1} </span> </div></div>
                             </div>
                             <div className={cs("keen-slider__slide number-slide1", styles.slide)}>
-                                <div className={styles.box4}><MyImage src={{default: props.img4}} alt={'1'} /> <div className={styles.box4_description}><span>{ text1} </span> </div></div>
+                                <div className={styles.box4}><MyImage src={{default: props.img4}} alt={text4} /> <div className={styles.box4_description}><span>{ text1} </span> </div></div>
                             </div>
                             <div className={cs("keen-slider__slide number-slide1", styles.slide)}>
-                                <div className={styles.box5}><MyImage src={{default: props.img5}} alt={'1'} /> <div className={styles.box5_description}><span>{ text1} </span> </div></div>
+                                <div className={styles.box5}><MyImage src={{default: props.img5}} alt={text5} /> <div className={styles.box5_description}><span>{ text1} </span> </div></div>
                             </div>
 
                         </div>
@@ -88,7 +92,7 @@ export const ImgModal = ( {id,active,setActive,text1,text2,text3,text4,text5,...
 
                 </div>
             </div>
-        </>
+        </section>
     )
 }
 export default ImgModal;

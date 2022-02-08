@@ -10,7 +10,7 @@ export const Cleaning:FunctionComponent = ( { }) =>{
         const size = useWindowSize();
     return(
 
-        <>
+        <section>
             {
                 size.width > 720 ?
                     <div className={styles.cleaning}>
@@ -23,34 +23,34 @@ export const Cleaning:FunctionComponent = ( { }) =>{
                                 <img className={styles.background} src="/Desinfection/virus.svg" alt=""/>: null
                             }
                             <div className={styles.content}>
-                                <div className={styles.title}>
+                                <h2 className={styles.title}>
                                     Обеспечим безопасность вашего мероприятия
-                                </div>
+                                </h2>
                                 <div className={styles.subtitle}>
-                                    <div>
+                                    <h3>
                                         Большой ассортимент сертифицированного
                                         оброрудования и средств защиты
 
 
-                                    </div>
+                                    </h3>
 
                                 </div>
                                 <div className={styles.grid}>
                                     <div className={styles.item}>
-                                        <img src="/Desinfection/desinfection_icon_1.svg" alt=""/>
-                                        <div> Дезинфекция воздуха и поверхностей в помещении</div>
+                                     <div>    <img src="/Desinfection/desinfection_icon_1.svg" alt=""/></div>
+                                        <h3> Дезинфекция воздуха и поверхностей в помещении</h3>
                                     </div>
                                     <div className={styles.item}>
-                                        <img src="/Desinfection/desinfection_icon_2.svg" alt=""/>
-                                        <div> Аренда санитайзеров, автоматов с масками и перчатками</div>
+                                        <div>  <img src="/Desinfection/desinfection_icon_2.svg" alt=""/></div>
+                                        <h3> Аренда санитайзеров, автоматов с масками и перчатками</h3>
                                     </div>
                                     <div className={styles.item}>
-                                        <img src="/Desinfection/desinfection_icon_3.svg" alt=""/>
-                                        <div> Проведение санитарного контроля на входе</div>
+                                        <div>   <img src="/Desinfection/desinfection_icon_3.svg" alt=""/></div>
+                                        <h3> Проведение санитарного контроля на входе</h3>
                                     </div>
                                     <div className={styles.item}>
-                                        <img src="/Desinfection/desinfection_icon_4.svg" alt=""/>
-                                        <div> Выезд мед.работника для проведения экспресс  ПЦР-тестов</div>
+                                        <div>  <img src="/Desinfection/desinfection_icon_4.svg" alt=""/></div>
+                                        <h3> Выезд мед.работника для проведения экспресс  ПЦР-тестов</h3>
                                     </div>
 
                                 </div>
@@ -65,6 +65,6 @@ export const Cleaning:FunctionComponent = ( { }) =>{
             }
             {size.width < 720 ? <Cleaning_360 /> : null}
 
-        </>
+        </section>
     )
 }

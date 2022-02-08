@@ -5,7 +5,7 @@ import styles from './Sale_360.module.scss'
  export const Sale_360:FunctionComponent = ({ })  =>{
 
     return(
-        <>
+        <section>
             <div className={styles.sale}>
                 <img className={styles.sale_svg} src="/sale.svg" alt=""/>
                 <div className={styles.container}>
@@ -27,7 +27,7 @@ import styles from './Sale_360.module.scss'
                 </div>
 
             </div>
-        </>
+        </section>
     )
 }
 

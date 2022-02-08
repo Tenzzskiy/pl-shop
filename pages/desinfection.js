@@ -16,7 +16,7 @@ import {Provider} from "react-redux";
 import {store} from "../redux";
 import {Modal} from "../components/Modal/Modal";
 import FeedBack from "../components/FeedBack/FeedBack";
-import data from "../components/Shop/cart_arenda-plasm77.ru.json";
+import data from "../sources/data/cart_arenda-plasm77.ru.json";
 import {OfferModal} from "../components/offerModal/OfferModal";
 import SitesModal from "../components/SitesModal/SitesModal";
 export  const getStaticProps = async () =>{
@@ -123,6 +123,7 @@ const Index = ({ cards}) => {
                 /> : null
             }
             <Seo
+                title='Обработка помещений от вирусов и бактерий'
                 image1='/Seo/Desinfection/1.png'
                 image2='/Seo/Desinfection/2.jpg'
                 text1='В новых социальных условиях все большую важность приобретает соблюдение санитарно-гигиенических требований.
