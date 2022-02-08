@@ -1,0 +1,128 @@
+.container {
+  min-width: 598px;
+  max-width: 598px;
+  min-height: 213px;
+  background: white;
+  border: 1px solid #CFCFDC;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  a{
+    outline: none;
+    text-decoration: none;
+    border: 0;
+  }
+  .content{
+    padding: 16px;
+    height: 100%;
+    max-height: 179px;
+    .flex{
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      .img{
+        height: 100%;
+        margin-right: 15px;
+      img{
+        max-width: 250px;
+        max-height: 212px;
+
+      }
+      }
+      .text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        color: var(--description);
+      .title{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 120%;
+        color: var(--description);
+      }
+        .description{
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 140%;
+          color: var(--description);
+
+        }
+        .button{
+
+          align-self: flex-end;
+          button{
+            color: var(--description);
+            background: #E3E1FB;
+            border-radius: 2px;
+            padding: 5px 20px;
+            width: 160px;
+            height: 36px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 120%;
+            outline: none;
+            border: 0;
+            text-decoration: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            div{
+              margin-left: 5px;
+              height: 17px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media(max-width: 1250px){
+  .container{
+    max-width: 320px !important;
+    min-width: 320px !important;
+    max-height: 137px;
+    min-height: 137px !important;
+  }
+  .content{
+    padding: 8px !important;
+    max-height:121px !important ;
+    .img{
+      img{
+        max-width: 100px !important;
+        max-height: 75px !important;
+
+      }
+    }
+  }
+  .title{
+    font-size: 15px !important;
+  }
+  .text{
+    .description{
+      #text{
+        font-size: 11px !important;
+      }
+    }
+  }
+  .button{
+    button{
+      width: 120px !important;
+      height: 30px !important;
+    }
+  }
+
+
+}
+@media (max-width: 720px) {
+  .flex{
+    height: 121px !important;
+  }
+  .content{
+
+    min-height: 121px !important;
+  }
+}
