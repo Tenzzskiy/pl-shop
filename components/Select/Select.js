@@ -63,9 +63,10 @@ export const Selector = ( {item,checked,check,setChangedPrice,price,setTime,time
                     <button type="button" className={styles.selectorItem} onClick={() => {
                         setExample('3 суток')
                         setSelectorStatus(false)
-                        {data.checked ?  setChangedPrice(c2) :  setChangedPrice(c)}
+                        {checked ?  setChangedPrice(c2) :  setChangedPrice(c)}
                         setTime('3 суток');
-                        {data.checked  ?
+                        console.log(checked)
+                        {checked  ?
                             dispatch(updateSelect({...data, changedPrice: roundHundred(Number(b) + (Number(a) * 0.5)) *count,time: "3 суток"})) :
                             dispatch(updateSelect({...data, changedPrice: roundHundred(Number(b) + (Number(a) * 0.4)) *count,time: "3 суток"}))
                         }

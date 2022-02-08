@@ -7,14 +7,15 @@ import {useKeenSlider} from "keen-slider/react";
 import {useEffect} from "react";
 import {Arrow} from "../Offer/Offer";
 import {MyImage} from "../MyImage";
-export const ImgModal = ( {id,active,setActive,text1,text2,text3,text4,text5,...props}) =>{
+export const ImgModal = ( {id =0,active,setActive,text1,text2,text3,text4,text5,...props}) =>{
+    console.log(id)
     const [currentSlide, setCurrentSlide] = useState(0);
     const [loaded, setLoaded] = useState(false);
     const [sliderRef, instanceRef] = useKeenSlider({
         initial: id,
         slides: {
-            perView: 1,
-            spacing:0,
+            perView: 0,
+
         },
         slideChanged(slider) {
             setCurrentSlide(slider.track.details.rel);
