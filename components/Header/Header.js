@@ -30,10 +30,10 @@ const Header = ({ setNavigation,setContacts,count}) =>{
 
         )} >
 
-            <div className={styles.top_header} >
+            <div className={styles.top_header} itemScope itemType="http://schema.org/SiteNavigationElement">
 
                     <div className={styles.top_header_container}>
-                        <div className={styles.top_header_container_content}>
+                        <div className={styles.top_header_container_content} >
                             {size.width <1250 ?
                                 <div className={styles.leftModal} onClick={( ) => setNavigation(true)} >
                                     <picture>
@@ -79,9 +79,9 @@ const Header = ({ setNavigation,setContacts,count}) =>{
                                   </div></a></Link>
 
 
-                            <div className={styles.contacts}>
+                            <div className={styles.contacts}  itemProp="address" itemScope itemType="http://schema.org/Organization">
                                 {size.width > 600 ?
-                                    <div className={styles.number}> <a href="tel:+7 (495) 162 72 50"> +7 495 162-72-50</a></div>
+                                    <div className={styles.number}> <a itemProp="telephone" href="tel:+7 (495) 162 72 50"> +7 495 162-72-50</a></div>
                                 :   <div className={styles.contacts}>
                                         <picture>
 
@@ -95,7 +95,7 @@ const Header = ({ setNavigation,setContacts,count}) =>{
                                 }
 
                                 {size.width > 1250 ?
-                                    <div className={styles.mail}>  <a href="mailto:info@arenda-plazm77.ru">info@arenda-plazm77.ru</a>   </div> : null
+                                    <div className={styles.mail}>  <a itemProp="email" href="mailto:info@arenda-plazm77.ru">info@arenda-plazm77.ru</a>   </div> : null
 
 
                                 }
@@ -112,32 +112,32 @@ const Header = ({ setNavigation,setContacts,count}) =>{
                                    route.asPath === '/' ? styles.a_active : null
 
                                )} >Плазмы</a></Link>
-                               <Link href='/screens'><a className={cn(styles.a,
+                               <Link href='/screens'><a itemProp="url" className={cn(styles.a,
                                    route.asPath === '/screens' ? styles.a_active : null
 
                                )}
                                >Светодиодные экраны</a></Link>
-                               <Link href='/videoWalls'><a className={cn(styles.a,
+                               <Link href='/videoWalls'><a itemProp="url" className={cn(styles.a,
                                    route.asPath === '/videoWalls' ? styles.a_active : null
 
                                )}>Видеостены</a></Link>
-                               <Link href='/touchPanel'><a className={cn(styles.a,
+                               <Link href='/touchPanel'><a itemProp="url" className={cn(styles.a,
                                    route.asPath === '/touchPanel' ? styles.a_active : null
 
                                )} >Сенсорные тач-панели</a></Link>
-                               <Link href='/projectors'><a className={cn(styles.a,
+                               <Link href='/projectors'><a itemProp="url" className={cn(styles.a,
                                    route.asPath === '/projectors' ? styles.a_active : null
 
                                )}>Проекторы</a></Link>
-                               <Link href='/laptops'><a className={cn(styles.a,
+                               <Link href='/laptops'><a itemProp="url" className={cn(styles.a,
                                    route.asPath === '/laptops' ? styles.a_active : null
 
                                )}>Ноутбуки</a></Link>
-                               <Link href='/sound'><a className={cn(styles.a,
+                               <Link href='/sound'><a itemProp="url" className={cn(styles.a,
                                    route.asPath === '/sound' ? styles.a_active : null
 
                                )}>Звук, Свет и окружение</a></Link>
-                               <Link href='/desinfection'><a className={cn(styles.a,
+                               <Link href='/desinfection'><a itemProp="url" className={cn(styles.a,
                                    route.asPath === '/desinfection' ? styles.a_active : null
 
                                )}>Дезинфекция</a></Link>

@@ -75,10 +75,10 @@ export const Releases_768 = ( {img1,img2,img3,img4,img5,text1,text2,text3,text4,
 const ReleasesSlider = ({img,text} ) => {
     return(
         <>
-        <div className={styles.slider_container}>
+        <div className={styles.slider_container} itemScope itemType="http://schema.org/ImageObject">
             <picture>
-                <MyImage src={{default: img}} alt={text} />
-                <div className={styles.faded_text}> {text}</div>
+                <MyImage itemProp="contentUrl" src={{default: img}} alt={text} />
+                <div className={styles.faded_text} itemProp="name"> {text}</div>
             </picture>
 
         </div>

@@ -32,24 +32,28 @@ export const OfferCard= ( {detail1,detail2,mainDetail,mainDetail2,price,title,im
     return(
 
         <>
-            <div className={cs(styles.container,busket === 1 ? styles.busket : null)}>
+            <div className={cs(styles.container,busket === 1 ? styles.busket : null)} itemScope itemType="http://schema.org/Product">
             <div className={styles.content}>
             <div className={styles.img}>
                 <picture>
-                    <MyImage src={{default: img}} alt={title} />
+                    <MyImage itemprop="image" src={{default: img}} alt={title} />
                 </picture>
             </div>
-                <h2 className={styles.title}> {title}</h2>
+                <h2 className={styles.title} itemProp="name"> {title}</h2>
                 <div className={styles.subTitle}>
                     <div>{mainDetail} </div>
-                    <h3>{detail1} </h3>
+                    <h3 itemProp='description'>{detail1} </h3>
                    </div>
                 <div className={styles.subTitle}>
                     <div>{mainDetail2} </div>
-                    <h3>{detail2} </h3>
+                    <h3 itemProp='description'>{detail2} </h3>
                 </div>
-                <div className={styles.flex}>
-                    <div className={styles.select}>
+                <div className={styles.flex} itemProp="offers" itemScope itemType="http://schema.org/Offer">
+                    <meta itemProp="price" content={changedPrice}/>
+                        <meta itemProp="priceCurrency" content="RUB"/>
+                            <link itemProp="availability" href="http://schema.org/InStock"/>
+
+                            <div className={styles.select}>
                     <Selector changedPrice={changedPrice} setChangedPrice={setChangedPrice} price={price} setTime={setTime} time={time} check={check()}/>
                     </div>
                     <div className={styles.price}> {changedPrice}₽</div>
@@ -59,7 +63,7 @@ export const OfferCard= ( {detail1,detail2,mainDetail,mainDetail2,price,title,im
                         {/*</picture>*/}
                         { check() ?
 
-                            <Link href="/busket"><a>  <div className={styles.disabled_busket}>
+                            <Link href="/busket"><a rel='nofollow'>  <div className={styles.disabled_busket}>
                                 <img src="/ShopItem/selected_busket.svg" alt=""/>
                             </div></a></Link> :
                             <div className={styles.bucket} >
