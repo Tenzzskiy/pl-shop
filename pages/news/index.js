@@ -1,8 +1,5 @@
 import styles from '../../styles/index.module.scss'
 import Layout from "../../components/Layout/Layout";
-import {Provider} from "react-redux";
-import {store} from "../../redux";
-import {useRouter} from "next/router";
 import Link from "next/link";
 import FeedBack from "../../components/FeedBack/FeedBack";
 import data from "../../sources/data/cart_arenda-plasm77.ru.json";
@@ -10,6 +7,7 @@ import NewsCard from "../../components/NewsCard/NewsCard";
 import cs from "classnames";
 import {useState} from "react";
 import {useWindowSize} from "../../Hooks/useWindowSize";
+import Head from 'next/head'
 export  const getStaticProps = async () =>{
     return {
         props: {
@@ -35,9 +33,30 @@ const Index = ({cards}) =>{
     }
     return(
         <>
-            <Provider store={store} >
-                <Layout count ={1}>
 
+                <Layout count ={1}>
+<Head>
+    <meta charSet="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title itemProp="headline">Новости</title>
+    <meta property="og:title" content="Новости"/>
+    <meta itemProp="description" name="description" content="Новости"/>
+    <meta property="og:description" content="Новости"/>
+    <meta property="og:type" content="website"/>
+
+    <meta property="og:image:type" content="image/jpeg"/>
+    <meta property="og:image" content="/assets/images/preview1080.jpg"/>
+    <meta property="og:image:width" content="1080"/>
+    <meta property="og:image:height" content="1080"/>
+    <meta property="og:image" content="/assets/images/preview565.jpg"/>
+    <meta property="og:image:width" content="1080"/>
+    <meta property="og:image:height" content="565"/>
+    <meta property="og:site_name" content="Аренда плазм"/>
+    <meta property="og:locale" content="ru_RU"/>
+    <meta property="og:url" content="https://arenda-plazm77/news"/>
+
+</Head>
                     <div className={styles.news_container}>
                         <div className={styles.error_link}>  <Link href="/" ><a><img src="/back_arrow.svg" alt=""/> На Главную</a></Link></div>
                         <div className={styles.news_title}>Наши новости</div>
@@ -48,7 +67,7 @@ const Index = ({cards}) =>{
                     {step ? <div className={cs(styles.else )}><button onClick={ () => Else()}>Показать ещё </button> </div> : null}
                     <FeedBack />
                 </Layout>
-            </Provider>
+
         </>
     )
 }

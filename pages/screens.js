@@ -1,8 +1,8 @@
 import Layout from "../components/Layout/Layout";
 import {Conditions} from "../components/Conditions/Conditions";
 import {Preferences} from "../components/Preferences/Preferences";
-import React, {FunctionComponent, ReactNode, useState} from "react";
-import HeaderComponent from "../components/HeaderComponent/HeaderComponent";
+import React, { useState} from "react";
+import Head from 'next/head'
 import {Cleaning} from "../components/Cleaning/Cleaning";
 import Sale from "../components/Sale/Sale";
 import Releases from "../components/Relises/Relises";
@@ -15,14 +15,13 @@ import {Offer_768} from "../components/Offer/OfferCard/Offer_768";
 import {Offer_360} from "../components/Offer/OfferCard/Offer_360";
 import {Preferences_768} from "../components/Preferences/Right/right";
 import {Preferences_360} from "../components/Preferences/Preferences_360/Preferences_360";
-import {Provider} from "react-redux";
-import {store} from "../redux";
 import {Modal} from "../components/Modal/Modal";
 import FeedBack from "../components/FeedBack/FeedBack";
 import data from "../sources/data/cart_arenda-plasm77.ru.json";
 import {OfferModal} from "../components/offerModal/OfferModal";
 import SitesModal from "../components/SitesModal/SitesModal";
 import MediumHeader from "../components/HeaderComponent/MediumHeader/MediumHeader";
+
 
 export const getStaticProps = async () => {
     return {
@@ -40,6 +39,41 @@ const Screens = ({cards}) => {
     return (
         <>
             <Layout>
+                <Head>
+                    <meta charSet="UTF-8"/>
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                    <title itemProp="headline">
+                        Аренда светодиодных экранов | LED экран на мероприятие
+                    </title>
+                    <meta
+                        property="og:title"
+                        content="Аренда светодиодных экранов | LED экран на мероприятие"
+                    />
+                    <meta
+                        itemProp="description"
+                        name="description"
+                        content="Светодиодные экраны различных размеров в аренду на презентации и рекламные мероприятия. Доставка оборудования на выгодных условиях в Москве. ✔ Бесплатный монтаж "
+                    />
+                    <meta
+                        property="og:description"
+                        content="Светодиодные экраны различных размеров в аренду на презентации и рекламные мероприятия. Доставка оборудования на выгодных условиях в Москве. ✔ Бесплатный монтаж "
+                    />
+                    <meta property="og:type" content="website"/>
+
+                    <meta property="og:image:type" content="image/jpeg"/>
+                    <meta property="og:image" content="/assets/images/preview1080.jpg"/>
+                    <meta property="og:image:width" content="1080"/>
+                    <meta property="og:image:height" content="1080"/>
+                    <meta property="og:image" content="/assets/images/preview565.jpg"/>
+                    <meta property="og:image:width" content="1080"/>
+                    <meta property="og:image:height" content="565"/>
+                    <meta property="og:site_name" content="Аренда плазм"/>
+                    <meta property="og:locale" content="ru_RU"/>
+                    <meta property="og:url" content="https://arenda-plazm77/screens"/>
+
+
+                </Head>
                 <MediumHeader
                     img_360='/header/Screen/main_360.jpg'
                     title='Аренда  светодиодных экранов'

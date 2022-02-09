@@ -34,6 +34,7 @@
   .content{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding: 15px;
     max-width: 280px;
 
@@ -76,10 +77,10 @@
     .flex{
       display: flex;
       flex-direction: row;
-      position: absolute;
+
       bottom: 15px;
       align-items: center;
-      margin-right: 15px;
+
 
       .select{
         width:110px;

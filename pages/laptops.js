@@ -16,13 +16,12 @@ import {Offer} from "../components/Offer/Offer";
 import {Offer_768} from "../components/Offer/OfferCard/Offer_768";
 import {Offer_360} from "../components/Offer/OfferCard/Offer_360";
 import {Releases_768} from "../components/Relises/Releases_768/Releases_768";
-import {store} from "../redux";
-import {Provider} from "react-redux";
 import {Modal} from "../components/Modal/Modal";
 import FeedBack from "../components/FeedBack/FeedBack";
 import data from "../sources/data/cart_arenda-plasm77.ru.json";
 import {OfferModal} from "../components/offerModal/OfferModal";
 import SitesModal from "../components/SitesModal/SitesModal";
+import Head from 'next/head'
 export  const getStaticProps = async () =>{
     return {
         props: {
@@ -38,6 +37,42 @@ const Laptops = ({ cards }) => {
     return (
         <>
         <Layout >
+            <Head>
+                <meta charSet="UTF-8"/>
+                <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                <title itemProp="headline">
+                    Аренда ноутбуков💻 Доставка ноутбуков по низкой цене на мероприятие в
+                    Москве
+                </title>
+                <meta
+                    property="og:title"
+                    content="Аренда ноутбуков💻 Доставка ноутбуков по низкой цене на мероприятие в Москве"
+                />
+                <meta
+                    itemProp="description"
+                    name="description"
+                    content="Аренда ноутбуков различных моделей с доставкой по выгодной цене на любые мероприятия. Большой выбор ноутбуков в прокат."
+                />
+                <meta
+                    property="og:description"
+                    content="Аренда ноутбуков различных моделей с доставкой по выгодной цене на любые мероприятия. Большой выбор ноутбуков в прокат."
+                />
+                <meta property="og:type" content="website"/>
+
+                <meta property="og:image:type" content="image/jpeg"/>
+                <meta property="og:image" content="/assets/images/preview1080.jpg"/>
+                <meta property="og:image:width" content="1080"/>
+                <meta property="og:image:height" content="1080"/>
+                <meta property="og:image" content="/assets/images/preview565.jpg"/>
+                <meta property="og:image:width" content="1080"/>
+                <meta property="og:image:height" content="565"/>
+                <meta property="og:site_name" content="Аренда плазм"/>
+                <meta property="og:locale" content="ru_RU"/>
+                <meta property="og:url" content="https://arenda-plazm77/laptops"/>
+
+
+            </Head>
 <MediumHeaderComponent
     button_text='Рассчитать стоимость'
     title='Аренда ноутбуков'

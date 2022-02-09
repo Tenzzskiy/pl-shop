@@ -17,6 +17,7 @@ import FeedBack from "../components/FeedBack/FeedBack";
 import data from "../sources/data/cart_arenda-plasm77.ru.json";
 import {OfferModal} from "../components/offerModal/OfferModal";
 import SitesModal from "../components/SitesModal/SitesModal";
+import Head from 'next/head'
 export  const getStaticProps = async () =>{
     return {
         props: {
@@ -32,6 +33,41 @@ const Index = ({ cards}) => {
     return (
         <>
         <Layout >
+            <Head>
+                <meta charSet="UTF-8"/>
+                <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                <title itemProp="headline">
+                    Оборудование для дезинфекции в аренду | Очистка помещений от микробов и
+                    вирусов в Москве
+                </title>
+                <meta
+                    property="og:title"
+                    content="Оборудование для дезинфекции в аренду | Очистка помещений от микробов и вирусов в Москве"
+                />
+                <meta
+                    itemProp="description"
+                    name="description"
+                    content="Организация дезинфекции помещений современным оборудованием и профессиональными специалистами. Закажите санитарную обработку на любое мероприятие."
+                />
+                <meta
+                    property="og:description"
+                    content="Организация дезинфекции помещений современным оборудованием и профессиональными специалистами. Закажите санитарную обработку на любое мероприятие."
+                />
+                <meta property="og:type" content="website"/>
+
+                <meta property="og:image:type" content="image/jpeg"/>
+                <meta property="og:image" content="/assets/images/preview1080.jpg"/>
+                <meta property="og:image:width" content="1080"/>
+                <meta property="og:image:height" content="1080"/>
+                <meta property="og:image" content="/assets/images/preview565.jpg"/>
+                <meta property="og:image:width" content="1080"/>
+                <meta property="og:image:height" content="565"/>
+                <meta property="og:site_name" content="Аренда плазм"/>
+                <meta property="og:locale" content="ru_RU"/>
+                <meta property="og:url" content="https://arenda-plazm77/desinfection"/>
+
+            </Head>
 <MediumHeaderComponent
     button_text='Рассчитать стоимость'
     title='Аренда оборудования для дезинфекции'
