@@ -22,6 +22,7 @@ import data from "../sources/data/cart_arenda-plasm77.ru.json";
 import {OfferModal} from "../components/offerModal/OfferModal";
 import SitesModal from "../components/SitesModal/SitesModal";
 import Head from 'next/head'
+import ImgModal from "../components/Img_modal/ImgModal";
 export  const getStaticProps = async () =>{
     return {
         props: {
@@ -30,6 +31,8 @@ export  const getStaticProps = async () =>{
     };
 }
 const Laptops = ({ cards }) => {
+    const [id,setId] = useState(0);
+    const [imgModal,setImgModal] = useState(false)
     const size = useWindowSize()
     const [modalActive,setModalActive] = useState(false)
     const [offerModal,setOfferModal] = useState(false)
@@ -140,6 +143,10 @@ const Laptops = ({ cards }) => {
 
             {size.width > 1200 ?
                 <Releases
+                    setImgModal={setImgModal}
+                    imgModal={imgModal}
+                    id={id}
+                    setId={setId}
                     text1=' Ноутбук для обработки фотографий'
             text2=' Ноутбук для проведения температурного контроля'
             text3='Ноутбук для организаторского контроля сцены '
@@ -196,6 +203,19 @@ const Laptops = ({ cards }) => {
             <SitesModal sites={sites} setSites= {setSites} setOfferModal={setOfferModal} title='Получить расчет'/>
             <OfferModal offerModal={offerModal} setOfferModal={setOfferModal}/>
             <Modal active={modalActive} setActive={setModalActive} />
+            {size.width > 1200 ? <ImgModal active={imgModal} setActive={setImgModal}
+                                           id={id}
+                                           text1=' Ноутбук для обработки фотографий'
+                                           text2=' Ноутбук для проведения температурного контроля'
+                                           text3='Ноутбук для организаторского контроля сцены '
+                                           text4=' Ноутбук для презентационных целей'
+                                           text5='Ноутбук для организации температурного контроля '
+                                           img1='/releases/Laptops/1.png'
+                                           img2='/releases/Laptops/2.png'
+                                           img3='/releases/Laptops/3.jpg'
+                                           img4='/releases/Laptops/4.png'
+                                           img5='/releases/Laptops/5.png'
+            /> : null}
             </>
     )
 }

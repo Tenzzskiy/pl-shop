@@ -23,6 +23,7 @@ import data from "../sources/data/cart_arenda-plasm77.ru.json";
 import {OfferModal} from "../components/offerModal/OfferModal";
 import SitesModal from "../components/SitesModal/SitesModal";
 import Head from 'next/head'
+import ImgModal from "../components/Img_modal/ImgModal";
 export  const getStaticProps = async () =>{
     return {
         props: {
@@ -31,6 +32,8 @@ export  const getStaticProps = async () =>{
     };
 }
 const Projectors = ({ cards }) => {
+    const [id,setId] = useState(0);
+    const [imgModal,setImgModal] = useState(false)
     const size =useWindowSize();
     const [modalActive,setModalActive] = useState(false)
     const [offerModal,setOfferModal] = useState(false)
@@ -126,6 +129,10 @@ const Projectors = ({ cards }) => {
 
               {size.width > 1200 ?
                   <Releases
+                      setImgModal={setImgModal}
+                      imgModal={imgModal}
+                      id={id}
+                      setId={setId}
                       img1='/releases/Projectors/1.png'
                       img2='/releases/Projectors/2.png'
                       img3='/releases/Projectors/3.jpg'
@@ -184,6 +191,21 @@ const Projectors = ({ cards }) => {
           <SitesModal sites={sites} setSites= {setSites} setOfferModal={setOfferModal} title='Получить расчет'/>
           <OfferModal offerModal={offerModal} setOfferModal={setOfferModal}/>
           <Modal active={modalActive} setActive={setModalActive} />
+          {size.width > 1200 ? <ImgModal active={imgModal} setActive={setImgModal}
+                                         id={id}
+                                         img1='/releases/Projectors/1.png'
+                                         img2='/releases/Projectors/2.png'
+                                         img3='/releases/Projectors/3.jpg'
+                                         img4='/releases/Projectors/4.png'
+                                         img5='/releases/Projectors/5.png'
+
+
+                                         text1='Применение проектора на форумах'
+                                         text2='Применение проектора для бизнес встреч'
+                                         text3='Применение проектора на форумах и корпоративах'
+                                         text4='Применение проектора на тренингах'
+                                         text5='Применение проектора в игровых зонах'
+          /> : null}
       </>
     )
 }

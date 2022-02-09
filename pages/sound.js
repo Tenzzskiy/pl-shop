@@ -14,6 +14,7 @@ import data from "../sources/data/cart_arenda-plasm77.ru.json";
 import {OfferModal} from "../components/offerModal/OfferModal";
 import SitesModal from "../components/SitesModal/SitesModal";
 import Head from 'next/head'
+import ImgModal from "../components/Img_modal/ImgModal";
 export  const getStaticProps = async () =>{
     return {
         props: {
@@ -22,6 +23,7 @@ export  const getStaticProps = async () =>{
     };
 }
 const Sound = ({ cards }) => {
+
     const size = useWindowSize();
     const [modalActive,setModalActive] = useState(false)
     const [offerModal,setOfferModal] = useState(false)
@@ -120,6 +122,7 @@ const Sound = ({ cards }) => {
           <SitesModal sites={sites} setSites= {setSites} setOfferModal={setOfferModal} title='Получить расчет'/>
           <OfferModal offerModal={offerModal} setOfferModal={setOfferModal}/>
           <Modal active={modalActive} setActive={setModalActive} />
+
       </>
     )
 }

@@ -81,7 +81,7 @@ const Header = ({ setNavigation,setContacts,count}) =>{
 
                             <div className={styles.contacts}>
                                 {size.width > 600 ?
-                                    <div className={styles.number}> <a href="tel:+7 (495) 321 54 76"> +7 495 321-54-76</a></div>
+                                    <div className={styles.number}> <a href="tel:+7 (495) 162 72 50"> +7 495 162-72-50</a></div>
                                 :   <div className={styles.contacts}>
                                         <picture>
 

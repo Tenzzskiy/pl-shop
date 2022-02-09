@@ -25,7 +25,7 @@ const Footer:FunctionComponent = ({ }):JSX.Element =>{
 
                                     </div>
                                <div className={styles.item2}>  <a href="mailto:info@arenda-plazm77.ru"> info@arenda-plazm77.ru</a></div>
-                               <div className={styles.item3}> <a href="tel:+7 (495) 321 54 76"> +7 495 321-54-76</a> </div>
+                               <div className={styles.item3}> <a href="tel:+7 (495) 162 72 50"> +7 495 162-72-50</a> </div>
                                <div className={styles.item4}>109382, Москва, пр. Егорьевский, д.2а </div>
                            </div>
                            <div className={styles.flex2}>

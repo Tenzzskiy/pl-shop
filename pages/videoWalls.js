@@ -22,6 +22,7 @@ import data from "../sources/data/cart_arenda-plasm77.ru.json";
 import {OfferModal} from "../components/offerModal/OfferModal";
 import SitesModal from "../components/SitesModal/SitesModal";
 import Head from 'next/head'
+import ImgModal from "../components/Img_modal/ImgModal";
 
 export  const getStaticProps = async () =>{
     return {
@@ -31,6 +32,8 @@ export  const getStaticProps = async () =>{
     };
 }
 const VideoWalls = ({  cards}) => {
+    const [id,setId] = useState(0);
+    const [imgModal,setImgModal] = useState(false)
     const size = useWindowSize();
     const [modalActive,setModalActive] = useState(false)
     const [offerModal,setOfferModal] = useState(false)
@@ -124,6 +127,10 @@ const VideoWalls = ({  cards}) => {
 
             {size.width > 1200 ?
                 <Releases
+                    setImgModal={setImgModal}
+                    imgModal={imgModal}
+                    id={id}
+                    setId={setId}
                     img1='/releases/VideoWalls/1.png'
                     img2='/releases/VideoWalls/2.png'
                     img3='/releases/VideoWalls/3.png'
@@ -172,6 +179,19 @@ const VideoWalls = ({  cards}) => {
         <SitesModal sites={sites} setSites= {setSites} setOfferModal={setOfferModal} title='Получить расчет'/>
         <OfferModal offerModal={offerModal} setOfferModal={setOfferModal}/>
         <Modal active={modalActive} setActive={setModalActive} />
+        {size.width > 1200 ? <ImgModal active={imgModal} setActive={setImgModal}
+                                       id={id}
+                                       img1='/releases/VideoWalls/1.png'
+                                       img2='/releases/VideoWalls/2.png'
+                                       img3='/releases/VideoWalls/3.png'
+                                       img4='/releases/VideoWalls/4.png'
+                                       img5='/releases/VideoWalls/5.png'
+                                       text1='Видеостена с промо-роликами в ТЦ'
+                                       text2='Видеостена на мероприятии по тим билдингу'
+                                       text3='Видеостена в ТЦ для демонстрации новой рекламной кампании'
+                                       text4='Видеостена на мероприятии по тим билдингу'
+                                       text5='Видеостена на научном фестивале'
+        /> : null}
     </>
     )
 }

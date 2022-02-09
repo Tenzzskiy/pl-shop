@@ -22,6 +22,7 @@ import data from "../sources/data/cart_arenda-plasm77.ru.json";
 import {OfferModal} from "../components/offerModal/OfferModal";
 import SitesModal from "../components/SitesModal/SitesModal";
 import Head from 'next/head'
+import ImgModal from "../components/Img_modal/ImgModal";
 
 
 export  const getStaticProps = async () =>{
@@ -32,6 +33,8 @@ export  const getStaticProps = async () =>{
     };
 }
 const TouchPanel = ({ cards}) => {
+    const [id,setId] = useState(0);
+    const [imgModal,setImgModal] = useState(false)
     const [sites,setSites] = useState(false);
     const size =useWindowSize();
     const [modalActive,setModalActive] = useState(false)
@@ -151,6 +154,10 @@ const TouchPanel = ({ cards}) => {
 
               {size.width > 1200 ?
                   <Releases
+                      setImgModal={setImgModal}
+                      imgModal={imgModal}
+                      id={id}
+                      setId={setId}
                       img1='/releases/TouchPanel/1.png'
                       img2='/releases/TouchPanel/2.png'
                       img3='/releases/TouchPanel/3.jpg'
@@ -231,6 +238,21 @@ const TouchPanel = ({ cards}) => {
           <SitesModal TouchPanel={touchPanel} setTouchPanel= {setTouchPanel} setOfferModal={setOfferModal} touchpanel={1} title='Получить расчет'/>
           <OfferModal offerModal={offerModal} setOfferModal={setOfferModal}/>
           <Modal active={modalActive} setActive={setModalActive}  />
+          {size.width > 1200 ? <ImgModal active={imgModal} setActive={setImgModal}
+                                         id={id}
+                                         img1='/releases/TouchPanel/1.png'
+                                         img2='/releases/TouchPanel/2.png'
+                                         img3='/releases/TouchPanel/3.jpg'
+                                         img4='/releases/TouchPanel/4.png'
+                                         img5='/releases/TouchPanel/5.png'
+
+
+                                         text1='Интерактивные панели для ознакомления с шоу-программой'
+                                         text2='Тач-панель при фотозоне для отбора готовых фото'
+                                         text3='Брендированный стенд с интерактивными панелями на презентации нового продукта'
+                                         text4='Интерактичный стол с занимательной игрой для гостей'
+                                         text5='Сенсорная панель'
+          /> : null}
       </>
     )
 }
