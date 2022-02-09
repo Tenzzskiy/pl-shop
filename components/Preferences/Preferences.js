@@ -47,18 +47,18 @@ import {MyImage} from "../MyImage";
 const LeftPreference = ( { leftImg,leftTitle,leftText}) =>{
      return(
          <>
-             <div className={styles.container}>
+             <div className={styles.container} itemScope itemType="http://schema.org/ImageObject">
                 <div className={styles.flex}>
                     <div className={styles.img}>
-                        <MyImage src={{default: leftImg}} alt={'1'} />
+                        <MyImage itemProp="contentUrl" src={{default: leftImg}} alt={leftTitle} />
                         <img  className={styles.background_img} src="/Preferences/background_image.svg" alt={leftTitle}/>
                     </div>
 
                     <div className={styles.text}>
-                                <h2 className={styles.title_text}>
+                                <h2 className={styles.title_text} itemProp="name">
                                     {leftTitle}
                                 </h2>
-                        <h3 className={styles.description_text}>
+                        <h3 className={styles.description_text} itemProp="description">
                             {leftText}
                         </h3>
                     </div>
@@ -72,20 +72,20 @@ const LeftPreference = ( { leftImg,leftTitle,leftText}) =>{
 const RightPreference = ( { rightImg,rightText,rightTitle}) =>{
      return(
          <>
-             <div className={styles.container}>
+             <div className={styles.container} itemScope itemType="http://schema.org/ImageObject">
                  <div className={styles.flex_2}>
 
 
                      <div className={styles.text}>
-                         <h2 className={styles.title_text}>
+                         <h2 className={styles.title_text} itemProp="name">
                              {rightTitle}
                          </h2>
-                         <h3 className={styles.description_text}>
+                         <h3 className={styles.description_text} itemProp="description">
                              {rightText}
                          </h3>
                      </div>
                      <div className={styles.img}>
-                        <MyImage src={{default: rightImg}} alt={'1'} />
+                        <MyImage itemProp="contentUrl" src={{default: rightImg}} alt={rightTitle} />
                          <img  className={styles.background_img_2} src="/Preferences/background_img2.svg" alt={rightTitle}/>
                      </div>
                  </div>

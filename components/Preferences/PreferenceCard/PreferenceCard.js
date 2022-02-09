@@ -2,30 +2,23 @@ import React, {FunctionComponent, ReactNode} from "react";
 import styles from './PreferenceCard.module.scss'
 
 
-interface PreferenceCardProps{
-    children?:ReactNode,
-    img?:string,
-    title?:string,
-    description?:string,
-    secondDescription?:string,
-}
- export const PreferenceCard:FunctionComponent = ( { img,title,description,secondDescription} :PreferenceCardProps ) =>{
+ export const PreferenceCard = ( { img,title,description,secondDescription}  ) =>{
     return(
         <>
-            <div className={styles.container}>
+            <div className={styles.container} itemScope itemType="http://schema.org/ImageObject">
             <div className={styles.content}>
                 <div className={styles.img}>
-                    <img src={img} alt={title}/>
+                    <img itemProp="contentUrl" src={img} alt={title}/>
                 </div>
                 <div className={styles.info}>
-                    <h2 className={styles.title}>
+                    <h2 className={styles.title} itemProp="name">
                         {title}
                     </h2>
-                    <h3 className={styles.description}>
+                    <h3 className={styles.description} itemProp="description">
                         {description}
 
                     </h3>
-                    <div className={styles.second_description}>
+                    <div className={styles.second_description} itemProp="description">
                         {secondDescription}
                     </div>
                 </div>

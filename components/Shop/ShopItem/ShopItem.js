@@ -1,6 +1,6 @@
 import React, {FunctionComponent, ReactNode, useState} from "react";
 import styles from './ShopItem.module.scss'
-import {Disabled_Selector, Selector} from "../../Select/Select";
+import { Selector} from "../../Select/Select";
 import {useDispatch, useSelector} from "react-redux";
 import {setItemInCart, updateTotalPrice} from '../../../redux/cart/reducer.js'
 import Link from "next/link";
@@ -39,27 +39,27 @@ const check = () =>{
 
     return(
         <>
-            <div className={styles.container}>
+            <div className={styles.container} itemScope itemType="http://schema.org/Product">
             <div className={styles.content}>
-                <div className={styles.img}>
+                <div className={styles.img} >
                     <picture>
-                        <MyImage src={{default: img}} alt={title} />
+                        <MyImage itemProp="contentUrl" src={{default: img}} alt={title} />
 
                     </picture>
                 </div>
                 <div className={styles.flex}>
-                    <h4 className={styles.title}>{title}</h4>
+                    <h4 className={styles.title} itemProp="name">{title}</h4>
                     {count === 1 ?
                         <>
                             {detail1 !== undefined ?  <div className={styles.detail}>
 
-                                <span> {mainDetail}</span>
-                                <p>{detail1}</p>
+                                <span > {mainDetail}</span>
+                                <p itemProp="description">{detail1}</p>
                             </div> : null}
                             {detail2 !== undefined ?  <div className={styles.detail}>
 
                                 <span>{mainDetail2}</span>
-                                <p> {detail2}</p>
+                                <p itemProp="description"> {detail2}</p>
                             </div>
                              : null}
                         </> : null
@@ -72,8 +72,13 @@ const check = () =>{
 
                      : null}
 
-                    <div className={cn(styles.card_footer,Number(data.count) === 1 ? styles.justify : null )}>
-                        {Number(data.count) === 1 ? null : <Selector item={item} checked={checked} changedPrice={changedPrice} setChangedPrice={setChangedPrice} data={data} price={data.price} setTime={setTime} time={time} check={check()} />}
+                    <div className={cn(styles.card_footer,Number(data.count) === 1 ? styles.justify : null )} itemProp="offers" itemScope itemType="http://schema.org/Offer">
+                        <meta itemProp="price" content={changedPrice}   />
+                        <meta itemProp="priceCurrency" content="RUB" />
+                        <link itemProp="availability" href="http://schema.org/InStock" />
+
+
+                                {Number(data.count) === 1 ? null : <Selector item={item} checked={checked} changedPrice={changedPrice} setChangedPrice={setChangedPrice} data={data} price={data.price} setTime={setTime} time={time} check={check()} />}
                         <span> {changedPrice}₽ </span>
                         { check() ?
 

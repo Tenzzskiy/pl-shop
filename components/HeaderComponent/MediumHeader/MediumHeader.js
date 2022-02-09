@@ -3,28 +3,21 @@ import styles from './MediumHeader.module.scss'
 import {useWindowSize} from "../../../Hooks/useWindowSize";
 import Steps from "../../steps/steps";
 
-interface MediumHeaderComponentProps{
-    children?:ReactNode,
-    title:string,
-    button_text:string,
-    mainImg:string,
-    img_360?:string
-    setSites?:any
-}
-const MediumHeaderComponent:FunctionComponent = ( {setSites,title,button_text,mainImg,img_360 }:MediumHeaderComponentProps):JSX.Element =>{
+
+const MediumHeaderComponent = ( {setSites,title,button_text,mainImg,img_360 }) =>{
 const size = useWindowSize();
     return(
         <>
-            <div className={styles.header_component}>
+            <div className={styles.header_component}  itemScope itemType="http://schema.org/ImageObject">
                 <div className={styles.back}>
                 <Steps />
                 </div>
-                <img className={styles.background} src={size.width < 720 ? img_360 : mainImg } alt={title}/>
+                <img itemProp="contentUrl" className={styles.background} src={size.width < 720 ? img_360 : mainImg } alt={title}/>
                 <div className={styles.container}>
 
 
                     <div className={styles.content}>
-                        <h1 className={styles.title}>{title} </h1>
+                        <h1 className={styles.title} itemProp="name">{title} </h1>
                         <div className={styles.button}><button onClick={() => setSites(true)}> {button_text}</button> </div>
                         <div className={styles.free}> Это бесплатно</div>
 

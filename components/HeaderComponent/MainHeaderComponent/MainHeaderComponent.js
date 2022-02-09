@@ -16,15 +16,21 @@ const MainHeaderComponent = ({setSites} ) =>{
                 <div className={styles.header_component}>
 
                     <div className={styles.container}>
-                        <picture>
-                            <source srcSet="/assets/images/tv.webp" type="image/webp" />
-                            <img src="/assets/images/tv.jpg" alt=""/>
-                        </picture>
 
-                        <div className={styles.content}>
+                        <div itemScope itemType="http://schema.org/ImageObject">
+                            <picture>
+                                <source srcSet="/assets/images/tv.webp" type="image/webp" />
+                                <img itemProp="contentUrl" src="/assets/images/tv.jpg" alt=""/>
+                            </picture>
+                        </div>
 
-                            <h1 className={styles.title}> Аренда плазмы </h1>
-                            <h2 className={styles.description}> Организуем техническое обеспечение выставок, форумов и конференций</h2>
+
+
+
+                        <div className={styles.content} >
+
+                            <h1 className={styles.title} itemProp="name"> Аренда плазмы </h1>
+                            <h2 className={styles.description} itemProp={"description"} > Организуем техническое обеспечение выставок, форумов и конференций</h2>
                             <div className={styles.button}><button onClick={() =>setSites(true)}> Рассчитать стоимость</button> </div>
                             <div className={styles.free}> Это бесплатно</div>
 

@@ -5,12 +5,12 @@ import styles from './MainHeaderComponent_360.module.scss'
 
 export const MainHeaderComponent_360 = ( { setSites}) =>{
     return(
-        <section className={styles.container}>
-            <div className={styles.content_img}>
+        <section className={styles.container} itemScope itemType="http://schema.org/ImageObject">
+            <div className={styles.content_img} >
                 <div className={styles.img}>
                     <div className={styles.relative}>
-                        <img src='/assets/images/tv360_1.jpg' alt=""/>
-                        <h1 className={styles.title}>
+                        <img itemProp="contentUrl" src='/assets/images/tv360_1.jpg' alt=""/>
+                        <h1 className={styles.title} itemProp="name">
                             Аренда <br/> плазмы
                         </h1>
                     </div>
@@ -20,7 +20,7 @@ export const MainHeaderComponent_360 = ( { setSites}) =>{
             </div>
 
         <div className={styles.content_text}>
-                <h2 className={styles.description}>
+                <h2 className={styles.description} itemProp="description">
                     Организуем техническое обеспечение выставок, форумов и конференций
                 </h2>
             <div className={styles.button}>

@@ -1,11 +1,10 @@
 import styles from './right.module.scss'
 import React from "react";
-import {useWindowSize} from "../../../Hooks/useWindowSize";
 import {Left} from "../LeftPreference_tablet/left";
 
 
 export const Preferences_768 = ( {setSites,button=false,count = 0,secondLeftImg,secondRightImg,leftImg,rightImg,leftTitle,rightTitle,leftText,rightText,rightSecondText,leftSecondText,leftSecondTitle,rightSecondTitle,...props } ) => {
-    const size = useWindowSize();
+
     return(
         <>
             <div className={styles.preferences}>
@@ -46,21 +45,21 @@ export const Preferences_768 = ( {setSites,button=false,count = 0,secondLeftImg,
 export const Right =({img,title,description }) =>{
     return(
         <>
-            <div className={styles.container}>
+            <div className={styles.container} itemScope itemType="http://schema.org/ImageObject">
             <div className={styles.content}>
             <div className={styles.grid}>
 
                 <div  className={styles.flex}>
-                <h3 className={styles.title}>
+                <h3 className={styles.title} itemProp="name">
                     {title}
                 </h3>
-                    <h4 className={styles.description}>
+                    <h4 className={styles.description} itemProp="description">
                         {description}
                     </h4>
 
                 </div>
                 <div className={styles.img}>
-                    <img  className={styles.background_img} src={img} alt={title}/>
+                    <img itemProp='contentUrl' className={styles.background_img} src={img} alt={title}/>
                 </div>
             </div>
             </div>
