@@ -27,6 +27,8 @@ const MainHeaderComponent = ({setSites} ) =>{
 
 
 
+
+
                         <div className={styles.content} >
 
                             <h1 className={styles.title} itemProp="name"> Аренда плазмы </h1>

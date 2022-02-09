@@ -1,4 +1,8 @@
 .footer{
+  iframe{
+    z-index: 15;
+    position: relative;
+  }
   min-height: 909px;
   a{
     outline:none;

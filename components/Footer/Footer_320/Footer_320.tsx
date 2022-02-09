@@ -3,9 +3,43 @@ import React from "react";
 import Link from "next/link";
 import cn from "classnames";
 import {MyImage} from "../../MyImage";
+import cs from "classnames";
+import {useEffect,useRef,useState} from "react";
+
+const useLazy = (
+    targetRef: React.RefObject<Element>,
+    callback: () => void,
+): void => {
+    useEffect(() => {
+        if ('IntersectionObserver' in window) {
+            const myObserver = new IntersectionObserver(
+                (entries, observer) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            callback();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { rootMargin: '0px 0px 100px 0px' },
+            );
+
+            if (targetRef.current) {
+                myObserver.observe(targetRef.current);
+            }
+        }
+    });
+};
+export {useLazy}
 
 
 export const Footer_320 = () =>{
+    const [isRatingShow, setRatingShowing] = useState(false);
+    const ratingRef = useRef<HTMLIFrameElement>(null);
+
+    useLazy(ratingRef, () => {
+        setRatingShowing(true);
+    });
     const [Data] = React.useState(new Date);
     return(
         <section>
@@ -38,7 +72,7 @@ export const Footer_320 = () =>{
 
             </div>
 
-                <div className={styles.content2} >
+                <div ref={ratingRef} className={styles.content2} >
                     <div className={styles.border}> </div>
                 <div className={styles.grid} itemScope itemType="http://schema.org/SiteNavigationElement">
                     <Link href='/' ><a itemProp="url" className={cn(styles.a,
@@ -82,7 +116,25 @@ export const Footer_320 = () =>{
                         <MyImage src={{default: "/IG.svg"}} alt={'Instagram'} />
 
                     </div>
-                    <div className={styles.item14}> Yandex metrika badge-widget  </div>
+                    {isRatingShow && (
+                        <div
+                            className={cs(
+                                styles.evaluation,
+
+                            )}
+
+                        >
+                            {
+                                <iframe
+                                    title="yandexRating"
+                                    src="https://yandex.ru/sprav/widget/rating-badge/237884847372"
+                                    width="150"
+                                    height="50"
+                                    frameBorder="0"
+                                />
+                            }
+
+                    </div> )}
                 <div className={styles.item15}><Link href="/privacy"><a rel='nofollow'> Политика конфиденциальности</a></Link> </div>
                 <div className={styles.item16}>© Arenda-plazm77, 2021-{Data.getFullYear()} </div>
                 </div>
@@ -92,3 +144,4 @@ export const Footer_320 = () =>{
         </section>
     )
 }
+

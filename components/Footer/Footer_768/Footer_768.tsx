@@ -1,11 +1,20 @@
 import styles from './Footer_768.module.scss'
-import React from "react";
+import React, {useEffect, useRef, useState} from "react";
 import Link from "next/link";
 import cn from "classnames";
 import {MyImage} from "../../MyImage";
+import cs from "classnames";
+import {useLazy} from "../Footer_320/Footer_320";
 
 
 export const Footer_768 = () =>{
+    const [isRatingShow, setRatingShowing] = useState(false);
+
+    const ratingRef = useRef<HTMLIFrameElement>(null);
+
+    useLazy(ratingRef, () => {
+        setRatingShowing(true);
+    });
     const [Data] = React.useState(new Date);
     return(
         <section className={styles.footer}>
@@ -84,13 +93,25 @@ export const Footer_768 = () =>{
                         </div>
 
                     </div>
-                <div className={styles.box3}>
+                <div ref={ratingRef} className={styles.box3}>
                         <div className={styles.item13}>
                             <MyImage src={{default: "/VK.svg"}} alt='VK' />
                             <MyImage src={{default: "/FB.svg"}} alt='Facebook' />
                             <MyImage src={{default: "/IG.svg"}} alt='Instagram' />
                         </div>
+                    {isRatingShow && (
+                        <div
+                            className={styles.item14}
+                        >
+                                <iframe
+                                    title="yandexRating"
+                                    src="https://yandex.ru/sprav/widget/rating-badge/237884847372"
+                                    width="150"
+                                    height="50"
+                                    frameBorder="0"
+                                />
 
+                        </div> )}
                         <div className={styles.item15}><Link href="/privacy"><a  rel='nofollow'> Политика конфиденциальности</a></Link></div>
                     <div className={styles.item16}> © Arenda-plazm77, 2021-{Data.getFullYear()}</div>
                 </div>
