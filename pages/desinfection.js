@@ -74,8 +74,8 @@ const Index = ({ cards}) => {
 <MediumHeaderComponent
     button_text='Рассчитать стоимость'
     title='Аренда оборудования для дезинфекции'
-    mainImg="/assets/images/tv_7.jpg"
-    img_360='/header/Desinfection/middle_360.jpg'
+    mainImg="/Hero Blocks/newDesinf1920.jpg"
+    img_360="/Hero Blocks/newDesinf360.jpg"
     setSites={setSites}
     setOfferModal={setOfferModal}
 />

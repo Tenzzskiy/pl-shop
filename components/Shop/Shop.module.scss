@@ -50,6 +50,14 @@
 
 
     button{
+      &:hover{
+        background: #9B8BB6;
+        color: #0E0E52;
+        transition:all 0.4s;
+        border: 1px solid #9B8BB6;
+        box-sizing: border-box;
+      }
+      transition:all 0.4s;
       font-style: normal;
       font-weight: 500;
       font-size: 18px;

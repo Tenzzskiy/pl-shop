@@ -5,6 +5,9 @@
    color: white;
    border: 0;
    text-decoration: none;
+   &:hover{
+     text-decoration: underline;
+   }
  }
   background: rgba(38, 38, 38, 1);
 

@@ -72,8 +72,8 @@ const Sound = ({ cards }) => {
               <MediumHeaderComponent
                   button_text='Рассчитать стоимость'
                   title='Звук, свет и окружение'
-                  mainImg="/assets/images/tv_8.jpg"
-                  img_360='/assets/images/tv360_8.jpg'
+                  mainImg="/Hero Blocks/newSound1920.jpg"
+                  img_360="/Hero Blocks/newSound360.jpg"
                   setSites={setSites}
                   setOfferModal={setOfferModal}
               />
