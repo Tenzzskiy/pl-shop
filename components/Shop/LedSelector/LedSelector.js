@@ -1,13 +1,16 @@
 import styles from './LedSelector.module.scss'
-import React, {useState} from "react";
+import React, {useRef, useState} from "react";
 import cn from "classnames";
 import {updateSelect} from "../../../redux/cart/reducer";
 import {useDispatch} from "react-redux";
+import {useOnClickOutside} from "../../Select/Select";
 
 export const LedSelector = ({check,changedPrice,setChangedPrice,time,count,Switch=1,checked,setCheck,select1,select2,data,setSwitch,num=0}) =>{
     const [example,setExample] = useState(Switch === 1 ? select1 : select2);
     const [selectorStatus,setSelectorStatus] = useState(false)
     const dispatch = useDispatch();
+    const ref = useRef();
+    useOnClickOutside(ref, () => setSelectorStatus(false));
     const roundHundred = (value) =>{
         return Math.round(value/100)*100
     }
@@ -24,7 +27,7 @@ export const LedSelector = ({check,changedPrice,setChangedPrice,time,count,Switc
     return(
         <>
 
-            <div className={styles.wrapper}>
+            <div className={styles.wrapper} ref={ref}>
                 <button type='button' className={cn(styles.selector,check ?  styles.disabled_selector : null,  {
 
                     [styles.selectorActive]: selectorStatus === true

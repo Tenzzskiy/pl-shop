@@ -19,6 +19,7 @@
 .busket{
   box-shadow: 2px 4px 4px rgba(87, 87, 134, 0.2);
   border-radius: 5px;
+
 }
 .container{
   box-shadow: 2px 4px 4px rgba(87, 87, 134, 0.2);
@@ -59,7 +60,7 @@
       line-height: 120%;
       display: flex;
       flex-direction: row;
-      justify-content: center;
+      height: 15px;
       align-items: center;
       div:first-child{
         margin-right: 3px;
@@ -97,6 +98,12 @@
         color: var(--brand-color);
       }
       .busket{
+        &:hover{
+          background: #0E0E52;
+          transition: all 0.3s;
+        }
+        transition: all 0.3s;
+        cursor: pointer;
         width:50px;
         height: 40px;
         background: var(--brand-color);

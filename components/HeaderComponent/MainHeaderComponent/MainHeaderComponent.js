@@ -23,8 +23,8 @@ const MainHeaderComponent = ({setSites} ) =>{
 
                         <div className={styles.content}>
 
-                            <h2 className={styles.title}> Аренда плазмы </h2>
-                            <h3 className={styles.description}> Организуем техническое обеспечение выставок, форумов и конференций</h3>
+                            <h1 className={styles.title}> Аренда плазмы </h1>
+                            <h2 className={styles.description}> Организуем техническое обеспечение выставок, форумов и конференций</h2>
                             <div className={styles.button}><button onClick={() =>setSites(true)}> Рассчитать стоимость</button> </div>
                             <div className={styles.free}> Это бесплатно</div>
 

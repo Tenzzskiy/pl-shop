@@ -24,7 +24,7 @@ const size = useWindowSize();
 
 
                     <div className={styles.content}>
-                        <h2 className={styles.title}>{title} </h2>
+                        <h1 className={styles.title}>{title} </h1>
                         <div className={styles.button}><button onClick={() => setSites(true)}> {button_text}</button> </div>
                         <div className={styles.free}> Это бесплатно</div>
 

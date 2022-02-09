@@ -1,15 +1,20 @@
 import styles from './Contacts.module.scss'
-import React, {useState} from "react";
+import React, {useRef, useState} from "react";
 import cn from "classnames";
+import {useOnClickOutside} from "../Select/Select";
+
 
 export const Contacts = () =>{
 const [example,setExample] = useState('Позвонить');
     const [selectorStatus,setSelectorStatus] = useState(false)
+    const ref = useRef();
+    useOnClickOutside(ref, () => setSelectorStatus(false));
+
 
     return(
         <>
 
-            <div className={styles.wrapper}>
+            <div className={styles.wrapper} ref={ref}>
                 <button type='button' className={cn(styles.selector, {
                     [styles.selectorActive]: selectorStatus === true
                 })} onClick={() => {

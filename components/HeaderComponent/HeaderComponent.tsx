@@ -22,7 +22,7 @@ const HeaderComponent:FunctionComponent = ( {TouchPanel,setTouchPanel,touchpanel
             <div className={styles.container}>
                 <img src={mainImg} alt={title}/>
             <div className={styles.content}>
-                <h2 className={styles.title}>{title} </h2>
+                <h1 className={styles.title}>{title} </h1>
                 <div className={cs(styles.button, purple===true ? styles.purple : null)}><button onClick={() =>
                 {
                     touchpanel === 1 ? setTouchPanel(true) : setSites(true)

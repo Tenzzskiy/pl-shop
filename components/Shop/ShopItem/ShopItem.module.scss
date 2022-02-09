@@ -1,4 +1,6 @@
-
+.justify{
+  justify-content: right !important;
+}
 .container{
   background: white;border-radius: 5px;
   margin-bottom: 20px;
@@ -61,7 +63,7 @@
         font-size: 18px;
         line-height: 130%;
         color: var(--description);
-        margin-bottom: 15px;
+        margin: 0 !important;
         height: 46px;
       }
 
@@ -111,6 +113,11 @@
   }
 
   .bucket{
+    &:hover{
+      background: #0E0E52;
+      transition: all 0.3s;
+    }
+    transition: all 0.3s;
     margin-left: 10px;
     width: 68px;
     height: 40px;

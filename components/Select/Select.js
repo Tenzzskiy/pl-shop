@@ -1,12 +1,41 @@
-import React, { useState} from "react";
+import React, {useRef, useState} from "react";
 import styles from './Select.module.scss'
 import cn from 'classnames'
 import {useDispatch} from "react-redux";
 import {updateSelect,updateTime} from './../../redux/cart/reducer'
+import {useEffect} from "react";
 
+export function useOnClickOutside(ref, handler) {
+    useEffect(
+        () => {
+            const listener = (event) => {
+                // Do nothing if clicking ref's element or descendent elements
+                if (!ref.current || ref.current.contains(event.target)) {
+                    return;
+                }
+                handler(event);
+            };
+            document.addEventListener("mousedown", listener);
+            document.addEventListener("touchstart", listener);
+            return () => {
+                document.removeEventListener("mousedown", listener);
+                document.removeEventListener("touchstart", listener);
+            };
+        },
+        // Add ref and handler to effect dependencies
+        // It's worth noting that because passed in handler is a new ...
+        // ... function on every render that will cause this effect ...
+        // ... callback/cleanup to run every render. It's not a big deal ...
+        // ... but to optimize you can wrap handler in useCallback before ...
+        // ... passing it into this hook.
+        [ref, handler]
+    );
+}
 export const Selector = ( {item,checked,check,setChangedPrice,price,setTime,time,data,Priced,count=1} ) =>{
     const [selectorStatus,setSelectorStatus] = useState(false)
+    const ref = useRef();
     const [example,setExample] = useState(time);
+    useOnClickOutside(ref, () => setSelectorStatus(false));
      const roundHundred = (value) =>{
         return Math.round(value/100)*100
     }
@@ -25,7 +54,7 @@ export const Selector = ( {item,checked,check,setChangedPrice,price,setTime,time
 
     return(
         <>
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper} ref={ref}>
             <button type='button' className={cn(styles.selector,check ?  styles.disabled_button : null, {
                 [styles.selectorActive]: selectorStatus === true,
 

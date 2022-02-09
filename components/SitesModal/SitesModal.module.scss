@@ -126,7 +126,11 @@
   text-align: left;
 }
 .button{
+
   button{
+    &:hover{
+      background: #3508A3;
+    }
     background: #460BD9;
     border-radius: 2px;
     padding: 10px;

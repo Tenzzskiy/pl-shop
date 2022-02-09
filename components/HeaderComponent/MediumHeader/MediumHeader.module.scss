@@ -45,6 +45,12 @@
         text-align: center;
       }
       .button{
+        &:hover{
+          background: #4CF5E0;
+          /* DEEP Shadow */
+
+          box-shadow: 0px 4px 6px rgba(24, 24, 36, 0.8);
+        }
         margin-bottom: 5px;
         & button{
           font-style: normal;

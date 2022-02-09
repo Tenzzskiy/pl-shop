@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import styles from './BusketCard.module.scss'
-import {Selector} from "../../Select/Select";
+import {Selector, useOnClickOutside} from "../../Select/Select";
 import {setItemInCart, updateTotalPrice} from "../../../redux/cart/reducer";
 import {useDispatch} from "react-redux";
 import {deleteItemFromCart} from './../../../redux/cart/reducer'
@@ -28,6 +28,7 @@ export const BusketCard = ( {detail1,detail2,mainDetail,mainDetail2,img,title,ti
     const dispatch = useDispatch();
     const [duration,setTime] =useState(time);
 
+
     const deleteItem = ( ) =>{
         dispatch(deleteItemFromCart(id))
     }
@@ -35,7 +36,7 @@ export const BusketCard = ( {detail1,detail2,mainDetail,mainDetail2,img,title,ti
         dispatch(updateSelect(data));
         dispatch(updateCount(data));
         dispatch(updateTime({data}))
-        console.log(data)
+
     }, [changedPrice])
     const details = () =>{
         if (Number(data.id) >=25 && Number(data.id) <=34 ){

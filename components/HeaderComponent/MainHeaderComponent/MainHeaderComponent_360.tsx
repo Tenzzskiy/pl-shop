@@ -10,9 +10,9 @@ export const MainHeaderComponent_360 = ( { setSites}) =>{
                 <div className={styles.img}>
                     <div className={styles.relative}>
                         <img src='/assets/images/tv360_1.jpg' alt=""/>
-                        <h2 className={styles.title}>
+                        <h1 className={styles.title}>
                             Аренда <br/> плазмы
-                        </h2>
+                        </h1>
                     </div>
 
                 </div>
@@ -20,9 +20,9 @@ export const MainHeaderComponent_360 = ( { setSites}) =>{
             </div>
 
         <div className={styles.content_text}>
-                <h3 className={styles.description}>
+                <h2 className={styles.description}>
                     Организуем техническое обеспечение выставок, форумов и конференций
-                </h3>
+                </h2>
             <div className={styles.button}>
                 <button onClick={() => setSites(true)}>
                     Рассчитать стоимость

@@ -4,7 +4,7 @@ import {BusketCard} from "./BusketCard/BusketCard";
 import {useSelector} from "react-redux";
 import data from "../../sources/data/cart_arenda-plasm77.ru.json";
 import {ShopItem} from "../Shop/ShopItem/ShopItem";
-import React, {useState} from "react";
+import React, {useRef, useState} from "react";
 import {useWindowSize} from "../../Hooks/useWindowSize";
 import Link from "next/link";
 import {Offer} from "../Offer/Offer";
@@ -14,7 +14,7 @@ import {Contacts} from "../Contacts/Contacts";
 import {FormInput} from "../Input";
 import {Link as Link32, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import cn from "classnames";
-import {Selector} from "../Select/Select";
+import {Selector, useOnClickOutside} from "../Select/Select";
 
 export const ResultBusket = ( { setOfferModal}) => {
     const [value,setValue] = useState();
@@ -173,12 +173,15 @@ export const ResultBusket = ( { setOfferModal}) => {
     )
 }
 
+
  export const Selector_360 =() => {
     const [example,setExample] = useState('Позвонить по Телефону');
     const [selectorStatus,setSelectorStatus] = useState(false)
+     const ref = useRef();
+     useOnClickOutside(ref, () => setSelectorStatus(false));
     return(
         <>
-            <div className={styles.wrapper}>
+            <div className={styles.wrapper} ref={ref}>
                 <button type='button' className={cn(styles.selector, {
                     [styles.selectorActive]: selectorStatus === true
                 })} onClick={() => {
