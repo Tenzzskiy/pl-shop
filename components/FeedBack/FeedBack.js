@@ -12,11 +12,50 @@ const FeedBack = ( {setOfferModal}) => {
         <section>
 
             <div className={styles.feedback}>
-                {size.width < 720 ? <img className={styles.img} src="/contacts/contacts_360.svg" alt=""/> : null}
-                {size.width > 1200 ? <img className={styles.img} src="/contacts/caontacts.svg" alt=""/> : null}
-                { size.width > 720 && size.width < 1200?
+                {size.width < 720 ?
+                    <svg  className={styles.img} width="360" preserveAspectRatio="none" height="634" viewBox="0 0 360 634" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0L360 24V634L0 610V0Z" fill="#CFCFDC"/>
+                        <path d="M360 0L0 57.788V627L360 569.212V0Z" fill="#9B8BB6"/>
+                        <path d="M0 27L360 82.2995V627L0 571.7V27Z" fill="url(#paint0_linear_963_18758)"/>
+                        <defs>
+                            <linearGradient id="paint0_linear_963_18758" x1="0" y1="327.18" x2="360" y2="327.18" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#07F1D3"/>
+                                <stop offset="0.572917" stop-color="#3A65F1"/>
+                                <stop offset="0.984375" stop-color="#B93DF6"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
 
-                    <img className={styles.img} src="/contacts/contacts_768.svg" alt=""/> :  null
+                     : null}
+                {size.width > 1200 ?
+                    <svg className={styles.img} width="2000" height="684" viewBox="0 0 1280 684" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1280 684L0 588.135V0L1280 82.1124V684Z" fill="#CFCFDC"/>
+                        <path d="M0 660.225L1280 513.844V12.8021L0 154.122V660.225Z" fill="#9B8BB6"/>
+                        <path d="M0 12.8018L1280 159.182V660.224L0 518.905V12.8018Z" fill="url(#paint0_linear_891_388)"/>
+                        <defs>
+                            <linearGradient id="paint0_linear_891_388" x1="0" y1="336.708" x2="1280" y2="336.708" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#07F1D3"/>
+                                <stop offset="0.572917" stop-color="#3A65F1"/>
+                                <stop offset="0.984375" stop-color="#B93DF6"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    : null}
+                { size.width > 720 && size.width < 1200?
+                    <svg className={styles.img} width="768" preserveAspectRatio="none" height="443" viewBox="0 0 768 443" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0.5L768 42.2612V443L0 408.759V0.5Z" fill="#CFCFDC"/>
+                        <path d="M768 10.2021L-6.10352e-05 47.9919V435.407L768 382.431V10.2021Z" fill="#9B8BB6"/>
+                        <path d="M0 27.9189L768 64.0758V420.221L0 384.064V27.9189Z" fill="url(#paint0_linear_411_53821)"/>
+                        <defs>
+                            <linearGradient id="paint0_linear_411_53821" x1="0" y1="224.188" x2="768" y2="224.188" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#07F1D3"/>
+                                <stop offset="0.572917" stop-color="#3A65F1"/>
+                                <stop offset="0.984375" stop-color="#B93DF6"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+
+                   :  null
                 }
 
 

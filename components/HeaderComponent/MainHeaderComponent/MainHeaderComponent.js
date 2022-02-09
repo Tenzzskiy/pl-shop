@@ -16,13 +16,13 @@ const MainHeaderComponent = ({setSites} ) =>{
                 <div className={styles.header_component}>
 
                     <div className={styles.container}>
-
                         <div itemScope itemType="http://schema.org/ImageObject">
                             <picture>
                                 <source srcSet="/assets/images/tv.webp" type="image/webp" />
-                                <img itemProp="contentUrl" src="/assets/images/tv.jpg" alt=""/>
+                                <img itemProp='contentUrl' src="/assets/images/tv.jpg" alt=""/>
                             </picture>
                         </div>
+
 
 
 

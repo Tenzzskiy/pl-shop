@@ -19,7 +19,13 @@ const [example,setExample] = useState('Позвонить');
                     [styles.selectorActive]: selectorStatus === true
                 })} onClick={() => {
                     setSelectorStatus(!selectorStatus)
-                }}>{example} <img src="/select_arrow.svg" className={selectorStatus === true ? styles.selector_img_style : null} alt=""/> </button>
+                }}>{example}
+
+                    <svg className={selectorStatus === true ? styles.selector_img_style : null} width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 0.499999L6 5.5L1 0.499999" stroke="#0E0E52"/>
+                    </svg>
+
+                </button>
 
                 {selectorStatus && (
                     <div className={styles.selectorList}>
