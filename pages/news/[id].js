@@ -5,7 +5,6 @@ import data from '../../sources/data/cart_arenda-plasm77.ru.json'
 import FeedBack from "../../components/FeedBack/FeedBack";
 import Head from 'next/head'
 const Index_page = ({props}) =>{
-    console.log(props)
     let url =  `https://arenda-plazm77/news/news/${props.index}`
     return(
 

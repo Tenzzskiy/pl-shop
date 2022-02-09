@@ -21,7 +21,7 @@ const Index = ({cards}) =>{
     const [step,setStep ] = useState(true)
     const News = (step ? cards.news.slice(0,size.width < 720 ? 4:6) :  cards.news).map( elem => {
         return (
-            <NewsCard title={elem.title} key={elem.index} text={elem.text} img={elem.img} index={elem.index}/>
+            <NewsCard itemProp="url" title={elem.title} key={elem.index} text={elem.text} img={elem.img} index={elem.index}/>
         )
     })
     const itemsLength = cards.news.length;
@@ -57,7 +57,7 @@ const Index = ({cards}) =>{
     <meta property="og:url" content="https://arenda-plazm77/news"/>
 
 </Head>
-                    <div className={styles.news_container}>
+                    <div className={styles.news_container} itemScope itemType="http://schema.org/SiteNavigationElement">
                         <div className={styles.error_link}>  <Link href="/" ><a><img src="/back_arrow.svg" alt=""/> На Главную</a></Link></div>
                         <div className={styles.news_title}>Наши новости</div>
                         <div className={styles.news_flex}>

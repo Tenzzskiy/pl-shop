@@ -119,27 +119,6 @@ export const Offer_768 = ({busket=0,active,setActive,title=' С этим тов�
                                     {count === 4 ?  items4: null}
                                 </div>
 
-                                {/*{loaded && instanceRef.current && (*/}
-                                {/*    <>*/}
-                                {/*        <Arrow*/}
-                                {/*            left*/}
-                                {/*            onClick={(e) =>*/}
-                                {/*                e.stopPropagation() || instanceRef.current?.prev()*/}
-                                {/*            }*/}
-                                {/*            disabled={currentSlide === 0}*/}
-                                {/*        />*/}
-
-                                {/*        <Arrow*/}
-                                {/*            onClick={(e) =>*/}
-                                {/*                e.stopPropagation() || instanceRef.current?.next()*/}
-                                {/*            }*/}
-                                {/*            disabled={*/}
-                                {/*                currentSlide ===*/}
-                                {/*                instanceRef.current.track.details.slides.length - 1*/}
-                                {/*            }*/}
-                                {/*        />*/}
-                                {/*    </>*/}
-                                {/*)}*/}
 
                             </div>
                             {loaded && instanceRef.current && (

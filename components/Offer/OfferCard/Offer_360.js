@@ -18,7 +18,7 @@ export const Offer_360 = ({count =0,busket=0,active,setActive,title=' С эти�
         initial: 0,
         slides: {
             perView: size.width < 600 ? 1.15 : 2.1,
-            // perView:"auto",
+
         },
         slideChanged(slider) {
             setCurrentSlide(slider.track.details.rel);
@@ -120,27 +120,6 @@ export const Offer_360 = ({count =0,busket=0,active,setActive,title=' С эти�
 
                                 </div>
 
-                                {/*{loaded && instanceRef.current && (*/}
-                                {/*    <>*/}
-                                {/*        <Arrow*/}
-                                {/*            left*/}
-                                {/*            onClick={(e) =>*/}
-                                {/*                e.stopPropagation() || instanceRef.current?.prev()*/}
-                                {/*            }*/}
-                                {/*            disabled={currentSlide === 0}*/}
-                                {/*        />*/}
-
-                                {/*        <Arrow*/}
-                                {/*            onClick={(e) =>*/}
-                                {/*                e.stopPropagation() || instanceRef.current?.next()*/}
-                                {/*            }*/}
-                                {/*            disabled={*/}
-                                {/*                currentSlide ===*/}
-                                {/*                instanceRef.current.track.details.slides.length - 1*/}
-                                {/*            }*/}
-                                {/*        />*/}
-                                {/*    </>*/}
-                                {/*)}*/}
 
                             </div>
                             {loaded && instanceRef.current && (
