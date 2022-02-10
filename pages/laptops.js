@@ -134,9 +134,9 @@ const Laptops = ({ cards }) => {
             }
             <Conditions />
             <Shop page={7}  active={modalActive} setActive={setModalActive} data={cards.laptopsCatalogue}/>
-            {size.width > 1200 ? <Offer active={modalActive} count={4} setActive={setModalActive}/> : null }
-            {size.width > 720 && size.width<1200 ? <Offer_768 count={4}  active={modalActive} setActive={setModalActive}/> : null }
-            {size.width < 720  ? <Offer_360 count={4} active={modalActive} setActive={setModalActive}
+            {size.width > 1200 ? <Offer data={cards.laptopAdditionals} active={modalActive} count={4} setActive={setModalActive}/> : null }
+            {size.width > 720 && size.width<1200 ? <Offer_768 data={cards.laptopAdditionals} count={4}  active={modalActive} setActive={setModalActive}/> : null }
+            {size.width < 720  ? <Offer_360 data={cards.laptopAdditionals} count={4} active={modalActive} setActive={setModalActive}
             /> : null }
             <Cleaning />
             <Sale />

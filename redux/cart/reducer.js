@@ -1,5 +1,6 @@
 import {createSlice} from "@reduxjs/toolkit";
-
+import {getCartFromLocaleStorage} from "../../sources/utils/helpers";
+const savedCart = getCartFromLocaleStorage()
 const cartSlice = createSlice({
     name: 'cart',
     initialState: {
@@ -29,10 +30,15 @@ const cartSlice = createSlice({
             state.itemsInCart = state.itemsInCart.map(elem => elem.id === action.payload.id ?
                 action.payload : elem )
         },
-
+        saveOnLocalStorage:(state,action) =>{
+            return {
+                ...initialState,
+                cart:savedCart
+            }
+        }
     }
 });
 
-export const {setItemInCart,deleteItemFromCart,updateTotalPrice,updateSelect,updateCount,updateTime} = cartSlice.actions;
+export const {setItemInCart,deleteItemFromCart,updateTotalPrice,updateSelect,updateCount,updateTime,saveOnLocalStorage} = cartSlice.actions;
 export default cartSlice.reducer;
 export const initialState = cartSlice.getInitialState;

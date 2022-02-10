@@ -120,9 +120,9 @@ const Projectors = ({ cards }) => {
               <Choose />
               <Conditions />
               <Shop page={6} active={modalActive} setActive={setModalActive} data={cards.projectorsCatalogue}/>
-              {size.width > 1200 ? <Offer active={modalActive} setActive={setModalActive} count={3}/> : null }
-              {size.width > 720 && size.width<1200 ? <Offer_768  active={modalActive} count={3} setActive={setModalActive} /> : null }
-              {size.width < 720  ? <Offer_360 active={modalActive} count={3} setActive={setModalActive}
+              {size.width > 1200 ? <Offer data={cards.projectorAdditionals} active={modalActive} setActive={setModalActive} count={3}/> : null }
+              {size.width > 720 && size.width<1200 ? <Offer_768 data={cards.projectorAdditionals}  active={modalActive} count={3} setActive={setModalActive} /> : null }
+              {size.width < 720  ? <Offer_360 data={cards.projectorAdditionals} active={modalActive} count={3} setActive={setModalActive}
               /> : null }
               <Cleaning />
               <Sale />

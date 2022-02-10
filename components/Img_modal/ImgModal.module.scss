@@ -11,13 +11,19 @@
     background: rgba(255, 255, 255, 1);
 
   }
+  &:hover svg{
+
+    path{
+
+      fill: var(--description) !important;
+    }
+  }
   svg{
     width: 30px;
     height: 30px;
     fill: #CFCFDC;
-    &:hover{
-      fill: var(--description) !important;
-    }
+
+
   }
 }
 .block_left{

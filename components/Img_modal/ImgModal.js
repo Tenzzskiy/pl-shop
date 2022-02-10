@@ -65,7 +65,7 @@ export const ImgModal = ( {id,active,setActive,text1,text2,text3,text4,text5,...
                         {loaded && instanceRef.current && (
                             <>
                                 <div className={styles.prev_arrow}>
-                                <Arrow
+                                <Arrow2
                                     left
                                     onClick={(e) =>
                                         e.stopPropagation() || instanceRef.current?.prev()
@@ -74,7 +74,7 @@ export const ImgModal = ( {id,active,setActive,text1,text2,text3,text4,text5,...
                                 />
                                 </div>
                                 <div className={styles.next_arrow}>
-                                <Arrow
+                                <Arrow2
                                     onClick={(e) =>
                                         e.stopPropagation() || instanceRef.current?.next()
                                     }
@@ -95,7 +95,7 @@ export const ImgModal = ( {id,active,setActive,text1,text2,text3,text4,text5,...
 }
 export default ImgModal;
 
-export function Arrow({
+export function Arrow2({
                           disabled,
                           left,
                           onClick
