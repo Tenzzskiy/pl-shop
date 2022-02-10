@@ -20,7 +20,7 @@ export const ShopItem = ( { total,detail,select1,select2,data,children,price,cou
     const items = useSelector(state => state.cart.itemsInCart);
    const [Switch,setSwitch] = useState(1)
     const handleClick =() =>{
-        dispatch(setItemInCart({img,changedPrice,id,title,time,Priced,select1,select2,mainDetail,mainDetail2,detail1,detail2,Switch,checked}));
+        dispatch(setItemInCart({img,changedPrice,id,title,time,Priced,select1,select2,mainDetail,mainDetail2,detail1,detail2,Switch,checked,detail}));
         dispatch(updateTotalPrice(Number(changedPrice)))
         setActive(true);
 
@@ -41,6 +41,10 @@ const check = () =>{
         <>
             <div className={styles.container} itemScope itemType="http://schema.org/Product">
             <div className={styles.content}>
+                <div className={styles.hit}>
+                    {data.total === "1" ?  <img src="/hit.svg" alt=""/> : Number(data.total) === 2 ?  <img src="/profitable.svg" alt=""/> : null}
+
+                </div>
                 <div className={styles.img} >
                     <picture>
                         <MyImage itemProp="contentUrl" src={{default: img}} alt={title} />

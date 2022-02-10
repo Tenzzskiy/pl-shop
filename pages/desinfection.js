@@ -128,7 +128,7 @@ const Index = ({ cards}) => {
                     /> : null
             }
             <Certificates />
-            <Shop page={9} active={modalActive} setActive={setModalActive} data={cards} />
+            <Shop page={9} active={modalActive} setActive={setModalActive} data={cards.desinfectionCatalogue} />
             <Sale />
 
             {size.width > 1200 ?

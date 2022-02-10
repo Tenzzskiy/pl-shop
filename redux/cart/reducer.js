@@ -28,7 +28,8 @@ const cartSlice = createSlice({
         updateTime:(state,action) => {
             state.itemsInCart = state.itemsInCart.map(elem => elem.id === action.payload.id ?
                 action.payload : elem )
-        }
+        },
+
     }
 });
 

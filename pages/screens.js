@@ -121,7 +121,7 @@ const Screens = ({cards}) => {
                 }
 
                 <Conditions/>
-                <Shop page={3} active={modalActive} setActive={setModalActive} data={cards} count={0}/>
+                <Shop page={3} active={modalActive} setActive={setModalActive} data={cards.ledScreenCatalogue} count={0}/>
                 {size.width > 1200 ? <Offer active={modalActive} setActive={setModalActive}/> : null}
                 {size.width > 720 && size.width < 1200 ?
                     <Offer_768 active={modalActive} setActive={setModalActive}/> : null}

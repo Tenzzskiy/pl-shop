@@ -115,7 +115,7 @@ const Sound = ({ cards }) => {
                       /> : null
               }
               {/*<SoundSale />*/}
-              <Shop page={8} active={modalActive} setActive={setModalActive} data={cards}/>
+              <Shop page={8} active={modalActive} setActive={setModalActive} data={cards.otherCatalogue}/>
               <Cleaning />
               <FeedBack setOfferModal={setOfferModal} />
           </Layout>

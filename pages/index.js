@@ -162,7 +162,7 @@ const Home = ({ cards }) => {
         <Conditions />
         </div>
         <div className={styles.shop}>
-        <Shop page={1} active={modalActive} setActive={setModalActive} data={cards} />
+        <Shop page={1} active={modalActive} setActive={setModalActive} data={cards.mainCatalogue} />
         </div>
 <div className={styles.offer}>
         {size.width > 1200 ? <Offer count={1} active={modalActive} setActive={setModalActive} title={' С этим товаром часто берут'} /> : null }
