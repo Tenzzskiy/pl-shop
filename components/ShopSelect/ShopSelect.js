@@ -15,7 +15,7 @@ export const ShopSelector = ( {data,array,setCatalogue,mainCatalogue} ) =>{
         return Math.round(value/100)*100
     }
 
-    console.log(mainCatalogue)
+
 
     return(
         <>

@@ -1,0 +1,48 @@
+.section {
+  padding-top: 116px;
+}
+
+.container {
+  max-width: 328px;
+  width: 100vw;
+  margin: 0 auto;
+
+
+}
+@media (min-width: 720px){
+  .paragraph{
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  .container{
+    max-width: 1280px;
+    h1{
+      max-width: 768px;
+      margin: 0 auto 0 auto;
+    }
+  }
+
+}
+@media (min-width: 1200px){
+  .paragraph{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .container{
+    max-width: 1280px;
+    h1{
+      max-width: 768px;
+      margin: 0;
+      padding: 32px 32px 0 32px;
+    }
+  }
+
+}
+
+
+
+
+.link {
+  text-decoration: underline;
+}

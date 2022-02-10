@@ -1,3 +1,45 @@
+.button_block{
+  width: 45px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 2px 4px 4px rgba(87, 87, 134, 0.2);
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    background: rgba(255, 255, 255, 1);
+
+  }
+  svg{
+    width: 30px;
+    height: 30px;
+    fill: #CFCFDC;
+    &:hover{
+      fill: var(--description) !important;
+    }
+  }
+}
+.block_left{
+  cursor: pointer;
+  position: absolute;
+  bottom: 57%;
+  left: -22px;
+  transition: all 0.4s;
+
+}
+
+.block_right{
+
+  svg{
+    transform: rotate(180deg);
+  }
+  cursor: pointer;
+  position: absolute;
+  bottom: 57%;
+  right: -5px;
+  transition: all 0.4s;
+}
 .slide{
 
   min-width: 100%;
