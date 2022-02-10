@@ -32,7 +32,7 @@
   .container{
     max-width: 1280px;
     margin: 0 auto;
-
+      min-height: 348px;
     .content{
       .container{
         .border{
@@ -57,7 +57,7 @@
           .img{
             justify-self: flex-end;
             align-self: flex-start;
-            height: 247px;
+            min-height: 247px;
 
 
           }
@@ -81,6 +81,9 @@
           }
         }
         .flex{
+          min-height: 307px;
+          height: 307px;
+          max-height: 307px;
           padding: 0 135px;
           display: grid;
           grid-template-columns: 1fr 1fr;
