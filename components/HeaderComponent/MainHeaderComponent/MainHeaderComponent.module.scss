@@ -1,7 +1,51 @@
+.center{
+  border: 0 !important;
+  z-index: 6;
+    position: absolute !important;
+  right: -100px;
+  max-width: 411px;
+}
+@keyframes left {
+  from {
+
+   opacity: 0;
+  }
+
+  50% {
+    opacity: 50%;
+
+  }
+
+  to {
+
+    opacity: 100%;
+  }
+}
+.left{
+  animation-name: left;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  left: -100px;
+  border: 0 !important;
+  position: absolute !important;
+  z-index: 6;
+  max-width: 411px;
+}
+.right{
+  border: 0 !important;
+  position: absolute !important;
+  z-index: 6;
+  top: -100px;
+  max-width: 411px;
+  img{
+
+  }
+
+}
 .header_component{
   width: 100%;
   background: #181824;
-
+  position: relative;
 
   .container{
     position: relative;

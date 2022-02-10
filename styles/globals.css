@@ -88,3 +88,7 @@ button{
 a{
     cursor: pointer;
 }
+
+#__next {
+    overflow: hidden;
+}
