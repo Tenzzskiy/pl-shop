@@ -1,5 +1,6 @@
 
 .footer{
+  font-family: Rubik-1 !important;
   iframe{
 
   }
@@ -28,6 +29,10 @@
     .item14{
       width: 150px;
       height: 50px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      width: 100%;
     }
 
     .content2{

@@ -110,12 +110,12 @@ export const Footer_320 = () =>{
 
                 <div className={styles.content3}>
                 <div className={styles.flex}>
-                    <div className={styles.item1}>
-                        <MyImage src={{default: "/VK.svg"}} alt={'VK'} />
-                        <MyImage src={{default: "/FB.svg"}} alt={'Facebook'} />
-                        <MyImage src={{default: "/IG.svg"}} alt={'Instagram'} />
+                    {/*<div className={styles.item1}>*/}
+                    {/*    <MyImage src={{default: "/VK.svg"}} alt={'VK'} />*/}
+                    {/*    <MyImage src={{default: "/FB.svg"}} alt={'Facebook'} />*/}
+                    {/*    <MyImage src={{default: "/IG.svg"}} alt={'Instagram'} />*/}
 
-                    </div>
+                    {/*</div>*/}
                     {isRatingShow && (
                         <div
                             className={cs(
@@ -128,7 +128,7 @@ export const Footer_320 = () =>{
                                 <iframe
                                     title="yandexRating"
                                     src="https://yandex.ru/sprav/widget/rating-badge/237884847372"
-                                    width="150"
+                                    width="120"
                                     height="50"
                                     frameBorder="0"
                                 />

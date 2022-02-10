@@ -1,15 +1,22 @@
 import styles from './Footer.module.scss'
-import React, {FunctionComponent} from 'react'
+import React, {FunctionComponent, useRef, useState} from 'react'
 import {useWindowSize} from "../../Hooks/useWindowSize";
 import {Footer_768} from "./Footer_768/Footer_768";
-import {Footer_320} from "./Footer_320/Footer_320";
+import {Footer_320, useLazy} from "./Footer_320/Footer_320";
 import cn from "classnames";
 import Link from "next/link";
 import {MyImage} from "../MyImage";
+import cs from "classnames";
 
 const Footer:FunctionComponent = ({ }):JSX.Element =>{
     const [Data] = React.useState(new Date);
     const size = useWindowSize();
+    const [isRatingShow, setRatingShowing] = useState(false);
+    const ratingRef = useRef<HTMLIFrameElement>(null);
+
+    useLazy(ratingRef, () => {
+        setRatingShowing(true);
+    });
     return(
        <footer>
            {size.width > 1250 ?
@@ -34,7 +41,7 @@ const Footer:FunctionComponent = ({ }):JSX.Element =>{
 
                                </div>
                            </div>
-                           <div className={styles.flex2} itemScope itemType="http://schema.org/SiteNavigationElement">
+                           <div className={styles.flex2} itemScope itemType="http://schema.org/SiteNavigationElement" ref={ratingRef}>
                                <div>
                                    <Link href='/' ><a itemProp="url" className={cn(styles.a,
                                    )} > Главная</a></Link>
@@ -74,17 +81,37 @@ const Footer:FunctionComponent = ({ }):JSX.Element =>{
 
                            </div>
                            <div className={styles.flex4}>
-                               <div className={styles.item13}>
-                                   <MyImage src={{default: "/VK.svg"}} alt={'VK'} />
-                                   <MyImage src={{default: "/FB.svg"}} alt={'Facebook'} />
-                                   <MyImage src={{default: "/IG.svg"}} alt={'Instagram'} />
-                               </div>
-                               <div className={styles.item14}>{size.width} </div>
-                               <div className={styles.item15}><Link  href="/privacy"><a rel='nofollow'> Политика конфиденциальности</a></Link></div>
+                               {/*<div className={styles.item13}>*/}
+                               {/*    <MyImage src={{default: "/VK.svg"}} alt={'VK'} />*/}
+                               {/*    <MyImage src={{default: "/FB.svg"}} alt={'Facebook'} />*/}
+                               {/*    <MyImage src={{default: "/IG.svg"}} alt={'Instagram'} />*/}
+                               {/*</div>*/}
+                               <div className={styles.item14}>
+                                   {isRatingShow && (
+                                       <div
+                                           className={cs(
+                                               styles.evaluation,
 
+                                           )}
+
+                                       >
+                                           {
+                                               <iframe
+                                                   title="yandexRating"
+                                                   src="https://yandex.ru/sprav/widget/rating-badge/237884847372"
+                                                   width="120"
+                                                   height="50"
+                                                   frameBorder="0"
+                                               />
+                                           }
+
+                                       </div> )}
+                               </div>
+                               <div className={styles.item15}><Link  href="/privacy"><a rel='nofollow'> Политика конфиденциальности</a></Link></div>
+                               <div className={styles.item16}> © Arenda-plazm77, 2021-{Data.getFullYear()}</div>
                            </div>
                        </div>
-                       <div className={styles.item16}> © Arenda-plazm77, 2021-{Data.getFullYear()}</div>
+
 
                    </div>
 

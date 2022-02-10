@@ -94,11 +94,11 @@ export const Footer_768 = () =>{
 
                     </div>
                 <div ref={ratingRef} className={styles.box3}>
-                        <div className={styles.item13}>
-                            <MyImage src={{default: "/VK.svg"}} alt='VK' />
-                            <MyImage src={{default: "/FB.svg"}} alt='Facebook' />
-                            <MyImage src={{default: "/IG.svg"}} alt='Instagram' />
-                        </div>
+                        {/*<div className={styles.item13}>*/}
+                        {/*    <MyImage src={{default: "/VK.svg"}} alt='VK' />*/}
+                        {/*    <MyImage src={{default: "/FB.svg"}} alt='Facebook' />*/}
+                        {/*    <MyImage src={{default: "/IG.svg"}} alt='Instagram' />*/}
+                        {/*</div>*/}
                     {isRatingShow && (
                         <div
                             className={styles.item14}
@@ -106,7 +106,7 @@ export const Footer_768 = () =>{
                                 <iframe
                                     title="yandexRating"
                                     src="https://yandex.ru/sprav/widget/rating-badge/237884847372"
-                                    width="150"
+                                    width="120"
                                     height="50"
                                     frameBorder="0"
                                 />
