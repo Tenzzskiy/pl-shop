@@ -36,7 +36,7 @@ export const Offer = ({count=0,active,setActive,title=' С этим товаро
                            detail1={elem.detail1}
                            detail2={elem.detail2}
                            mainDetail2={elem.mainDetail2}
-                           mainDetail={elem.mainDetail}
+                           mainDetail={elem.mainDetail} total={elem.total}
 
                 />
             </div>

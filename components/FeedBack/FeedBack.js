@@ -4,6 +4,7 @@ import {useWindowSize} from "../../Hooks/useWindowSize";
 import Contacts from "../Contacts/Contacts";
 import {FormInput} from "../Input";
 import Link from "next/link";
+import {Selector_360,Selector_758} from "../Busket/Busket";
 
 const FeedBack = ( {setOfferModal}) => {
     const [checkbox,setCheckBox] =useState(true);
@@ -108,7 +109,7 @@ const FeedBack = ( {setOfferModal}) => {
                             }
                         }
                         >Отправить заявку </button>
-                        <Contacts />
+                        <Selector_758 />
 
 
                         </div>

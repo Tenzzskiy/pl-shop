@@ -8,14 +8,14 @@ import Link from "next/link";
 import {MyImage} from "../../MyImage";
 
 
-export const OfferCard= ( {detail1,detail2,mainDetail,mainDetail2,price,title,img,data,id,active,setActive,busket,...props }) =>{
+export const OfferCard= ( {total,detail1,detail2,mainDetail,mainDetail2,price,title,img,data,id,active,setActive,busket,...props }) =>{
     const dispatch = useDispatch();
     const [changedPrice,setChangedPrice] = useState(Number(price))
     const [time, setTime] = useState('1 сутки');
     const Priced = Number(price);
     const items = useSelector(state => state.cart.itemsInCart);
     const handleClick =() =>{
-        dispatch(setItemInCart({img,changedPrice,id,title,time,Priced,detail1,detail2,mainDetail,mainDetail2}))
+        dispatch(setItemInCart({total,img,changedPrice,id,title,time,Priced,detail1,detail2,mainDetail,mainDetail2}))
         dispatch(updateTotalPrice(Number(changedPrice)))
         {busket === 1 ? null : setActive(true)}
     }

@@ -1,10 +1,10 @@
 import {createSlice} from "@reduxjs/toolkit";
 import {getCartFromLocaleStorage} from "../../sources/utils/helpers";
-const savedCart = getCartFromLocaleStorage()
+const savedCart = getCartFromLocaleStorage();
 const cartSlice = createSlice({
     name: 'cart',
     initialState: {
-        itemsInCart:[],
+        itemsInCart:savedCart,
         totalPrice: 0,
     },
     reducers:{
@@ -31,11 +31,10 @@ const cartSlice = createSlice({
                 action.payload : elem )
         },
         saveOnLocalStorage:(state,action) =>{
-            return {
-                ...initialState,
-                cart:savedCart
-            }
+            state.itemsInCart = state.itemsInCart = savedCart;
         }
+
+
     }
 });
 

@@ -31,7 +31,7 @@ export const Slider = ({perView,setActive}) =>{
             <div className={styles.flex} >
                 <ModalCard price={elem.price} title={elem.name} img={elem.img} data={elem} id={elem.id} setActive={setActive} detail1={elem.detail1} detail2={elem.detail2}
                            mainDetail2={elem.mainDetail2}
-                           mainDetail={elem.mainDetail} />
+                           mainDetail={elem.mainDetail} total={elem.total} />
             </div>
         </div>
 

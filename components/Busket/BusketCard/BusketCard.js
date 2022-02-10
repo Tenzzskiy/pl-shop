@@ -24,7 +24,7 @@ export const BusketCard = ( {detail1,detail2,mainDetail,mainDetail2,img,title,ti
     const [c2] = useState(roundHundred(b + (Number(a) * 0.5)) )
     const [d2] = useState(roundHundred(c2 + (Number(a) * 0.45)))
     const [e2] = useState(roundHundred(d2 + (Number(a) * 0.4)))
-    const [count,setCount] = useState(1)
+    const [count,setCount] = useState(data.count ? data.count : 1)
     const dispatch = useDispatch();
     const [duration,setTime] =useState(time);
 
@@ -34,10 +34,14 @@ export const BusketCard = ( {detail1,detail2,mainDetail,mainDetail2,img,title,ti
     }
     useEffect(() => {
         dispatch(updateSelect(data));
-        dispatch(updateCount(data));
+        // dispatch(updateCount({...data, count}));
         dispatch(updateTime({data}))
 
     }, [changedPrice])
+
+    useEffect(() => {
+        dispatch(updateCount({...data, count}));
+    }, [count])
     const details = () =>{
         if (Number(data.id) >=25 && Number(data.id) <=34 ){
             return(
@@ -60,10 +64,15 @@ export const BusketCard = ( {detail1,detail2,mainDetail,mainDetail2,img,title,ti
             )
         }
     }
+    console.log(data)
     return(
         <>
         <section className={styles.container}>
             <div className={styles.content}>
+                <div className={styles.hit}>
+                    {data.total === "1" ?  <img src="/hit.svg" alt=""/> : Number(data.total) === 2 ?  <img src="/profitable.svg" alt=""/> : null}
+
+                </div>
                 <svg className={styles.exit} onClick={deleteItem} width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <line y1="-0.5" x2="27.6923" y2="-0.5" transform="matrix(0.707107 0.707106 -0.707107 0.707106 9.78979 10.2101)" stroke="#575786"/>
                     <line y1="-0.5" x2="28.2843" y2="-0.5" transform="matrix(-0.707107 0.707107 -0.707108 -0.707106 29.4075 9.40747)" stroke="#575786"/>

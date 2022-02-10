@@ -7,7 +7,7 @@ import cs from "classnames";
 
 
 
-export const ModalCard = ({img,title,price,id,setActive,detail1,detail2,mainDetail,mainDetail2 }) => {
+export const ModalCard = ({total,img,title,price,id,setActive,detail1,detail2,mainDetail,mainDetail2 }) => {
     const roundHundred = (value) =>{
         return Math.round(value/100)*100
     }
@@ -27,7 +27,7 @@ export const ModalCard = ({img,title,price,id,setActive,detail1,detail2,mainDeta
                     time === '5 суток' ? e : null )
     const Priced = Number(price);
     const handleClick =() =>{
-        dispatch(setItemInCart({img,changedPrice,id,title,time,Priced,detail1,detail2,mainDetail,mainDetail2}))
+        dispatch(setItemInCart({total,img,changedPrice,id,title,time,Priced,detail1,detail2,mainDetail,mainDetail2}))
         dispatch(updateTotalPrice(changedPrice))
     }
     const check = () =>{
@@ -40,10 +40,15 @@ export const ModalCard = ({img,title,price,id,setActive,detail1,detail2,mainDeta
         return false;
 
     }
+
     return(
         <>
         <div className={styles.container}>
             <div className={styles.content}>
+                <div className={styles.hit}>
+                    {total === "1" ?  <img src="/hit.svg" alt=""/> : Number(total) === 2 ?  <img src="/profitable.svg" alt=""/> : null}
+
+                </div>
             <div className={styles.img}>
                 <picture>
                     <img src={img} alt={title}/>

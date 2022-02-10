@@ -1,6 +1,6 @@
 import Layout from "../components/Layout/Layout";
 import Releases from "../components/Relises/Relises";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Head from 'next/head'
 import Sale from "../components/Sale/Sale";
 import {Partners} from "../components/Partners/Partners";
@@ -24,6 +24,8 @@ import SitesModal from "../components/SitesModal/SitesModal";
 import Seo from "../components/SEO/SEO";
 import styles from './../styles/index.module.scss'
 import ImgModal from "../components/Img_modal/ImgModal";
+import {useDispatch, useSelector} from "react-redux";
+import useLocalStorage from "../Hooks/useLocalStorage";
 export  const getStaticProps = async () =>{
     return {
         props: {
@@ -40,6 +42,10 @@ const Home = ({ cards }) => {
     const size = useWindowSize();
     const [modalActive,setModalActive] = useState(false)
     const [imgModal,setImgModal] = useState(false)
+    const dispatch = useDispatch();
+    const items = useSelector(state => state.cart.itemsInCart);
+
+
   return (
 
 

@@ -5,11 +5,11 @@ export const getCartFromLocaleStorage = () => {
         if (localStorage.getItem('store')) {
             const store = JSON.parse(localStorage.getItem('store'));
 
-            if (store.cart.itemsInCart && store.cart.itemsInCart.length) {
-                cart = store.cart.itemsInCart;
+            if (store && store.length) {
+                cart = store;
             }
         }
     }
-
+    console.log(cart)
     return cart;
 };

@@ -74,7 +74,12 @@ export const Modal = ( {active,setActive}) =>{
                     </div>
 
                     <div className={styles.title}>Товар добавлен в корзину </div>
+                    <div className={styles.hit}>
+                        {quantity.total === "1" ?  <img src="/hit.svg" alt=""/> : Number(quantity.total) === 2 ?  <img src="/profitable.svg" alt=""/> : null}
+
+                    </div>
                     <div className={styles.item}>
+
                         <div className={styles.img}>
                             <picture>
                                 <img src={quantity.img} alt={quantity.title}/>

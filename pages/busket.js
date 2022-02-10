@@ -4,15 +4,23 @@ import {Provider} from "react-redux";
 import {store} from "../redux";
 import {ResultBusket} from "../components/Busket/Busket";
 import {OfferModal} from "../components/offerModal/OfferModal";
+import data from "../sources/data/cart_arenda-plasm77.ru.json";
+export  const getStaticProps = async () =>{
+    return {
+        props: {
+            cards: data
+        }
+    };
+}
 
 
-const Busket = ( { }) => {
+const Busket = ( {cards }) => {
     const [offerModal,setOfferModal] = useState(false)
     return(
         <>
             <Layout>
 
-                <ResultBusket setOfferModal={setOfferModal} />
+                <ResultBusket setOfferModal={setOfferModal} data={cards} />
 
 
             </Layout>

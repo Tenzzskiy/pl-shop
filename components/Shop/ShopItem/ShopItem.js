@@ -7,6 +7,7 @@ import Link from "next/link";
 import {LedSelector} from "../LedSelector/LedSelector";
 import {MyImage} from "../../MyImage";
 import cn from "classnames";
+import useLocalStorage from "../../../Hooks/useLocalStorage";
 
 
 export const ShopItem = ( { total,detail,select1,select2,data,children,price,count,img,title,active,setActive,detail1,detail2,mainDetail,mainDetail2,id,...props}) =>{
@@ -19,11 +20,12 @@ export const ShopItem = ( { total,detail,select1,select2,data,children,price,cou
     const [changedPrice,setChangedPrice] = useState(Number(price))
     const items = useSelector(state => state.cart.itemsInCart);
    const [Switch,setSwitch] = useState(1)
+    const [store,setStore] = useLocalStorage('store',[])
     const handleClick =() =>{
-        dispatch(setItemInCart({img,changedPrice,id,title,time,Priced,select1,select2,mainDetail,mainDetail2,detail1,detail2,Switch,checked,detail}));
+        dispatch(setItemInCart({total,img,changedPrice,id,title,time,Priced,select1,select2,mainDetail,mainDetail2,detail1,detail2,Switch,checked,detail}));
         dispatch(updateTotalPrice(Number(changedPrice)))
         setActive(true);
-
+        setStore(items)
     }
 
 const check = () =>{

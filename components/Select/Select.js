@@ -22,12 +22,7 @@ export function useOnClickOutside(ref, handler) {
                 document.removeEventListener("touchstart", listener);
             };
         },
-        // Add ref and handler to effect dependencies
-        // It's worth noting that because passed in handler is a new ...
-        // ... function on every render that will cause this effect ...
-        // ... callback/cleanup to run every render. It's not a big deal ...
-        // ... but to optimize you can wrap handler in useCallback before ...
-        // ... passing it into this hook.
+
         [ref, handler]
     );
 }
@@ -71,7 +66,7 @@ export const Selector = ( {item,checked,check,setChangedPrice,price,setTime,time
                         setTime('1 сутки');
                         {checked ? dispatch(updateSelect({...data, changedPrice: a*count,time: "1 сутки"})) :
                             dispatch(updateSelect({...data, changedPrice: a*count,time: "1 сутки"}))}
-                        console.log(a)
+
                     }}>
                         1 сутки
 
@@ -85,7 +80,7 @@ export const Selector = ( {item,checked,check,setChangedPrice,price,setTime,time
                             dispatch(updateSelect({...data, changedPrice: roundHundred(Number(a) + (Number(a) * 0.5)) *count,time: "2 суток"})) :
                             dispatch(updateSelect({...data, changedPrice: roundHundred(Number(a) + (Number(a) * 0.5)) *count,time: "2 суток"}))
                         }
-                        console.log(b)
+
                     }}>
                         2 суток
                     </button>
@@ -94,13 +89,12 @@ export const Selector = ( {item,checked,check,setChangedPrice,price,setTime,time
                         setSelectorStatus(false)
                         {checked ?  setChangedPrice(c2) :  setChangedPrice(c)}
                         setTime('3 суток');
-                        console.log(checked)
+
                         {checked  ?
                             dispatch(updateSelect({...data, changedPrice: roundHundred(Number(b) + (Number(a) * 0.5)) *count,time: "3 суток"})) :
                             dispatch(updateSelect({...data, changedPrice: roundHundred(Number(b) + (Number(a) * 0.4)) *count,time: "3 суток"}))
                         }
-                        console.log(c)
-                        console.log(c2)
+
                     }}>
                         3 суток
                     </button>
@@ -113,8 +107,7 @@ export const Selector = ( {item,checked,check,setChangedPrice,price,setTime,time
                             dispatch(updateSelect({...data, changedPrice: roundHundred(Number(c2) + (Number(a) * 0.45)) *count,time: "4 суток"})) :
                             dispatch(updateSelect({...data, changedPrice: roundHundred(Number(c) + (Number(a) * 0.35)) *count,time: "4 суток"}))
                         }
-                        console.log(d)
-                        console.log(d2)
+
 
                     }}>
                         4 суток
@@ -129,8 +122,7 @@ export const Selector = ( {item,checked,check,setChangedPrice,price,setTime,time
                             dispatch(updateSelect({...data, changedPrice: roundHundred(Number(d2) + (Number(a) * 0.4)) *count,time: "5 суток"})) :
                             dispatch(updateSelect({...data, changedPrice: roundHundred(Number(d) + (Number(a) * 0.3)) *count,time: "5 суток"}))
                         }
-                        console.log(e)
-                        console.log(e2)
+
 
                     }}>
                         5 суток
