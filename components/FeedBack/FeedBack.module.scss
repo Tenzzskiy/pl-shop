@@ -1,4 +1,41 @@
+.privacy_flex{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+align-items: center;
+  padding: 10px 16px;
+}
+.checkbox{
+  background: #F2F3FE;
+  border-radius: 8px;
+  width: 28px;
+  max-width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  cursor: pointer;
 
+  .hide{
+    opacity: 0;
+    transition: all 0.2s;
+  }
+  img{
+    transition: all 0.2s;
+    width: 12px;
+    height: 8px;
+  }
+}
+.agree{
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 120%;
+}
 
 .img{
   width: 100%;
@@ -38,7 +75,7 @@ background:  #F2F3FE;
   align-items: center;
   justify-content: center;
   .title{
-  margin-bottom: 15px;
+
   }
   .description{
     font-weight: normal;
@@ -182,7 +219,13 @@ background:  #F2F3FE;
     font-size: 18px;
     width: 320px;
     text-align: center;
+    margin-bottom: 0 !important;
   }
+  .checkbox{
+    margin-left: 70px;
+
+  }
+
 
   .request{
     font-size: 20px;

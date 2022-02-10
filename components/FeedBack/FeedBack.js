@@ -3,8 +3,13 @@ import React, {useRef, useState} from "react";
 import {useWindowSize} from "../../Hooks/useWindowSize";
 import Contacts from "../Contacts/Contacts";
 import {FormInput} from "../Input";
+import Link from "next/link";
 
 const FeedBack = ( {setOfferModal}) => {
+    const [checkbox,setCheckBox] =useState(true);
+    const triggerCheckBox = () =>{
+        setCheckBox(!checkbox);
+    }
     const [input,setInput] = useState(false);
     const value = useRef()
     const size = useWindowSize();
@@ -89,11 +94,27 @@ const FeedBack = ( {setOfferModal}) => {
 
 
                             }}/>
-                        <button onClick={() => {
-                            input ? setOfferModal(true) : null
-                        }}>Отправить заявку </button>
+                        <button
+                            onClick={ () =>
+
+                            {
+                                if ( checkbox === true &&  input ===true){
+
+                                    setOfferModal(true)
+                                } else if (checkbox ===true && input ===true){
+
+                                    setOfferModal(true)
+                                }
+                            }
+                        }
+                        >Отправить заявку </button>
                         <Contacts />
 
+
+                        </div>
+                        <div className={styles.privacy_flex}>
+                        <div className={styles.checkbox} onClick={triggerCheckBox}><img className={checkbox ? null : styles.hide} src="/Seo/checkbox.svg" alt=""/></div>
+                        <div className={styles.agree}> Соглашаюсь с <Link href="/privacy"><a rel='nofollow'>Правилами обработки персональных данных</a></Link></div>
                         </div>
                     </div>
                 </div>
