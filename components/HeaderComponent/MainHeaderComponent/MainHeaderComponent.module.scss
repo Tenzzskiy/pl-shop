@@ -1,42 +1,48 @@
 .center{
   border: 0 !important;
-  z-index: 6;
+  z-index: 0;
     position: absolute !important;
-  right: -100px;
-  max-width: 411px;
+  top: -300px;
+  width: 800px !important;
+  height: 800px !important;
 }
 @keyframes left {
-  from {
-
-   opacity: 0;
+  0%{
+    transform: scale(0);
   }
-
-  50% {
-    opacity: 50%;
+  25%{
 
   }
+  75% {
 
-  to {
 
-    opacity: 100%;
   }
+  100%{
+    transform: scale(1);
+  }
+
 }
 .left{
+  width: 800px !important;
+  height: 800px !important;
   animation-name: left;
   animation-duration: 2s;
   animation-iteration-count: infinite;
-  left: -100px;
+  left: -400px;
   border: 0 !important;
   position: absolute !important;
-  z-index: 6;
-  max-width: 411px;
+  z-index: 0;
+  animation-direction: alternate-reverse;
 }
 .right{
+  width: 800px !important;
+  height: 800px !important;
   border: 0 !important;
   position: absolute !important;
-  z-index: 6;
-  top: -100px;
-  max-width: 411px;
+  z-index: 0;
+
+
+  right: -400px;
   img{
 
   }
