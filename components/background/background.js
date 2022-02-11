@@ -1,10 +1,10 @@
-function BlobCoverReverse({ classNames = null }) {
+function BlobCoverReverse({ classNames = null,width=598,height   =230 }) {
     return (
         <svg
             version="1.1"
-            width="598"
-            height="230"
-            viewBox="0 0 598 230"
+            width={width}
+            height={height}
+            viewBox={`0 0 ${width} ${height}`}
             baseProfile="full"
             xmlns="http://www.w3.org/2000/svg"
             className={classNames}
@@ -15,7 +15,7 @@ function BlobCoverReverse({ classNames = null }) {
                     <stop offset="100%" stopColor="#3496FE " />
                 </linearGradient>
             </defs>
-            <path fill="url(#blobGradient2)" transform="translate(550 270) rotate(180)">
+            <path fill="url(#blobGradient2)" transform={`translate(${width-40} ${height+50}) rotate(180)`}>
                 <animate
                     attributeName="d"
                     dur="0.8s"

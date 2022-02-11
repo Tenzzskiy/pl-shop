@@ -8,7 +8,6 @@ import {useSelector} from "react-redux";
 
 const Header = ({ setNavigation,setContacts,count}) =>{
     const items = useSelector(state => state.cart.itemsInCart);
-    // const totalPrice = items.reduce((acc,data) =>acc+=Number(data.price) ,0)
     const route = useRouter()
     const [scroll, setScroll] = React.useState(0);
     const [lastScroll,setLastScroll] = useState(1)

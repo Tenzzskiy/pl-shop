@@ -1,7 +1,6 @@
 import styles from './../../styles/index.module.scss'
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import FeedBack from "../FeedBack/FeedBack";
 import React, {FunctionComponent, ReactNode, useState} from "react";
 import {useRouter} from "next/router";
 import Link from "next/link";

@@ -1,0 +1,29 @@
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  max-width: 130px;
+  min-width: 130px;
+  width: 130px;
+  max-height: 46px;
+  min-height: 46px;
+  height: 46px;
+  background: #F2F3FE;
+  box-sizing: border-box;
+  border-radius: 2px;
+  text-align: center;
+  color: #0E0E52;
+  border: 1px solid #9B8BB6;
+  &:hover{
+    color: white;
+    transition: color 0.4s;
+
+  }
+  margin-right: 15px;
+}
+.cover{
+  position: absolute;
+  z-index: -1;
+}

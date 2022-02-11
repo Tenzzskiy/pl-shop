@@ -15,6 +15,7 @@ import {FormInput} from "../Input";
 import {Link as Link32, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import cn from "classnames";
 import {Selector, useOnClickOutside} from "../Select/Select";
+import {NavigationButton} from "./navigation_button/NavigationButton";
 
 export const ResultBusket = ( {data, setOfferModal}) => {
     const [value,setValue] = useState();
@@ -41,6 +42,19 @@ export const ResultBusket = ( {data, setOfferModal}) => {
         title={elem.title}
             data={elem}
         />  )
+    const names = [
+
+        {title:'Плазмы',link:'/'},
+        {title:'Светодиодные экраны',link:'/screens'},
+        {title:'Видеостены',link:'/videoWalls'},
+        {title:'Сенсорные тач-панели',link:'/touchPanel'},
+        {title:'Проекторы',link:'/projectors'},
+        {title:'Ноутбуки',link:'/laptops'},
+        {title:'Звук, Свет и окружение',link:'/sound'},
+        {title:'Дезинфекция',link:'/desinfection'}
+
+    ]
+    const buttons = names.map( (elem) => <NavigationButton title={elem.title} link={elem.link}/>)
     const triggerCheckBox = () =>{
         setCheckBox(!checkbox);
     }
@@ -62,8 +76,11 @@ export const ResultBusket = ( {data, setOfferModal}) => {
             {count > 0 ? goods :
             <>
                 <div className={styles.first}> Здесь пока ничего нет =(</div>
-                <div className={styles.second}> Но это легко исправить, заглянув в <Link href="/"><a>Каталог</a></Link></div>
-
+                <div className={styles.second}> Но это легко исправить, заглянув в соответствующий раздел {size.width < 1200 ? <Link href="/"><a
+                >Каталога:</a></Link> : 'Каталога:' }</div>
+                {size.width > 1200 ? <nav className={styles.nav_flex}>
+                    {buttons}
+                </nav> : null}
             </>}
         </div>
         {count > 0 && size.width > 1250?

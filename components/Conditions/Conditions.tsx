@@ -18,9 +18,9 @@ export const Conditions:FunctionComponent = ( { }) =>{
                         <path d="M0 90.439L640 0L1280 90.439V534.937H0V90.439Z" fill="url(#paint0_linear_962_18636)"/>
                         <defs>
                             <linearGradient id="paint0_linear_962_18636" x1="0" y1="267.629" x2="1280" y2="267.629" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#07F1D3"/>
-                                <stop offset="0.572917" stop-color="#3A65F1"/>
-                                <stop offset="0.984375" stop-color="#B93DF6"/>
+                                <stop stopColor="#07F1D3"/>
+                                <stop offset="0.572917" stopColor="#3A65F1"/>
+                                <stop offset="0.984375" stopColor="#B93DF6"/>
                             </linearGradient>
                         </defs>
                     </svg>

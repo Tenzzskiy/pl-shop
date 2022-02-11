@@ -1,3 +1,9 @@
+.nav_flex{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+}
 .back{
   display: flex;
   justify-content: flex-start;
@@ -181,7 +187,7 @@
 }
 .items{
   margin-right: 20px;
-  width: 60%;
+  width: 100%;
   .first{
     font-style: normal;
     font-weight: normal;
@@ -196,6 +202,7 @@
     font-size: 20px;
     line-height: 140%;
     color: #575786;
+    margin-bottom: 20px;
   }
   a{
     outline: none;

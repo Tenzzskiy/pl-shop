@@ -99,7 +99,7 @@ const Footer:FunctionComponent = ({ }):JSX.Element =>{
                                                <iframe
                                                    title="yandexRating"
                                                    src="https://yandex.ru/sprav/widget/rating-badge/237884847372"
-                                                   width="120"
+                                                   width="150"
                                                    height="50"
                                                    frameBorder="0"
                                                />

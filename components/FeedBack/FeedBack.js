@@ -1,18 +1,18 @@
 import styles from './FeedBack.module.scss'
-import React, {useRef, useState} from "react";
+import React, { useState} from "react";
 import {useWindowSize} from "../../Hooks/useWindowSize";
-import Contacts from "../Contacts/Contacts";
 import {FormInput} from "../Input";
 import Link from "next/link";
-import {Selector_360,Selector_758} from "../Busket/Busket";
+import {Selector_758} from "../Busket/Busket";
 
 const FeedBack = ( {setOfferModal}) => {
     const [checkbox,setCheckBox] =useState(true);
     const triggerCheckBox = () =>{
         setCheckBox(!checkbox);
     }
+    const [value,setValue] = useState(null);
     const [input,setInput] = useState(false);
-    const value = useRef()
+
     const size = useWindowSize();
     return (
         <section>
@@ -25,9 +25,9 @@ const FeedBack = ( {setOfferModal}) => {
                         <path d="M0 27L360 82.2995V627L0 571.7V27Z" fill="url(#paint0_linear_963_18758)"/>
                         <defs>
                             <linearGradient id="paint0_linear_963_18758" x1="0" y1="327.18" x2="360" y2="327.18" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#07F1D3"/>
-                                <stop offset="0.572917" stop-color="#3A65F1"/>
-                                <stop offset="0.984375" stop-color="#B93DF6"/>
+                                <stop stopColor="#07F1D3"/>
+                                <stop offset="0.572917" stopColor="#3A65F1"/>
+                                <stop offset="0.984375" stopColor="#B93DF6"/>
                             </linearGradient>
                         </defs>
                     </svg>
@@ -40,9 +40,9 @@ const FeedBack = ( {setOfferModal}) => {
                         <path d="M0 12.8018L1280 159.182V660.224L0 518.905V12.8018Z" fill="url(#paint0_linear_891_388)"/>
                         <defs>
                             <linearGradient id="paint0_linear_891_388" x1="0" y1="336.708" x2="1280" y2="336.708" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#07F1D3"/>
-                                <stop offset="0.572917" stop-color="#3A65F1"/>
-                                <stop offset="0.984375" stop-color="#B93DF6"/>
+                                <stop stopColor="#07F1D3"/>
+                                <stop offset="0.572917" stopColor="#3A65F1"/>
+                                <stop offset="0.984375" stopColor="#B93DF6"/>
                             </linearGradient>
                         </defs>
                     </svg>
@@ -54,9 +54,9 @@ const FeedBack = ( {setOfferModal}) => {
                         <path d="M0 27.9189L768 64.0758V420.221L0 384.064V27.9189Z" fill="url(#paint0_linear_411_53821)"/>
                         <defs>
                             <linearGradient id="paint0_linear_411_53821" x1="0" y1="224.188" x2="768" y2="224.188" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#07F1D3"/>
-                                <stop offset="0.572917" stop-color="#3A65F1"/>
-                                <stop offset="0.984375" stop-color="#B93DF6"/>
+                                <stop stopColor="#07F1D3"/>
+                                <stop offset="0.572917" stopColor="#3A65F1"/>
+                                <stop offset="0.984375" stopColor="#B93DF6"/>
                             </linearGradient>
                         </defs>
                     </svg>
@@ -83,7 +83,7 @@ const FeedBack = ( {setOfferModal}) => {
                         </div>
 
                         <div className={styles.contacts}>
-                            <FormInput mask="+7 (999) 999-99-99" maskChar=" "  placeholder='+7 999 999-99-99' onChange={(evt) => {
+                            <FormInput mask="+7 (999) 999-99-99"   placeholder='+7 999 999-99-99' onChange={(evt) => {
 
 
                                 {
@@ -92,9 +92,9 @@ const FeedBack = ( {setOfferModal}) => {
                                 {
                                     (!(evt?.includes('_')) && (evt?.includes(' '))) ?  setInput(true): null ;
                                 }
+                                setValue(evt)
 
-
-                            }}/>
+                            }} value={value}/>
                         <button
                             onClick={ () =>
 

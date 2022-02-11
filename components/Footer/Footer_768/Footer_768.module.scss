@@ -27,12 +27,12 @@
     }
 
     .item14{
-      width: 150px;
+      width: 150px !important;
       height: 50px;
       display: flex;
       justify-content: flex-end;
       align-items: flex-end;
-      width: 100%;
+
     }
 
     .content2{
@@ -51,6 +51,7 @@
         display: flex;
         justify-content: space-between;
         flex-direction: column;
+        align-items: flex-end;
 
 
 
