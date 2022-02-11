@@ -118,9 +118,9 @@ const VideoWalls = ({  cards}) => {
             <Conditions />
             <Shop page={4} active={modalActive} setActive={setModalActive} data={cards.videoWallCatalogue}/>
 
-            {size.width > 1250 ? <Offer  data={cards.mainAdditionals} active={modalActive} setActive={setModalActive}/> : null }
-            {size.width > 720 && size.width<1250 ? <Offer_768 data={cards.mainAdditionals} active={modalActive} setActive={setModalActive} /> : null }
-            {size.width < 720  ? <Offer_360 data={cards.mainAdditionals} active={modalActive} setActive={setModalActive}
+            {size.width > 1250 ? <Offer  data={cards.ledAdditionals} active={modalActive} setActive={setModalActive}/> : null }
+            {size.width > 720 && size.width<1250 ? <Offer_768 data={cards.ledAdditionals} active={modalActive} setActive={setModalActive} /> : null }
+            {size.width < 720  ? <Offer_360 data={cards.ledAdditionals} active={modalActive} setActive={setModalActive}
             /> : null }
             <Cleaning />
             <Sale />

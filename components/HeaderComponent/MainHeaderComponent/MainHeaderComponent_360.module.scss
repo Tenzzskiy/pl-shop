@@ -1,4 +1,38 @@
+.center{
+  border: 0 !important;
+  z-index: 0;
+  position: absolute !important;
+  top: -150px;
+  width: 400px !important;
+  height: 400px !important;
+
+}
+.left{
+  bottom: 0;
+  width: 400px !important;
+  height: 400px !important;
+  left: -150px;
+  border: 0 !important;
+  position: absolute !important;
+  z-index: 0;
+}
+.right{
+  width: 400px !important;
+  bottom: -50px;
+  height: 400px !important;
+  border: 0 !important;
+  position: absolute !important;
+  z-index: 0;
+  left: 100px;
+
+
+  img{
+
+  }
+
+}
 .container{
+  position: relative;
   width: 100%;
   margin: 0 auto;
   background: #181824;
@@ -39,6 +73,7 @@ position: absolute;
   }
   .content_text{
     .description{
+      z-index: 2;
       font-style: normal;
       font-weight: bold;
       font-size: 18px;
@@ -52,6 +87,7 @@ position: absolute;
     flex-direction: column;
     align-items: center;
     .button{
+      z-index: 2;
       &:hover{
         background: #4CF5E0;
         /* DEEP Shadow */
@@ -83,6 +119,7 @@ position: absolute;
       color: white;
       text-align: center;
       padding-bottom: 75px;
+      z-index: 2;
     }
   }
 }

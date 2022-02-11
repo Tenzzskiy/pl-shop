@@ -2,47 +2,95 @@
   border: 0 !important;
   z-index: 0;
     position: absolute !important;
-  top: -300px;
-  width: 800px !important;
-  height: 800px !important;
+  top: -500px;
+  width: 1200px !important;
+  height: 1200px !important;
+  animation-name: center;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+@media (max-width: 1200px){
+  .center{
+    top: -200px!important;
+  }
+  .left{
+    left: -300px !important;
+  }
+  .right{
+    left: 400px !important;
+  }
+}
+@keyframes center {
+  0%{
+    transform: scale(0.5);
+
+  }
+  50%{
+    transform: scale(1);
+  }
+  100%{
+
+    transform: scale(0.5);
+
+  }
+
 }
 @keyframes left {
   0%{
-    transform: scale(0.4);
-  }
-  25%{
-  top: -400px;
-  }
-  75% {
+    transform: scale(0.5);
 
-
+  }
+  50%{
+    transform: scale(1);
   }
   100%{
+
+    transform: scale(0.5);
+
+  }
+
+}
+@keyframes right {
+  0%{
+    transform: scale(0.5);
+
+  }
+  50%{
     transform: scale(1);
+  }
+  100%{
+
+    transform: scale(0.5);
+
   }
 
 }
 .left{
-  width: 800px !important;
-  height: 800px !important;
+  width: 1200px !important;
+  height: 1200px !important;
   animation-name: left;
-  animation-duration: 2s;
+  animation-duration: 4s;
   animation-iteration-count: infinite;
-  left: -400px;
+  left: -500px;
   border: 0 !important;
   position: absolute !important;
   z-index: 0;
   animation-direction: alternate-reverse;
 }
 .right{
-  width: 800px !important;
-  height: 800px !important;
+  animation-name: center;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  width: 1200px !important;
+  height: 1200px !important;
   border: 0 !important;
   position: absolute !important;
   z-index: 0;
 
 
-  right: -400px;
+  right: -500px;
   img{
 
   }
@@ -170,6 +218,26 @@
       font-size: 15px;
     }
   }
-
+ .left{
+   width: 1200px !important;
+   height: 1200px !important;
+   max-width: 1200px !important;
+   max-height: 1200px !important;
+   left: -600px !important;
+ }
+  .center{
+      width: 1200px !important;
+      height: 1200px !important;
+      max-width: 1200px !important;
+      max-height: 1200px !important;
+      top: -600px !important;
+  }
+  .right{
+    width: 1200px !important;
+    height: 1200px !important;
+    max-width: 1200px !important;
+    max-height: 1200px !important;
+    left: 0 !important;
+  }
 
 }
