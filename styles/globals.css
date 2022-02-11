@@ -10,7 +10,7 @@
     src: url('./fonts/Rubik-Bold.ttf');
 }
 :root {
-    --brand-color: #460BD9;
+    --brand-color: #460BD9;;
     --description:#0E0E52;
     --light-grey:#E3E1FB;
 }

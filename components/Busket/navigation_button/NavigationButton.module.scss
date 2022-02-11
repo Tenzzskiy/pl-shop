@@ -23,7 +23,34 @@
   }
   margin-right: 15px;
 }
+.container2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  min-width: 100%;
+  width: 100%;
+  max-height: 56px;
+  min-height: 56px;
+  height: 56px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  text-align: center;
+  color: white;
+
+  &:hover{
+
+    transition: color 0.4s;
+
+  }
+
+}
 .cover{
   position: absolute;
   z-index: -1;
+}
+.a_active{
+  background: #460BD9!important;
 }

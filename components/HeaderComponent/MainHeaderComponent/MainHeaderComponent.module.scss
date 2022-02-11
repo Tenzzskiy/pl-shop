@@ -1,3 +1,7 @@
+.cover{
+  z-index: -1;
+  position: absolute;
+}
 .center{
   border: 0 !important;
   z-index: 0;
@@ -156,14 +160,15 @@
       text-align: center;
     }
     .button{
+      z-index: 2;
+      position: relative;
       &:hover{
-        background: #4CF5E0;
-        /* DEEP Shadow */
 
         box-shadow: 0px 4px 6px rgba(24, 24, 36, 0.8);
       }
       margin-bottom: 5px;
       & button{
+        position: relative;
         font-style: normal;
         font-weight: bold;
         font-size: 20px;
@@ -176,6 +181,13 @@
         border:0;
         outline: none;
         text-decoration: none;
+        transition:  all 0.7s;
+        &:hover{
+          color: white;
+          transition:  all 0.7s;
+          background: #B93DF6;
+          box-shadow: 0px 4px 6px rgba(24, 24, 36, 0.8);
+        }
       }
     }
     .free{
@@ -205,6 +217,9 @@
     }
     .title{
       font-size: 42px;
+      h1{
+        margin: 0 !important;
+      }
     }
     .button {
 

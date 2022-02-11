@@ -1,15 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 import styles from './MainHeaderComponent.module.scss'
 import {useWindowSize} from "../../../Hooks/useWindowSize";
 import {MainHeaderComponent_360} from "./MainHeaderComponent_360";
 import {Steps} from "../../steps/steps";
+import BlobCoverReverse from "../../background/background";
 
 
 
 
 const MainHeaderComponent = ({setSites} ) =>{
         const size = useWindowSize();
-
+        const [buttonActive,setButtonActive] = useState(false);
     return(
         <section>
             {size.width > 720 ?
@@ -36,7 +37,11 @@ const MainHeaderComponent = ({setSites} ) =>{
 
                             <h1 className={styles.title} itemProp="name"> Аренда плазмы </h1>
                             <h2 className={styles.description} itemProp={"description"} > Организуем техническое обеспечение выставок, форумов и конференций</h2>
-                            <div className={styles.button}><button onClick={() =>setSites(true)}> Рассчитать стоимость</button> </div>
+                            <div className={styles.button} onMouseEnter={() => setButtonActive(true)} onMouseLeave={() => setButtonActive(false)}>
+
+                                <button onClick={() =>setSites(true)}>
+
+                                Рассчитать стоимость</button> </div>
                             <div className={styles.free}> Это бесплатно</div>
 
 

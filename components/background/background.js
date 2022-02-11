@@ -1,4 +1,4 @@
-function BlobCoverReverse({ classNames = null,width=598,height   =230 }) {
+function BlobCoverReverse({ classNames = null,width=598,height   =230,color1,color2 }) {
     return (
         <svg
             version="1.1"
@@ -11,8 +11,8 @@ function BlobCoverReverse({ classNames = null,width=598,height   =230 }) {
         >
             <defs>
                 <linearGradient id="blobGradient2">
-                    <stop offset="0%" stopColor="#C038F5" />
-                    <stop offset="100%" stopColor="#3496FE " />
+                    <stop offset="0%" stopColor={color1}/>
+                    <stop offset="100%" stopColor={color2} />
                 </linearGradient>
             </defs>
             <path fill="url(#blobGradient2)" transform={`translate(${width-40} ${height+50}) rotate(180)`}>

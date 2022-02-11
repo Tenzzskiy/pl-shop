@@ -118,10 +118,10 @@
 
   .bucket{
     &:hover{
-      background: #0E0E52;
-      transition: all 0.3s;
+      background: var(--description);
+      transition: all 0.5s;
     }
-    transition: all 0.3s;
+    transition: all 0.5s;
     margin-left: 10px;
     width: 68px;
     height: 40px;

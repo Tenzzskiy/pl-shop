@@ -5,6 +5,7 @@ import {useRouter} from "next/router";
 import cn from 'classnames'
 import {useWindowSize} from './../../Hooks/useWindowSize.js'
 import {useSelector} from "react-redux";
+import {NavigationButton} from "../Busket/navigation_button/NavigationButton";
 
 const Header = ({ setNavigation,setContacts,count}) =>{
     const items = useSelector(state => state.cart.itemsInCart);
@@ -22,6 +23,19 @@ const Header = ({ setNavigation,setContacts,count}) =>{
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     });
+    const names = [
+
+        {title:'Плазмы',link:'/'},
+        {title:'Светодиодные экраны',link:'/screens'},
+        {title:'Видеостены',link:'/videoWalls'},
+        {title:'Сенсорные тач-панели',link:'/touchPanel'},
+        {title:'Проекторы',link:'/projectors'},
+        {title:'Ноутбуки',link:'/laptops'},
+        {title:'Звук, Свет и окружение',link:'/sound'},
+        {title:'Дезинфекция',link:'/desinfection'}
+
+    ]
+    const buttons = names.map( (elem) => <NavigationButton color1='#460BD9' color2='#460BD9' width={152} height={62} title={elem.title} link={elem.link} count={false}/>)
 
     return(
    <header>
@@ -107,40 +121,40 @@ const Header = ({ setNavigation,setContacts,count}) =>{
                    <div className={cn(styles.bottom_header,  scroll>lastScroll ? styles.header_fixed : null)} >
                        <div className={styles.bottom_header_container}>
                            <div className={styles.content}>
-                               <Link href='/' ><a className={cn(styles.a,
-                                   route.asPath === '/' ? styles.a_active : null
+                               {/*<Link href='/' ><a className={cn(styles.a,*/}
+                               {/*    route.asPath === '/' ? styles.a_active : null*/}
 
-                               )} >Плазмы</a></Link>
-                               <Link href='/screens'><a itemProp="url" className={cn(styles.a,
-                                   route.asPath === '/screens' ? styles.a_active : null
+                               {/*)} >Плазмы</a></Link>*/}
+                               {/*<Link href='/screens'><a itemProp="url" className={cn(styles.a,*/}
+                               {/*    route.asPath === '/screens' ? styles.a_active : null*/}
 
-                               )}
-                               >Светодиодные экраны</a></Link>
-                               <Link href='/videoWalls'><a itemProp="url" className={cn(styles.a,
-                                   route.asPath === '/videoWalls' ? styles.a_active : null
+                               {/*)}*/}
+                               {/*>Светодиодные экраны</a></Link>*/}
+                               {/*<Link href='/videoWalls'><a itemProp="url" className={cn(styles.a,*/}
+                               {/*    route.asPath === '/videoWalls' ? styles.a_active : null*/}
 
-                               )}>Видеостены</a></Link>
-                               <Link href='/touchPanel'><a itemProp="url" className={cn(styles.a,
-                                   route.asPath === '/touchPanel' ? styles.a_active : null
+                               {/*)}>Видеостены</a></Link>*/}
+                               {/*<Link href='/touchPanel'><a itemProp="url" className={cn(styles.a,*/}
+                               {/*    route.asPath === '/touchPanel' ? styles.a_active : null*/}
 
-                               )} >Сенсорные тач-панели</a></Link>
-                               <Link href='/projectors'><a itemProp="url" className={cn(styles.a,
-                                   route.asPath === '/projectors' ? styles.a_active : null
+                               {/*)} >Сенсорные тач-панели</a></Link>*/}
+                               {/*<Link href='/projectors'><a itemProp="url" className={cn(styles.a,*/}
+                               {/*    route.asPath === '/projectors' ? styles.a_active : null*/}
 
-                               )}>Проекторы</a></Link>
-                               <Link href='/laptops'><a itemProp="url" className={cn(styles.a,
-                                   route.asPath === '/laptops' ? styles.a_active : null
+                               {/*)}>Проекторы</a></Link>*/}
+                               {/*<Link href='/laptops'><a itemProp="url" className={cn(styles.a,*/}
+                               {/*    route.asPath === '/laptops' ? styles.a_active : null*/}
 
-                               )}>Ноутбуки</a></Link>
-                               <Link href='/sound'><a itemProp="url" className={cn(styles.a,
-                                   route.asPath === '/sound' ? styles.a_active : null
+                               {/*)}>Ноутбуки</a></Link>*/}
+                               {/*<Link href='/sound'><a itemProp="url" className={cn(styles.a,*/}
+                               {/*    route.asPath === '/sound' ? styles.a_active : null*/}
 
-                               )}>Звук, Свет и окружение</a></Link>
-                               <Link href='/desinfection'><a itemProp="url" className={cn(styles.a,
-                                   route.asPath === '/desinfection' ? styles.a_active : null
+                               {/*)}>Звук, Свет и окружение</a></Link>*/}
+                               {/*<Link href='/desinfection'><a itemProp="url" className={cn(styles.a,*/}
+                               {/*    route.asPath === '/desinfection' ? styles.a_active : null*/}
 
-                               )}>Дезинфекция</a></Link>
-
+                               {/*)}>Дезинфекция</a></Link>*/}
+                               {buttons}
 
 
                            </div>

@@ -27,7 +27,7 @@ const Footer:FunctionComponent = ({ }):JSX.Element =>{
                            <div className={styles.flex1}>
 
                                <div className={styles.item1}>
-                                   <Link href='/' ><a className={cn(styles.a,
+                                   <Link href='/' ><a className={cn(
                                    )} ><MyImage src={{default: "/header/Logotype.svg"}} alt={'1'} /></a></Link>
 
                                     </div>

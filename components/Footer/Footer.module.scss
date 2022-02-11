@@ -14,7 +14,9 @@
    border: 0;
    text-decoration: none;
    &:hover{
-     border-bottom: 3px solid white;
+     border-bottom: 1px solid #8B4CF5;
+       color: #8B4CF5;
+       transition: all 0.3s;
    }
  }
   background: rgba(38, 38, 38, 1);
@@ -35,6 +37,7 @@
       color: white;
       text-decoration: none;
       border: 0;
+
     }
     .item16{
       text-align: right;

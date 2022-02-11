@@ -145,6 +145,13 @@
       border:0;
       outline: none;
       text-decoration: none;
+      transition:  all 0.7s;
+      &:hover{
+        color: white;
+        transition:  all 0.7s;
+        background: #B93DF6;
+        box-shadow: 0px 4px 6px rgba(24, 24, 36, 0.8);
+      }
     }
   }
   .title{
