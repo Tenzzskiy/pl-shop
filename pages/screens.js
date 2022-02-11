@@ -164,8 +164,8 @@ const Screens = ({cards}) => {
 
                 <Seo
                     title='Прокат светодиодных экранов'
-                    image1='/Seo/Screen/1.jpg'
-                    image2='/Seo/Screen/2.jpg'
+                    image1='/assets/images/info_2-1.jpg'
+                    image2='/assets/images/info_2-2.jpg'
                     text1='Довольно часто на развлекательных и информационных мероприятиях используется оборудование, позволяющее транслировать информацию на большой экран. Речь идет о светодиодных экранах, которые отличаются способностью передавать изображение высокого качества с отличной яркостью. Отдельно можно отметить работоспособность оборудования.
 
 Чаще всего LED экраны используются при проведении:
@@ -190,11 +190,11 @@ const Screens = ({cards}) => {
             <Modal active={modalActive} setActive={setModalActive}/>
             {size.width > 1200 ? <ImgModal active={imgModal} setActive={setImgModal}
                                            id={id}
-                                           img1='/releases/Screen/1.jpg'
-                                           img2='/releases/Screen/2.jpg'
-                                           img3='/releases/Screen/3.jpg'
-                                           img4='/releases/Screen/4.jpg'
-                                           img5='/releases/Screen/5.jpg'
+                                           img1='/Gallery/LEDPage/804x603@plazma1.jpg'
+                                           img2='/Gallery/LEDPage/804x603@plazma3.jpg'
+                                           img3='/Gallery/LEDPage/804x603@plazma2.jpg'
+                                           img4='/Gallery/LEDPage/804x603@plazma5.jpg'
+                                           img5='/Gallery/LEDPage/804x603@plazma4.jpg'
                                            text1='Угловая LED фотозона'
                                            text2='Брендированный экспостенд'
                                            text3='LED экраны в оформлении сцены для презентации нового продукта'

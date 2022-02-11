@@ -1,5 +1,12 @@
+.background{
+  background: #F2F3FE;
+  padding-bottom: 60px;
+  min-height: 75vh;
+}
 .else{
-  margin-bottom: 40px;
+  max-width: 1216px;
+  margin: 0 auto 80px auto;
+
   padding: 0 32px;
   button{
     color: #575786;
@@ -14,6 +21,12 @@
     border-radius: 2px;
     width: 100%;
     height: 35px;
+    transition: all 0.3s;
+    &:hover{
+      background: #9B8BB6;
+      color: var(--description);
+      transition: all 0.3s;
+    }
   }
 }
 .news_title{
@@ -39,6 +52,7 @@
     flex-wrap: wrap;
 
   }
+
   @media (max-width: 720px){
 
     .news_flex{
@@ -262,7 +276,7 @@ min-height: 1593px;
 }
 @media (max-width: 720px){
   .else{
-    padding: 0 8px !important;
+    padding: 0 20px !important;
   }
   .error_text{
     font-size: 18px !important;
@@ -281,5 +295,11 @@ min-height: 1593px;
       align-items: center;
     }
 
+  }
+
+}
+@media (max-width: 1200px){
+  .else{
+    padding: 0 32px ;
   }
 }

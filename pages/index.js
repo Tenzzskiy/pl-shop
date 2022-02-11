@@ -220,8 +220,8 @@ const Home = ({ cards }) => {
         <div className={styles.seo}>
         <Seo
             title='Телевизоры в аренду'
-            image1='/Seo/seo1FirstPicture.png'
-            image2='/Seo/2.png'
+            image1='/assets/images/info_1.jpg'
+            image2='/assets/images/info_2.jpg'
         text1='Намечается торжественное мероприятие, планируется выставка или понадобилось организовать деловую встречу?
         Наверняка для организации понадобится современное оборудование. Установка жк телевизоров поможет только сделать зал
         более современным. Кроме того, это отличный способ донести важную информацию гостям мероприятия.
@@ -254,11 +254,11 @@ const Home = ({ cards }) => {
           <Modal active={modalActive} setActive={setModalActive} />
           {size.width > 1200 ? <ImgModal active={imgModal} setActive={setImgModal}
                                          id={id}
-                                         img1='/releases/releases1(1).png'
-                                         img2='/releases/releases1(2).png'
-                                         img3='/releases/releases1(3).png'
-                                         img4='/releases/releases1(4).png'
-                                         img5='/releases/releases1(5).png'
+                                         img1='/Gallery/PlazmaPage/804x603@pl4.jpg'
+                                         img2='/Gallery/PlazmaPage/804x603@pl2.jpg'
+                                         img3='/Gallery/PlazmaPage/804x603@pl1.jpg'
+                                         img4='/Gallery/PlazmaPage/804x603@pl5.jpg'
+                                         img5='/Gallery/PlazmaPage/804x603@pl3.jpg'
 
                                          text1='Плазма на стойке для трансляции спортивных матчей'
                                          text2='Брендированный экспостенд с плазмой для интерактивной зоны'

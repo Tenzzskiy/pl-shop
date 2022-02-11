@@ -53,9 +53,10 @@
   padding-left: 9px;
 }
 .offer{
+  background: #E3E1FB !important;
   width: 100%;
-  background: #E3E1FB;
-  padding-top: 115px;
+
+  padding-top: 60px;
   position: relative;
   min-height: 608px;
   .container{
@@ -90,6 +91,7 @@ width: 280px;
 @media( max-width: 99999px){
   .content{
     padding: 0 0 0 24px;
+    background: #E3E1FB;
     .flex{
       display: flex;
       flex-direction: row;
@@ -106,6 +108,7 @@ width: 280px;
     }
 
     .title{
+      background: #E3E1FB !important;
       font-style: normal;
       font-weight: bold;
       font-size: 45px;

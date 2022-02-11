@@ -165,8 +165,8 @@ const Projectors = ({ cards }) => {
               }
               <Seo
                   title='Прокат проектора'
-              image1='/Seo/Projectors/1.png'
-              image2='/Seo/Projectors/2.svg'
+              image1='/assets/images/info_5-1.jpg'
+              image2='/assets/images/info_5-2.jpg'
               text1=' Компания предлагает взять в аренду проектор на мероприятие с доставкой. Всегда в наличии широкий выбор профессионального оборудования для проведения конференции, выставки, праздника или инсталляции любого формата. Заказчикам гарантируется гибкая стоимость услуг, монтаж, настройка и демонтаж под ключ.
 
 В каталоге представлены лучшие модели проекторов и экранов с регулируемой яркостью. Техника различается по мощности, размеру полотна, набору функций и дизайну. Некоторые конфигурации имеют ряд дополнительных опций, что позволяет расширить их функционал.
@@ -193,11 +193,11 @@ const Projectors = ({ cards }) => {
           <Modal active={modalActive} setActive={setModalActive} />
           {size.width > 1200 ? <ImgModal active={imgModal} setActive={setImgModal}
                                          id={id}
-                                         img1='/releases/Projectors/1.png'
-                                         img2='/releases/Projectors/2.png'
-                                         img3='/releases/Projectors/3.jpg'
-                                         img4='/releases/Projectors/4.png'
-                                         img5='/releases/Projectors/5.png'
+                                         img1='/Gallery/ProjectorPage/804x603@prj1.jpg'
+                                         img2='/Gallery/ProjectorPage/804x603@prj3.jpg'
+                                         img3='/Gallery/ProjectorPage/804x603@prj5.jpg'
+                                         img4='/Gallery/ProjectorPage/804x603@prj4.jpg'
+                                         img5='/Gallery/ProjectorPage/804x603@prj2.jpg'
 
 
                                          text1='Применение проектора на форумах'

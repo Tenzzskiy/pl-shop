@@ -46,6 +46,7 @@ export const ResultBusket = ( {data, setOfferModal}) => {
     }
     return(
         <section>
+            <div className={styles.background}>
         <div className={styles.container}>
             <div className={styles.back}>
 
@@ -122,6 +123,7 @@ export const ResultBusket = ( {data, setOfferModal}) => {
             </div>
             </> :null
             }
+            </div>
             {count > 0 ?    <div >
                 {size.width > 1200 ? <Offer title={'Вам также может пригодиться'} busket={1} data={data.mainAdditionals}/> : null }
                 {size.width > 720 && size.width<1200 ? <Offer_768 data={data.mainAdditionals}  title={'Вам также может пригодиться'} busket={1}/> : null }
@@ -169,6 +171,7 @@ export const ResultBusket = ( {data, setOfferModal}) => {
                     </div>
                 </div> : null
             }
+
         </section>
     )
 }
@@ -273,7 +276,9 @@ export const ResultBusket = ( {data, setOfferModal}) => {
 
 
     </div>
+
 </>
+
 
     )
 }

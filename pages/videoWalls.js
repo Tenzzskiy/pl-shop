@@ -159,8 +159,8 @@ const VideoWalls = ({  cards}) => {
             }
             <Seo
                 title='Прокат видеостены'
-                image1='/Seo/VideoWalls/1.png'
-                image2='/Seo/VideoWalls/2.png'
+                image1='/assets/images/info_3-1.jpg'
+                image2='/assets/images/info_3-2.jpg'
                 text1='Подготовка к проведению мероприятия, будь то большой семейный праздник, выставка, презентация или корпоративная встреча, подразумевает украшение зала и его оснащение современной аппаратурой. Интересно на тематических мероприятиях смотрятся видеостены. Смонтировав систему видеоотражающих устройств, которые образуют цельный экран, можно воспроизводить практически любую информацию. Это может быть как несколько независимых роликов, так и один клип, транслирующий информацию на большую поверхность. Добиться высокого качества при проведении такой презентации помогает большое количество источников видеосигнала.
 '
                 text2='Аренда бесшовной видеостены актуальна для проведения:
@@ -181,11 +181,11 @@ const VideoWalls = ({  cards}) => {
         <Modal active={modalActive} setActive={setModalActive} />
         {size.width > 1200 ? <ImgModal active={imgModal} setActive={setImgModal}
                                        id={id}
-                                       img1='/releases/VideoWalls/1.png'
-                                       img2='/releases/VideoWalls/2.png'
-                                       img3='/releases/VideoWalls/3.png'
-                                       img4='/releases/VideoWalls/4.png'
-                                       img5='/releases/VideoWalls/5.png'
+                                       img1='/Gallery/VideoWallPage/804x603@vw4.jpg'
+                                       img2='/Gallery/VideoWallPage/804x603@vw3.jpg'
+                                       img3='/Gallery/VideoWallPage/804x603@vw5.jpg'
+                                       img4='/Gallery/VideoWallPage/804x603@vw1.jpg'
+                                       img5='/Gallery/VideoWallPage/804x603@vw2.jpg'
                                        text1='Видеостена с промо-роликами в ТЦ'
                                        text2='Видеостена на мероприятии по тим билдингу'
                                        text3='Видеостена в ТЦ для демонстрации новой рекламной кампании'

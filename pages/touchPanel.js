@@ -190,8 +190,8 @@ const TouchPanel = ({ cards}) => {
               }
               <Seo
                   title='Сенсорные столы и киоски в аренду'
-              image1='/Seo/TouchPanel/1.png'
-              image2='/Seo/TouchPanel/2.svg'
+              image1='/assets/images/info_4-1.jpg'
+              image2='/assets/images/info_4-2.jpg'
               text1='Банальные, но неопровержимые выводы,
               а также акционеры крупнейших компаний, которые
               представляют собой яркий пример континентально-европейского
@@ -240,11 +240,11 @@ const TouchPanel = ({ cards}) => {
           <Modal active={modalActive} setActive={setModalActive}  />
           {size.width > 1200 ? <ImgModal active={imgModal} setActive={setImgModal}
                                          id={id}
-                                         img1='/releases/TouchPanel/1.png'
-                                         img2='/releases/TouchPanel/2.png'
-                                         img3='/releases/TouchPanel/3.jpg'
-                                         img4='/releases/TouchPanel/4.png'
-                                         img5='/releases/TouchPanel/5.png'
+                                         img1='/Gallery/TouchScreenPage/804x603@ts5.jpg'
+                                         img2='/Gallery/TouchScreenPage/804x603@ts3.jpg'
+                                         img3='/Gallery/TouchScreenPage/804x603@ts1.jpg'
+                                         img4='/Gallery/TouchScreenPage/804x603@ts4.jpg'
+                                         img5='/Gallery/TouchScreenPage/804x603@ts2.jpg'
 
 
                                          text1='Интерактивные панели для ознакомления с шоу-программой'

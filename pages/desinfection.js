@@ -165,8 +165,8 @@ const Index = ({ cards}) => {
             }
             <Seo
                 title='Обработка помещений от вирусов и бактерий'
-                image1='/Seo/Desinfection/1.png'
-                image2='/Seo/Desinfection/2.jpg'
+                image1='/assets/images/info_7-1.jpg'
+                image2='/assets/images/info_7-2.jpg'
                 text1='В новых социальных условиях все большую важность приобретает соблюдение санитарно-гигиенических требований.
                 Компания предлагает взять в аренду передовое оборудование для дезинфекции помещения по выгодной цене.
                 Установка эффективной системы очистки позволяет избавить воздух от вирусов, а с помощью специальной дезинфекционной техники можно произвести стерилизацию поверхностей.'
@@ -192,11 +192,11 @@ const Index = ({ cards}) => {
                                            text3='Дезинфекция помещения до и после мероприятия'
                                            text4='Аренда бактерицидный рециркуляторов и санитайзеров'
                                            text5='температурный контроль на входной группе'
-                                           img1='/releases/Desinfection/1.png'
-                                           img2='/releases/Desinfection/2.png'
-                                           img3='/releases/Desinfection/3.jpg'
-                                           img4='/releases/Desinfection/4.png'
-                                           img5='/releases/Desinfection/5.png'
+                                           img1='/Gallery/DisinfectionPage/804x603@dis1.jpg'
+                                           img2='/Gallery/DisinfectionPage/804x603@dis3.jpg'
+                                           img3='/Gallery/DisinfectionPage/804x603@dis4.jpg'
+                                           img4='/Gallery/DisinfectionPage/804x603@dis2.jpg'
+                                           img5='/Gallery/1.jpg'
             /> : null}
         </>
     )

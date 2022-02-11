@@ -57,6 +57,7 @@ const Index = ({cards}) =>{
     <meta property="og:url" content="https://arenda-plazm77/news"/>
 
 </Head>
+                    <div className={styles.background}>
                     <div className={styles.news_container} itemScope itemType="http://schema.org/SiteNavigationElement">
                         <div className={styles.error_link}>  <Link href="/" ><a><img src="/back_arrow.svg" alt=""/> На Главную</a></Link></div>
                         <div className={styles.news_title}>Наши новости</div>
@@ -66,6 +67,7 @@ const Index = ({cards}) =>{
                     </div>
                     {step ? <div className={cs(styles.else )}><button onClick={ () => Else()}>Показать ещё </button> </div> : null}
                     <FeedBack />
+                    </div>
                 </Layout>
 
         </>
