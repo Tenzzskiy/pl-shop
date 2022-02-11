@@ -64,7 +64,7 @@ export const BusketCard = ( {detail1,detail2,mainDetail,mainDetail2,img,title,ti
             )
         }
     }
-    console.log(data)
+
     return(
         <>
         <section className={styles.container}>
@@ -117,7 +117,7 @@ export const BusketCard = ( {detail1,detail2,mainDetail,mainDetail2,img,title,ti
                                                         data.time === '4 суток' ? d :
                                                             data.time === '5 суток' ? e : null) * (count-1)}))
                                         setCount(count - 1)
-                                        console.log('done1')
+
                                     }
                                 } else {
                                     if( count-1 > 0 ) {
@@ -127,7 +127,7 @@ export const BusketCard = ( {detail1,detail2,mainDetail,mainDetail2,img,title,ti
                                                         data.time === '4 суток' ? d2 :
                                                             data.time === '5 суток' ? e2 : null) * (count-1)}))
                                         setCount(count - 1)
-                                        console.log('done2')
+
                                     }
                                 }
                                 }}
@@ -143,7 +143,7 @@ export const BusketCard = ( {detail1,detail2,mainDetail,mainDetail2,img,title,ti
                                                             data.time === '4 суток' ? d :
                                                                 data.time === '5 суток' ? e : null) * (count+1)}))
                                             setCount(count + 1)
-                                            console.log('done1')
+
                                         }
                                     } else {
                                         if( count+1 > 0 ) {
@@ -153,7 +153,7 @@ export const BusketCard = ( {detail1,detail2,mainDetail,mainDetail2,img,title,ti
                                                             data.time === '4 суток' ? d2 :
                                                                 data.time === '5 суток' ? e2 : null) * (count+1)}))
                                             setCount(count + 1)
-                                            console.log('done2')
+
                                         }
                                     }
 

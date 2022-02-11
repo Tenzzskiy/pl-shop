@@ -16,6 +16,8 @@ import {Link as Link32, DirectLink, Element, Events, animateScroll as scroll, sc
 import cn from "classnames";
 import {Selector, useOnClickOutside} from "../Select/Select";
 import {NavigationButton} from "./navigation_button/NavigationButton";
+import axios from "axios";
+import {sendEmail} from "../../sources/utils/helpers";
 
 export const ResultBusket = ( {data, setOfferModal}) => {
     const [value,setValue] = useState();
@@ -116,8 +118,7 @@ export const ResultBusket = ( {data, setOfferModal}) => {
             {
                 if ( checkbox === true  && input ===true){
                     setOfferModal(true)
-                } else if (checkbox ===true  && input ===true){
-                    setOfferModal(true)
+                    sendEmail(items,' wad')
                 }
             }
             }><button>Отправить заявку</button> </div>

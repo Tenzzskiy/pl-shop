@@ -10,10 +10,13 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.1",
     "@thalesrc/js-utils": "^2.10.2",
+    "axios": "^0.25.0",
     "classnames": "^2.3.1",
     "clsx": "^1.1.1",
     "keen-slider": "^6.6.3",
     "next": "12.0.8",
+    "node-fetch": "^3.2.0",
+    "nodemailer": "^6.7.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-input-mask": "^2.0.4",

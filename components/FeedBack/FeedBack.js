@@ -4,6 +4,7 @@ import {useWindowSize} from "../../Hooks/useWindowSize";
 import {FormInput} from "../Input";
 import Link from "next/link";
 import {Selector_758} from "../Busket/Busket";
+import {sendEmail} from "../../sources/utils/helpers";
 
 const FeedBack = ( {setOfferModal}) => {
     const [checkbox,setCheckBox] =useState(true);
@@ -102,6 +103,7 @@ const FeedBack = ( {setOfferModal}) => {
                                 if ( checkbox === true &&  input ===true){
 
                                     setOfferModal(true)
+
                                 } else if (checkbox ===true && input ===true){
 
                                     setOfferModal(true)
