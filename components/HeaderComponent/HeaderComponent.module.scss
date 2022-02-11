@@ -1,4 +1,87 @@
+@keyframes center {
+  0%{
+    transform: scale(0.5);
+
+  }
+  50%{
+    transform: scale(1);
+  }
+  100%{
+
+    transform: scale(0.5);
+
+  }
+
+}
+@keyframes left {
+  0%{
+    transform: scale(0.5);
+
+  }
+  50%{
+    transform: scale(1);
+  }
+  100%{
+
+    transform: scale(0.5);
+
+  }
+
+}
+@keyframes right {
+  0% {
+    transform: scale(0.5);
+
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+
+    transform: scale(0.5);
+
+  }
+}
+.center{
+  animation-name: center;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  border: 0 !important;
+  z-index: 0;
+  position: absolute !important;
+  top: -300px;
+  width: 1200px !important;
+  height: 1200px !important;
+
+}
+.left{
+  animation-name: left;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  width: 1200px !important;
+  height: 1200px !important;
+  left: -400px;
+  border: 0 !important;
+  position: absolute !important;
+  z-index: 0;
+
+}
+.right{
+  animation-name: right;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  width: 1200px !important;
+  right: -400px !important;
+  height: 1200px !important;
+  border: 0 !important;
+  position: absolute !important;
+  z-index: 0;
+}
 .header_component{
+  position: relative;
   width: 100%;
   background: #181824;
 
@@ -73,6 +156,7 @@
     line-height: 120%;
     max-width: 700px;
     text-align: center;
+    z-index: 2;
   }
   .container{
     img{
@@ -87,11 +171,33 @@
   }
 }
 @media (max-width: 1200px) {
+  .center{
+    top: -150px;
+    width: 600px !important;
+    height: 600px !important;
+
+  }
+  .left{
+    width: 600px !important;
+    height: 600px !important;
+    left: -300px !important;
+    bottom: -200px ;
+
+  }
+  .right{
+
+    width: 600px !important;
+    right: -300px !important;
+    bottom: -200px ;
+    height: 600px !important;
+
+  }
   .container{
     padding: 0;
     max-width: 768px!important;
   }
   .button{
+    z-index: 2;
     & button{
       font-size: 18px;
       width: 285px;
@@ -118,8 +224,21 @@
   }
 }
 @media (max-width: 720px) {
+  .title{
+    max-width: 310px !important;
+  }
+  .left{
+    animation-name: none;
+  }
+  .right{
+    animation-name: none;
+  }
+  .center{
+    animation-name: none;
+  }
   .free{
     margin-bottom: 40px;
+    z-index: 2;
   }
   .button{
     & button{

@@ -8,6 +8,9 @@ const HeaderComponent = ( {TouchPanel,setTouchPanel,touchpanel=0,setSites,title,
     return(
         <section>
             <div className={styles.header_component} itemScope itemType="http://schema.org/ImageObject">
+                <img className={styles.center} src="/center_circle.svg" alt=""/>
+                <img className={styles.left} src="/left_circle.svg" alt=""/>
+                <img className={styles.right} src="/right_circle.svg" alt=""/>
             <Steps />
             <div className={styles.container}>
                 <img itemProp="contentUrl" src={mainImg} alt={title}/>
