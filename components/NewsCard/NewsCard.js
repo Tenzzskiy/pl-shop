@@ -3,13 +3,20 @@ import cs from 'classnames'
 import {useWindowSize} from "../../Hooks/useWindowSize";
 import Link from "next/link";
 import {useRouter} from "next/router";
+import BlobCoverReverse from "../background/background";
+import {useState} from "react";
 
 const NewsCard = ( {img,title,date,text,data,index}) =>{
     const size = useWindowSize();
+    const [background,setBackground] = useState(false);
     return(
         <section>
             <Link href={`/news/${index}`}><a className={styles.a}>
-        <div className={styles.container} itemScope itemType="http://schema.org/ImageObject">
+        <div className={styles.container} itemScope itemType="http://schema.org/ImageObject"
+             onMouseEnter={() => setBackground(true)}
+             onMouseLeave={() =>setBackground(false) }>
+            {background ? <BlobCoverReverse classNames={styles.svg}/> : null}
+
         <div className={styles.content}>
         <div className={styles.flex}>
         <div className={styles.img} ><img itemProp="contentUrl"  src={img} alt={title}/> </div>
