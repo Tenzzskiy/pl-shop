@@ -348,7 +348,7 @@
     color: var(--description);
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 140%;
     z-index: 5;
     height: 100%;
@@ -405,7 +405,9 @@
     align-items: center;
     color: var(--brand-color);
     position: relative;
-
+    button{
+      font-size: 12px !important;
+    }
     svg{
       margin-left: 5px;
       transition: all 0.2s;
