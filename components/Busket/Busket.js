@@ -120,7 +120,6 @@ export const ResultBusket = ( {data, setOfferModal}) => {
             {
                 if ( checkbox === true  && input ===true){
                     setOfferModal(true)
-                    setPhone({...phone,type:example})
                     sendEmail(items,phone,"cart" ,result)
 
                 }
@@ -186,7 +185,6 @@ export const ResultBusket = ( {data, setOfferModal}) => {
                         {
                             if ( checkbox === true &&  input ===true){
                                 setOfferModal(true)
-                                setPhone({...phone,type:example})
 
                                     sendEmail(items,phone,"cart",result)
 
@@ -228,23 +226,28 @@ export const ResultBusket = ( {data, setOfferModal}) => {
                     <div className={styles.selectorList}>
                         <button type="button" className={styles.selectorItem} onClick={() => {
                             setExample('Позвонить по телефону')
-                            value = example;
                             setSelectorStatus(false)
-
+                            setPhone((prev) => {
+                                return {...prev,type:'Позвонить по телефону'}
+                            })
                         }}>
                             Позвонить по Телефону
                         </button>
                         <button type="button" className={styles.selectorItem} onClick={() => {
                             setExample('Написать в Telegram')
                             setSelectorStatus(false)
-                            value = example;
+                            setPhone((prev) => {
+                                return {...prev,type:'Написать в Telegram'}
+                            })
                         }}>
                             Написать в Telegram
                         </button>
                         <button type="button" className={styles.selectorItem} onClick={() => {
                             setExample('Написать в WhatsApp')
                             setSelectorStatus(false)
-                            value = example;
+                            setPhone((prev) => {
+                                return {...prev,type:'Написать в WhatsApp'}
+                            })
                         }}>
                             Написать в WhatsApp
                         </button>
@@ -281,7 +284,9 @@ export const ResultBusket = ( {data, setOfferModal}) => {
             <div className={styles.selectorList}>
                 <button type="button" className={styles.selectorItem2} onClick={() => {
                     setExample('Позвонить по телефону')
-                    setPhone({...phone,type:example})
+                    setPhone((prev) => {
+                        return {...prev,type:'Позвонить по телефону'}
+                    })
                     setSelectorStatus(false)
                 }}>
                     Позвонить по Телефону
@@ -290,14 +295,18 @@ export const ResultBusket = ( {data, setOfferModal}) => {
                 <button type="button" className={styles.selectorItem2} onClick={() => {
                     setExample('Написать в Telegram')
                     setSelectorStatus(false)
-                    setPhone({...phone,type:example})
+                    setPhone((prev) => {
+                        return {...prev,type:'Написать в Telegram'}
+                    })
                 }}>
                     Написать в Telegram
                 </button>
                 <button type="button" className={styles.selectorItem2} onClick={() => {
                     setExample('Написать в WhatsApp')
                     setSelectorStatus(false)
-                    setPhone({...phone,type:example})
+                    setPhone((prev) => {
+                        return {...prev,type:'Написать в WhatsApp'}
+                    })
                 }}>
                     Написать в WhatsApp
                 </button>
