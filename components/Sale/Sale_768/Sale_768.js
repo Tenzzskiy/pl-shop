@@ -1,8 +1,8 @@
 import React, {FunctionComponent} from "react";
-import styles from './Sale_360.module.scss'
+import styles from './Sale_768.module.scss'
+import Timer from "../timer";
 
-
- export const Sale_360:FunctionComponent = ({ })  =>{
+const Sale_768 = (  { })  =>{
 
     return(
         <section>
@@ -11,7 +11,7 @@ import styles from './Sale_360.module.scss'
                 <div className={styles.container}>
                     <div className={styles.content}>
                         <div className={styles.offer}>
-                            <div className={styles.title}>Закажи сейчас со скидкой ! </div>
+                            <h2 className={styles.title}>Закажи сейчас со скидкой ! </h2>
                             <div className={styles.promo}> По промокоду “PLAZMA77”</div>
 
                         </div>
@@ -21,7 +21,7 @@ import styles from './Sale_360.module.scss'
                         </div>
                         <div className={styles.timer}>
                             <div className={styles.sale_title}> До завершения акции:</div>
-                            <div className={styles.time}> 12312312312</div>
+                            <div className={styles.time}>  <Timer /></div>
                         </div>
                     </div>
                 </div>
@@ -31,4 +31,4 @@ import styles from './Sale_360.module.scss'
     )
 }
 
-export default Sale_360;
+export default Sale_768;

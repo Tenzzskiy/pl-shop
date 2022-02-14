@@ -5,29 +5,17 @@ import {sendEmail} from "../../sources/utils/helpers";
 
 
 export default function email(req, res) {
-    const title = req.body.cards.map((elem) => {
-            return (
-                `
-           <li>
-           <p>
-        Название ${elem.title}
-            </p>
-           
-            </li>
-           `
-            )
-        }
-    )
 
+    console.log(req.body)
     const htmlLi = [];
 
     for (let index = 0; index < req.body.cards.length; index++){
         const li = `
 
-            <li>
-                <p>название: ${req.body.cards[index].title}</p>
+            <li style="display: flex flex-direction: row; justify-content: center ; align-items: center;">
+                <p style="color: #0b2650; ">Название: ${req.body.cards[index].title}</p>
                 <p>Время: ${req.body.cards[index].time}</p>
-                <p>Стоимсоть: ${req.body.cards[index].changedPrice}</p>  
+                <p style="color: green">Стоимсоть: ${req.body.cards[index].changedPrice}</p>  
             </li>
         `;
         htmlLi.push(li)
@@ -62,14 +50,17 @@ export default function email(req, res) {
         const mailData = {
             from: EMAIL_LOG,
             to: 'begliy710@yandex.ru',
-            subject: `Заявка с сайта Фотозоны на 8 марта `,
+            subject: `Заявка с сайта Аренда-Плазм77 `,
             text: "Sent from website",
             html: "",
         };
 
         if (type === "phone") {
             mailData.html = `
-         
+            <h1 style="padding-top: 10px; padding-bottom: 10px">
+                Получен заказ на номер: <i style="color: red;">${req.body.phone.phone}</i>   </h1>
+              <h2>  способ связи с клиентом : <i style="color: blue">${req.body.phone.type} </i></h2>
+              <h3>  В корзину ничего не было добавлено, заявка оставлена с целью рассчета </h3>
           `;
         } else if (type === "cart") {
             `
@@ -78,8 +69,10 @@ export default function email(req, res) {
             mailData.html =
                 `
                   <h1 style="padding-top: 10px; padding-bottom: 10px">
-                Получен заказ на номер: <i style="color: red;">${req.body.phone}</i>
-            </h1>
+                Получен заказ на номер: <i style="color: red;">${req.body.phone.phone}</i>   </h1>
+              <h2>  способ связи с клиентом : <i style="color: blue">${req.body.phone.type} </i></h2>
+              <h3>  Итоговая стоимость : <i style="color: green">${req.body.totalPrice} ₽ </i></h3>
+                
                 `
                  + html
         } else {
@@ -91,7 +84,7 @@ export default function email(req, res) {
 
                 res.status(200).json({success: false});
             }
-            console.log('mail', mailData.html)
+
         });
     } catch {
         res.status(200).json({success: false});

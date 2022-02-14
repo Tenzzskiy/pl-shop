@@ -15,19 +15,19 @@ export const getCartFromLocaleStorage = () => {
 };
 
 
-export async function sendEmail(cards,contactsInfo) {
+export async function sendEmail(cards,contactsInfo,type,totalPrice) {
     const POST_URL = '/api/email'
 
-    console.log('response')
+
     const response = await fetch(POST_URL,{
         method:'POST',
         headers:{
             "Content-Type":"application/json",
 
         },
-        body:JSON.stringify({type:"cart",cards:cards,phone:contactsInfo})
+        body:JSON.stringify({type:type,cards:cards,phone:contactsInfo,totalPrice:totalPrice})
     })
-    console.log('data',response.json())
+
 }
 export const translit = (word) => {
     const converter = {

@@ -4,7 +4,6 @@ import data from './../sources/data/cart_arenda-plasm77.ru.json'
 
 const newsArr = data.news;
 const DOMAIN = 'arenda-plazm77.ru';
-console.log(data.news)
 const blogPostsRssXml = data => {
 	let rssItemsXml = '';
 

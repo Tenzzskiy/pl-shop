@@ -13,7 +13,11 @@ const FeedBack = ( {setOfferModal}) => {
     }
     const [value,setValue] = useState(null);
     const [input,setInput] = useState(false);
-
+    const [example,setExample] = useState('Позвонить по Телефону');
+    const [phone,setPhone] = useState({
+        phone:" ",
+        type: example,
+    });
     const size = useWindowSize();
     return (
         <section>
@@ -93,7 +97,7 @@ const FeedBack = ( {setOfferModal}) => {
                                 {
                                     (!(evt?.includes('_')) && (evt?.includes(' '))) ?  setInput(true): null ;
                                 }
-                                setValue(evt)
+                                setPhone({...phone, phone:evt})
 
                             }} value={value}/>
                         <button
@@ -101,17 +105,14 @@ const FeedBack = ( {setOfferModal}) => {
 
                             {
                                 if ( checkbox === true &&  input ===true){
-
+                                    sendEmail( " ",phone,"phone"," ")
                                     setOfferModal(true)
 
-                                } else if (checkbox ===true && input ===true){
-
-                                    setOfferModal(true)
                                 }
                             }
                         }
                         >Отправить заявку </button>
-                        <Selector_758 />
+                        <Selector_758 phone={phone} setPhone={setPhone} example={example} setExample={setExample}/>
 
 
                         </div>

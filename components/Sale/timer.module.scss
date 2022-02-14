@@ -1,0 +1,15 @@
+.flex{
+  display: flex;
+
+flex-direction: row;
+  width: 280px;
+  .count_text{
+    margin-right: 20px;
+    min-width: 80px;
+  }
+}
+@media (max-width: 720px) {
+  .flex{
+    justify-content: center !important;
+  }
+}

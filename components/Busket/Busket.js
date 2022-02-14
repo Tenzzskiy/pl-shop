@@ -15,7 +15,7 @@ import {NavigationButton} from "./navigation_button/NavigationButton";
 import {sendEmail} from "../../sources/utils/helpers";
 import {Navigation} from "../Layout/Layout";
 export const ResultBusket = ( {data, setOfferModal}) => {
-    const [value,setValue] = useState();
+    const value = ' ';
     const [checkbox,setCheckBox] = useState(true);
     const size = useWindowSize();
     const items = useSelector(state => state.cart.itemsInCart);
@@ -23,9 +23,13 @@ export const ResultBusket = ( {data, setOfferModal}) => {
     const [input,setNumber ] = useState(false)
     items.map(elem => result += elem.changedPrice)
     const count = items.length;
+    const [example,setExample] = useState('Позвонить по Телефону');
     const totalPrice = useSelector(state => state.cart.totalPrice);
     const [navigation,setNavigation] = useState(false);
-    const [phone,setPhone] = useState(" ");
+    const [phone,setPhone] = useState({
+        phone:" ",
+        type: example,
+    });
     const goods =  items.map(elem  =>
         <BusketCard
             detail1={elem.detail1}
@@ -102,10 +106,10 @@ export const ResultBusket = ( {data, setOfferModal}) => {
                 {
                     (!(evt?.includes('_')) && (evt?.includes(' '))) ?  setNumber(true): null ;
                 }
-                setPhone(evt)
+                setPhone({...phone, phone:evt})
 
             }} /> </div>
-                <Selector_758 />
+                <Selector_758 phone={phone} setPhone={setPhone} example={example} setExample={setExample}/>
             </div>
             <div className={styles.rules}>
             <div className={styles.checkbox} onClick={triggerCheckBox}><img className={checkbox ? null : styles.hide} src="/Seo/checkbox.svg" alt=""/></div>
@@ -116,7 +120,9 @@ export const ResultBusket = ( {data, setOfferModal}) => {
             {
                 if ( checkbox === true  && input ===true){
                     setOfferModal(true)
-                    sendEmail(items,phone)
+                    setPhone({...phone,type:example})
+                    sendEmail(items,phone,"cart" ,result)
+
                 }
             }
             }><button>Отправить заявку</button> </div>
@@ -165,10 +171,11 @@ export const ResultBusket = ( {data, setOfferModal}) => {
                                 {
                                     (!(evt?.includes('_')) && (evt?.includes(' '))) ?  setNumber(true): null ;
                                 }
-
+                                setPhone({...phone, phone:evt})
 
                             }}  /> </div>
-                            {size.width < 720 ? <Selector_360 /> : <Selector_758 /> }
+                            {size.width < 720 ? <Selector_360  phone={phone} setPhone={setPhone} example={example} setExample={setExample}/>
+                                : <Selector_758  phone={phone} setPhone={setPhone} example={example} setExample={setExample} /> }
                         </div>
                         <div className={styles.rules}>
                             <div className={styles.checkbox} onClick={triggerCheckBox}><img className={checkbox ? null : styles.hide} src="/Seo/checkbox.svg" alt=""/></div>
@@ -179,9 +186,12 @@ export const ResultBusket = ( {data, setOfferModal}) => {
                         {
                             if ( checkbox === true &&  input ===true){
                                 setOfferModal(true)
-                            } else if (checkbox ===true && input ===true){
-                                setOfferModal(true)
+                                setPhone({...phone,type:example})
+
+                                    sendEmail(items,phone,"cart",result)
+
                             }
+
                         }
                         }>Отправить заявку</button> </div>
                     </div>
@@ -193,8 +203,7 @@ export const ResultBusket = ( {data, setOfferModal}) => {
 }
 
 
- export const Selector_360 =() => {
-    const [example,setExample] = useState('Позвонить по Телефону');
+ export const Selector_360 =({value,phone,setPhone,example,setExample}) => {
     const [selectorStatus,setSelectorStatus] = useState(false)
      const ref = useRef();
      useOnClickOutside(ref, () => setSelectorStatus(false));
@@ -219,20 +228,23 @@ export const ResultBusket = ( {data, setOfferModal}) => {
                     <div className={styles.selectorList}>
                         <button type="button" className={styles.selectorItem} onClick={() => {
                             setExample('Позвонить по телефону')
+                            value = example;
                             setSelectorStatus(false)
+
                         }}>
-                            Позвонить по телефону
+                            Позвонить по Телефону
                         </button>
                         <button type="button" className={styles.selectorItem} onClick={() => {
                             setExample('Написать в Telegram')
                             setSelectorStatus(false)
-
+                            value = example;
                         }}>
                             Написать в Telegram
                         </button>
                         <button type="button" className={styles.selectorItem} onClick={() => {
                             setExample('Написать в WhatsApp')
                             setSelectorStatus(false)
+                            value = example;
                         }}>
                             Написать в WhatsApp
                         </button>
@@ -244,8 +256,7 @@ export const ResultBusket = ( {data, setOfferModal}) => {
         </>
     )
 }
- export const Selector_758 = ( { }) =>{
-    const [example,setExample] = useState('Позвонить по Телефону');
+ export const Selector_758 = ( {phone,setPhone,example,setExample }) =>{
     const [selectorStatus,setSelectorStatus] = useState(false)
     const ref = useRef();
     useOnClickOutside(ref, () => setSelectorStatus(false));
@@ -270,20 +281,23 @@ export const ResultBusket = ( {data, setOfferModal}) => {
             <div className={styles.selectorList}>
                 <button type="button" className={styles.selectorItem2} onClick={() => {
                     setExample('Позвонить по телефону')
+                    setPhone({...phone,type:example})
                     setSelectorStatus(false)
                 }}>
-                    Позвонить по телефону
+                    Позвонить по Телефону
+
                 </button>
                 <button type="button" className={styles.selectorItem2} onClick={() => {
                     setExample('Написать в Telegram')
                     setSelectorStatus(false)
-
+                    setPhone({...phone,type:example})
                 }}>
                     Написать в Telegram
                 </button>
                 <button type="button" className={styles.selectorItem2} onClick={() => {
                     setExample('Написать в WhatsApp')
                     setSelectorStatus(false)
+                    setPhone({...phone,type:example})
                 }}>
                     Написать в WhatsApp
                 </button>

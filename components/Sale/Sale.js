@@ -3,9 +3,12 @@ import styles from './Sale.module.scss'
 import {useWindowSize} from "../../Hooks/useWindowSize";
 import Sale_768 from "./Sale_768/Sale_768";
 import Sale_360 from "./Sale_360/Sale_360";
+import cs from "classnames";
+import {Timer} from "./timer";
 
 
-const Sale:FunctionComponent = (  { })  =>{
+const Sale = (  { })  =>{
+
 const size =useWindowSize();
     return(
         <section>
@@ -18,7 +21,9 @@ const size =useWindowSize();
                                 <h2 className={styles.title}>Закажи сейчас со скидкой ! </h2>
                                 <div className={styles.promo}> По промокоду “PLAZMA77”</div>
                                 <div className={styles.sale_title}> До завершения акции:</div>
-                                <div className={styles.time}> 12312312312</div>
+                                <div className={styles.time}>
+                                 <Timer />
+                                </div>
                             </div>
                             <div className={styles.percents}>
                                 10%
