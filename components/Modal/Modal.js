@@ -24,7 +24,7 @@ export const Modal = ( {active,setActive}) =>{
     const [sliderRef, instanceRef] = useKeenSlider({
         initial: 0,
         slides: {
-            perView: perView,
+            perView: 'auto',
             spacing:35,
         },
         slideChanged(slider) {

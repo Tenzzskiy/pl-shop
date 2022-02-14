@@ -171,10 +171,12 @@ const Home = ({ cards }) => {
         <Shop page={1} active={modalActive} setActive={setModalActive} data={cards.mainCatalogue} />
         </div>
 <div className={styles.offer}>
-        {size.width > 1200 ? <Offer count={1} data={cards.mainAdditionals} active={modalActive} setActive={setModalActive} title={' С этим товаром часто берут'} /> : null }
+       {/* {size.width > 1200 ? <Offer count={1} data={cards.mainAdditionals} active={modalActive} setActive={setModalActive} title={' С этим товаром часто берут'} /> : null }
         {size.width > 720 && size.width<1200 ? <Offer_768  data={cards.mainAdditionals} count={1} active={modalActive} setActive={setModalActive} title={' С этим товаром часто берут'} /> : null }
         {size.width < 720  ? <Offer_360 data={cards.mainAdditionals} count={1} active={modalActive} setActive={setModalActive} title={' С этим товаром часто берут'}
-                                                           /> : null } </div>
+                                                           /> : null } */}
+    <Offer count={1} data={cards.mainAdditionals} active={modalActive} setActive={setModalActive} title={' С этим товаром часто берут'} />
+</div>
 
         <div className={styles.cleaning}>
         <Cleaning />

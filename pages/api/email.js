@@ -15,7 +15,7 @@ export default function email(req, res) {
             <li style="display: flex flex-direction: row; justify-content: center ; align-items: center;">
                 <p style="color: #0b2650; ">Название: ${req.body.cards[index].title}</p>
                 <p>Время: ${req.body.cards[index].time}</p>
-                <p style="color: green">Стоимсоть: ${req.body.cards[index].changedPrice}</p>  
+                <p style="color: green">Стоимость: ${req.body.cards[index].changedPrice}</p>  
             </li>
         `;
         htmlLi.push(li)
@@ -60,7 +60,7 @@ export default function email(req, res) {
             <h1 style="padding-top: 10px; padding-bottom: 10px">
                 Получен заказ на номер: <i style="color: red;">${req.body.phone.phone}</i>   </h1>
               <h2>  способ связи с клиентом : <i style="color: blue">${req.body.phone.type} </i></h2>
-              <h3>  В корзину ничего не было добавлено, заявка оставлена с целью рассчета </h3>
+              <h3>  В корзину ничего не было добавлено, заявка оставлена для рассчета </h3>
           `;
         } else if (type === "cart") {
             `

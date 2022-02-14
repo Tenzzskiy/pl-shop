@@ -13,8 +13,6 @@ import {Preferences_768} from "../components/Preferences/Right/right";
 import {Preferences_360} from "../components/Preferences/Preferences_360/Preferences_360";
 import {useWindowSize} from "../Hooks/useWindowSize";
 import {Offer} from "../components/Offer/Offer";
-import {Offer_768} from "../components/Offer/OfferCard/Offer_768";
-import {Offer_360} from "../components/Offer/OfferCard/Offer_360";
 import {Releases_768} from "../components/Relises/Releases_768/Releases_768";
 import {Modal} from "../components/Modal/Modal";
 import FeedBack from "../components/FeedBack/FeedBack";
@@ -118,10 +116,9 @@ const VideoWalls = ({  cards}) => {
             <Conditions />
             <Shop page={4} active={modalActive} setActive={setModalActive} data={cards.videoWallCatalogue}/>
 
-            {size.width > 1250 ? <Offer  data={cards.ledAdditionals} active={modalActive} setActive={setModalActive}/> : null }
-            {size.width > 720 && size.width<1250 ? <Offer_768 data={cards.ledAdditionals} active={modalActive} setActive={setModalActive} /> : null }
-            {size.width < 720  ? <Offer_360 data={cards.ledAdditionals} active={modalActive} setActive={setModalActive}
-            /> : null }
+           <Offer  data={cards.ledAdditionals} active={modalActive} setActive={setModalActive}/>
+
+
             <Cleaning />
             <Sale />
 

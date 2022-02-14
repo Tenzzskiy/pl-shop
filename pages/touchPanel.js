@@ -13,8 +13,6 @@ import {Preferences_768} from "../components/Preferences/Right/right";
 import {useWindowSize} from "../Hooks/useWindowSize";
 import {Preferences_360} from "../components/Preferences/Preferences_360/Preferences_360";
 import {Offer} from "../components/Offer/Offer";
-import {Offer_768} from "../components/Offer/OfferCard/Offer_768";
-import {Offer_360} from "../components/Offer/OfferCard/Offer_360";
 import {Releases_768} from "../components/Relises/Releases_768/Releases_768";
 import {Modal} from "../components/Modal/Modal";
 import FeedBack from "../components/FeedBack/FeedBack";
@@ -145,10 +143,8 @@ const TouchPanel = ({ cards}) => {
               }
               <Conditions />
               <Shop page={5} active={modalActive} setActive={setModalActive} data={cards.touchScreenCatalogue}/>
-              {size.width > 1200 ? <Offer data={cards.touchAdditionals} active={modalActive} setActive={setModalActive} count={2}/> : null }
-              {size.width > 720 && size.width<1200 ? <Offer_768 data={cards.touchAdditionals} active={modalActive} count={2} setActive={setModalActive}  /> : null }
-              {size.width < 720  ? <Offer_360 data={cards.touchAdditionals} active={modalActive} count={2} setActive={setModalActive}
-              /> : null }
+          <Offer data={cards.touchAdditionals} active={modalActive} setActive={setModalActive} count={2}/>
+
               <Cleaning />
               <Sale />
 

@@ -16,7 +16,7 @@ export const Slider = ({perView,setActive}) =>{
     const [sliderRef, instanceRef] = useKeenSlider({
         initial: 0,
         slides: {
-            perView: perView,
+            perView: 'auto',
             spacing:35,
         },
         slideChanged(slider) {
@@ -27,7 +27,7 @@ export const Slider = ({perView,setActive}) =>{
         }
     });
     const offers =  data.mainAdditionals.map(elem  =>
-        <div className="keen-slider__slide number-slide2" key={elem.id}>
+        <div className={cs("keen-slider__slide number-slide2",styles.slide)} key={elem.id}>
             <div className={styles.flex} >
                 <ModalCard price={elem.price} title={elem.name} img={elem.img} data={elem} id={elem.id} setActive={setActive} detail1={elem.detail1} detail2={elem.detail2}
                            mainDetail2={elem.mainDetail2}

@@ -1,3 +1,4 @@
+
 .hit{
   position: absolute;
 }
@@ -20,7 +21,8 @@
   border-radius: 2px;
 }
 .container{
-  max-width: 210px;
+  min-width: 210px;
+
   max-height: 263px;
   border: 1px solid #CFCFDC;
   box-shadow: 2px 4px 4px rgba(87, 87, 134, 0.2);

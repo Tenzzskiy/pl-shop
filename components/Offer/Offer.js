@@ -6,18 +6,17 @@ import 'keen-slider/keen-slider.min.css'
 import { useKeenSlider } from 'keen-slider/react';
 import {useWindowSize} from "../../Hooks/useWindowSize";
 import cs from 'classnames'
-import {Arrow2} from "../Img_modal/ImgModal";
 
 export const Offer = ({count=0,active,setActive,title=' С этим товаром часто берут',busket=0,data }) =>{
 
 
-
+    const size =useWindowSize();
     const [currentSlide, setCurrentSlide] = React.useState(0);
     const [loaded, setLoaded] = useState(false);
     const [sliderRef, instanceRef] = useKeenSlider({
         initial: 0,
         slides: {
-            perView: 4,
+            perView: 'auto',
             spacing:15,
         },
         slideChanged(slider) {
@@ -30,7 +29,7 @@ export const Offer = ({count=0,active,setActive,title=' С этим товаро
 
 
     const items =  data.map(elem  =>
-        <div className="keen-slider__slide number-slide2" key={elem.id}>
+        <div style={{minWidth: '280px'}} className="keen-slider__slide number-slide2" key={elem.id}>
             <div className={styles.flex} >
                 <OfferCard price={elem.price} title={elem.name} img={elem.img} data={elem} id={elem.id} active={active} setActive={setActive} busket={busket}
                            detail1={elem.detail1}
@@ -59,7 +58,7 @@ export const Offer = ({count=0,active,setActive,title=' С этим товаро
 
                     </div>
 
-                    {loaded && instanceRef.current && (
+                    {size.width > 720 ? loaded && instanceRef.current && (
                         <>
                             <Arrow3
                                 left
@@ -79,7 +78,7 @@ export const Offer = ({count=0,active,setActive,title=' С этим товаро
                                 }
                             />
                         </>
-                    )}
+                    )  : null}
 
                 </div>
                 {loaded && instanceRef.current && (

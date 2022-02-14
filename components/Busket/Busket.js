@@ -5,8 +5,6 @@ import React, {useRef, useState} from "react";
 import {useWindowSize} from "../../Hooks/useWindowSize";
 import Link from "next/link";
 import {Offer} from "../Offer/Offer";
-import {Offer_768} from "../Offer/OfferCard/Offer_768";
-import {Offer_360} from "../Offer/OfferCard/Offer_360";
 import {FormInput} from "../Input";
 import {Link as Link32} from 'react-scroll'
 import cn from "classnames";
@@ -146,11 +144,10 @@ export const ResultBusket = ( {data, setOfferModal}) => {
             }
             </div>
             {count > 0 ?    <div >
-                {size.width > 1200 ? <Offer title={'Вам также может пригодиться'} busket={1} data={data.mainAdditionals}/> : null }
-                {size.width > 720 && size.width<1200 ? <Offer_768 data={data.mainAdditionals}  title={'Вам также может пригодиться'} busket={1}/> : null }
-                {size.width < 720  ? <Offer_360  title={'Вам также может пригодиться'} busket={1} data={data.mainAdditionals}
-                /> : null }
-            </div> : null}
+
+                    <Offer title={'Вам также может пригодиться'} busket={1} data={data.mainAdditionals}/>
+            </div>
+                : null}
             {count > 0 &&  size.width < 1250 ?
                 <div className={styles.menu}  id='anchor'>
                     <div className={styles.menu_container}>

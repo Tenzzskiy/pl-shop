@@ -14,8 +14,6 @@ import {Preferences_768} from "../components/Preferences/Right/right";
 import {Preferences_360} from "../components/Preferences/Preferences_360/Preferences_360";
 import {useWindowSize} from "../Hooks/useWindowSize";
 import {Offer} from "../components/Offer/Offer";
-import {Offer_768} from "../components/Offer/OfferCard/Offer_768";
-import {Offer_360} from "../components/Offer/OfferCard/Offer_360";
 import {Releases_768} from "../components/Relises/Releases_768/Releases_768";
 import {Modal} from "../components/Modal/Modal";
 import FeedBack from "../components/FeedBack/FeedBack";
@@ -120,10 +118,9 @@ const Projectors = ({ cards }) => {
               <Choose />
               <Conditions />
               <Shop page={6} active={modalActive} setActive={setModalActive} data={cards.projectorsCatalogue}/>
-              {size.width > 1200 ? <Offer data={cards.projectorAdditionals} active={modalActive} setActive={setModalActive} count={3}/> : null }
-              {size.width > 720 && size.width<1200 ? <Offer_768 data={cards.projectorAdditionals}  active={modalActive} count={3} setActive={setModalActive} /> : null }
-              {size.width < 720  ? <Offer_360 data={cards.projectorAdditionals} active={modalActive} count={3} setActive={setModalActive}
-              /> : null }
+     <Offer data={cards.projectorAdditionals} active={modalActive} setActive={setModalActive} count={3}/>
+
+
               <Cleaning />
               <Sale />
 

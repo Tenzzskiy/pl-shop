@@ -11,8 +11,6 @@ import {Shop} from "../components/Shop/Shop";
 import {Releases_768} from "../components/Relises/Releases_768/Releases_768";
 import {useWindowSize} from "../Hooks/useWindowSize";
 import {Offer} from "../components/Offer/Offer";
-import {Offer_768} from "../components/Offer/OfferCard/Offer_768";
-import {Offer_360} from "../components/Offer/OfferCard/Offer_360";
 import {Preferences_768} from "../components/Preferences/Right/right";
 import {Preferences_360} from "../components/Preferences/Preferences_360/Preferences_360";
 import {Modal} from "../components/Modal/Modal";
@@ -122,11 +120,8 @@ const Screens = ({cards}) => {
 
                 <Conditions/>
                 <Shop page={3} active={modalActive} setActive={setModalActive} data={cards.ledScreenCatalogue} count={0}/>
-                {size.width > 1200 ? <Offer data={cards.ledAdditionals} active={modalActive} setActive={setModalActive}/> : null}
-                {size.width > 720 && size.width < 1200 ?
-                    <Offer_768  data={cards.ledAdditionals} active={modalActive} setActive={setModalActive}/> : null}
-                {size.width < 720 ? <Offer_360 data={cards.ledAdditionals}  active={modalActive} setActive={setModalActive}
-                /> : null}
+              <Offer data={cards.ledAdditionals} active={modalActive} setActive={setModalActive}/>
+
                 <Cleaning/>
                 <Sale/>
                 {size.width > 1200 ?

@@ -1,7 +1,5 @@
 import React, {useState} from "react";
 import Layout from "../components/Layout/Layout";
-import {Provider} from "react-redux";
-import {store} from "../redux";
 import {ResultBusket} from "../components/Busket/Busket";
 import {OfferModal} from "../components/offerModal/OfferModal";
 import data from "../sources/data/cart_arenda-plasm77.ru.json";

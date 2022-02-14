@@ -55,8 +55,8 @@
       z-index: 5;
       cursor: pointer;
       &:hover{
-        background: #575786;
-        color: white;
+
+        color: var(--brand-color);
       }
     }
 
