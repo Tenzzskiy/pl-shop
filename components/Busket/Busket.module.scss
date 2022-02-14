@@ -371,13 +371,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--brand-color);
+    color: var(--description);
     position: relative;
     svg{
       margin-left: 5px;
       transition: all 0.2s;
       position: absolute;
       top: 40%;
+      path{
+        fill: var(--description);
+      }
     }
     .selector_img_style{
       transform: rotate(360deg);
@@ -395,8 +398,13 @@
     z-index: 5;
     cursor: pointer;
     &:hover{
-      background: #575786;
-      color: white;
+      background: white;
+      color: var(--brand-color);
+      svg{
+        path{
+          fill: var(--brand-color);
+        }
+      }
     }
   }
   .selector2{
@@ -408,7 +416,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--brand-color);
+    color: var(--description);
     position: relative;
     button{
       font-size: 12px !important;
@@ -418,6 +426,9 @@
       transition: all 0.2s;
       position: absolute;
       top: 40%;
+      path{
+        fill: #0E0E52;
+      }
     }
     .selector_img_style{
       transform: rotate(360deg);
@@ -441,8 +452,8 @@
       cursor: pointer;
 
       &:hover{
-        background: #575786;
-        color: white;
+        background: white;
+        color: var(--brand-color);
       }
     }
 
