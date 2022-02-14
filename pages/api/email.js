@@ -1,14 +1,50 @@
-const nodemailer = require("nodemailer");
+import {dataArray} from "../../components/dataArray/dataArray";
 
+const nodemailer = require("nodemailer");
+import {sendEmail} from "../../sources/utils/helpers";
 
 
 export default function email(req, res) {
-    const EMAIL_LOG= 'begliy710@yandex.ru'
-    const EMAIL_PASS = 'Ten22101975'
+    const title = req.body.cards.map((elem) => {
+            return (
+                `
+           <li>
+           <p>
+        Название ${elem.title}
+            </p>
+           
+            </li>
+           `
+            )
+        }
+    )
+
+    const htmlLi = [];
+
+    for (let index = 0; index < req.body.cards.length; index++){
+        const li = `
+            <li>
+                <p>название: ${req.body.cards[index].title}</p>
+                <p>Время: ${req.body.cards[index].time}</p>
+                <p>Стоимсоть: ${req.body.cards[index].changedPrice}</p>  
+            </li>
+        `;
+        htmlLi.push(li)
+    }
+
+    const html = ` 
+               <ul>
+                ${htmlLi.join("")}
+            </ul>
+    `
+   const EMAIL_LOG = "info@vinnoe-kazino.ru";
+  const EMAIL_PASS = "VE&#r7w/2*c-f82ad";
+    // const EMAIL_LOG = 'begliy710@yandex.ru'
+    // const EMAIL_PASS = 'Ten22101975'
     const type = req.body.type;
-    console.log('done',req.body)
+
     if (!type) {
-        res.status(200).json({ success: false });
+        res.status(200).json({success: false});
     }
 
     try {
@@ -36,44 +72,23 @@ export default function email(req, res) {
                 Получен заказ на номер: <i style="color: red;">${req.body.phone}</i>
             </h1>
           `;
-        } else if (type  === "cart") {
-            console.log('cart',req.body.cards);
-            mailData.html = `
-                    <h2>
-                            Получен заказ на номер: <i style="color: red;">${req.body.phone}</i> 
-                    </h2>
-            ${req.body.cards.map((elem) => {
-                console.log('element',elem)
-                return(
-                    <div style="padding-top: 10px; padding-bottom: 10px">
-                        
-                    <ul>
-                        <li><b>название:</b> ${elem.title}</li>
-                        <li><b>длительность:</b> ${elem.time}</li>
+        } else if (type === "cart") {
 
-                        <li><b>сумма:</b> ${elem.changedPrice}</li>
-                    </ul>
-                </div>
-                )
-                   
-                }
-            
-            )}
-
-`
+            mailData.html =html
         } else {
-            res.status(200).json({ success: false });
+            res.status(200).json({success: false});
         }
 
         transporter.sendMail(mailData, (err, info) => {
             if (err.length > 0) {
 
-                res.status(200).json({ success: false });
+                res.status(200).json({success: false});
             }
-            console.log('mail',mailData.html)
+            console.log('mail', mailData.html)
         });
     } catch {
-        res.status(200).json({ success: false });
+        res.status(200).json({success: false});
     }
-    res.status(200).json({ success: true });
+    res.status(200).json({success: true});
 }
+

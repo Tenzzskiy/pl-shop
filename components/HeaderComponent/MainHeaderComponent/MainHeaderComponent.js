@@ -2,8 +2,9 @@ import React, {useState} from "react";
 import styles from './MainHeaderComponent.module.scss'
 import {useWindowSize} from "../../../Hooks/useWindowSize";
 import {MainHeaderComponent_360} from "./MainHeaderComponent_360";
-import {Steps} from "../../steps/steps";
+
 import BlobCoverReverse from "../../background/background";
+import Steps from "../../steps/steps";
 
 
 

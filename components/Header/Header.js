@@ -121,39 +121,7 @@ const Header = ({ setNavigation,setContacts,count}) =>{
                    <div className={cn(styles.bottom_header,  scroll>lastScroll ? styles.header_fixed : null)} >
                        <div className={styles.bottom_header_container}>
                            <div className={styles.content}>
-                               {/*<Link href='/' ><a className={cn(styles.a,*/}
-                               {/*    route.asPath === '/' ? styles.a_active : null*/}
 
-                               {/*)} >Плазмы</a></Link>*/}
-                               {/*<Link href='/screens'><a itemProp="url" className={cn(styles.a,*/}
-                               {/*    route.asPath === '/screens' ? styles.a_active : null*/}
-
-                               {/*)}*/}
-                               {/*>Светодиодные экраны</a></Link>*/}
-                               {/*<Link href='/videoWalls'><a itemProp="url" className={cn(styles.a,*/}
-                               {/*    route.asPath === '/videoWalls' ? styles.a_active : null*/}
-
-                               {/*)}>Видеостены</a></Link>*/}
-                               {/*<Link href='/touchPanel'><a itemProp="url" className={cn(styles.a,*/}
-                               {/*    route.asPath === '/touchPanel' ? styles.a_active : null*/}
-
-                               {/*)} >Сенсорные тач-панели</a></Link>*/}
-                               {/*<Link href='/projectors'><a itemProp="url" className={cn(styles.a,*/}
-                               {/*    route.asPath === '/projectors' ? styles.a_active : null*/}
-
-                               {/*)}>Проекторы</a></Link>*/}
-                               {/*<Link href='/laptops'><a itemProp="url" className={cn(styles.a,*/}
-                               {/*    route.asPath === '/laptops' ? styles.a_active : null*/}
-
-                               {/*)}>Ноутбуки</a></Link>*/}
-                               {/*<Link href='/sound'><a itemProp="url" className={cn(styles.a,*/}
-                               {/*    route.asPath === '/sound' ? styles.a_active : null*/}
-
-                               {/*)}>Звук, Свет и окружение</a></Link>*/}
-                               {/*<Link href='/desinfection'><a itemProp="url" className={cn(styles.a,*/}
-                               {/*    route.asPath === '/desinfection' ? styles.a_active : null*/}
-
-                               {/*)}>Дезинфекция</a></Link>*/}
                                {buttons}
 
 

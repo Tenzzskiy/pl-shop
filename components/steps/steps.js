@@ -9,12 +9,12 @@ const Steps = () =>{
     const route = useRouter();
     return(
         <>
-            <div className={styles.back}>
+            <div className={styles.back} itemScope itemType="http://schema.org/BreadcrumbList">
 
                 Главная
 
                 <img src="/white_arrow.svg" alt=""/>
-                <span>
+                <span  itemProp="name" itemScope itemType="http://schema.org/ListItem" >
                   {
                       route.asPath === '/screens' ? 'Светодиодные экраны' :
                           route.asPath === '/videoWalls' ? 'Видеостены' :
