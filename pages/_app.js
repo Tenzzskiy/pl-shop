@@ -6,7 +6,7 @@ import {useEffect} from "react";
 import Script from "next/script";
 
 function MyApp({ Component, pageProps }) {
-  console.log(store.getState())
+
   useEffect(() => {
     window.addEventListener('beforeunload', function (e) {
       localStorage.setItem('store', JSON.stringify(store.getState().cart.itemsInCart));

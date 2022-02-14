@@ -18,7 +18,7 @@ export const getCartFromLocaleStorage = () => {
 export async function sendEmail(cards,contactsInfo) {
     const POST_URL = '/api/email'
 
-
+    console.log('response')
     const response = await fetch(POST_URL,{
         method:'POST',
         headers:{

@@ -15,7 +15,7 @@ const NewsCard = ( {img,title,date,text,data,index}) =>{
         <div className={styles.container} itemScope itemType="http://schema.org/ImageObject"
              onMouseEnter={() => setBackground(true)}
              onMouseLeave={() =>setBackground(false) }>
-            {background ? <BlobCoverReverse classNames={styles.svg}/> : null}
+            {background ? <BlobCoverReverse classNames={styles.svg} color1="#C038F5" color2='#3496FE'/> : null}
 
         <div className={styles.content}>
         <div className={styles.flex}>

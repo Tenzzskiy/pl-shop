@@ -20,7 +20,7 @@ const Busket = ( {cards }) => {
         <>
             <Layout>
 
-                <ResultBusket setOfferModal={setOfferModal} data={cards} />
+                <ResultBusket  setOfferModal={setOfferModal} data={cards} />
 
 
             </Layout>

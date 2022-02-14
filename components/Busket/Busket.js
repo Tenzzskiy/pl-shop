@@ -1,24 +1,19 @@
 import styles from './Busket.module.scss'
-import Layout from "../Layout/Layout";
 import {BusketCard} from "./BusketCard/BusketCard";
 import {useSelector} from "react-redux";
-import data from "../../sources/data/cart_arenda-plasm77.ru.json";
-import {ShopItem} from "../Shop/ShopItem/ShopItem";
 import React, {useRef, useState} from "react";
 import {useWindowSize} from "../../Hooks/useWindowSize";
 import Link from "next/link";
 import {Offer} from "../Offer/Offer";
 import {Offer_768} from "../Offer/OfferCard/Offer_768";
 import {Offer_360} from "../Offer/OfferCard/Offer_360";
-import {Contacts} from "../Contacts/Contacts";
 import {FormInput} from "../Input";
-import {Link as Link32, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import {Link as Link32} from 'react-scroll'
 import cn from "classnames";
 import {Selector, useOnClickOutside} from "../Select/Select";
 import {NavigationButton} from "./navigation_button/NavigationButton";
-import axios from "axios";
 import {sendEmail} from "../../sources/utils/helpers";
-
+import {Navigation} from "../Layout/Layout";
 export const ResultBusket = ( {data, setOfferModal}) => {
     const [value,setValue] = useState();
     const [checkbox,setCheckBox] = useState(true);
@@ -29,6 +24,7 @@ export const ResultBusket = ( {data, setOfferModal}) => {
     items.map(elem => result += elem.changedPrice)
     const count = items.length;
     const totalPrice = useSelector(state => state.cart.totalPrice);
+    const [navigation,setNavigation] = useState(false);
     const goods =  items.map(elem  =>
         <BusketCard
             detail1={elem.detail1}
@@ -70,7 +66,7 @@ export const ResultBusket = ( {data, setOfferModal}) => {
 
             </div>
 <div className={styles.content}>
-    <div className={styles.title} >
+    <div className={styles.title}  >
         Моя корзина
     </div>
     <div className={styles.flex}>
@@ -78,8 +74,9 @@ export const ResultBusket = ( {data, setOfferModal}) => {
             {count > 0 ? goods :
             <>
                 <div className={styles.first}> Здесь пока ничего нет =(</div>
-                <div className={styles.second}> Но это легко исправить, заглянув в соответствующий раздел {size.width < 1200 ? <Link href="/"><a
-                >Каталога:</a></Link> : 'Каталога:' }</div>
+                <div className={styles.second}> Но это легко исправить, заглянув в соответствующий раздел {size.width < 1200 ?
+                    <a onClick={() => setNavigation(true)}> Каталога: </a>
+                    : 'Каталога:' }</div>
                 {size.width > 1200 ? <nav className={styles.nav_flex}>
                     {buttons}
                 </nav> : null}
@@ -189,7 +186,7 @@ export const ResultBusket = ( {data, setOfferModal}) => {
                     </div>
                 </div> : null
             }
-
+            <Navigation setNavigation={setNavigation} navigation={navigation} />
         </section>
     )
 }

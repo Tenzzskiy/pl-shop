@@ -46,14 +46,14 @@ const Index_page = ({props}) =>{
     />
 
 </Head>
-                <div className={styles.news_container}>
-                    <div className={styles.error_link}>  <Link href="/news" ><a><img src="/back_arrow.svg" alt=""/> К Новостям</a></Link></div>
-                    <div className={styles.news_title}> {props.title}</div>
+                <div className={styles.news_container} itemScope itemType="http://schema.org/ImageObject">
+                    <div className={styles.error_link} >  <Link href="/news" ><a><img src="/back_arrow.svg" alt=""/> К Новостям</a></Link></div>
+                    <div className={styles.news_title} itemProp="name" > {props.title}</div>
                     <div className={styles.news_flex}>
-                    <div className={styles.news_img}><img src={props.img} alt={props.title}/></div>
+                    <div className={styles.news_img}><img itemProp="contentUrl" src={props.img} alt={props.title}/></div>
                         <div className={styles.flex}>
                     <div className={styles.date}>{props.date}  </div>
-                    <div className={styles.news_text}>{props.text} </div>
+                    <div className={styles.news_text} itemProp="description">{props.text} </div>
                         </div>
                     </div>
                 </div>
