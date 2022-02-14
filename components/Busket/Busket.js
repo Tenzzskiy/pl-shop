@@ -25,6 +25,7 @@ export const ResultBusket = ( {data, setOfferModal}) => {
     const count = items.length;
     const totalPrice = useSelector(state => state.cart.totalPrice);
     const [navigation,setNavigation] = useState(false);
+    const [phone,setPhone] = useState(" ");
     const goods =  items.map(elem  =>
         <BusketCard
             detail1={elem.detail1}
@@ -101,7 +102,7 @@ export const ResultBusket = ( {data, setOfferModal}) => {
                 {
                     (!(evt?.includes('_')) && (evt?.includes(' '))) ?  setNumber(true): null ;
                 }
-
+                setPhone(evt)
 
             }} /> </div>
                 <Selector_758 />
@@ -115,7 +116,7 @@ export const ResultBusket = ( {data, setOfferModal}) => {
             {
                 if ( checkbox === true  && input ===true){
                     setOfferModal(true)
-                    sendEmail(items,' wad')
+                    sendEmail(items,phone)
                 }
             }
             }><button>Отправить заявку</button> </div>

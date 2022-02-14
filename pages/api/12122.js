@@ -1,12 +1,10 @@
 const nodemailer = require("nodemailer");
-
-
+import { MAIN_URL, EMAIL_LOG, EMAIL_PASS } from "../../constants/contacts";
+import priceToPretty from "../../helpers/priceToPretty";
 
 export default function email(req, res) {
-    const EMAIL_LOG= 'begliy710@yandex.ru'
-    const EMAIL_PASS = 'Ten22101975'
     const type = req.body.type;
-    console.log('done',req.body)
+
     if (!type) {
         res.status(200).json({ success: false });
     }
@@ -24,8 +22,8 @@ export default function email(req, res) {
 
         const mailData = {
             from: EMAIL_LOG,
-            to: 'begliy710@yandex.ru',
-            subject: `Заявка с сайта Фотозоны на 8 марта `,
+            to: "kazikhan.lezg@gmail.com",
+            subject: `Заявка с сайта Фотозоны на 8 марта ${MAIN_URL}`,
             text: "Sent from website",
             html: "",
         };
@@ -33,47 +31,36 @@ export default function email(req, res) {
         if (type === "phone") {
             mailData.html = `
             <h1 style="padding-top: 10px; padding-bottom: 10px">
-                Получен заказ на номер: <i style="color: red;">${req.body.phone}</i>
+                Получен заказ на номер: <i style="color: red;">${req.body.person.phone}</i> Имя: <i style="color: red;">${req.body.person.name}</i>
             </h1>
           `;
         } else if (type  === "cart") {
-            console.log('cart',req.body.cards);
             mailData.html = `
+                <div style="padding-top: 10px; padding-bottom: 10px">
                     <h2>
-                            Получен заказ на номер: <i style="color: red;">${req.body.phone}</i> 
+                        Получен заказ на номер: <i style="color: red;">${req.body.person.phone}</i> Имя: <i style="color: red;">${req.body.person.name}</i>
                     </h2>
-            ${req.body.cards.map((elem) => {
-                console.log('element',elem)
-                return(
-                    <div style="padding-top: 10px; padding-bottom: 10px">
-                        
                     <ul>
-                        <li><b>название:</b> ${elem.title}</li>
-                        <li><b>длительность:</b> ${elem.time}</li>
-
-                        <li><b>сумма:</b> ${elem.changedPrice}</li>
+                        <li><b>название:</b> ${req.body.card.title}</li>
+                        <li><b>длительность:</b> ${req.body.card.time}</li>
+                        <li><b>тип:</b> ${req.body.card.type}</li>
+                        <li><b>сумма:</b> ${priceToPretty(req.body.card.totalSum)}</li>
                     </ul>
                 </div>
-                )
-                   
-                }
-            
-            )}
-
-`
+            `;
         } else {
             res.status(200).json({ success: false });
         }
 
         transporter.sendMail(mailData, (err, info) => {
-            if (err.length > 0) {
-
+            if (err) {
+                console.log(err);
                 res.status(200).json({ success: false });
             }
-            console.log('mail',mailData.html)
         });
     } catch {
         res.status(200).json({ success: false });
     }
+
     res.status(200).json({ success: true });
 }
