@@ -11,8 +11,8 @@ export const LinkComponent = ({ link }) => {
     </a>
   );
 };
-const DOMEN = '11111';
-const EMAIL = '@@@@'
+const DOMEN = 'arenda-plazm77.ru';
+const EMAIL = 'info@arenda-plazm77.ru'
 export default function Privacy() {
   const name_oranization = "Аренда фотозон.";
   return (

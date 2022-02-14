@@ -23,6 +23,7 @@ export default function email(req, res) {
 
     for (let index = 0; index < req.body.cards.length; index++){
         const li = `
+
             <li>
                 <p>название: ${req.body.cards[index].title}</p>
                 <p>Время: ${req.body.cards[index].time}</p>
@@ -37,8 +38,8 @@ export default function email(req, res) {
                 ${htmlLi.join("")}
             </ul>
     `
-   const EMAIL_LOG = "info@vinnoe-kazino.ru";
-  const EMAIL_PASS = "VE&#r7w/2*c-f82ad";
+   const EMAIL_LOG = "info@arenda-plazm77.ru";
+  const EMAIL_PASS = "PRt-yu0-r4d";
     // const EMAIL_LOG = 'begliy710@yandex.ru'
     // const EMAIL_PASS = 'Ten22101975'
     const type = req.body.type;
@@ -68,13 +69,19 @@ export default function email(req, res) {
 
         if (type === "phone") {
             mailData.html = `
-            <h1 style="padding-top: 10px; padding-bottom: 10px">
-                Получен заказ на номер: <i style="color: red;">${req.body.phone}</i>
-            </h1>
+         
           `;
         } else if (type === "cart") {
-
-            mailData.html =html
+            `
+             
+            `
+            mailData.html =
+                `
+                  <h1 style="padding-top: 10px; padding-bottom: 10px">
+                Получен заказ на номер: <i style="color: red;">${req.body.phone}</i>
+            </h1>
+                `
+                 + html
         } else {
             res.status(200).json({success: false});
         }
