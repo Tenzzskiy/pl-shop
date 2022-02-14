@@ -54,7 +54,7 @@ export const Timer = () => {
             }
 
             updateClock();
-            let timeinterval = setInterval(updateClock, 500);
+            let timeinterval = setInterval(updateClock, 1000);
         }
 
         let deadline = new Date(Date.parse(new Date()) +   24 * 60 * 60 * 1000); // for endless timer
