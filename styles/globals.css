@@ -1,12 +1,15 @@
 
 @font-face {
     font-family: Rubik-1;
+    src: url("./fonts/Rubik-Bold.woff");
     src: url('./fonts/Rubik-Regular.ttf');
 }@font-face {
     font-family: Rubik-2;
+    src: url("./fonts/Rubik-Bold.woff");
     src: url('./fonts/Rubik-Medium.ttf');
 }@font-face {
     font-family: Rubik-3;
+    src: url("./fonts/Rubik-Bold.woff");
     src: url('./fonts/Rubik-Bold.ttf');
 }
 :root {
