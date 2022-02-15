@@ -1,9 +1,9 @@
-import React, {FunctionComponent} from "react";
+import React, {useState} from "react";
 import styles from './Sale_768.module.scss'
-import Timer from "../timer";
+import cn from "classnames";
 
 const Sale_768 = (  { })  =>{
-
+    const [promo,setPromo] = useState(false);
     return(
         <section>
             <div className={styles.sale}>
@@ -11,17 +11,29 @@ const Sale_768 = (  { })  =>{
                 <div className={styles.container}>
                     <div className={styles.content}>
                         <div className={styles.offer}>
-                            <h2 className={styles.title}>Закажи сейчас со скидкой ! </h2>
-                            <div className={styles.promo}> По промокоду “PLAZMA77”</div>
+                            <h2 className={styles.title}>Скидка на всё! </h2>
+                            <div className={styles.promo}> Получи промокод по клику!</div>
+                            <div className={styles.button}>
+                                <div className="col-md-3 col-sm-3 col-xs-6" onClick={() => {
+                                    setPromo(true)
+                                }}><a href="#"
+                                      className={cn("btn btn-sm animated-button victoria-two",
+                                          promo ? 'animated-button_disabled' : null
+                                      )} onClick="noperevod(event);">
+                                    <span>Хочу промокод</span>
+                                    <span className={promo ? styles.plazma2 : styles.plazma}>PLAZMA77</span>
 
+                                </a>
+                                </div>
+                            </div>
                         </div>
                         <div className={styles.percents}>
                             10%
 
                         </div>
                         <div className={styles.timer}>
-                            <div className={styles.sale_title}> До завершения акции:</div>
-                            <div className={styles.time}>  </div>
+                            <div className={styles.sale_title}>  *При заказе от 30 000₽</div>
+
                         </div>
                     </div>
                 </div>

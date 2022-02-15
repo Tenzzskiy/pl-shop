@@ -1,3 +1,24 @@
+.button{
+  width:186px ;
+  cursor: pointer;
+  height: 0;
+}
+
+.plazma{
+  position: absolute;
+  bottom: 15px;
+  left: 120px;
+  opacity: 0;
+  z-index: 5;
+  transition: all 0.7s;
+}.plazma2{
+   position: absolute;
+   bottom: 15px;
+   left: 50px;
+   opacity: 1;
+   z-index: 5;
+   transition: all 0.7s;
+ }
 .sale{
   background: white;
   .sale_svg{
@@ -28,9 +49,13 @@
   .sale_title{
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 140%;
-
+    font-size: 15px;
+    line-height: 120%;
+    color: #9B8BB6;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
   }
 
   .time{
@@ -45,18 +70,21 @@
       .offer{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: flex-start;
         color: white;
-        height: 120px;
-        width: 202px;
+        height: 130px;
+        width:260px;
         padding-top: 60px;
         padding-left: 48px;
+
         .title{
           font-style: normal;
           font-weight: bold;
-          font-size: 25px;
+          font-size: 42px;
           line-height: 120%;
+          margin: 5px 0!important;
+          max-width: 200px;
         }
         .promo{
           font-style: normal;
@@ -68,7 +96,7 @@
       }
       .percents{
         color: white;
-        right: 228px;
+        right: 100px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -76,7 +104,7 @@
         bottom: 30%;
         font-style: normal;
         font-weight: bold;
-        font-size: 141px;
+        font-size: 190px;
         line-height: 100%;
       }
     }

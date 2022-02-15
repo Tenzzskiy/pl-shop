@@ -3,11 +3,9 @@ import cs from 'classnames'
 import React, {useEffect, useRef, useState} from "react";
 import {FormInput} from "../Input";
 import Link from "next/link";
-import {Selector, useOnClickOutside} from "../Select/Select";
-import Contacts from "../Contacts/Contacts";
+import { useOnClickOutside} from "../Select/Select";
 import {Selector_360} from "../Busket/Busket";
 import {sendEmail} from "../../sources/utils/helpers";
-import {useSelector} from "react-redux";
 import cn from "classnames";
 
 export const SitesModal = ({touchpanel=0, setTouchPanel,TouchPanel,setOfferModal,setSites,sites,title='Заказать разработку ПО'}) =>{
@@ -25,7 +23,6 @@ export const SitesModal = ({touchpanel=0, setTouchPanel,TouchPanel,setOfferModal
     const [error,setError] = useState(false)
     const [input,setNumber] =useState(false);
     const [checkbox,setCheckBox] =useState(true);
-    const [disabled,setDisabled] = useState(true)
     const triggerCheckBox = () =>{
         setCheckBox(!checkbox);
     }

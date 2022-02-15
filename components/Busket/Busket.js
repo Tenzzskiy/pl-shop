@@ -8,7 +8,7 @@ import {Offer} from "../Offer/Offer";
 import {FormInput} from "../Input";
 import {Link as Link32} from 'react-scroll'
 import cn from "classnames";
-import {Selector, useOnClickOutside} from "../Select/Select";
+import { useOnClickOutside} from "../Select/Select";
 import {NavigationButton} from "./navigation_button/NavigationButton";
 import {sendEmail} from "../../sources/utils/helpers";
 import {Navigation} from "../Layout/Layout";

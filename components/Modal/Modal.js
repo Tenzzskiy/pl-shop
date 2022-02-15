@@ -25,7 +25,7 @@ export const Modal = ( {active,setActive}) =>{
         initial: 0,
         slides: {
             perView: 'auto',
-            spacing:35,
+            spacing:15,
         },
         slideChanged(slider) {
             setCurrentSlide(slider.track.details.rel);

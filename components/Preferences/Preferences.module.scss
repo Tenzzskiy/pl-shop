@@ -42,13 +42,15 @@
           height: 1px;
         }
         .flex_2{
+          margin-top: 20px;
           padding: 0 135px;
           display: grid;
           grid-template-columns: 1fr 1fr;
           grid-template-rows: minmax(307px,auto);
           position: relative;
           margin-bottom: 40px;
-
+          min-height: 307px;
+          max-height: 307px;
           .background_img_2{
             position: absolute;
             bottom: 0;
@@ -59,7 +61,9 @@
             justify-self: flex-end;
             align-self: flex-start;
             min-height: 247px;
+            img{
 
+            }
 
           }
           .text{
@@ -82,6 +86,7 @@
           }
         }
         .flex{
+          margin-top: 20px;
           min-height: 307px;
           height: 307px;
           max-height: 307px;
@@ -91,6 +96,7 @@
           grid-template-rows: minmax(307px,auto);
           position: relative;
           margin-bottom: 40px;
+
           .img{
             justify-self: flex-end;
             align-self: flex-end;
