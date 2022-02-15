@@ -1,6 +1,7 @@
 import styles from './right.module.scss'
 import React from "react";
 import {Left} from "../LeftPreference_tablet/left";
+import {MyImage} from "../../MyImage";
 
 
 export const Preferences_768 = ( {setSites,button=false,count = 0,secondLeftImg,secondRightImg,leftImg,rightImg,leftTitle,rightTitle,leftText,rightText,rightSecondText,leftSecondText,leftSecondTitle,rightSecondTitle,...props } ) => {
@@ -59,7 +60,8 @@ export const Right =({img,title,description }) =>{
 
                 </div>
                 <div className={styles.img}>
-                    <img itemProp='contentUrl' className={styles.background_img} src={img} alt={title}/>
+                    <MyImage itemProp='contentUrl' className={styles.background_img} src={img} alt={title} />
+
                 </div>
             </div>
             </div>

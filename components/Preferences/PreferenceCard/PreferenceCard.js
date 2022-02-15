@@ -1,5 +1,6 @@
 import React, {FunctionComponent, ReactNode} from "react";
 import styles from './PreferenceCard.module.scss'
+import {MyImage} from "../../MyImage";
 
 
  export const PreferenceCard = ( { img,title,description,secondDescription}  ) =>{
@@ -8,7 +9,8 @@ import styles from './PreferenceCard.module.scss'
             <div className={styles.container} itemScope itemType="http://schema.org/ImageObject">
             <div className={styles.content}>
                 <div className={styles.img}>
-                    <img itemProp="contentUrl" src={img} alt={title}/>
+                    <MyImage itemProp="contentUrl" src={img}  alt={title} />
+
                 </div>
                 <div className={styles.info}>
                     <h2 className={styles.title} itemProp="name">
