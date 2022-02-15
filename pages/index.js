@@ -90,7 +90,7 @@ const Home = ({ cards }) => {
          <MainHeaderComponent  setSites={setSites}
             setOfferModal={setOfferModal}/>
         </div>
-        <div className={styles.preferences}>
+        <div className={size.width > 1200 ? styles.preferences2 : styles.preferences}>
         {size.width > 1200 ?
             <Preferences
                 count={4}
