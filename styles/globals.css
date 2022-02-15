@@ -112,6 +112,7 @@ a.animated-button:link, a.animated-button:visited {
 body{
     font-family: Rubik-2;
     margin: 0;
+    @include mixin-name;
 }
 .arrow{
     width: 30px;

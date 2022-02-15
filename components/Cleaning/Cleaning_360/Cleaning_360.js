@@ -1,11 +1,12 @@
-import React, {FunctionComponent} from "react";
+import React from "react";
 import styles from './Cleaning_360.module.scss'
 import cn from "classnames";
 import Link from "next/link";
+import {MyImage} from "../../MyImage";
 
 
 
-export const Cleaning_360:FunctionComponent = ( { }) =>{
+export const Cleaning_360 = ( { }) =>{
 
     return(
 
@@ -37,22 +38,22 @@ export const Cleaning_360:FunctionComponent = ( { }) =>{
                     </div>
                     <div className={styles.grid}>
                         <div className={styles.item}>
-                            <img src="/Desinfection/desinfection_icon_1.svg" alt=""/>
+                            <MyImage src='"/Desinfection/desinfection_icon_1.svg"' />
 
                             <h3> Дезинфекция воздуха и поверхностей в помещении</h3>
                         </div>
                         <div className={styles.item}>
-                            <img src="/Desinfection/desinfection_icon_2.svg" alt=""/>
+                            <MyImage src='"/Desinfection/desinfection_icon_2.svg"' />
 
                             <h3> Аренда санитайзеров, автоматов с масками и перчатками</h3>
                         </div>
                         <div className={styles.item}>
-                            <img src="/Desinfection/desinfection_icon_3.svg" alt=""/>
+                            <MyImage src='"/Desinfection/desinfection_icon_3.svg"' />
 
                             <h3> Проведение санитарного контроля на входе</h3>
                         </div>
                         <div className={styles.item}>
-                            <img src="/Desinfection/desinfection_icon_4.svg" alt=""/>
+                            <MyImage src='"/Desinfection/desinfection_icon_4.svg"' />
 
                             <h3> Выезд мед.работника для проведения экспресс  ПЦР-тестов</h3>
                         </div>

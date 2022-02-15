@@ -6,7 +6,7 @@ import {sendEmail} from "../../sources/utils/helpers";
 
 export default function email(req, res) {
 
-    console.log(req.body)
+
     const htmlLi = [];
 
     for (let index = 0; index < req.body.cards.length; index++){
@@ -49,7 +49,7 @@ export default function email(req, res) {
 
         const mailData = {
             from: EMAIL_LOG,
-            to: 'begliy710@yandex.ru',
+            to: "info@arenda-plazm77.ru",
             subject: `Заявка с сайта Аренда-Плазм77 `,
             text: "Sent from website",
             html: "",
