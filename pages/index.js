@@ -90,7 +90,7 @@ const Home = ({ cards }) => {
          <MainHeaderComponent  setSites={setSites}
             setOfferModal={setOfferModal}/>
         </div>
-        <div className={size.width < 1200 ? styles.preferences : styles.preferences2}>
+        <div className={size.width < 1200 ? size.width < 720 ? styles.preferences : styles.preferences3 : styles.preferences2}>
         {size.width > 1200 ?
             <Preferences
                 count={4}
@@ -120,8 +120,8 @@ const Home = ({ cards }) => {
                 count={4}
                 title='Ваши выгоды с PLAZMA77'
                 leftImg="/assets/images/advantages_1.jpg"
-                rightImg="/assets/images/advantages_2.jpg"
-                secondLeftImg='/assets/images/advantages_3.jpg'
+                rightImg="/assets/images/advantages_3.jpg"
+                secondLeftImg='/assets/images/advantages_1.jpg'
                 secondRightImg='/assets/images/advantages_4.jpg'
                 leftText='Гибкая система скидок и бонусов для ивент менеджеров
             и организаторов мероприятий. Мы за долгосрочное сотрудничество!'
@@ -167,7 +167,7 @@ const Home = ({ cards }) => {
         <div className={styles.conditions}>
         <Conditions />
         </div>
-        <div className={size.width > 1200 ? styles.shop2 : styles.shop}>
+        <div className={size.width > 1250 ? styles.shop2 : styles.shop}>
         <Shop page={1} active={modalActive} setActive={setModalActive} data={cards.mainCatalogue} />
         </div>
 <div className={styles.offer}>

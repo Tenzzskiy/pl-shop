@@ -11,6 +11,7 @@
   border-radius: 5px;
   max-width: 598px;
   max-height: 218px;
+  font-family: Rubik-1;
   .content{
     max-height: 188px;
 
@@ -33,6 +34,7 @@
         height: 26px;
 
         span {
+
           width: 158px;
           color: #575786;
           margin-right: 8px;
@@ -49,6 +51,7 @@
         margin-bottom: 15px;
         height: 18px;
         span{
+
           margin-right: 5px;
           color: #575786;
         }
@@ -69,6 +72,7 @@
         color: var(--description);
         margin: 0 !important;
         height: 46px;
+        font-family: Rubik-3;
       }
 
     }
@@ -85,6 +89,7 @@
 
 
     span{
+      font-family: Rubik-3;
       color: var(--brand-color);
       font-style: normal;
       font-weight: 500;

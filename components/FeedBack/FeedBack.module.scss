@@ -1,3 +1,27 @@
+.disabled{
+  opacity: 0.4 !important;
+}
+.number_disabled{
+  input{
+    border: 1px solid darkred !important;
+    color: darkred !important;
+  }
+}
+.error_disabled{
+  opacity: 0;
+  max-height: 35px;
+}
+
+.error{
+  font-family: Rubik-1;
+  font-size: 12px;
+  max-height: 35px;
+  color: darkred;
+  opacity: 1 ;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
 .privacy_flex{
   display: flex;
   flex-direction: row;
@@ -97,6 +121,7 @@ background:  #F2F3FE;
   }
 }
 @media (max-width: 99999px){
+
   .number{
     margin-bottom: 45px;
    a{
@@ -168,6 +193,9 @@ background:  #F2F3FE;
 }
 
 @media (max-width: 1200px) {
+  .error{
+    max-width: 740px !important;
+  }
   .img{
     height: 442px;
   }
@@ -187,6 +215,7 @@ background:  #F2F3FE;
     font-size: 25px;
     margin-bottom: 0;
   }
+
   .request{
     font-size: 18px;
   }
@@ -205,6 +234,11 @@ background:  #F2F3FE;
 }
 
 @media (max-width: 720px){
+  .error{
+    max-width: 740px !important;
+    width: 100%;
+    text-align: center;
+  }
   .feedback_flex{
     min-height: 433px !important;
   }

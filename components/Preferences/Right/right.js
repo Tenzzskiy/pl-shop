@@ -60,7 +60,7 @@ export const Right =({img,title,description }) =>{
 
                 </div>
                 <div className={styles.img}>
-                    <MyImage itemProp='contentUrl' className={styles.background_img} src={img} alt={title} />
+                    <MyImage itemProp='contentUrl' className={styles.background_img} src={{default:img}} alt={title} />
 
                 </div>
             </div>

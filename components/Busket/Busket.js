@@ -13,6 +13,19 @@ import {NavigationButton} from "./navigation_button/NavigationButton";
 import {sendEmail} from "../../sources/utils/helpers";
 import {Navigation} from "../Layout/Layout";
 export const ResultBusket = ( {data, setOfferModal}) => {
+    const setInput = (id) =>{
+       if (id ===1 ) {
+           setNumber(false);
+           setError(true);
+       } else {
+           setNumber(true);
+           setError(false);
+       }
+    }
+    const button = useRef();
+    useOnClickOutside(button, () => setError(false));
+
+    const [error,setError] = useState(false)
     const value = ' ';
     const [checkbox,setCheckBox] = useState(true);
     const size = useWindowSize();
@@ -23,7 +36,7 @@ export const ResultBusket = ( {data, setOfferModal}) => {
     const count = items.length;
     const [example,setExample] = useState('Позвонить по Телефону');
     const totalPrice = useSelector(state => state.cart.totalPrice);
-    const [navigation,setNavigation] = useState(false);
+    const [navigation,setNavigation] = useState(false)
     const [phone,setPhone] = useState({
         phone:" ",
         type: example,
@@ -96,13 +109,19 @@ export const ResultBusket = ( {data, setOfferModal}) => {
             </div>
             <div className={styles.add}>*финальная стоимость
             с учётом доставки рассчитывается менеджером</div>
+                <div  className={(cn(styles.error_disabled,error ? styles.error :  ( checkbox === true &&  input ===true ? styles.error_disabled : null)     ) )}>
+                Введите корректный номер телефона
+                </div>
             <div className={styles.contacts}>
-            <div className={styles.number}><FormInput mask="+7 (999) 999-99-99" placeholder='+7 999 999-99-99' onChange={(evt) => {
+            <div ref={button}  className={(cn(styles.number, error ? checkbox === true &&  input ===true ? null  :styles.number_disabled : null ))}
+
+                 ><FormInput
+            mask="+7 (999) 999-99-99" placeholder='+7 999 999-99-99' onChange={(evt) => {
                 {
-                    (evt?.includes('_')) && (evt?.includes(' ')) ?  setNumber(false): null ;
+                    (evt?.includes('_')) && (evt?.includes(' ')) ?  setInput(1): null ;
                 }
                 {
-                    (!(evt?.includes('_')) && (evt?.includes(' '))) ?  setNumber(true): null ;
+                    (!(evt?.includes('_')) && (evt?.includes(' '))) ?  setInput() : null ;
                 }
                 setPhone({...phone, phone:evt})
 
@@ -113,7 +132,7 @@ export const ResultBusket = ( {data, setOfferModal}) => {
             <div className={styles.checkbox} onClick={triggerCheckBox}><img className={checkbox ? null : styles.hide} src="/Seo/checkbox.svg" alt=""/></div>
             <div> Соглашаюсь с <Link href=""><a>Правилами обработки персональных данных</a></Link></div>
             </div>
-            <div className={styles.button} onClick={ () =>
+            <div className={cn(styles.button, checkbox === true &&  input ===true ? null : styles.disabled)} onClick={ () =>
 
             {
                 if ( checkbox === true  && input ===true){
@@ -159,15 +178,19 @@ export const ResultBusket = ( {data, setOfferModal}) => {
                         </div>
                         <div className={styles.add}>*финальная стоимость
                             с учётом доставки рассчитывается менеджером</div>
+                        <div className={(cn(styles.error_disabled,error ? styles.error :  ( checkbox === true &&  input ===true ? styles.error_disabled : null)     ) )}>
+                            Введите корректный номер телефона
+                        </div>
                         <div className={styles.contacts}>
-                            <div className={styles.number}><FormInput mask="+7 (999) 999-99-99" placeholder='+7 999 999-99-99'  onChange={(evt) => {
+                            <div ref={button}  className={(cn(styles.number, error ? checkbox === true &&  input ===true ? null  :styles.number_disabled : null ))} ><FormInput mask="+7 (999) 999-99-99" placeholder='+7 999 999-99-99'  onChange={(evt) => {
                                 {
-                                    (evt?.includes('_')) && (evt?.includes(' ')) ?  setNumber(false): null ;
+                                    (evt?.includes('_')) && (evt?.includes(' ')) ?  setInput(1): null ;
                                 }
                                 {
-                                    (!(evt?.includes('_')) && (evt?.includes(' '))) ?  setNumber(true): null ;
+                                    (!(evt?.includes('_')) && (evt?.includes(' '))) ?  setInput() : null ;
                                 }
                                 setPhone({...phone, phone:evt})
+
 
                             }}  /> </div>
                             {size.width < 720 ? <Selector_360  phone={phone} setPhone={setPhone} example={example} setExample={setExample}/>
@@ -177,7 +200,7 @@ export const ResultBusket = ( {data, setOfferModal}) => {
                             <div className={styles.checkbox} onClick={triggerCheckBox}><img className={checkbox ? null : styles.hide} src="/Seo/checkbox.svg" alt=""/></div>
                             <div className={styles.agree}> Соглашаюсь с <Link href=""><a>Правилами обработки персональных данных</a></Link></div>
                         </div>
-                        <div className={styles.button}><button onClick={ () =>
+                        <div className={cn(styles.button, checkbox === true &&  input ===true ? null : styles.disabled)}><button onClick={ () =>
 
                         {
                             if ( checkbox === true &&  input ===true){

@@ -1,15 +1,28 @@
 import styles from './SitesModal.module.scss'
 import cs from 'classnames'
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import {FormInput} from "../Input";
 import Link from "next/link";
-import {Selector} from "../Select/Select";
+import {Selector, useOnClickOutside} from "../Select/Select";
 import Contacts from "../Contacts/Contacts";
 import {Selector_360} from "../Busket/Busket";
 import {sendEmail} from "../../sources/utils/helpers";
 import {useSelector} from "react-redux";
+import cn from "classnames";
 
 export const SitesModal = ({touchpanel=0, setTouchPanel,TouchPanel,setOfferModal,setSites,sites,title='Заказать разработку ПО'}) =>{
+    const button = useRef();
+    useOnClickOutside(button, () => setError(false));
+    const setInput = (id) =>{
+        if (id ===1 ) {
+            setNumber(false);
+            setError(true);
+        } else {
+            setNumber(true);
+            setError(false);
+        }
+    }
+    const [error,setError] = useState(false)
     const [input,setNumber] =useState(false);
     const [checkbox,setCheckBox] =useState(true);
     const [disabled,setDisabled] = useState(true)
@@ -40,13 +53,16 @@ export const SitesModal = ({touchpanel=0, setTouchPanel,TouchPanel,setOfferModal
                     <div className={styles.number}>
                     Телефон<span>*</span>
                     </div>
-                    <div className={styles.input}>
+                    <div className={(cn(styles.error_disabled,error ? styles.error :  ( checkbox === true &&  input ===true ? styles.error_disabled : null)     ) )}>
+                        Введите корректный номер телефона
+                    </div>
+                    <div ref={button} className={(cn(styles.input, error ? checkbox === true &&  input ===true ? null  :styles.number_disabled : null ))}>
                         <FormInput mask="+7 (999) 999-99-99" placeholder='+7 999 999-99-99' onChange={(evt) => {
                             {
-                                (evt?.includes('_')) && (evt?.includes(' ')) ?  setNumber(false): null ;
+                                (evt?.includes('_')) && (evt?.includes(' ')) ?  setInput(1): null ;
                             }
                             {
-                                (!(evt?.includes('_')) && (evt?.includes(' '))) ?  setNumber(true): null ;
+                                (!(evt?.includes('_')) && (evt?.includes(' '))) ?  setInput(): null ;
                             }
                             setPhone({...phone,phone:evt})
 
@@ -61,7 +77,7 @@ export const SitesModal = ({touchpanel=0, setTouchPanel,TouchPanel,setOfferModal
                             <div className={styles.agree}> Соглашаюсь с <Link href="/privacy"><a rel='nofollow'>Правилами обработки персональных данных</a></Link></div>
                         </div>
 
-                        <div className={styles.button} >
+                        <div className={cn(styles.button,checkbox === true &&  input ===true ? null : styles.disabled)} >
                         <button onClick={ () =>
 
                         {

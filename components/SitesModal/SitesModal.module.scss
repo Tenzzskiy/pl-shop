@@ -1,3 +1,29 @@
+.disabled{
+  opacity: 0.4 !important;
+}
+.number_disabled{
+  input{
+    border: 1px solid darkred !important;
+    color: darkred !important;
+  }
+}
+.error_disabled{
+  opacity: 0;
+  max-height: 14px;
+}
+
+.error{
+  text-align: left;
+  font-family: Rubik-1;
+  font-size: 12px;
+  max-height: 14px;
+  color: darkred;
+  opacity: 1 ;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  height: 14px;
+}
 .exit{
   position: absolute;
   top: 6px;

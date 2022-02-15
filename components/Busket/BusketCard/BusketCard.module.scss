@@ -20,6 +20,7 @@
   box-shadow: 2px 4px 4px rgba(87, 87, 134, 0.2);
   height: 181px;
   width: 700px;
+  font-family: Rubik-3;
   background: white;
   box-sizing: border-box;
   border-radius: 5px;
@@ -49,6 +50,7 @@
       flex-direction: column;
       justify-content: space-between;
       .title{
+        font-family: Rubik-2;
         font-style: normal;
         font-weight: 500;
         font-size: 18px;

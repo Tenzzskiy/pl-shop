@@ -1,12 +1,27 @@
 import styles from './FeedBack.module.scss'
-import React, { useState} from "react";
+import React, {useRef, useState} from "react";
 import {useWindowSize} from "../../Hooks/useWindowSize";
 import {FormInput} from "../Input";
 import Link from "next/link";
 import {Selector_758} from "../Busket/Busket";
 import {sendEmail} from "../../sources/utils/helpers";
+import cn from "classnames";
+import {useOnClickOutside} from "../Select/Select";
 
 const FeedBack = ( {setOfferModal}) => {
+    const button = useRef();
+    useOnClickOutside(button, () => setError(false));
+    const setNumber = (id) =>{
+    if (id ===1 ) {
+        setInput(false);
+        setError(true);
+    } else {
+        setInput(true);
+        setError(false);
+    }
+}
+
+    const [error,setError] = useState(false)
     const [checkbox,setCheckBox] =useState(true);
     const triggerCheckBox = () =>{
         setCheckBox(!checkbox);
@@ -86,21 +101,23 @@ const FeedBack = ( {setOfferModal}) => {
                         <div className={styles.request}>
                             Или оставьте заявку
                         </div>
-
-                        <div className={styles.contacts}>
+                        <div className={(cn(styles.error_disabled,error ? styles.error :  ( checkbox === true &&  input ===true ? styles.error_disabled : null)     ) )}>
+                            Введите корректный номер телефона
+                        </div>
+                        <div ref={button} className={(cn(styles.contacts, error ? checkbox === true &&  input ===true ? null  :styles.number_disabled : null ))}>
                             <FormInput mask="+7 (999) 999-99-99"   placeholder='+7 999 999-99-99' onChange={(evt) => {
 
 
                                 {
-                                    (evt?.includes('_')) && (evt?.includes(' ')) ?  setInput(false): null ;
+                                    (evt?.includes('_')) && (evt?.includes(' ')) ?  setNumber(1): null ;
                                 }
                                 {
-                                    (!(evt?.includes('_')) && (evt?.includes(' '))) ?  setInput(true): null ;
+                                    (!(evt?.includes('_')) && (evt?.includes(' '))) ?  setNumber(): null ;
                                 }
                                 setPhone({...phone, phone:evt})
 
                             }} value={value}/>
-                        <button
+                        <button className={checkbox === true &&  input ===true ? null : styles.disabled}
                             onClick={ () =>
 
                             {

@@ -31,14 +31,14 @@ export const Partners_360 = ({}) => {
                         <div className={styles.flex}>
 
 
-                            <div className={styles.faded}> <MyImage src={"/Clients/client_1.svg"} alt="maximice" />   </div>
-                            <div className={styles.faded}><MyImage src={ "/Clients/client_2.svg"} alt="mega" />    </div>
+                            <div className={styles.faded}> <MyImage src={{default: "/Clients/client_1.svg"}} alt="maximice" />   </div>
+                            <div className={styles.faded}><MyImage src={{default: "/Clients/client_2.svg"}} alt="mega" />    </div>
                         </div>
                     </div>
                     <div className={cn("keen-slider__slide",styles.slider)}>
                         <div className={styles.flex}>
-                            <div className={styles.faded}><MyImage src={ "/Clients/client_3.svg"} alt="volkswagen" /></div>
-                            <div className={styles.faded}><MyImage src={"/Clients/client_4.svg"} alt="porsche" /></div>
+                            <div className={styles.faded}><MyImage src={{default: "/Clients/client_3.svg"}} alt="volkswagen" /></div>
+                            <div className={styles.faded}><MyImage src={{default: "/Clients/client_4.svg"}} alt="porsche" /></div>
                         </div>
 
                     </div>
