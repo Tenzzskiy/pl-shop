@@ -1,5 +1,5 @@
 @font-face {
-    font-family: Rubik-1;
+    font-family: Rubik-2;
     src: url('./fonts/Rubik-Bold.woff2') format('woff2'),
     url('./fonts/Rubik-Bold.woff') format('woff');
     font-weight: bold;
@@ -8,7 +8,7 @@
 }
 
 @font-face {
-    font-family: Rubik-2;
+    font-family: Rubik-1;
     src: url('./fonts/Rubik-Regular.woff2') format('woff2'),
     url('./fonts/Rubik-Regular.woff') format('woff');
     font-weight: normal;
