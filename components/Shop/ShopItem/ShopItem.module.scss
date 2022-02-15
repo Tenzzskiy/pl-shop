@@ -144,8 +144,11 @@
     min-height: 223px;
     img{
       width: 250px;
+      max-width: 250px;
+      min-width: 250px;
       min-height: 188px;
       max-height: 188px;
+      height: 188px;
     }
   }
   .content{
@@ -177,6 +180,14 @@
   .bucket{
 
     right: -300px;
+    img{
+      min-width: 24px;
+      max-width: 24px;
+      width: 24px;
+      min-height: 22px;
+      max-height: 22px;
+      height: 22px;
+    }
   }
   .content{
     flex-direction: column;
