@@ -22,7 +22,7 @@ const size =useWindowSize();
                                 <div className={styles.promo}> По промокоду “PLAZMA77”</div>
                                 <div className={styles.sale_title}> До завершения акции:</div>
                                 <div className={styles.time}>
-                                 <Timer />
+
                                 </div>
                             </div>
                             <div className={styles.percents}>

@@ -21,7 +21,7 @@ const Sale_768 = (  { })  =>{
                         </div>
                         <div className={styles.timer}>
                             <div className={styles.sale_title}> До завершения акции:</div>
-                            <div className={styles.time}>  <Timer /></div>
+                            <div className={styles.time}>  </div>
                         </div>
                     </div>
                 </div>
