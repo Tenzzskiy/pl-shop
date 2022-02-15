@@ -44,7 +44,7 @@ const check = () =>{
             <div className={styles.container} itemScope itemType="http://schema.org/Product">
             <div className={styles.content}>
                 <div className={styles.hit}>
-                    {data.total === "1" ?  <img src="/hit.svg" alt=""/> : Number(data.total) === 2 ?  <img src="/profitable.svg" alt=""/> : null}
+                    {data.total === "1" ?  <MyImage itemProp="contentUrl" src={{default: "/hit.svg"}} alt="Хит" /> : Number(data.total) === 2 ?  <MyImage itemProp="contentUrl" src={{default: "/profitable.svg"}} alt="Выгодно" /> : null}
 
                 </div>
                 <div className={styles.img} >
