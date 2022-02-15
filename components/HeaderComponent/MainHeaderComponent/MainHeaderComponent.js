@@ -18,9 +18,9 @@ const MainHeaderComponent = ({setSites} ) =>{
                 <div className={styles.header_component}>
 
                     <div className={styles.container}>
-                        <img className={styles.center} src="/center_circle.svg" alt=""/>
-                        <img className={styles.left} src="/left_circle.svg" alt=""/>
-                        <img className={styles.right} src="/right_circle.svg" alt=""/>
+                        {/*<img className={styles.center} src="/center_circle.svg" alt=""/>*/}
+                        {/*<img className={styles.left} src="/left_circle.svg" alt=""/>*/}
+                        {/*<img className={styles.right} src="/right_circle.svg" alt=""/>*/}
                         <div itemScope itemType="http://schema.org/ImageObject">
                             <picture>
                                 <source srcSet="/assets/images/tv.webp" type="image/webp" />
