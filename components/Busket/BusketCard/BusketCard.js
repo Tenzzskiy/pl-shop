@@ -7,6 +7,7 @@ import {deleteItemFromCart} from './../../../redux/cart/reducer'
 import {updateSelect,updateCount,updateTime} from './../../../redux/cart/reducer'
 import {useWindowSize} from "../../../Hooks/useWindowSize";
 import {LedSelector} from "../../Shop/LedSelector/LedSelector";
+import {numberWithSpaces} from "../../../sources/utils/helpers";
 export const BusketCard = ( {detail1,detail2,mainDetail,mainDetail2,img,title,time,price,id,data,Priced  }) => {
 
     const [Switch,setSwitch] = useState(data.Switch)
@@ -105,7 +106,7 @@ export const BusketCard = ( {detail1,detail2,mainDetail,mainDetail2,img,title,ti
                     <div className={styles.text_content_footer}>
                         {size.width > 720 ? <Selector checked={data.checked} setChangedPrice={setChangedPrice} duration={duration}  price={changedPrice} setTime={setTime} time={time} data={data} changedPrice={changedPrice} count={count} /> : null}
                         <div className={styles.price}>
-                        <div className={styles.number}>{data.changedPrice}₽</div>
+                        <div className={styles.number}>{numberWithSpaces(data.changedPrice)}₽</div>
                             <div className={styles.trigger}>
                                 <div onClick={ ( ) => {
 

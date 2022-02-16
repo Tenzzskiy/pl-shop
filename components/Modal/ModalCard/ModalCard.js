@@ -4,7 +4,7 @@ import {setItemInCart, updateTotalPrice} from "../../../redux/cart/reducer";
 import {useDispatch, useSelector} from "react-redux";
 import Link from "next/link";
 import cs from "classnames";
-
+import {numberWithSpaces} from "../../../sources/utils/helpers";
 
 
 export const ModalCard = ({total,img,title,price,id,setActive,detail1,detail2,mainDetail,mainDetail2 }) => {
@@ -35,6 +35,7 @@ export const ModalCard = ({total,img,title,price,id,setActive,detail1,detail2,ma
             if (items[i].id === id) {
                 return true;
 
+
             }
         }
         return false;
@@ -55,11 +56,11 @@ export const ModalCard = ({total,img,title,price,id,setActive,detail1,detail2,ma
                 </picture> </div>
             <div className={styles.title}>{title} </div>
             <div className={styles.footer}>
-            <div className={styles.price}>+{time === '1 сутки' ? a :
-                                          time === '2 суток' ? b :
-                                              time === '3 суток' ? c :
-                                              time === '4 суток' ? d :
-                                                time === '5 суток' ? e : null }₽</div>
+            <div className={styles.price}>+{time === '1 сутки' ? numberWithSpaces(a) :
+                                          time === '2 суток' ? numberWithSpaces(b) :
+                                              time === '3 суток' ? numberWithSpaces(c) :
+                                              time === '4 суток' ? numberWithSpaces(d) :
+                                                time === '5 суток' ? numberWithSpaces(e) : null }₽</div>
             <div className={cs(styles.busket,check() ? styles.disabled_busket_background : null)} onClick={check() ? () => setActive(false) : handleClick}>
 
 

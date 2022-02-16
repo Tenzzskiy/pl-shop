@@ -8,6 +8,7 @@ import Link from "next/link";
 import {MyImage} from "../../MyImage";
 import BlobCoverReverse from "../../background/background";
 import {useWindowSize} from "../../../Hooks/useWindowSize";
+import {numberWithSpaces} from './../../../sources/utils/helpers'
 
 
 export const OfferCard= ( {total,detail1,detail2,mainDetail,mainDetail2,price,title,img,data,id,active,setActive,busket,...props }) =>{
@@ -64,7 +65,7 @@ export const OfferCard= ( {total,detail1,detail2,mainDetail,mainDetail2,price,ti
                             <div className={styles.select}>
                     <Selector changedPrice={changedPrice} setChangedPrice={setChangedPrice} price={price} setTime={setTime} time={time} check={check()}/>
                     </div>
-                    <div className={styles.price}> {changedPrice}₽</div>
+                    <div className={styles.price}> {numberWithSpaces(changedPrice)}₽</div>
                     <div className={cs(styles.busket,check() ? styles.busket_disabled : null)} onClick={check() ? null : handleClick} onMouseEnter={() => setBackground(true)}
                          onMouseLeave={() =>setBackground(false) }>
                         {/*<picture>*/}

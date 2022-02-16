@@ -10,6 +10,7 @@ import cn from "classnames";
 import useLocalStorage from "../../../Hooks/useLocalStorage";
 import BlobCoverReverse from "../../background/background";
 import {useWindowSize} from "../../../Hooks/useWindowSize";
+import {numberWithSpaces} from "../../../sources/utils/helpers";
 
 
 export const ShopItem = ( { total,detail,select1,select2,data,children,price,count,img,title,active,setActive,detail1,detail2,mainDetail,mainDetail2,id,...props}) =>{
@@ -89,7 +90,7 @@ const check = () =>{
 
 
                                 {Number(data.count) === 1 ? null : <Selector item={item} checked={checked} changedPrice={changedPrice} setChangedPrice={setChangedPrice} data={data} price={data.price} setTime={setTime} time={time} check={check()} />}
-                        <span> {changedPrice}₽ </span>
+                        <span> {numberWithSpaces(changedPrice)}₽ </span>
                         { check() ?
 
                             <Link href="/busket"><a rel='nofollow'>  <div className={styles.disabled_busket}>

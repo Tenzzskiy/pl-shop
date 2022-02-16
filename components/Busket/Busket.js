@@ -13,7 +13,7 @@ import {NavigationButton} from "./navigation_button/NavigationButton";
 import {sendEmail} from "../../sources/utils/helpers";
 import {Navigation} from "../Layout/Layout";
 import {clean} from "../../redux/cart/reducer";
-
+import {numberWithSpaces} from "../../sources/utils/helpers";
 export const ResultBusket = ( {data, setOfferModal}) => {
     const setInput = (id) =>{
        if (id ===1 ) {
@@ -107,7 +107,7 @@ export const ResultBusket = ( {data, setOfferModal}) => {
             <div className={styles.total}>
             <div>{count} товаров</div>
             <div className={styles.toch}>................................</div>
-            <div className={styles.totalPrice}>{result}₽</div>
+            <div className={styles.totalPrice}>{numberWithSpaces(result)}₽</div>
             </div>
             <div className={styles.add}>*финальная стоимость
             с учётом доставки рассчитывается менеджером</div>
@@ -176,7 +176,7 @@ export const ResultBusket = ( {data, setOfferModal}) => {
                         <div className={styles.total}>
                             <div>{count} товаров</div>
                             <div className={styles.toch}>{size.width > 720 ? '................................' : '...'}</div>
-                            <div className={styles.totalPrice}>{result}₽</div>
+                            <div className={styles.totalPrice}>{numberWithSpaces(result)}₽</div>
                         </div>
                         <div className={styles.add}>*финальная стоимость
                             с учётом доставки рассчитывается менеджером</div>
