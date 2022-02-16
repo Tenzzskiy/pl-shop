@@ -126,7 +126,7 @@ export const ResultBusket = ( {data, setOfferModal}) => {
                 setPhone({...phone, phone:evt})
 
             }} /> </div>
-                <Selector_758 phone={phone} setPhone={setPhone} example={example} setExample={setExample}/>
+                <Selector_768 phone={phone} setPhone={setPhone} example={example} setExample={setExample}/>
             </div>
             <div className={styles.rules}>
             <div className={styles.checkbox} onClick={triggerCheckBox}><img className={checkbox ? null : styles.hide} src="/Seo/checkbox.svg" alt=""/></div>
@@ -193,8 +193,8 @@ export const ResultBusket = ( {data, setOfferModal}) => {
 
 
                             }}  /> </div>
-                            {size.width < 720 ? <Selector_360  phone={phone} setPhone={setPhone} example={example} setExample={setExample}/>
-                                : <Selector_758  phone={phone} setPhone={setPhone} example={example} setExample={setExample} /> }
+                            {size.width < 720 ? <Selector_350  phone={phone} setPhone={setPhone} example={example} setExample={setExample}/>
+                                : <Selector_768  phone={phone} setPhone={setPhone} example={example} setExample={setExample} /> }
                         </div>
                         <div className={styles.rules}>
                             <div className={styles.checkbox} onClick={triggerCheckBox}><img className={checkbox ? null : styles.hide} src="/Seo/checkbox.svg" alt=""/></div>
@@ -339,5 +339,125 @@ export const ResultBusket = ( {data, setOfferModal}) => {
 </>
 
 
+    )
+}
+export const Selector_768 = ( {phone,setPhone,example,setExample }) =>{
+    const [selectorStatus,setSelectorStatus] = useState(false)
+    const ref = useRef();
+    useOnClickOutside(ref, () => setSelectorStatus(false));
+    return(
+        <>
+            <div className={styles.wrapper} ref={ref}>
+                <button type='button' className={cn(styles.selector2, {
+                    [styles.selectorActive]: selectorStatus === true
+                })} onClick={() => {
+                    setSelectorStatus(!selectorStatus)
+                }}>{example} <div className={selectorStatus === true ? styles.selector_img_2 : null}>
+                    <svg className={selectorStatus === true ? styles.selector_img_style : styles.selector_img_style_2} width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M-2.28179e-05 6.45698C-0.000532082 6.30638 0.032486 6.15759 0.0966025 6.02152C0.160719 5.88545 0.254307 5.76558 0.370487 5.6707L6.37875 0.801829C6.55793 0.653563 6.78268 0.57251 7.01462 0.57251C7.24657 0.57251 7.47132 0.653563 7.6505 0.801829L13.6588 5.84207C13.8633 6.01318 13.9919 6.25905 14.0163 6.5256C14.0407 6.79216 13.9589 7.05756 13.7889 7.26342C13.619 7.46928 13.3747 7.59874 13.1099 7.62331C12.8451 7.64789 12.5815 7.56557 12.377 7.39447L7.00962 2.88849L1.64223 7.24326C1.49525 7.36653 1.31626 7.44483 1.12645 7.4689C0.936642 7.49297 0.743953 7.46181 0.571187 7.37909C0.398422 7.29637 0.252812 7.16557 0.151582 7.00215C0.0503522 6.83874 -0.00225823 6.64955 -2.28179e-05 6.45698Z"
+                              fill="#460BD9" />
+                    </svg>
+
+
+
+                </div> </button>
+
+                {selectorStatus && (
+                    <div className={styles.selectorList}>
+                        <button type="button" className={styles.selectorItem3} onClick={() => {
+                            setExample('Позвонить по телефону')
+                            setPhone((prev) => {
+                                return {...prev,type:'Позвонить по телефону'}
+                            })
+                            setSelectorStatus(false)
+                        }}>
+                            Позвонить по Телефону
+
+                        </button>
+                        <button type="button" className={styles.selectorItem3} onClick={() => {
+                            setExample('Написать в Telegram')
+                            setSelectorStatus(false)
+                            setPhone((prev) => {
+                                return {...prev,type:'Написать в Telegram'}
+                            })
+                        }}>
+                            Написать в Telegram
+                        </button>
+                        <button type="button" className={styles.selectorItem3} onClick={() => {
+                            setExample('Написать в WhatsApp')
+                            setSelectorStatus(false)
+                            setPhone((prev) => {
+                                return {...prev,type:'Написать в WhatsApp'}
+                            })
+                        }}>
+                            Написать в WhatsApp
+                        </button>
+                    </div>
+                )}
+
+
+            </div>
+
+        </>
+
+
+    )
+}
+export const Selector_350 =({value,phone,setPhone,example,setExample}) => {
+    const [selectorStatus,setSelectorStatus] = useState(false)
+    const ref = useRef();
+    useOnClickOutside(ref, () => setSelectorStatus(false));
+    return(
+        <>
+            <div className={styles.wrapper} ref={ref}>
+                <button type='button' className={cn(styles.selector, {
+                    [styles.selectorActive]: selectorStatus === true
+                })} onClick={() => {
+                    setSelectorStatus(!selectorStatus)
+                }}>{example} <div className={selectorStatus === true ? styles.selector_img_2 : null}>
+                    <svg className={selectorStatus === true ? styles.selector_img_style : styles.selector_img_style_2} width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M-2.28179e-05 6.45698C-0.000532082 6.30638 0.032486 6.15759 0.0966025 6.02152C0.160719 5.88545 0.254307 5.76558 0.370487 5.6707L6.37875 0.801829C6.55793 0.653563 6.78268 0.57251 7.01462 0.57251C7.24657 0.57251 7.47132 0.653563 7.6505 0.801829L13.6588 5.84207C13.8633 6.01318 13.9919 6.25905 14.0163 6.5256C14.0407 6.79216 13.9589 7.05756 13.7889 7.26342C13.619 7.46928 13.3747 7.59874 13.1099 7.62331C12.8451 7.64789 12.5815 7.56557 12.377 7.39447L7.00962 2.88849L1.64223 7.24326C1.49525 7.36653 1.31626 7.44483 1.12645 7.4689C0.936642 7.49297 0.743953 7.46181 0.571187 7.37909C0.398422 7.29637 0.252812 7.16557 0.151582 7.00215C0.0503522 6.83874 -0.00225823 6.64955 -2.28179e-05 6.45698Z"
+                              fill="#460BD9" />
+                    </svg>
+
+
+
+                </div> </button>
+
+                {selectorStatus && (
+                    <div className={styles.selectorList}>
+                        <button type="button" className={styles.selectorItem4} onClick={() => {
+                            setExample('Позвонить по телефону')
+                            setSelectorStatus(false)
+                            setPhone((prev) => {
+                                return {...prev,type:'Позвонить по телефону'}
+                            })
+                        }}>
+                            Позвонить по Телефону
+                        </button>
+                        <button type="button" className={styles.selectorItem4} onClick={() => {
+                            setExample('Написать в Telegram')
+                            setSelectorStatus(false)
+                            setPhone((prev) => {
+                                return {...prev,type:'Написать в Telegram'}
+                            })
+                        }}>
+                            Написать в Telegram
+                        </button>
+                        <button type="button" className={styles.selectorItem4} onClick={() => {
+                            setExample('Написать в WhatsApp')
+                            setSelectorStatus(false)
+                            setPhone((prev) => {
+                                return {...prev,type:'Написать в WhatsApp'}
+                            })
+                        }}>
+                            Написать в WhatsApp
+                        </button>
+                    </div>
+                )}
+
+
+            </div>
+        </>
     )
 }

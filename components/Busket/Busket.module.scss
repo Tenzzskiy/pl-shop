@@ -420,6 +420,8 @@
     background: white;
     z-index: 5;
     cursor: pointer;
+    padding-left: 46px;
+    text-align: left;
     &:hover{
       background: white;
       color: var(--brand-color);
@@ -469,7 +471,36 @@
       background: white;
       z-index: 5;
       cursor: pointer;
-
+      padding-left: 46px;
+      text-align: left;
+      &:hover{
+        background: white;
+        color: var(--brand-color);
+      }
+    }
+    .selectorItem3{
+      border:0.1px solid #F2F3FE;
+      width: 220px;
+      height: 40px;
+      background: white;
+      z-index: 5;
+      cursor: pointer;
+      padding-left: 38px;
+      text-align: left;
+      &:hover{
+        background: white;
+        color: var(--brand-color);
+      }
+    }
+    .selectorItem4{
+      border:0.1px solid #F2F3FE;
+      width: 258px;
+      height: 40px;
+      background: white;
+      z-index: 5;
+      cursor: pointer;
+      padding-left: 55px;
+      text-align: left;
       &:hover{
         background: white;
         color: var(--brand-color);

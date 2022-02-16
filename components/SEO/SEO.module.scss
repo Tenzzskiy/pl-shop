@@ -174,6 +174,17 @@ width: 100%;;
 
 
 @media (max-width: 1200px){
+  .background_image_360{
+    min-width: 320px !important;
+    max-width: 320px !important;
+
+  }
+  .image_360{
+    min-width: 300px !important;
+    max-width: 300px !important;
+    max-height: 172px !important;
+    min-height: 172px !important;
+  }
   .title{
 
       font-size: 25px !important;

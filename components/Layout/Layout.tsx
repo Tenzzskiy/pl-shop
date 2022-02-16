@@ -88,14 +88,6 @@ export const Navigation = ( { setNavigation,navigation,contacts,setContacts}) =>
                         <span>Позвонить</span>
                     </div>
                     <div className={styles.app}>
-                        <img src="/Modal/WS.svg" alt=""/>
-                        <span>Написать в WhatsApp</span>
-                    </div>
-                    <div className={styles.app}>
-                        <img src="/Modal/TG.svg" alt=""/>
-                        <span>Написать в Telegram</span>
-                    </div>
-                    <div className={styles.app}>
                         <img src="/Modal/TG.svg" alt=""/>
                         <span>Отправить E-mail</span>
                     </div>
