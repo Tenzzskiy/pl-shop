@@ -90,7 +90,7 @@ const Home = ({ cards }) => {
          <MainHeaderComponent  setSites={setSites}
             setOfferModal={setOfferModal}/>
         </div>
-        <div className={size.width < 1200 ? size.width < 720 ? styles.preferences : styles.preferences3 : styles.preferences2}>
+
         {size.width > 1200 ?
             <Preferences
                 count={4}
@@ -115,52 +115,52 @@ const Home = ({ cards }) => {
             /> : null
 
         }
-        {/*{size.width < 1200 && size.width > 720 ?*/}
-        {/*    <Preferences_768*/}
-        {/*        count={4}*/}
-        {/*        title='Ваши выгоды с PLAZMA77'*/}
-        {/*        leftImg="/assets/images/advantages_1.jpg"*/}
-        {/*        rightImg="/assets/images/advantages_3.jpg"*/}
-        {/*        secondLeftImg='/assets/images/advantages_1.jpg'*/}
-        {/*        secondRightImg='/assets/images/advantages_4.jpg'*/}
-        {/*        leftText='Гибкая система скидок и бонусов для ивент менеджеров*/}
-        {/*    и организаторов мероприятий. Мы за долгосрочное сотрудничество!'*/}
-        {/*        leftSecondText='Работаем в сфере организации частных*/}
-        {/*    и корпоративных мероприятий с 2007 года, и точно знаем своё дело!'*/}
-        {/*        leftTitle='Клиентоориентированность'*/}
-        {/*        leftSecondTitle='Квалификация'*/}
-        {/*        rightText='В зависимости от задач мы подберем для вас плазму*/}
-        {/*    либо соберем видеостену, либо смонтируем масштабную светодиодную сцену!'*/}
-        {/*        rightSecondText='Возьмём на себя все вопросы по инсталяции и избавим вас от*/}
-        {/*    головной боли! Монтаж и демонтаж уже включены в стоимость!'*/}
-        {/*        rightTitle='Огромный выбор'*/}
-        {/*        rightSecondTitle='Под ключ'*/}
-        {/*    /> : null*/}
-        {/*}*/}
-        {/*{*/}
-        {/*    size.width <720 ?*/}
-        {/*        <Preferences_360*/}
-        {/*            count={4}*/}
-        {/*            mainTitle='Ваши выгоды с PLAZMA77'*/}
-        {/*            leftImg="/assets/images/advantages_1.jpg"*/}
-        {/*            rightImg="/assets/images/advantages_2.jpg"*/}
-        {/*            secondLeftImg='/assets/images/advantages_3.jpg'*/}
-        {/*            secondRightImg='/assets/images/advantages_4.jpg'*/}
-        {/*            leftText='Гибкая система скидок и бонусов для ивент менеджеров*/}
-        {/*    и организаторов мероприятий. Мы за долгосрочное сотрудничество!'*/}
-        {/*            leftSecondText='Работаем в сфере организации частных*/}
-        {/*    и корпоративных мероприятий с 2007 года, и точно знаем своё дело!'*/}
-        {/*            leftTitle='Клиентоориентированность'*/}
-        {/*            leftSecondTitle='Квалификация'*/}
-        {/*            rightText='В зависимости от задач мы подберем для вас плаsзму*/}
-        {/*    либо соберем видеостену, либо смонтируем масштабную светодиодную сцену!'*/}
-        {/*            rightSecondText='Возьмём на себя все вопросы по инсталяции и избавим вас от*/}
-        {/*    головной боли! Монтаж и демонтаж уже включены в стоимость!'*/}
-        {/*            rightTitle='Огромный выбор'*/}
-        {/*            rightSecondTitle='Под ключ'*/}
-        {/*        /> : null*/}
-        {/*}*/}
-         </div>
+        {size.width < 1200 && size.width > 720 ?
+            <Preferences_768
+                count={4}
+                title='Ваши выгоды с PLAZMA77'
+                leftImg="/assets/images/advantages_1.jpg"
+                rightImg="/assets/images/advantages_3.jpg"
+                secondLeftImg='/assets/images/advantages_1.jpg'
+                secondRightImg='/assets/images/advantages_4.jpg'
+                leftText='Гибкая система скидок и бонусов для ивент менеджеров
+            и организаторов мероприятий. Мы за долгосрочное сотрудничество!'
+                leftSecondText='Работаем в сфере организации частных
+            и корпоративных мероприятий с 2007 года, и точно знаем своё дело!'
+                leftTitle='Клиентоориентированность'
+                leftSecondTitle='Квалификация'
+                rightText='В зависимости от задач мы подберем для вас плазму
+            либо соберем видеостену, либо смонтируем масштабную светодиодную сцену!'
+                rightSecondText='Возьмём на себя все вопросы по инсталяции и избавим вас от
+            головной боли! Монтаж и демонтаж уже включены в стоимость!'
+                rightTitle='Огромный выбор'
+                rightSecondTitle='Под ключ'
+            /> : null
+        }
+        {
+            size.width <720 ?
+                <Preferences_360
+                    count={4}
+                    mainTitle='Ваши выгоды с PLAZMA77'
+                    leftImg="/assets/images/advantages_1.jpg"
+                    rightImg="/assets/images/advantages_2.jpg"
+                    secondLeftImg='/assets/images/advantages_3.jpg'
+                    secondRightImg='/assets/images/advantages_4.jpg'
+                    leftText='Гибкая система скидок и бонусов для ивент менеджеров
+            и организаторов мероприятий. Мы за долгосрочное сотрудничество!'
+                    leftSecondText='Работаем в сфере организации частных
+            и корпоративных мероприятий с 2007 года, и точно знаем своё дело!'
+                    leftTitle='Клиентоориентированность'
+                    leftSecondTitle='Квалификация'
+                    rightText='В зависимости от задач мы подберем для вас плаsзму
+            либо соберем видеостену, либо смонтируем масштабную светодиодную сцену!'
+                    rightSecondText='Возьмём на себя все вопросы по инсталяции и избавим вас от
+            головной боли! Монтаж и демонтаж уже включены в стоимость!'
+                    rightTitle='Огромный выбор'
+                    rightSecondTitle='Под ключ'
+                /> : null
+        }
+
             <div className={size.width > 1200 ? styles.partners2 : styles.partners}>
         <Partners />
             </div>
