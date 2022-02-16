@@ -94,7 +94,7 @@ const Header = ({ setNavigation,setContacts,count}) =>{
 
                             <div className={styles.contacts}  itemProp="address" itemScope itemType="http://schema.org/Organization">
                                 {size.width > 600 ?
-                                    <div className={styles.number}> <a itemProp="telephone" href="tel:+7 495 162 72 50"> +7 495 162-72-50</a></div>
+                                    <div className={styles.number}> <a itemProp="telephone" href="tel:+74951627250"> +7 495 162-72-50</a></div>
                                 :   <div className={styles.contacts}>
                                         <picture>
 

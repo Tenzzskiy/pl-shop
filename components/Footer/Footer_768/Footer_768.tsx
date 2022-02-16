@@ -31,7 +31,7 @@ export const Footer_768 = () =>{
                         </div>
                         <div className={styles.second}>
                             <div className={styles.item3}>
-                                <a href="tel:+7 (495) 321 54 76" itemProp="telephone"> +7 495 321-54-76</a>
+                                <a href="tel:+74951627250" itemProp="telephone"> +7 495 321-54-76</a>
 
                                  </div>
                             <div className={styles.item4}>

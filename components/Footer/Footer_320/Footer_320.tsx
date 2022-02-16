@@ -60,7 +60,7 @@ export const Footer_320 = () =>{
                     </div>
                         <div className={styles.contacts}>
                             <picture>
-                                <a  itemProp="telephone" href="tel:+7 (495) 321 54 76">
+                                <a  itemProp="telephone" href="tel:+74951627250">
                                     <MyImage src={{default: "/header/footer_contacts.svg"}} alt={'1'} />
                                     </a>
                             </picture>
@@ -133,7 +133,6 @@ export const Footer_320 = () =>{
                                     frameBorder="0"
                                 />
                             }
-
                     </div> )}
                 <div className={styles.item15}><Link href="/privacy"><a rel='nofollow'> Политика конфиденциальности</a></Link> </div>
                 <div className={styles.item16}>© Arenda-plazm77, 2021-{Data.getFullYear()} </div>

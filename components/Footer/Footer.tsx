@@ -32,7 +32,7 @@ const Footer:FunctionComponent = ({ }):JSX.Element =>{
 
                                     </div>
                                <div className={styles.item2}>  <a href="mailto:info@arenda-plazm77.ru" itemProp="email"> info@arenda-plazm77.ru</a></div>
-                               <div className={styles.item3}> <a href="tel:+7 (495) 162 72 50 " itemProp="telephone"> +7 495 162-72-50</a> </div>
+                               <div className={styles.item3}> <a href="tel:+74951627250" itemProp="telephone"> +7 495 162-72-50</a> </div>
                                <div className={styles.item4} itemScope itemType="https://schema.org/PostalAddress">
 
                                <span itemProp="postalCode"> 109382, </span>
