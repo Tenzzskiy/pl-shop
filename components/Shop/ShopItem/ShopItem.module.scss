@@ -1,5 +1,10 @@
 .bucket{
-
+  &:hover .svg2{
+    path{
+      fill: var(--description);
+      transition: all 0.5s;
+    }
+  }
   z-index: 2;
   svg{
     z-index: 2;
@@ -17,6 +22,7 @@
     min-height: 32px;
   }
 }
+
 .svg{
   position: absolute;
   z-index: 0;

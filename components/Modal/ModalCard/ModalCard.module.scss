@@ -22,10 +22,9 @@
 }
 .container{
   min-width: 210px;
-
+  border-radius: 5px;
   max-height: 263px;
-  border: 1px solid #CFCFDC;
-  box-shadow: 2px 4px 4px rgba(87, 87, 134, 0.2);
+
   background: white;
   .content{
     padding: 10px;

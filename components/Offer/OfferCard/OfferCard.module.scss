@@ -1,3 +1,26 @@
+.svg{
+  position: absolute;
+
+  bottom: 15px;
+  right: 15px;
+  z-index: -1!important;
+}
+.svg2{
+  z-index: 2;
+}
+.bucket{
+  z-index: 2;
+  &:hover .svg2{
+    path{
+      fill: var(--description);
+      transition: all 0.5s;
+    }
+  }
+  svg{
+    z-index: 2;
+
+  }
+}
 .hit{
   position: absolute;
 }

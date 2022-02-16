@@ -64,7 +64,7 @@ export const Slider = ({perView,setActive}) =>{
                                 }
                                 disabled={
                                     currentSlide ===
-                                    instanceRef.current.track.details.slides.length - 3
+                                    instanceRef.current.track.details.slides.length
                                 }
                             /></div>
                         </>
@@ -77,7 +77,9 @@ export const Slider = ({perView,setActive}) =>{
                         <div className={styles.dots}>
 
                             {[
-                                ...Array(instanceRef.current.track.details.slides.length ).keys()
+                                ...Array(instanceRef.current.track.details.slides.length-(size.width < 420 ? 0 :
+                                    size.width > 420 && size.width < 720 ? 1
+                                        : size.width > 600 && size.width < 920 ? 2 : null) ).keys()
                             ].map((idx) => {
                                 return (
                                     <button

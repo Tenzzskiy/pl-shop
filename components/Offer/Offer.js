@@ -14,7 +14,6 @@ export const Offer = ({count=0,active,setActive,title=' С этим товаро
     const [currentSlide, setCurrentSlide] = React.useState(0);
     const [loaded, setLoaded] = useState(false);
     const [sliderRef, instanceRef] = useKeenSlider({
-        initial: 0,
         slides: {
             perView: 'auto',
             spacing:15,
@@ -85,7 +84,11 @@ export const Offer = ({count=0,active,setActive,title=' С этим товаро
                     <div className={styles.dots}>
 
                         {[
-                            ...Array(instanceRef.current.track.details.slides.length -3).keys()
+                            ...Array(instanceRef.current.track.details.slides.length -
+                                (size.width < 420 ? 0 :
+                                    size.width > 420 && size.width < 600 ? 1
+                                        : size.width > 600 && size.width < 920 ? 2 :
+                                size.width > 920?  3 : null)).keys()
                         ].map((idx) => {
                             return (
                                 <button
