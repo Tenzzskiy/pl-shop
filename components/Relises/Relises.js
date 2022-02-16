@@ -20,33 +20,33 @@ const Releases = ({setId, imgModal, setImgModal, children, text1, text2, text3, 
                                 setId(0);
                             }}
 
-                            ><MyImage itemProp="contentUrl" src={{default: props.img1}} alt={text1}/>
+                            ><MyImage width='289' height='216' itemProp="contentUrl" src={{default: props.img1}} alt={text1}/>
                                 <div className={styles.box1_description}><span itemProp="name">{text1} </span></div>
                             </div>
                             <div className={styles.box2} onClick={() => {
                                 setImgModal(true);
                                 setId(1);
-                            }}><MyImage itemProp="contentUrl" src={{default: props.img2}} alt={text2}/>
+                            }}><MyImage width='289' height='216' itemProp="contentUrl" src={{default: props.img2}} alt={text2}/>
                                 <div className={styles.box2_description}><span itemProp="name">{text2} </span></div>
                             </div>
                             <div className={styles.box3} onClick={() => {
                                 setId(2);
                                 setImgModal(true);
 
-                            }}><MyImage itemProp="contentUrl" src={{default: props.img3}} alt={text3}/>
+                            }}><MyImage width='600' height='216'  itemProp="contentUrl" src={{default: props.img3}} alt={text3}/>
                                 <div className={styles.box3_description}><span itemProp="name">{text3} </span></div>
                             </div>
                             <div className={styles.box4} onClick={() => {
                                 setId(3);
                                 setImgModal(true);
 
-                            }}><MyImage itemProp="contentUrl" src={{default: props.img4}} alt={text4}/>
+                            }}><MyImage width='289' height='216' itemProp="contentUrl" src={{default: props.img4}} alt={text4}/>
                                 <div className={styles.box4_description}><span itemProp="name">{text4} </span></div>
                             </div>
                             <div className={styles.box5} onClick={() => {
                                 setImgModal(true);
                                 setId(4);
-                            }}><MyImage itemProp="contentUrl" src={{default: props.img5}} alt={text5}/>
+                            }}><MyImage width='289' height='216' itemProp="contentUrl" src={{default: props.img5}} alt={text5}/>
                                 <div className={styles.box5_description}><span itemProp="name">{text5} </span></div>
                             </div>
 

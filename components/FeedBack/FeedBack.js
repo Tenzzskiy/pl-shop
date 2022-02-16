@@ -96,7 +96,7 @@ const FeedBack = ( {setOfferModal}) => {
                             Звоните, проконсультируем и всё расскажем
                         </div>
                         <div className={styles.number}>
-                            <a href="tel:+7 (495) 321 54 76"> +7 495 321-54-76</a>
+                            <a href="tel:+74951627250"> +7 495 162-72-50</a>
                         </div>
                         <div className={styles.request}>
                             Или оставьте заявку

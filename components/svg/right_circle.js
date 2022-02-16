@@ -8,7 +8,7 @@ export const Right_circle = () =>{
                     <circle cx="485.5" cy="485.5" r="205.5" fill="url(#paint0_linear_1287_19553)"/>
                 </g>
                 <defs>
-                    <filter id="filter0_f_1287_19553" x="0" y="0" width="971" height="971" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <filter id="filter0_f_1287_19553" x="0" y="0" width="971" height="971" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                         <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                         <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
                         <feGaussianBlur stdDeviation="140" result="effect1_foregroundBlur_1287_19553"/>
