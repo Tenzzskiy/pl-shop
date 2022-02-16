@@ -40,12 +40,12 @@ export const OfferCard= ( {total,detail1,detail2,mainDetail,mainDetail2,price,ti
             <div className={cs(styles.container,busket === 1 ? styles.busket : null)} itemScope itemType="http://schema.org/Product">
             <div className={styles.content}>
                 <div className={styles.hit}>
-                    {data.total === "1" ?  <img src="/hit.svg" alt=""/> : Number(data.total) === 2 ?  <img src="/profitable.svg" alt=""/> : null}
+                    {data.total === "1" ?  <img width='107' height='32' src="/hit.svg" alt=""/> : Number(data.total) === 2 ?  <img width='107' height='32' src="/profitable.svg" alt=""/> : null}
 
                 </div>
             <div className={styles.img}>
                 <picture>
-                    <MyImage itemprop="image" src={{default: img}} alt={title} />
+                    <MyImage width='251' height='188' itemprop="image" src={{default: img}} alt={title} />
                 </picture>
             </div>
                 <h2 className={styles.title} itemProp="name"> {title}</h2>

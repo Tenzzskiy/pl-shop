@@ -19,26 +19,26 @@ export const Partners = ( { }) =>{
                             <div className={styles.grid}>
                                 <div className={styles.faded}>
 
-                                    <MyImage  itemProp="/Clients/client_1.svg" src={{default:"/Clients/client_1.svg"}} alt="maximice" />
+                                    <MyImage width='300' height='150' itemProp="/Clients/client_1.svg" src={{default:"/Clients/client_1.svg"}} alt="maximice" />
                                 </div>
                                 <div>
 
 
-                                    <MyImage  itemProp="/Clients/client_2.svg"  src={{default:"/Clients/client_2.svg"}} alt="mega" />
+                                    <MyImage width='300' height='150'  itemProp="/Clients/client_2.svg"  src={{default:"/Clients/client_2.svg"}} alt="mega" />
                                 </div>
                                 <div className={styles.faded}>
-                                    <MyImage  itemProp="/Clients/client_3.svg"  src={{default:"/Clients/client_3.svg"}} alt="volkswagen" />
+                                    <MyImage width='300' height='150'  itemProp="/Clients/client_3.svg"  src={{default:"/Clients/client_3.svg"}} alt="volkswagen" />
 
                                 </div>
                                 <div >
-                                    <MyImage  itemProp="/Clients/client_4.svg"  src={{default:"/Clients/client_4.svg"}} alt="porsche"/>
+                                    <MyImage width='300' height='150'  itemProp="/Clients/client_4.svg"  src={{default:"/Clients/client_4.svg"}} alt="porsche"/>
                                 </div>
                                 <div className={styles.faded}>
 
-                                    <MyImage  itemProp="/Clients/client_5.svg"  src={{default:"/Clients/client_5.svg"}} alt="lacoste"/>
+                                    <MyImage width='300' height='150'  itemProp="/Clients/client_5.svg"  src={{default:"/Clients/client_5.svg"}} alt="lacoste"/>
                                 </div>
                                 <div>
-                                    <MyImage  itemProp="/Clients/client_6.svg"  src={{default:"/Clients/client_6.svg"}} alt="adidas"/>
+                                    <MyImage width='300' height='150'  itemProp="/Clients/client_6.svg"  src={{default:"/Clients/client_6.svg"}} alt="adidas"/>
 
                                 </div>
 

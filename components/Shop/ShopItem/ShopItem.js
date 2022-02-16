@@ -49,12 +49,12 @@ const check = () =>{
             <div className={styles.container} itemScope itemType="http://schema.org/Product">
             <div className={styles.content}>
                 <div className={styles.hit}>
-                    {data.total === "1" ?  <MyImage itemProp="contentUrl" src={{default: "/hit.svg"}} alt="Хит" /> : Number(data.total) === 2 ?  <MyImage itemProp="contentUrl" src={{default: "/profitable.svg"}} alt="Выгодно" /> : null}
+                    {data.total === "1" ?  <MyImage width='107' height='32' itemProp="contentUrl" src={{default: "/hit.svg"}} alt="Хит" /> : Number(data.total) === 2 ?  <MyImage width='107' height='32' itemProp="contentUrl" src={{default: "/profitable.svg"}} alt="Выгодно" /> : null}
 
                 </div>
                 <div className={styles.img} >
                     <picture>
-                        <MyImage itemProp="contentUrl" src={{default: img}} alt={title} />
+                        <MyImage width='250' height='188' itemProp="contentUrl" src={{default: img}} alt={title} />
 
                     </picture>
                 </div>
@@ -94,7 +94,7 @@ const check = () =>{
                         { check() ?
 
                             <Link href="/busket"><a rel='nofollow'>  <div className={styles.disabled_busket}>
-                                <img src="/ShopItem/selected_busket.svg" alt=""/>
+                                <img  src="/ShopItem/selected_busket.svg" alt=""/>
                             </div></a></Link> :
 
                             <div className={styles.bucket} onClick={handleClick} onMouseEnter={() => setBackground(true)}

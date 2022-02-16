@@ -58,22 +58,22 @@ export const Cleaning:FunctionComponent = ( { }) =>{
                                 </div>
                                 <div className={styles.grid}>
                                     <div className={styles.item}>
-                                     <div>     <MyImage src={{default :'/Desinfection/desinfection_icon_1.svg'}}/>
+                                     <div>     <MyImage width='82' height='100' src={{default :'/Desinfection/desinfection_icon_1.svg'}}/>
                                      </div>
                                         <h3> Дезинфекция воздуха и поверхностей в помещении</h3>
                                     </div>
                                     <div className={styles.item}>
-                                        <div>   <MyImage src={{default :'/Desinfection/desinfection_icon_2.svg'}}/>
+                                        <div>   <MyImage width='82' height='100' src={{default :'/Desinfection/desinfection_icon_2.svg'}}/>
                                         </div>
                                         <h3> Аренда санитайзеров, автоматов с масками и перчатками</h3>
                                     </div>
                                     <div className={styles.item}>
-                                        <div>     <MyImage src={{default :'/Desinfection/desinfection_icon_3.svg'}}/>
+                                        <div>     <MyImage width='52' height='52' src={{default :'/Desinfection/desinfection_icon_3.svg'}}/>
                                         </div>
                                         <h3> Проведение санитарного контроля на входе</h3>
                                     </div>
                                     <div className={styles.item}>
-                                        <div>    <MyImage src={{default :'/Desinfection/desinfection_icon_4.svg'}}/>
+                                        <div>    <MyImage width='52' height='52' src={{default :'/Desinfection/desinfection_icon_4.svg'}}/>
                                         </div>
                                         <h3> Выезд мед.работника для проведения экспресс  ПЦР-тестов</h3>
                                     </div>
@@ -81,7 +81,7 @@ export const Cleaning:FunctionComponent = ( { }) =>{
                                 </div>
                                 <div className={styles.button}>
                                     <Link href='/desinfection' ><a className={cn(styles.a,
-                                    )} >   <button> Каталог дезинфекции</button> </a></Link>
+                                    )} >   <span> Каталог дезинфекции</span> </a></Link>
                                 </div>
                             </div>
                         </div>

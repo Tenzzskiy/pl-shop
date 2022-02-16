@@ -50,9 +50,9 @@ const LeftPreference = ( { leftImg,leftTitle,leftText}) =>{
              <div className={styles.container} itemScope itemType="http://schema.org/ImageObject">
                 <div className={styles.flex}>
                     <div className={styles.img}>
-                        {/*<MyImage itemProp="contentUrl" src={{default: leftImg}} alt={leftTitle} />*/}
-                        <img itemProp="contentUrl" src={leftImg} alt={leftTitle}/>
-                        <img  className={styles.background_img} src="/Preferences/background_image.svg" alt={leftTitle}/>
+                        <MyImage width='392' height='247' itemProp="contentUrl" src={{default: leftImg}} alt={leftTitle} />
+
+                        <img   className={styles.background_img} src="/Preferences/background_image.svg" alt={leftTitle}/>
                     </div>
 
                     <div className={styles.text}>
@@ -86,7 +86,7 @@ const RightPreference = ( { rightImg,rightText,rightTitle}) =>{
                          </h3>
                      </div>
                      <div className={styles.img}>
-                        <MyImage itemProp="contentUrl" src={{default: rightImg}} alt={rightTitle} />
+                        <MyImage width='392' height='247' itemProp="contentUrl" src={{default: rightImg}} alt={rightTitle} />
                          <img  className={styles.background_img_2} src="/Preferences/background_img2.svg" alt={rightTitle}/>
                      </div>
                  </div>

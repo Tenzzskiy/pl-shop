@@ -53,7 +53,7 @@ const Home = ({ cards }) => {
     <Layout>
         <Head itemscope itemtype="http://schema.org/WPHeader">
             {/*<meta itemProp="keywords" name="keywords" content="ключевые_слова_для_страницы">*/}
-                <meta charSet="UTF-8"/>
+                <meta />
                 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             <title itemProp="headline">

@@ -61,7 +61,7 @@ export const Right =({img,title,description }) =>{
                 </div>
                 <div className={styles.img}>
                     {/*<MyImage itemProp='contentUrl' className={styles.background_img} src={{default:img}} alt={title} />*/}
-                    <img itemProp='contentUrl' src={img} alt={title}/>
+                    <img width='392' height='247' itemProp='contentUrl' src={img} alt={title}/>
                 </div>
             </div>
             </div>

@@ -31,7 +31,7 @@ const MyImage = (props: MyImageProps): JSX.Element => {
                     ref={imgRef}
                     className={clsx(className, lazy && 'lazy')}
                     data-src={src.default}
-                    src={lazy ? ' ' : src.default}
+                    src={lazy ? '' : src.default}
                     width={width}
                     height={height}
                     alt={alt}
