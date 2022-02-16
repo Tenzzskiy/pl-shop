@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^12.0.10",
     "@reduxjs/toolkit": "^1.7.1",
     "@thalesrc/js-utils": "^2.10.2",
     "axios": "^0.25.0",
@@ -15,6 +16,7 @@
     "clsx": "^1.1.1",
     "keen-slider": "^6.6.3",
     "next": "12.0.8",
+    "next-compose-plugins": "^2.2.1",
     "node-fetch": "^3.2.0",
     "nodemailer": "^6.7.2",
     "react": "17.0.2",
@@ -23,6 +25,7 @@
     "react-redux": "^7.2.6",
     "react-scroll": "^1.8.4",
     "sass": "^1.49.0",
+    "save": "^2.4.0",
     "typescript": "^4.5.4",
     "vanilla-lazyload": "^17.5.0"
   },
