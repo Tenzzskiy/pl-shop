@@ -9,13 +9,22 @@
 }
 .error_disabled{
   opacity: 0;
-  max-height: 35px;
+  font-family: Rubik-1;
+  font-size: 12px;
+  max-height: 15px;
+  color: darkred;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+
+  align-items: center;
 }
 
 .error{
   font-family: Rubik-1;
   font-size: 12px;
-  max-height: 35px;
+  max-height: 12px;
   color: darkred;
   opacity: 1 ;
   width: 100%;
@@ -46,6 +55,7 @@ align-items: center;
   .hide{
     opacity: 0;
     transition: all 0.2s;
+
   }
   img{
     transition: all 0.2s;
@@ -136,7 +146,7 @@ background:  #F2F3FE;
     font-style: normal;
     font-weight: 500;
     font-size: 25px;
-    margin-bottom: 20px;
+
   }
   .contacts{
     display: flex;
@@ -238,6 +248,7 @@ background:  #F2F3FE;
     max-width: 740px !important;
     width: 100%;
     text-align: center;
+    justify-content: center;
   }
   .feedback_flex{
     min-height: 433px !important;

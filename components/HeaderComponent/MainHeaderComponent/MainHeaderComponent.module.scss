@@ -127,8 +127,8 @@
       border: 22px solid #0E0E52;
       box-sizing: border-box;
 
-      width: 990px;
-      height: 560px;
+      min-width: 990px;
+      min-height: 560px;
 
     }
   }
@@ -206,6 +206,7 @@
       margin: 100px 0 60px 0;
       min-height: 446px;
       max-height: 446px;
+      min-width: 646px !important;
       max-width: 646px;
     }
   }

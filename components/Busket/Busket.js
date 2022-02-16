@@ -1,6 +1,6 @@
 import styles from './Busket.module.scss'
 import {BusketCard} from "./BusketCard/BusketCard";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import React, {useRef, useState} from "react";
 import {useWindowSize} from "../../Hooks/useWindowSize";
 import Link from "next/link";
@@ -12,6 +12,8 @@ import { useOnClickOutside} from "../Select/Select";
 import {NavigationButton} from "./navigation_button/NavigationButton";
 import {sendEmail} from "../../sources/utils/helpers";
 import {Navigation} from "../Layout/Layout";
+import {clean} from "../../redux/cart/reducer";
+
 export const ResultBusket = ( {data, setOfferModal}) => {
     const setInput = (id) =>{
        if (id ===1 ) {
@@ -24,7 +26,7 @@ export const ResultBusket = ( {data, setOfferModal}) => {
     }
     const button = useRef();
     useOnClickOutside(button, () => setError(false));
-
+    const dispatch = useDispatch();
     const [error,setError] = useState(false)
     const value = ' ';
     const [checkbox,setCheckBox] = useState(true);
@@ -138,7 +140,7 @@ export const ResultBusket = ( {data, setOfferModal}) => {
                 if ( checkbox === true  && input ===true){
                     setOfferModal(true)
                     sendEmail(items,phone,"cart" ,result)
-
+                    dispatch(clean())
                 }
             }
             }><button>Отправить заявку</button> </div>
@@ -205,9 +207,8 @@ export const ResultBusket = ( {data, setOfferModal}) => {
                         {
                             if ( checkbox === true &&  input ===true){
                                 setOfferModal(true)
-
                                     sendEmail(items,phone,"cart",result)
-
+                                dispatch(clean())
                             }
 
                         }
