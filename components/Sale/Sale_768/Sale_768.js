@@ -5,7 +5,7 @@ import cn from "classnames";
 const Sale_768 = (  { })  =>{
     const [promo,setPromo] = useState(false);
     return(
-        <section>
+        <>
             <div className={styles.sale}>
                 <img className={styles.sale_svg} src="/sale.svg" alt=""/>
                 <div className={styles.container}>
@@ -16,10 +16,10 @@ const Sale_768 = (  { })  =>{
                             <div className={styles.button}>
                                 <div className="col-md-3 col-sm-3 col-xs-6" onClick={() => {
                                     setPromo(true)
-                                }}><a href="#"
+                                }}><a
                                       className={cn("btn btn-sm animated-button victoria-two",
                                           promo ? 'animated-button_disabled' : null
-                                      )} onClick="noperevod(event);">
+                                      )}>
                                     <span>Хочу промокод</span>
                                     <span className={promo ? styles.plazma2 : styles.plazma}>PLAZMA77</span>
 
@@ -39,7 +39,7 @@ const Sale_768 = (  { })  =>{
                 </div>
 
             </div>
-        </section>
+        </>
     )
 }
 

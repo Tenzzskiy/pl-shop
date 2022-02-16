@@ -11,7 +11,7 @@ const Sale = (  { })  =>{
     const [promo,setPromo] = useState(false);
 const size =useWindowSize();
     return(
-        <section>
+        <>
             {size.width > 1200 ?
                 <div className={styles.sale}>
                     <img className={styles.sale_svg} src="/sale.svg" alt=""/>
@@ -22,10 +22,10 @@ const size =useWindowSize();
                                 <div className={styles.promo}> Получи промокод по клику!</div>
                                 <div className={styles.sale_title}>
                                     <div className={styles.button}>
-                                        <div  className="col-md-3 col-sm-3 col-xs-6" onClick={() =>{setPromo(true)} }><a  href="#"
+                                        <div  className="col-md-3 col-sm-3 col-xs-6" onClick={() =>{setPromo(true)} }><a
                                                                                        className={cn("btn btn-sm animated-button victoria-two",
                                                                                        promo ? 'animated-button_disabled' : null
-                                                                                       )} onclick="noperevod(event);">
+                                                                                       )}>
                                             <span>Хочу промокод</span>
                                             <span className={promo ? styles.plazma2 :  styles.plazma}>PLAZMA77</span>
 
@@ -48,7 +48,7 @@ const size =useWindowSize();
             }
             {size.width < 1200 && size.width>720 ? <Sale_768 /> : null}
             {size.width < 720 ? <Sale_360 /> : null}
-        </section>
+        </>
     )
 }
 

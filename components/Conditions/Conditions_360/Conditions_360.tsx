@@ -1,13 +1,13 @@
 import React, {FunctionComponent} from "react";
 import styles from './Conditions_360.module.scss'
-
+import {Conditions_3601} from './../../svg/Conditions_360.js'
 
 export const Conditions_360:FunctionComponent = ( { }) =>{
     return(
         <section>
             <div className={styles.conditions}>
 
-                <img className={styles.background2} src="/Conditions_360.svg" alt=""/>
+                <Conditions_3601 />
 
                 <div className={styles.container}>
                     <div className={styles.content}>

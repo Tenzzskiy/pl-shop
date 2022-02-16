@@ -11,7 +11,7 @@ export const Cleaning:FunctionComponent = ( { }) =>{
         const size = useWindowSize();
     return(
 
-        <section>
+        <>
             {
                 size.width > 720 ?
                     <div className={styles.cleaning}>
@@ -90,6 +90,6 @@ export const Cleaning:FunctionComponent = ( { }) =>{
             }
             {size.width < 720 ? <Cleaning_360 /> : null}
 
-        </section>
+        </>
     )
 }

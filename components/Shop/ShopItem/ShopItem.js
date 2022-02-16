@@ -53,10 +53,9 @@ const check = () =>{
 
                 </div>
                 <div className={styles.img} >
-                    <picture>
+
                         <MyImage width='250' height='188' itemProp="contentUrl" src={{default: img}} alt={title} />
 
-                    </picture>
                 </div>
                 <div className={styles.flex}>
                     <h4 className={styles.title} itemProp="name">{title}</h4>

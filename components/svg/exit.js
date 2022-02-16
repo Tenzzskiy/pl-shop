@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+export const Exit = () =>{
+    return(
+        <>
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line y1="-0.5" x2="27.6923" y2="-0.5" transform="matrix(0.707107 0.707106 -0.707107 0.707106 9.78979 10.2101)" stroke="#575786"/>
+                <line y1="-0.5" x2="28.2843" y2="-0.5" transform="matrix(-0.707107 0.707107 -0.707108 -0.707106 29.4075 9.40747)" stroke="#575786"/>
+            </svg>
+
+
+
+        </>
+    )
+}

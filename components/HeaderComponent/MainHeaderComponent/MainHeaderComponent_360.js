@@ -1,14 +1,17 @@
 import React from "react";
 import styles from './MainHeaderComponent_360.module.scss'
+import {Center_circle} from "../../svg/center";
+import {Left_circle} from "../../svg/left_circle";
+import {Right_circle} from "../../svg/right_circle";
 
 
 
 export const MainHeaderComponent_360 = ( { setSites}) =>{
     return(
         <section className={styles.container} itemScope itemType="http://schema.org/ImageObject">
-            <img className={styles.center} src="/center_circle.svg" alt=""/>
-            <img className={styles.left} src="/left_circle.svg" alt=""/>
-            <img className={styles.right} src="/right_circle.svg" alt=""/>
+            <Center_circle />
+            <Left_circle />
+            <Right_circle />
             <div className={styles.content_img} >
                 <div className={styles.img}>
                     <div className={styles.relative}>

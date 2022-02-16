@@ -26,7 +26,7 @@ const FeedBack = ( {setOfferModal}) => {
     const triggerCheckBox = () =>{
         setCheckBox(!checkbox);
     }
-    const [value,setValue] = useState(null);
+    const [value,setValue] = useState('');
     const [input,setInput] = useState(false);
     const [example,setExample] = useState('Позвонить по Телефону');
     const [phone,setPhone] = useState({

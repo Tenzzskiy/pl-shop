@@ -60,7 +60,7 @@ export const Footer_320 = () =>{
                     </div>
                         <div className={styles.contacts}>
                             <picture>
-                                <a  itemProp="telephone" href="tel:+74951627250">
+                                <a   href="tel:+74951627250">
                                     <MyImage src={{default: "/header/footer_contacts.svg"}} alt={'1'} />
                                     </a>
                             </picture>

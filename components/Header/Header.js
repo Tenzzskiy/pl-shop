@@ -6,6 +6,9 @@ import cn from 'classnames'
 import {useWindowSize} from './../../Hooks/useWindowSize.js'
 import {useSelector} from "react-redux";
 import {NavigationButton} from "../Busket/navigation_button/NavigationButton";
+import {LeftModal} from "../svg/leftModal";
+import {Logotype_768} from "../svg/Legotype_768";
+import {PurpleBucket} from "../svg/purpleBucket";
 
 const Header = ({ setNavigation,setContacts,count}) =>{
     const items = useSelector(state => state.cart.itemsInCart);
@@ -49,17 +52,18 @@ const Header = ({ setNavigation,setContacts,count}) =>{
                         <div className={styles.top_header_container_content} >
                             {size.width <1250 ?
                                 <div className={styles.leftModal} onClick={( ) => setNavigation(true)} >
-                                    <picture>
-                                        <img src="/header/leftModal.svg" alt=""/>
-
-                                    </picture>
+                                   <LeftModal />
                                 </div> : null
                             }
                            {
                                 size.width > 1000 ? <div className={styles.logo}>
-                                    <Link href="/"><a>  <img src="/header/Logotype.svg" alt=""/></a></Link>
+                                    <Link href="/"><a>
+                                        <img src="/header/Logotype.svg" alt=""/>
+                                    </a></Link>
                                 </div> : <div className={styles.logo}>
-                               <Link href="/"><a>   <img src="/header/Logotype_768.svg" alt=""/></a></Link>
+                               <Link href="/"><a>
+                                   <Logotype_768 />
+                               </a></Link>
                                 </div>
                             }
 
@@ -81,7 +85,7 @@ const Header = ({ setNavigation,setContacts,count}) =>{
                                               {quantity > 0 ?
                                                   <div> {quantity}</div> : null
                                               }
-                                              <img src="/header/purpleBusket.svg" alt=""/>
+                                              <PurpleBucket />
                                           </div>
                                       }
 
@@ -96,13 +100,13 @@ const Header = ({ setNavigation,setContacts,count}) =>{
                                 {size.width > 600 ?
                                     <div className={styles.number}> <a itemProp="telephone" href="tel:+74951627250"> +7 495 162-72-50</a></div>
                                 :   <div className={styles.contacts}>
-                                        <picture>
+
 
                                             <img src="/header/contacts.svg" alt="" onClick={() => {
                                                 setContacts(true);
                                                 console.log('done')
                                             }}/>
-                                        </picture>
+
                                         
                                 </div>
                                 }

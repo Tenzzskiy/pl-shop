@@ -44,18 +44,18 @@ export const OfferCard= ( {total,detail1,detail2,mainDetail,mainDetail2,price,ti
 
                 </div>
             <div className={styles.img}>
-                <picture>
+
                     <MyImage width='251' height='188' itemprop="image" src={{default: img}} alt={title} />
-                </picture>
+
             </div>
                 <h2 className={styles.title} itemProp="name"> {title}</h2>
                 <div className={styles.subTitle}>
                     <div>{mainDetail} </div>
-                    <h3 itemProp='description'>{detail1} </h3>
+                    <div itemProp='description'>{detail1} </div>
                    </div>
                 <div className={styles.subTitle}>
                     <div>{mainDetail2} </div>
-                    <h3 itemProp='description'>{detail2} </h3>
+                    <div itemProp='description'>{detail2} </div>
                 </div>
                 <div className={styles.flex} itemProp="offers" itemScope itemType="http://schema.org/Offer">
                     <meta itemProp="price" content={changedPrice}/>

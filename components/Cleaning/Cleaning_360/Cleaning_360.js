@@ -10,7 +10,7 @@ export const Cleaning_360 = ( { }) =>{
 
     return(
 
-        <section>
+        <>
                 <div className={styles.cleaning}>
 
                     <svg opacity='50%' className={styles.img1} width="153" height="215" viewBox="0 0 153 215" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -66,6 +66,6 @@ export const Cleaning_360 = ( { }) =>{
                 </div>
                 </div>
                 </div>
-        </section>
+        </>
     )
 }

@@ -22,30 +22,30 @@ export const Partners_360 = ({}) => {
     // @ts-ignore
     return (
         <section className={styles.partners_360}>
-            <h1 className={styles.title}>
+            <h2 className={styles.title}>
                 Наши клиенты
-            </h1>
+            </h2>
             <div className="navigation-wrapper">
                 <div ref={sliderRef} className="keen-slider">
                     <div className={cn("keen-slider__slide",styles.slider)}>
                         <div className={styles.flex}>
 
 
-                            <div className={styles.faded}> <MyImage width='156' height='104' src={{default: "/Clients/client_1.svg"}} alt="maximice" />   </div>
-                            <div className={styles.faded}><MyImage width='156' height='104' src={{default: "/Clients/client_2.svg"}} alt="mega" />    </div>
+                            <div className={styles.faded}> <MyImage width='156' height='104' src={{default: "/assets/images/clients_1.jpg"}} alt="maximice" />   </div>
+                            <div className={styles.faded}><MyImage width='156' height='104' src={{default: "/assets/images/clients_2.jpg"}} alt="mega" />    </div>
                         </div>
                     </div>
                     <div className={cn("keen-slider__slide",styles.slider)}>
                         <div className={styles.flex}>
-                            <div className={styles.faded}><MyImage width='156' height='104' src={{default: "/Clients/client_3.svg"}} alt="volkswagen" /></div>
-                            <div className={styles.faded}><MyImage width='156' height='104' src={{default: "/Clients/client_4.svg"}} alt="porsche" /></div>
+                            <div className={styles.faded}><MyImage width='156' height='104' src={{default: "/assets/images/clients_3.jpg"}} alt="volkswagen" /></div>
+                            <div className={styles.faded}><MyImage width='156' height='104' src={{default: "/assets/images/clients_4.jpg"}} alt="porsche" /></div>
                         </div>
 
                     </div>
                     <div className={cn("keen-slider__slide",styles.slider)}>
                         <div className={styles.flex}>
-                            <div className={styles.faded}><MyImage width='156' height='104' src={{default: "/Clients/client_5.svg"}} alt="lacoste" /></div>
-                            <div className={styles.faded}><MyImage width='156' height='104' src={{default: "/Clients/client_6.svg"}} alt="adidas" /></div>
+                            <div className={styles.faded}><MyImage width='156' height='104' src={{default: "/assets/images/clients_5.jpg"}} alt="lacoste" /></div>
+                            <div className={styles.faded}><MyImage width='156' height='104' src={{default: "/assets/images/clients_6.jpg"}} alt="adidas" /></div>
                         </div>
                     </div>
                     {loaded && instanceRef.current && (

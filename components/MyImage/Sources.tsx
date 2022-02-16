@@ -14,7 +14,7 @@ const Source = (props: SourceProps): JSX.Element | null => {
         return (
             <source
                 data-srcset={url}
-                srcSet={lazy ? ' ' : url}
+                srcSet={lazy ? undefined : url}
                 media={media ? `(max-width: ${media}px)` : undefined}
                 type={`image/${extension}`}
             />

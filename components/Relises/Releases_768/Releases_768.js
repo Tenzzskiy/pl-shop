@@ -76,10 +76,10 @@ const ReleasesSlider = ({img,text} ) => {
     return(
         <>
         <div className={styles.slider_container} itemScope itemType="http://schema.org/ImageObject">
-            <picture>
+
                 <MyImage itemProp="contentUrl" src={{default: img}} alt={text} />
                 <div className={styles.faded_text} itemProp="name"> {text}</div>
-            </picture>
+
 
         </div>
         </>
