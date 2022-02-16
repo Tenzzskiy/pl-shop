@@ -50,7 +50,8 @@ const LeftPreference = ( { leftImg,leftTitle,leftText}) =>{
              <div className={styles.container} itemScope itemType="http://schema.org/ImageObject">
                 <div className={styles.flex}>
                     <div className={styles.img}>
-                        <MyImage itemProp="contentUrl" src={{default: leftImg}} alt={leftTitle} />
+                        {/*<MyImage itemProp="contentUrl" src={{default: leftImg}} alt={leftTitle} />*/}
+                        <img itemProp="contentUrl" src={leftImg} alt={leftTitle}/>
                         <img  className={styles.background_img} src="/Preferences/background_image.svg" alt={leftTitle}/>
                     </div>
 

@@ -1,5 +1,6 @@
 import styles from './left.module.scss'
 import React from "react";
+import {MyImage} from "../../MyImage";
 
 
 
@@ -12,7 +13,7 @@ export const Left =({img,title,description }) =>{
             <div className={styles.content}>
             <div className={styles.grid}>
             <div className={styles.img}>
-                <img  itemProp="contentUrl" className={styles.background_img} src={img} alt={title}/>
+                <MyImage className={styles.background_img} src={{default :img}} alt={title}/>
             </div>
                 <div  className={styles.flex}>
                 <h3 className={styles.title} itemProp="name">
