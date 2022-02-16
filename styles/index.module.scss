@@ -158,19 +158,29 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+
   border-bottom: 0.5px solid #E3E1FB;
   &:hover{
     color: white;
     background: #575786 ;
     svg{
-      fill: #3496FE;
+      path{
+        fill: white;
+      }
     }
   }
-  img{
+  svg{
     width: 24px;
     height: 24px;
     margin-right: 10px;
     margin-left: 15px;
+  }
+  a{
+    max-height: 24px;
+    border: 0 !important;
+    padding: 0 !important;
+    text-decoration: none;
+    color: var(--description);
   }
 }
 .navigation_container{

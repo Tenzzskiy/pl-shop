@@ -220,6 +220,11 @@
 }
 
 @media(max-width: 720px ){
+  .img{
+    img{
+      max-width: 300px !important;
+    }
+  }
   .card_footer{
     margin-top: 0 !important;
   }
@@ -240,5 +245,6 @@
       height: 40px !important;
     }
   }
+
 
 }
