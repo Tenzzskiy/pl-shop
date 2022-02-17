@@ -37,7 +37,8 @@ export const OfferCard= ( {total,detail1,detail2,mainDetail,mainDetail2,price,ti
     return(
 
         <>
-            <div className={cs(styles.container,busket === 1 ? styles.busket : null)} itemScope itemType="http://schema.org/Product">
+            <div className={cs(styles.container,busket === 1 ? styles.busket : null)} itemScope itemType="http://schema.org/Product" onMouseEnter={() => setBackground(true)}
+                 onMouseLeave={() =>setBackground(false) }>
             <div className={styles.content}>
                 <div className={styles.hit}>
                     {data.total === "1" ?  <img width='107' height='32' src="/hit.svg" alt=""/> : Number(data.total) === 2 ?  <img width='107' height='32' src="/profitable.svg" alt=""/> : null}
@@ -66,8 +67,7 @@ export const OfferCard= ( {total,detail1,detail2,mainDetail,mainDetail2,price,ti
                     <Selector changedPrice={changedPrice} setChangedPrice={setChangedPrice} price={price} setTime={setTime} time={time} check={check()}/>
                     </div>
                     <div className={styles.price}> {numberWithSpaces(changedPrice)}₽</div>
-                    <div className={cs(styles.busket,check() ? styles.busket_disabled : null)} onClick={check() ? null : handleClick} onMouseEnter={() => setBackground(true)}
-                         onMouseLeave={() =>setBackground(false) }>
+                    <div className={cs(styles.busket,check() ? styles.busket_disabled : null)} onClick={check() ? null : handleClick} >
                         {/*<picture>*/}
                         {/*    <img src="/ShopItem/whiteBusket.svg" alt="" />*/}
                         {/*</picture>*/}
