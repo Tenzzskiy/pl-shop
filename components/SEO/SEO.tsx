@@ -66,7 +66,7 @@ const Seo:FunctionComponent = ({title,children, image1,image2,text1,text2,text3,
                 <div className={styles.container_360}>
                 <div className={styles.img_360}>
                     <img src="/Seo/background_768.svg" className={styles.background_image_360} alt=""/>
-                    <MyImage src={{default: image1}} alt={title} className={styles.image_360} />
+                    <MyImage width='382' height='260'  src={{default: image1}} alt={title} className={styles.image_360} />
                 </div>
                     <div className={cs(styles.text_360,active ? styles.show : styles.hide)}>
                         {items}{active ?  '...' :  null}

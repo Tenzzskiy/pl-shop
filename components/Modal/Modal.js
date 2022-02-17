@@ -11,6 +11,8 @@ import {ModalCard} from "./ModalCard/ModalCard";
 import {Slider} from "../Slider/Slider";
 import {useEffect} from "react";
 import Link from "next/link";
+import {numberWithSpaces} from "../../sources/utils/helpers";
+
 export const Modal = ( {active,setActive}) =>{
 
     const items = useSelector(state => state.cart.itemsInCart);
@@ -57,7 +59,7 @@ export const Modal = ( {active,setActive}) =>{
                                     Итого:
                                 </div>
                                 <div className={styles.totalCount}>
-                                    {itemsCount} товаров, {totalPrice}₽
+                                    {itemsCount} товаров, {numberWithSpaces(totalPrice)}₽
                                 </div>
                             </div>
                             {size.width > 720 ? <>
@@ -89,7 +91,7 @@ export const Modal = ( {active,setActive}) =>{
                                     <div className={styles.flex}>
 
                                         <span className={styles.time}> {quantity.time}:</span>
-                                        <span className={styles.price} > {quantity.changedPrice}₽</span>
+                                        <span className={styles.price} > {numberWithSpaces(quantity.changedPrice)}₽</span>
                                     </div>
 
                           : null}
@@ -112,7 +114,7 @@ export const Modal = ( {active,setActive}) =>{
                                 <div className={styles.flex}>
 
                                     <span className={styles.time}> {quantity.time}:</span>
-                                    <span className={styles.price} > {quantity.changedPrice}₽</span>
+                                    <span className={styles.price} > {numberWithSpaces(quantity.changedPrice)}₽</span>
                                 </div>
                             </> : null}
 

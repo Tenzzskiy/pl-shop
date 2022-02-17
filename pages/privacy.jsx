@@ -1,20 +1,13 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
 import s from './../styles/privacy.module.scss'
-
 import Head from "next/head";
 
-export const LinkComponent = ({ link }) => {
-  return (
-    <a className={s.link} href={link}>
-      {link}
-    </a>
-  );
-};
+
 const DOMEN = 'arenda-plazm77.ru';
 const EMAIL = 'info@arenda-plazm77.ru'
 export default function Privacy() {
-  const name_oranization = "Аренда фотозон.";
+  const name_oranization = "Аренда плазм.";
   return (
     <>
       <Head>
@@ -50,7 +43,7 @@ export default function Privacy() {
                   1.2. Настоящая политика Оператора в отношении обработки
                   персональных данных (далее – Политика) применяется ко всей
                   информации, которую Оператор может получить о посетителях
-                  веб-сайта {<LinkComponent link={DOMEN} />}.
+                  веб-сайта DOMEN.
                 </p>
                 <p className={s.paragraph}>
                   2. Основные понятия, используемые в Политике
@@ -69,7 +62,7 @@ export default function Privacy() {
                   2.3. Веб-сайт – совокупность графических и информационных
                   материалов, а также программ для ЭВМ и баз данных,
                   обеспечивающих их доступность в сети интернет по сетевому
-                  адресу {<LinkComponent link={DOMEN} />}.
+                  адресу DOMEN.
                 </p>
                 <p className={s.paragraph}>
                   2.4. Информационная система персональных данных — совокупность
@@ -106,7 +99,7 @@ export default function Privacy() {
                 <p className={s.paragraph}>
                   2.8. Персональные данные – любая информация, относящаяся прямо
                   или косвенно к определенному или определяемому Пользователю
-                  веб-сайта {<LinkComponent link={DOMEN} />}.
+                  веб-сайта DOMEN.
                 </p>
                 <p className={s.paragraph}>
                   2.9. Персональные данные, разрешенные субъектом персональных
@@ -120,7 +113,7 @@ export default function Privacy() {
                 </p>
                 <p className={s.paragraph}>
                   2.10. Пользователь – любой посетитель веб-сайта{" "}
-                  {<LinkComponent link={DOMEN} />}.
+                  DOMEN.
                 </p>
                 <p className={s.paragraph}>
                   2.11. Предоставление персональных данных – действия,
@@ -362,7 +355,7 @@ export default function Privacy() {
                   писем; – заключение, исполнение и прекращение
                   гражданско-правовых договоров; – предоставление доступа
                   Пользователю к сервисам, информации и/или материалам,
-                  содержащимся на веб-сайте {<LinkComponent link={DOMEN} />}; –
+                  содержащимся на веб-сайте DOMEN; –
                   уточнение деталей заказа.
                 </p>
                 <p className={s.paragraph}>
@@ -404,7 +397,7 @@ export default function Privacy() {
                   8.2. Оператор обрабатывает персональные данные Пользователя
                   только в случае их заполнения и/или отправки Пользователем
                   самостоятельно через специальные формы, расположенные на сайте{" "}
-                  {<LinkComponent link={DOMEN} />} или направленные Оператору
+                  DOMEN или направленные Оператору
                   посредством электронной почты. Заполняя соответствующие формы
                   и/или отправляя свои персональные данные Оператору,
                   Пользователь выражает свое согласие с данной Политикой.
@@ -608,7 +601,7 @@ export default function Privacy() {
                 <p className={s.paragraph}>
                   14.3. Актуальная версия Политики в свободном доступе
                   расположена в сети Интернет по адресу{" "}
-                  {<LinkComponent link={DOMEN + "/privacy"} />}.
+                  {DOMEN + '/privacy'}.
                 </p>
               </p>
             </div>
