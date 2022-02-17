@@ -1,6 +1,6 @@
 import Layout from "../components/Layout/Layout";
 import Releases from "../components/Relises/Relises";
-import React, {useEffect, useState} from "react";
+import React, { useState} from "react";
 import Head from 'next/head'
 import Sale from "../components/Sale/Sale";
 import {Partners} from "../components/Partners/Partners";
@@ -13,8 +13,6 @@ import {Preferences_768, Right} from "../components/Preferences/Right/right";
 import {useWindowSize} from "../Hooks/useWindowSize";
 import {Preferences_360} from "../components/Preferences/Preferences_360/Preferences_360.js";
 import {Preferences} from "../components/Preferences/Preferences";
-import {Offer_768} from "../components/Offer/OfferCard/Offer_768";
-import {Offer_360} from "../components/Offer/OfferCard/Offer_360";
 import {Releases_768} from "../components/Relises/Releases_768/Releases_768";
 import {Modal} from "../components/Modal/Modal";
 import FeedBack from "../components/FeedBack/FeedBack";
@@ -25,7 +23,6 @@ import Seo from "../components/SEO/SEO";
 import styles from './../styles/index.module.scss'
 import ImgModal from "../components/Img_modal/ImgModal";
 import {useDispatch, useSelector} from "react-redux";
-import useLocalStorage from "../Hooks/useLocalStorage";
 export  const getStaticProps = async () =>{
     return {
         props: {
@@ -38,13 +35,9 @@ const Home = ({ cards }) => {
     const [id,setId] = useState(0);
     const [sites,setSites] = useState(false);
     const [offerModal,setOfferModal] = useState(false)
-    const [totalPrice,setTotalPrice] = useState()
     const size = useWindowSize();
     const [modalActive,setModalActive] = useState(false)
     const [imgModal,setImgModal] = useState(false)
-    const dispatch = useDispatch();
-    const items = useSelector(state => state.cart.itemsInCart);
-
 
   return (
 
