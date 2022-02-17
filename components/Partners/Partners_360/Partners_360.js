@@ -21,7 +21,7 @@ export const Partners_360 = ({}) => {
 
     // @ts-ignore
     return (
-        <section className={styles.partners_360}>
+        <div className={styles.partners_360}>
             <h2 className={styles.title}>
                 Наши клиенты
             </h2>
@@ -70,7 +70,7 @@ export const Partners_360 = ({}) => {
                 </div>
 
             </div>
-        </section>
+        </div>
 
     )
 }

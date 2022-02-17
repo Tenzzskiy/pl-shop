@@ -38,7 +38,7 @@ const Seo:FunctionComponent = ({title,children, image1,image2,text1,text2,text3,
                        <div className={styles.container_1} itemScope itemType="http://schema.org/ImageObject">
                            <div className={styles.img}>
                                <img src="/Seo/background_768.svg" className={styles.background_image} alt=""/>
-                               <MyImage  src={{default: image1}} alt={title} className={styles.image} />
+                               <MyImage width='382' height='216'  src={{default: image1}} alt={title} className={styles.image} />
 
                            </div>
                            <div className={styles.text} itemProp="name">{text1}
@@ -50,7 +50,7 @@ const Seo:FunctionComponent = ({title,children, image1,image2,text1,text2,text3,
                        <div className={styles.container_2} itemScope itemType="http://schema.org/ImageObject">
                            <div className={styles.img}>
                                <img src="/Seo/background_768.svg" className={styles.background_image2} alt=""/>
-                               <MyImage  src={{default: image2}} alt={title} className={styles.image_2} />
+                               <MyImage width='382' height='216'   src={{default: image2}} alt={title} className={styles.image_2} />
                            </div>
                            <div className={styles.text} itemProp="name">{text3}
                            </div>

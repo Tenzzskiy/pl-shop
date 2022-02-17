@@ -164,7 +164,7 @@ const Home = ({ cards }) => {
             <div className={size.width > 1200 ? styles.partners2 : styles.partners}>
         <Partners />
             </div>
-        <div className={styles.conditions}>
+        <div className={size.width > 900 ?  styles.conditions : styles.conditions2}>
         <Conditions />
         </div>
         <div className={size.width > 1250 ? styles.shop2 : styles.shop}>

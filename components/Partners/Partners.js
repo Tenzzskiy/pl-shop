@@ -8,7 +8,7 @@ import {MyImage} from "../MyImage";
 export const Partners = ( { }) =>{
     const size = useWindowSize();
     return(
-        <section>
+        <>
             {size.width > 720 ?
                 <div className={styles.partners} itemScope itemType="http://schema.org/ImageObject" >
                     <div className={styles.container}>
@@ -52,6 +52,6 @@ export const Partners = ( { }) =>{
             {size.width < 720 ?
                 <Partners_360 /> : null
             }
-        </section>
+        </>
     )
 }
