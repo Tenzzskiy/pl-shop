@@ -19,10 +19,15 @@
   z-index: 5;
   transition: all 0.7s;
 }
+ .pointer{
+   cursor: pointer;
+   max-width: 182px;
+ }
 .sale{
   font-family: Rubik-3;
   a{
     cursor: pointer;
+    max-width: 150px;
   }
   .sale_svg{
     width: 100%;

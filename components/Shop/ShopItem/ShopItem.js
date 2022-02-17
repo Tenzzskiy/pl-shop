@@ -13,10 +13,10 @@ import {useWindowSize} from "../../../Hooks/useWindowSize";
 import {numberWithSpaces} from "../../../sources/utils/helpers";
 
 
-export const ShopItem = ( { total,detail,select1,select2,data,children,price,count,img,title,active,setActive,detail1,detail2,mainDetail,mainDetail2,id,...props}) =>{
+export const ShopItem = ( {total,detail,select1,select2,data,children,price,count,img,title,active,setActive,detail1,detail2,mainDetail,mainDetail2,id,...props}) =>{
     const [checked,setCheck] = useState(false)
     const size=useWindowSize();
-    const [background,setBackground] = useState(false);
+
     const num = 1;
    const item = true;
     const dispatch = useDispatch();
@@ -32,7 +32,7 @@ export const ShopItem = ( { total,detail,select1,select2,data,children,price,cou
         setActive(true);
         setStore(items)
     }
-
+    const [background,setBackground] = useState(false);
 const check = () =>{
     for (let i = 0; i < items.length; i++) {
         if (items[i].id === id) {
@@ -46,7 +46,8 @@ const check = () =>{
 
     return(
         <>
-            <div className={styles.container} itemScope itemType="http://schema.org/Product">
+            <div className={styles.container} itemScope itemType="http://schema.org/Product" onMouseEnter={() => setBackground(true)}
+                 onMouseLeave={() =>setBackground(false)}>
             <div className={styles.content}>
                 <div className={styles.hit}>
                     {data.total === "1" ?  <MyImage width='107' height='32' itemProp="contentUrl" src={{default: "/hit.svg"}} alt="Хит" /> : Number(data.total) === 2 ?  <MyImage width='107' height='32' itemProp="contentUrl" src={{default: "/profitable.svg"}} alt="Выгодно" /> : null}
@@ -96,8 +97,7 @@ const check = () =>{
                                 <img  src="/ShopItem/selected_busket.svg" alt=""/>
                             </div></a></Link> :
 
-                            <div className={styles.bucket} onClick={handleClick} onMouseEnter={() => setBackground(true)}
-                                 onMouseLeave={() =>setBackground(false) }>
+                            <div className={styles.bucket} onClick={handleClick}  >
 
                                 {background && size.width>720 ? <BlobCoverReverse classNames={styles.svg} width={59} height={40} color1="#C038F5" color2='#3496FE'/> : null}
                                 <svg className={styles.svg2} width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">

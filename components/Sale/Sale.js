@@ -21,8 +21,8 @@ const size =useWindowSize();
                                 <h2 className={styles.title}>Скидка на всё! </h2>
                                 <div className={styles.promo}> Получи промокод по клику!</div>
                                 <div className={styles.sale_title}>
-                                    <div className={styles.button}>
-                                        <div  className="col-md-3 col-sm-3 col-xs-6" onClick={() =>{setPromo(true)} }><a
+                                <div className={styles.pointer}>
+                                        <div  className="col-md-3 col-sm-3 col-xs-6" onClick={() =>{setPromo(true)} }><a href="#"
                                                                                        className={cn("btn btn-sm animated-button victoria-two",
                                                                                        promo ? 'animated-button_disabled' : null
                                                                                        )}>
@@ -31,7 +31,7 @@ const size =useWindowSize();
 
                                         </a>
                                         </div>
-                                    </div>
+                                </div>
                                 </div>
                                 <div className={styles.time}>
                                     *При заказе от 30 000₽

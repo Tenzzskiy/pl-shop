@@ -9,7 +9,7 @@ import {MyImage} from "../../MyImage";
             <div className={styles.container} itemScope itemType="http://schema.org/ImageObject">
             <div className={styles.content}>
                 <div className={styles.img}>
-                    <MyImage itemProp="contentUrl" src={{default:img}}  alt={title} />
+                    <MyImage width='392' height='187'  itemProp="contentUrl" src={{default:img}}  alt={title} />
 
                 </div>
                 <div className={styles.info}>

@@ -28,7 +28,7 @@
 a.animated-button:link, a.animated-button:visited {
     position: relative;
     display: block;
-    margin: 30px auto 0;
+    margin: 15px 0 !important;
     padding: 15px 15px;
     color: #fff;
     font-size:14px;
@@ -64,7 +64,10 @@ a.animated-button:link:hover, a.animated-button:visited:hover {
 }
 a.animated-button_disabled:link:after, a.animated-button:visited:after {
     height: 450%;
-    border: 1px solid #460BD9;
+
+}
+a.animated-button_disabled.victoria-two{
+    border: 1px solid #460BD9 !important;
 }
 a.animated-button.victoria-two {
     border: 1px solid #B93DF6;
@@ -74,16 +77,16 @@ a.animated-button.victoria-two {
 
 }
 a.animated-button.victoria-two:hover{
-    border: 1px solid #460BD9; ;
+    border: 1px solid #460BD9!important; ;
 }
 a.animated-button.victoria-two:after {
     z-index: 1;
-    background:linear-gradient(90deg, #460BD9 0%, #009bb4 15%, #460BD9 99.44%);;
+    background:#460BD9 !important;
 
-    -moz-transform: translateX(-50%) translateY(-50%) rotate(25deg);
-    -ms-transform: translateX(-50%) translateY(-50%) rotate(25deg);
-    -webkit-transform: translateX(-50%) translateY(-50%) rotate(25deg);
-    transform: translateX(-50%) translateY(-50%) rotate(25deg);
+    -moz-transform: translateX(-50%) translateY(-50%) rotate(25deg) !important;
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(25deg) !important;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(25deg) !important;
+    transform: translateX(-50%) translateY(-50%) rotate(25deg) !important;
 }
 a.animated-button:link, a.animated-button:visited {
     position: relative;

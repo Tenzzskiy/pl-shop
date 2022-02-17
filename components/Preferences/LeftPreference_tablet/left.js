@@ -13,7 +13,7 @@ export const Left =({img,title,description }) =>{
             <div className={styles.content}>
             <div className={styles.grid}>
             <div className={styles.img}>
-                <MyImage className={styles.background_img} src={{default :img}} alt={title}/>
+                <MyImage width='392' height='247' className={styles.background_img} src={{default :img}} alt={title}/>
             </div>
                 <div  className={styles.flex}>
                 <h3 className={styles.title} itemProp="name">

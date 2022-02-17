@@ -11,8 +11,10 @@ export const Shop = ( { page,active,setActive,data,...props}) =>{
     const [buttonStyle,setButtonStyle] = useState(styles.button)
         const itemsLength = data.length;
         const [mainCatalogue,setMainCatalogue] = useState(data)
+
        const items =  (step ? mainCatalogue.slice(0,size.width > 1200 ? 12:6) :  data).map(elem  =>
            <ShopItem
+
                detail1={elem.detail1}
                detail2={elem.detail2}
                mainDetail={elem.mainDetail}
