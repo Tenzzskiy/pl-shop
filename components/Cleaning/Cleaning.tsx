@@ -68,12 +68,12 @@ export const Cleaning:FunctionComponent = ( { }) =>{
                                         <h3> Аренда санитайзеров, автоматов с масками и перчатками</h3>
                                     </div>
                                     <div className={styles.item}>
-                                        <div>     <MyImage alt=' Проведение санитарного контроля на входе' width='52' height='52' src={{default :'/Desinfection/desinfection_icon_3.svg'}}/>
+                                        <div>     <MyImage alt=' Проведение санитарного контроля на входе' width='82' height='100' src={{default :'/Desinfection/desinfection_icon_3.svg'}}/>
                                         </div>
                                         <h3> Проведение санитарного контроля на входе</h3>
                                     </div>
                                     <div className={styles.item}>
-                                        <div>    <MyImage alt='Выезд мед.работника для проведения экспресс  ПЦР-тестов' width='52' height='52' src={{default :'/Desinfection/desinfection_icon_4.svg'}}/>
+                                        <div>    <MyImage alt='Выезд мед.работника для проведения экспресс  ПЦР-тестов' width='82' height='100' src={{default :'/Desinfection/desinfection_icon_4.svg'}}/>
                                         </div>
                                         <h3> Выезд мед.работника для проведения экспресс  ПЦР-тестов</h3>
                                     </div>
