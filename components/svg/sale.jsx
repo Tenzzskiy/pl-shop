@@ -5,7 +5,7 @@ export const Sale_img = () =>{
         <>
             <svg className={styles.sale_svg} width="1280" preserveAspectRatio="none" height="698" viewBox="0 0 1280 698" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 0L1280 108.5V698L0 586.29V0Z" fill="url(#paint0_linear_408_48954)"/>
-                <path d="M34.5 533.942V60.7013L1243.51 167.873L1245.49 643.857L34.5 533.942Z" stroke="url(#paint1_linear_408_48954)" stroke-width="3"/>
+                <path d="M34.5 533.942V60.7013L1243.51 167.873L1245.49 643.857L34.5 533.942Z" stroke="url(#paint1_linear_408_48954)" strokeWidth="3"/>
                 <defs>
                     <linearGradient id="paint0_linear_408_48954" x1="0" y1="349.21" x2="1280" y2="349.21" gradientUnits="userSpaceOnUse">
                         <stop stop-color="#07F1D3"/>
