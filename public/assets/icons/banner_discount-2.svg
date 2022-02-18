@@ -3,7 +3,7 @@
 <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1214 632" style="enable-background:new 0 0 1214 632;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:url(#SVGID_1_);strokeWidth:3;}
+	.st0{fill:none;stroke:url(#SVGID_1_);stroke-width:3;}
 </style>
 <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0" y1="318" x2="1214" y2="318" gradientTransform="matrix(1 0 0 -1 0 634)">
 	<stop  offset="0" style="stop-color:#B93DF6"/>

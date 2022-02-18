@@ -28,17 +28,17 @@ const Header = ({ setNavigation,setContacts,count}) =>{
     });
     const names = [
 
-        {title:'Плазмы',link:'/'},
-        {title:'Светодиодные экраны',link:'/screens'},
-        {title:'Видеостены',link:'/videoWalls'},
-        {title:'Сенсорные тач-панели',link:'/touchPanel'},
-        {title:'Проекторы',link:'/projectors'},
-        {title:'Ноутбуки',link:'/laptops'},
-        {title:'Звук, Свет и окружение',link:'/sound'},
-        {title:'Дезинфекция',link:'/desinfection'}
+        {title:'Плазмы',link:'/',id:'1'},
+        {title:'Светодиодные экраны',link:'/screens',id:'2'},
+        {title:'Видеостены',link:'/videoWalls',id:'3'},
+        {title:'Сенсорные тач-панели',link:'/touchPanel',id:'4'},
+        {title:'Проекторы',link:'/projectors',id:'5'},
+        {title:'Ноутбуки',link:'/laptops',id:'6'},
+        {title:'Звук, Свет и окружение',link:'/sound',id:'7'},
+        {title:'Дезинфекция',link:'/desinfection',id:'8'}
 
     ]
-    const buttons = names.map( (elem) => <NavigationButton color1='#460BD9' color2='#460BD9' width={152} height={62} title={elem.title} link={elem.link} count={false}/>)
+    const buttons = names.map( (elem) => <NavigationButton key={elem.id} color1='#460BD9' color2='#460BD9' width={152} height={62} title={elem.title} link={elem.link} count={false}/>)
 
     return(
    <header>

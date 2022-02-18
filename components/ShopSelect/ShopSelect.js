@@ -23,7 +23,7 @@ export const ShopSelector = ( {data,setCatalogue} ) =>{
                 setSelectorStatus(!selectorStatus)
             }>{example}
                 <svg className={cn(styles.select_arrow,selectorStatus ? styles.disable_arrow : null)} width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.5 1L5.5 5L1.5 1" stroke="white" strokeWidth="1.5"/>
+                    <path d="M9.5 1L5.5 5L1.5 1" stroke="white" stroke-width="1.5"/>
                 </svg>
 
 
