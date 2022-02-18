@@ -18,9 +18,10 @@ interface SeoProps{
 const Seo:FunctionComponent = ({title,children, image1,image2,text1,text2,text3,text4,otherText}:SeoProps) =>{
     const size=useWindowSize();
     const [active,setActive]= useState(true);
-    const text = `${text1}${text2}${text3}${text4} `
+    const text = `${text1}`
     const step = 210;
-    const items = text.slice(0,active ? step : text.length)
+    const items = text.slice(0,active ? step : text.length);
+    const fullText=`${text2}${text3}${text4}`;
     return(
         <div className={styles.seo} >
         <div className={styles.container}>
@@ -41,22 +42,22 @@ const Seo:FunctionComponent = ({title,children, image1,image2,text1,text2,text3,
                                <MyImage width='382' height='216'  src={{default: image1}} alt={title} className={styles.image} />
 
                            </div>
-                           <div className={styles.text} itemProp="name">{text1}
+                           <p className={styles.text} itemProp="name">{'          ' + text1}
 
-                           </div>   <div className={styles.text_2} itemProp="description">{text2}
+                           </p>   <p className={styles.text_2} itemProp="description">{text2}
 
-                           </div>
+                           </p>
                        </div>
                        <div className={styles.container_2} itemScope itemType="http://schema.org/ImageObject">
                            <div className={styles.img}>
                                <img src="/Seo/background_768.svg" className={styles.background_image2} alt=""/>
                                <MyImage width='382' height='216'   src={{default: image2}} alt={title} className={styles.image_2} />
                            </div>
-                           <div className={styles.text} itemProp="name">{text3}
-                           </div>
-                           <div className={styles.text_2} itemProp="description">{text4}
+                           <p className={styles.text} itemProp="name">{text3}
+                           </p>
+                           <p className={styles.text_2} itemProp="description">{text4}
 
-                           </div>
+                           </p>
                        </div>
                    </> : null
                 }
@@ -68,9 +69,16 @@ const Seo:FunctionComponent = ({title,children, image1,image2,text1,text2,text3,
                     <img src="/Seo/background_768.svg" className={styles.background_image_360} alt=""/>
                     <MyImage width='382' height='260'  src={{default: image1}} alt={title} className={styles.image_360} />
                 </div>
-                    <div className={cs(styles.text_360,active ? styles.show : styles.hide)}>
-                        {items}{active ?  '...' :  null}
-                    </div>
+                    <p className={cs(styles.text_360,active ? styles.show : styles.hide)}>
+                        {!active ?
+                            <>
+                            <p> {text1}</p>
+                            <p>{text2}</p>
+                            <p> {text3}</p>
+                            <p> {text4}</p>
+                            </>
+                            : `${items}`}{active ?  '...' :  null}
+                    </p>
                     <div className={styles.button} onClick={() => setActive(!active)}> {active ?  'Подробнее':'Скрыть' }
                         <img src={active ? "/Seo/arrow.svg" : "/Seo/arrow_top.svg"} alt=""/>
                     </div>

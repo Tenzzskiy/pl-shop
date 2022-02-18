@@ -116,7 +116,7 @@ const FeedBack = ( {setOfferModal}) => {
                                 }
                                 setPhone({...phone, phone:evt})
 
-                            }} value={value}/>
+                            }} value={phone.phone}/>
                         <button className={checkbox === true &&  input ===true ? null : styles.disabled}
                             onClick={ () =>
 
@@ -131,12 +131,12 @@ const FeedBack = ( {setOfferModal}) => {
                         >Отправить заявку </button>
                         <Selector_758 phone={phone} setPhone={setPhone} example={example} setExample={setExample}/>
 
-
                         </div>
-                        <div className={styles.privacy_flex}>
+
+                    </div>
+                    <div className={styles.privacy_flex}>
                         <div className={styles.checkbox} onClick={triggerCheckBox}><img className={checkbox ? null : styles.hide} src="/Seo/checkbox.svg" alt=""/></div>
                         <div className={styles.agree}> Соглашаюсь с <Link href="/privacy"><a rel='nofollow'>Правилами обработки персональных данных</a></Link></div>
-                        </div>
                     </div>
                 </div>
                 </div>

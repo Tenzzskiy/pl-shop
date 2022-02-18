@@ -35,6 +35,7 @@ width: 100%;;
     width: 100%;
     display: flex;
     justify-content: center;
+
     align-items: center;
     z-index: 1;
 
@@ -53,6 +54,7 @@ width: 100%;;
     max-width: 320px;
     width: 320px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 201px;
@@ -63,6 +65,10 @@ width: 100%;;
 }
 
 .seo{
+  p {
+    text-indent: 25px;
+    margin-top: 0 !important;
+  }
   width: 100%;
  background: #F2F3FE;;
 

@@ -1,5 +1,5 @@
 .disabled{
-  opacity: 0.4 !important;
+  opacity: 0.9 !important;
 }
 .number_disabled{
   input{
@@ -34,7 +34,8 @@
 .privacy_flex{
   display: flex;
   flex-direction: row;
-  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
   justify-content: center;
 align-items: center;
   padding: 10px 16px;
@@ -131,7 +132,10 @@ background:  #F2F3FE;
   }
 }
 @media (max-width: 99999px){
-
+  .privacy_flex{
+    max-width: 740px!important;
+    width: 100%;
+  }
   .number{
     margin-bottom: 45px;
    a{
