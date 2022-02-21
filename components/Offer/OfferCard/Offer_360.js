@@ -8,7 +8,7 @@ import {useKeenSlider} from "keen-slider/react";
 import styles2 from './Offer_360.module.scss'
 import cs from 'classnames'
 
-export const Offer_360 = ({count =0,busket=0,active,setActive,title=' С этим товаром часто берут'} ) =>{
+export const Offer_360 = ({count =0,busket=0,active,setActive,title=' С этим товаром часто берут',selector} ) =>{
     const size = useWindowSize();
 
 
@@ -36,6 +36,7 @@ export const Offer_360 = ({count =0,busket=0,active,setActive,title=' С эти�
                            detail2={elem.detail2}
                            mainDetail2={elem.mainDetail2}
                            mainDetail={elem.mainDetail}
+                           selector={elem.selector}
 
                 />
             </div>
@@ -49,6 +50,7 @@ export const Offer_360 = ({count =0,busket=0,active,setActive,title=' С эти�
                            detail2={elem.detail2}
                            mainDetail2={elem.mainDetail2}
                            mainDetail={elem.mainDetail}
+                           selector={elem.selector}
                 />
             </div>
         </div>
@@ -63,6 +65,7 @@ export const Offer_360 = ({count =0,busket=0,active,setActive,title=' С эти�
                            detail2={elem.detail2}
                            mainDetail2={elem.mainDetail2}
                            mainDetail={elem.mainDetail}
+                           selector={elem.selector}
                 />
             </div>
         </div>
@@ -72,7 +75,8 @@ export const Offer_360 = ({count =0,busket=0,active,setActive,title=' С эти�
     const items3 =  data.projectorAdditionals.map(elem  =>
         <div className="keen-slider__slide number-slide2" key={elem.id}>
             <div className={styles.flex} >
-                <OfferCard price={elem.price} title={elem.name} img={elem.img} data={elem} id={elem.id} active={active} setActive={setActive} busket={busket}
+                <OfferCard selector={elem.selector}
+                    price={elem.price} title={elem.name} img={elem.img} data={elem} id={elem.id} active={active} setActive={setActive} busket={busket}
                            detail1={elem.detail1}
                            detail2={elem.detail2}
                            mainDetail2={elem.mainDetail2}
@@ -86,7 +90,8 @@ export const Offer_360 = ({count =0,busket=0,active,setActive,title=' С эти�
     const items4 =  data.laptopAdditionals.map(elem  =>
         <div className="keen-slider__slide number-slide2" key={elem.id}>
             <div className={styles.flex} >
-                <OfferCard price={elem.price} title={elem.name} img={elem.img} data={elem} id={elem.id} active={active} setActive={setActive} busket={busket}
+                <OfferCard selector={elem.selector}
+                    price={elem.price} title={elem.name} img={elem.img} data={elem} id={elem.id} active={active} setActive={setActive} busket={busket}
                            detail1={elem.detail1}
                            detail2={elem.detail2}
                            mainDetail2={elem.mainDetail2}

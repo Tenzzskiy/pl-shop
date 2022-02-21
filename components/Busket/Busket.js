@@ -45,6 +45,7 @@ export const ResultBusket = ( {data, setOfferModal}) => {
     });
     const goods =  items.map(elem  =>
         <BusketCard
+            selector={elem.selector}
             detail1={elem.detail1}
             detail2={elem.detail2}
             mainDetail={elem.mainDetail}

@@ -16,7 +16,8 @@ import {numberWithSpaces} from "../../sources/utils/helpers";
 export const Modal = ( {active,setActive}) =>{
 
     const items = useSelector(state => state.cart.itemsInCart);
-    const totalPrice = useSelector(state => state.cart.totalPrice)
+    let result = 0;
+    items.map(elem => result += elem.changedPrice)
     const itemsCount = items.length;
     const quantity = items[items.length-1];
     const size = useWindowSize();
@@ -59,7 +60,7 @@ export const Modal = ( {active,setActive}) =>{
                                     Итого:
                                 </div>
                                 <div className={styles.totalCount}>
-                                    {itemsCount} товаров, {numberWithSpaces(totalPrice)}₽
+                                    {itemsCount} товаров, {result}₽
                                 </div>
                             </div>
                             {size.width > 720 ? <>

@@ -14,7 +14,7 @@ export const Shop = ( { page,active,setActive,data,...props}) =>{
 
        const items =  (step ? mainCatalogue.slice(0,size.width > 1200 ? 12:6) :  data).map(elem  =>
            <ShopItem
-
+                selector={elem.selector}
                detail1={elem.detail1}
                detail2={elem.detail2}
                mainDetail={elem.mainDetail}

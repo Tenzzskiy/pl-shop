@@ -15,7 +15,12 @@ export default function email(req, res) {
             <li style="display: flex flex-direction: row; justify-content: center ; align-items: center;">
                 <p style="color: #0b2650; ">Название: ${req.body.cards[index].title}</p>
                 <p>Время: ${req.body.cards[index].time}</p>
-                <p style="color: green">Стоимость: ${req.body.cards[index].changedPrice}</p>  
+                <p style="color: green">Стоимость: ${req.body.cards[index].changedPrice}</p> 
+                 <p style="color: black; ">Количество: ${req.body.cards[index].count}</p>
+                 <p style="color: blueviolet; ">Тип : ${
+            req.body.cards[index].Switch === 1 ? req.body.cards[index].select1 : 
+                req.body.cards[index].Switch === 2 ? req.body.cards[index].select2 : 'Только для светодиодных экранов'
+        }</p>
             </li>
         `;
         htmlLi.push(li)

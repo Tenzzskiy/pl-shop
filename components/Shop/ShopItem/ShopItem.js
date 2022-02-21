@@ -13,7 +13,7 @@ import {useWindowSize} from "../../../Hooks/useWindowSize";
 import {numberWithSpaces} from "../../../sources/utils/helpers";
 
 
-export const ShopItem = ( {total,detail,select1,select2,data,children,price,count,img,title,active,setActive,detail1,detail2,mainDetail,mainDetail2,id,...props}) =>{
+export const ShopItem = ( {total,detail,select1,select2,data,children,price,count,img,title,active,setActive,detail1,detail2,mainDetail,mainDetail2,id,selector,...props}) =>{
     const [checked,setCheck] = useState(false)
     const size=useWindowSize();
 
@@ -27,7 +27,7 @@ export const ShopItem = ( {total,detail,select1,select2,data,children,price,coun
    const [Switch,setSwitch] = useState(1)
     const [store,setStore] = useLocalStorage('store',[])
     const handleClick =() =>{
-        dispatch(setItemInCart({total,img,changedPrice,id,title,time,Priced,select1,select2,mainDetail,mainDetail2,detail1,detail2,Switch,checked,detail}));
+        dispatch(setItemInCart({total,img,changedPrice,id,title,time,Priced,select1,select2,mainDetail,mainDetail2,detail1,detail2,Switch,checked,detail,selector}));
         dispatch(updateTotalPrice(Number(changedPrice)))
         setActive(true);
         setStore(items)

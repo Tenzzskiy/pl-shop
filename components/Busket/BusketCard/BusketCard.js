@@ -8,7 +8,8 @@ import {updateSelect,updateCount,updateTime} from './../../../redux/cart/reducer
 import {useWindowSize} from "../../../Hooks/useWindowSize";
 import {LedSelector} from "../../Shop/LedSelector/LedSelector";
 import {numberWithSpaces} from "../../../sources/utils/helpers";
-export const BusketCard = ( {detail1,detail2,mainDetail,mainDetail2,img,title,time,price,id,data,Priced  }) => {
+import cs from "classnames";
+export const BusketCard = ( {detail1,detail2,mainDetail,mainDetail2,img,title,time,price,id,data,selector  }) => {
 
     const [Switch,setSwitch] = useState(data.Switch)
     const size = useWindowSize();
@@ -32,6 +33,7 @@ export const BusketCard = ( {detail1,detail2,mainDetail,mainDetail2,img,title,ti
 
     const deleteItem = ( ) =>{
         dispatch(deleteItemFromCart(id))
+
     }
     useEffect(() => {
         dispatch(updateSelect(data));
@@ -41,7 +43,11 @@ export const BusketCard = ( {detail1,detail2,mainDetail,mainDetail2,img,title,ti
     }, [changedPrice])
 
     useEffect(() => {
+        dispatch(updateSelect({...data, Switch: Switch}))
+    }, [Switch])
+    useEffect(() => {
         dispatch(updateCount({...data, count}));
+
     }, [count])
     const details = () =>{
         if (Number(data.id) >=25 && Number(data.id) <=34 ){
@@ -83,7 +89,7 @@ export const BusketCard = ( {detail1,detail2,mainDetail,mainDetail2,img,title,ti
                 <div className={styles.img}>
                     <picture>
 
-                        {size.width < 720 ? <div className={styles.img_360}>
+                        {size.width < 720 && selector !== false ? <div className={styles.img_360}>
                             <img className={styles.card_img} src={img} alt={title}/>
                             <Selector checked={data.checked} setChangedPrice={setChangedPrice} duration={duration}  price={changedPrice} setTime={setTime} time={time} data={data} changedPrice={changedPrice} count={count} />
                         </div> :<img className={styles.card_img} src={img} alt={title}/> }
@@ -103,8 +109,8 @@ export const BusketCard = ( {detail1,detail2,mainDetail,mainDetail2,img,title,ti
 
 
 
-                    <div className={styles.text_content_footer}>
-                        {size.width > 720 ? <Selector checked={data.checked} setChangedPrice={setChangedPrice} duration={duration}  price={changedPrice} setTime={setTime} time={time} data={data} changedPrice={changedPrice} count={count} /> : null}
+                    <div className={cs(styles.text_content_footer, selector === false ? styles.justify : null)}>
+                        {size.width > 720 && selector !== false ? <Selector checked={data.checked} setChangedPrice={setChangedPrice} duration={duration}  price={changedPrice} setTime={setTime} time={time} data={data} changedPrice={changedPrice} count={count} /> : null}
                         <div className={styles.price}>
                         <div className={styles.number}>{numberWithSpaces(data.changedPrice)}₽</div>
                             <div className={styles.trigger}>
@@ -119,6 +125,10 @@ export const BusketCard = ( {detail1,detail2,mainDetail,mainDetail2,img,title,ti
                                                             data.time === '5 суток' ? e : null) * (count-1)}))
                                         setCount(count - 1)
 
+                                    } else {
+                                        if (count === 1){
+                                            deleteItem();
+                                        }
                                     }
                                 } else {
                                     if( count-1 > 0 ) {
@@ -128,6 +138,12 @@ export const BusketCard = ( {detail1,detail2,mainDetail,mainDetail2,img,title,ti
                                                         data.time === '4 суток' ? d2 :
                                                             data.time === '5 суток' ? e2 : null) * (count-1)}))
                                         setCount(count - 1)
+
+                                    }
+                                    else {
+                                        if (count === 1){
+                                            deleteItem();
+                                        }
 
                                     }
                                 }

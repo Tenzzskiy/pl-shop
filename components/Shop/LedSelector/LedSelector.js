@@ -71,7 +71,7 @@ export const LedSelector = ({check,changedPrice,setChangedPrice,time,count,Switc
                             setExample(select2)
                             setSelectorStatus(false)
                             setSwitch(2)
-                            dispatch(updateSelect({...data, switch: 1}))
+                            dispatch(updateSelect({...data, Switch: 2}))
                             setCheck(true)
                             if (num ===1  ){
 

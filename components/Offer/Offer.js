@@ -30,7 +30,9 @@ export const Offer = ({count=0,active,setActive,title=' С этим товаро
     const items =  data.map(elem  =>
         <div style={{minWidth: '280px'}} className="keen-slider__slide number-slide2" key={elem.id}>
             <div className={styles.flex} >
-                <OfferCard price={elem.price} title={elem.name} img={elem.img} data={elem} id={elem.id} active={active} setActive={setActive} busket={busket}
+                <OfferCard
+                    selector={elem.selector}
+                    price={elem.price} title={elem.name} img={elem.img} data={elem} id={elem.id} active={active} setActive={setActive} busket={busket}
                            detail1={elem.detail1}
                            detail2={elem.detail2}
                            mainDetail2={elem.mainDetail2}
