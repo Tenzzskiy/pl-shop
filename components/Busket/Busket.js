@@ -37,7 +37,6 @@ export const ResultBusket = ( {data, setOfferModal}) => {
     items.map(elem => result += elem.changedPrice)
     const count = items.length;
     const [example,setExample] = useState('Позвонить по Телефону');
-    const totalPrice = useSelector(state => state.cart.totalPrice);
     const [navigation,setNavigation] = useState(false)
     const [phone,setPhone] = useState({
         phone:" ",
