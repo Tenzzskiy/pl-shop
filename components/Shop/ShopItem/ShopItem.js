@@ -8,7 +8,7 @@ import {LedSelector} from "../LedSelector/LedSelector";
 import {MyImage} from "../../MyImage";
 import cn from "classnames";
 import useLocalStorage from "../../../Hooks/useLocalStorage";
-import BlobCoverReverse from "../../background/background";
+import BlobCoverReverse, {BlobCoverReverse2} from "../../background/background";
 import {useWindowSize} from "../../../Hooks/useWindowSize";
 import {numberWithSpaces} from "../../../sources/utils/helpers";
 
@@ -98,6 +98,7 @@ const check = () =>{
                             </div></a></Link> :
 
                             <div className={styles.bucket} onClick={handleClick}  >
+                                {!background && size.width>720  ? <BlobCoverReverse2 classNames={styles.svg} color1="#C038F5" color2='#3496FE'  width={59} height={40}/> : null}
 
                                 {background && size.width>720 ? <BlobCoverReverse classNames={styles.svg} width={59} height={40} color1="#C038F5" color2='#3496FE'/> : null}
                                 <svg className={styles.svg2} width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
