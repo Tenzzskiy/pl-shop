@@ -1,2 +1,25 @@
+User-agent: Yandex
+Disallow: /privacy
+Disallow: /favorites
+Disallow: /basket
+Disallow: /search
+Disallow: /*?
+Disallow: /*&
+
+User-agent: Googlebot
+Disallow: /privacy
+Disallow: /favorites
+Disallow: /basket
+Disallow: /search
+Disallow: /*?
+Disallow: /*&
+
 User-agent: *
-Disallow: /
+Disallow: /privacy
+Disallow: /favorites
+Disallow: /basket
+Disallow: /search
+Disallow: /*?
+Disallow: /*&
+
+Sitemap: https://arenda-plazm77.ru//sitemap.xml

@@ -35,11 +35,9 @@ export const Conditions:FunctionComponent = ( { }) =>{
                                 <div className={styles.number}>1 </div>
                                 <div className={styles.number}> 2</div>
                                 <div className={styles.number}>3 </div>
-                                <div className={styles.number}>4 </div>
-                                <h3 className={styles.text}>Монтаж оборудования </h3>
+                                <h3 className={styles.text}>Оборудование </h3>
                                 <h3 className={styles.text}>Комплект коммутации </h3>
                                 <h3 className={styles.text}>Первичная настройка </h3>
-                                <h3 className={styles.text}>Демонтаж оборудования </h3>
                             </div>
                         </div>
                     </div>

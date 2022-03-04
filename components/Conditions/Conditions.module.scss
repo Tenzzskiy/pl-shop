@@ -1,6 +1,9 @@
 .conditions{
 
-
+  h3{
+    margin: 0 !important;
+    max-width: 219px;
+  }
   width: 100%;
   position: relative;
   height: 649px;
@@ -18,17 +21,18 @@
 
       .steps{
       display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr ;
         justify-items: center;
         align-items: center;
         padding: 0 32px;
-
+        column-gap: 80px;
 
       }
     }
   }
 }
 @media (max-width: 99999px){
+
   .text{
     font-style: normal;
     font-weight: normal;
@@ -77,6 +81,9 @@
   }
 }
 @media (max-width: 900px) {
+  .steps{
+    column-gap: 0 !important;
+  }
   .text{
     font-size: 20px;
   }
