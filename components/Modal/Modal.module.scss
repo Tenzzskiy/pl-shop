@@ -129,6 +129,11 @@ z-index: 1;
         height: 43px;
         cursor: pointer;
         button{
+          transition: all 0.3s;
+          &:hover{
+            background: var(--description);
+            transition: all 0.3s;
+          }
           width: 235px;
           height: 43px;
           color: white;

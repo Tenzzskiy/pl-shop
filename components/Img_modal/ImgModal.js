@@ -47,18 +47,18 @@ export const ImgModal = ( {id,active,setActive,text1,text2,text3,text4,text5,...
                     <div className="navigation-wrapper">
                         <div ref={sliderRef} className="keen-slider">
                             <div className={cs("keen-slider__slide number-slide1", styles.slide)}>
-                                <div className={styles.box1}><MyImage src={{default: props.img1}} alt={text1} /> <div className={styles.box1_description}><span>{ text1} </span> </div></div></div>
+                                <div className={styles.box1}><MyImage width={'100%'} height={'100%'} src={{default: props.img1}} alt={text1} /> <div className={styles.box1_description}><span>{ text1} </span> </div></div></div>
                             <div className={cs("keen-slider__slide number-slide1", styles.slide)}>
-                                <div className={styles.box2}><MyImage src={{default: props.img2}} alt={text2} /> <div className={styles.box2_description}><span>{ text1} </span> </div></div>
+                                <div className={styles.box2}><MyImage width={'100%'} height={'100%'} src={{default: props.img2}} alt={text2} /> <div className={styles.box2_description}><span>{ text2} </span> </div></div>
                             </div>
                             <div className={cs("keen-slider__slide number-slide1", styles.slide)}>
-                                <div className={styles.box3}><MyImage src={{default: props.img3}} alt={text3} /> <div className={styles.box3_description}><span>{ text1} </span> </div></div>
+                                <div className={styles.box3}><MyImage width={'100%'} height={'100%'} src={{default: props.img3}} alt={text3} /> <div className={styles.box3_description}><span>{ text3} </span> </div></div>
                             </div>
                             <div className={cs("keen-slider__slide number-slide1", styles.slide)}>
-                                <div className={styles.box4}><MyImage src={{default: props.img4}} alt={text4} /> <div className={styles.box4_description}><span>{ text1} </span> </div></div>
+                                <div className={styles.box4}><MyImage width={'100%'} height={'100%'}  src={{default: props.img4}} alt={text4} /> <div className={styles.box4_description}><span>{ text4} </span> </div></div>
                             </div>
                             <div className={cs("keen-slider__slide number-slide1", styles.slide)}>
-                                <div className={styles.box5}><MyImage src={{default: props.img5}} alt={text5} /> <div className={styles.box5_description}><span>{ text1} </span> </div></div>
+                                <div className={styles.box5}><MyImage width={'100%'} height={'100%'} src={{default: props.img5}} alt={text5} /> <div className={styles.box5_description}><span>{ text5} </span> </div></div>
                             </div>
 
                         </div>
