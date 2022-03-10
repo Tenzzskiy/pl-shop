@@ -1,6 +1,6 @@
-import React, {FunctionComponent, ReactNode, useState} from "react";
+import React, {FunctionComponent, ReactNode, useRef, useState} from "react";
 import styles from './ShopItem.module.scss'
-import { Selector} from "../../Select/Select";
+import {Selector, useOnClickOutside} from "../../Select/Select";
 import {useDispatch, useSelector} from "react-redux";
 import {setItemInCart, updateTotalPrice} from '../../../redux/cart/reducer.js'
 import Link from "next/link";
@@ -11,6 +11,7 @@ import useLocalStorage from "../../../Hooks/useLocalStorage";
 import BlobCoverReverse, {BlobCoverReverse2} from "../../background/background";
 import {useWindowSize} from "../../../Hooks/useWindowSize";
 import {numberWithSpaces} from "../../../sources/utils/helpers";
+import classNames from "classnames";
 
 
 export const ShopItem = ( {total,detail,select1,select2,data,children,price,count,img,title,active,setActive,detail1,detail2,mainDetail,mainDetail2,id,selector,...props}) =>{
@@ -43,7 +44,10 @@ const check = () =>{
     return false;
 
 }
+const ref = useRef();
 
+    useOnClickOutside(ref, () => setPodskazka(false));
+    const [podskazka,setPodskazka] = useState(false);
     return(
         <>
             <div className={styles.container} itemScope itemType="http://schema.org/Product" onMouseEnter={() => setBackground(true)}
@@ -52,6 +56,16 @@ const check = () =>{
                 <div className={styles.hit}>
                     {data.total === "1" ?  <MyImage width='107' height='32' itemProp="contentUrl" src={{default: "/hit.svg"}} alt="Хит" /> : Number(data.total) === 2 ?  <MyImage width='107' height='32' itemProp="contentUrl" src={{default: "/profitable.svg"}} alt="Выгодно" /> : null}
 
+                </div>
+                {data.desc ? <div className={styles.podskazka} onClick={() => setPodskazka(true)}>
+                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="11.3665" cy="11" r="11" fill="#F2F3FE"/>
+                        <path opacity="0.5" d="M10.455 17C10.355 17 10.27 16.97 10.2 16.91C10.14 16.84 10.11 16.755 10.11 16.655V9.545C10.11 9.445 10.14 9.365 10.2 9.305C10.27 9.235 10.355 9.2 10.455 9.2H11.175C11.275 9.2 11.355 9.235 11.415 9.305C11.475 9.365 11.505 9.445 11.505 9.545V16.655C11.505 16.755 11.475 16.84 11.415 16.91C11.355 16.97 11.275 17 11.175 17H10.455ZM10.335 7.745C10.235 7.745 10.15 7.715 10.08 7.655C10.02 7.585 9.99 7.5 9.99 7.4V6.59C9.99 6.49 10.02 6.41 10.08 6.35C10.15 6.28 10.235 6.245 10.335 6.245H11.28C11.38 6.245 11.46 6.28 11.52 6.35C11.59 6.41 11.625 6.49 11.625 6.59V7.4C11.625 7.5 11.59 7.585 11.52 7.655C11.46 7.715 11.38 7.745 11.28 7.745H10.335Z" fill="#460BD9"/>
+                    </svg>
+
+                </div> : null}
+                <div className={classNames(podskazka ? null : styles.disable,styles.modal_podskazka)} ref={ref}>
+                    {data.desc}
                 </div>
                 <div className={styles.img} >
 
