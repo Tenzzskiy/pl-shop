@@ -97,6 +97,9 @@
         }
         .box3{grid-area: box3 ;
           cursor: pointer;
+          img{
+            width: 100%;
+          }
           .box3_description{
             text-align: center;
             display: flex;
