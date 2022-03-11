@@ -51,7 +51,7 @@ export const OfferCard= ( {total,detail1,detail2,mainDetail,mainDetail2,price,ti
             </div>
                 <h2 className={styles.title} itemProp="name"> {title}</h2>
                 <div className={styles.subTitle}>
-                    <div>{mainDetail} </div>
+                    <div style={mainDetail === 'Дизайн-макет:' ? {minWidth : 110 +'px'} : null}>{mainDetail} </div>
                     <div itemProp='description'>{detail1} </div>
                    </div>
                 <div className={styles.subTitle}>
